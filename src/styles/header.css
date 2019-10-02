@@ -1,0 +1,29 @@
+header {
+    padding: 0 3rem;
+    background-color: #ccc;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+}
+
+header h1, header h2 {
+    font-size: 1rem;
+}
+
+header h1, header nav, header ul {
+    display: inline-block;
+}
+
+header h1 {
+    margin-right: 2rem;
+}
+
+header ul {
+    display: grid;
+    list-style-type: none;
+}
+
+header li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
