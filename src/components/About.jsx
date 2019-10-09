@@ -13,21 +13,33 @@ export default function About() {
                 Aenean quam. In scelerisque sem at dolor. Maecenas mattis. Sed convallis tristique sem. Proin ut ligula
                 vel nunc egestas porttitor. Morbi lectus risus, iaculis vel, suscipit quis, luctus non, massa. Fusce ac
                 turpis quis ligula lacinia aliquet. Mauris ipsum. </p>
-            <h3>Skillset</h3>
+            <h3>Skills Summary</h3>
             <ul>
                 <li>
-                    <span>Web Development</span>
+                    <span>Animals</span>
                     <ul>
-                        <li>React</li>
-                        <li>ECMAScript5</li>
-                        <li>CSS3</li>
-                        <li>WordPress</li>
-                        <li>.NET</li>
-                        <li>jQuery</li>
+                        <li>Dog</li>
+                        <li>Frog</li>
+                        <li>Pony</li>
+                        <li>Ladybug</li>
                     </ul>
                 </li>
-                <li>Back End</li>
-                <li>Design</li>
+                <li>
+                    <span>Colors</span>
+                    <ul>
+                        <li>Blue</li>
+                        <li>Green</li>
+                        <li>Yellow</li>
+                    </ul>
+                </li>
+                <li>
+                    <span>Shapes</span>
+                    <ul>
+                        <li>Triangle</li>
+                        <li>Circle</li>
+                        <li>Pentagon</li>
+                    </ul>
+                </li>
                 <li>And more!</li>
             </ul>
         </div>

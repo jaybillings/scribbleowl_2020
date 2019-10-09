@@ -7,13 +7,11 @@ import Contact from "../components/Contact";
 
 export default class SinglePageLayout extends Component {
     render() {
-        const forHire = true; // todo: Put this in config
-
         return [
-            <Header forHire={forHire}/>,
+            <Header forHire={this.props.forHire}/>,
             <About />,
             <Portfolio/>,
-            <Contact forHire={forHire}/>
+            <Contact forHire={this.props.forHire}/>
         ]
     }
 }

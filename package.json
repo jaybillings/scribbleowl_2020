@@ -2,16 +2,22 @@
   "name": "scribbleowl_2020",
   "version": "0.1.0",
   "private": true,
-  "dependencies": {
-    "react": "^16.10.1",
-    "react-dom": "^16.10.1",
-    "react-scripts": "3.1.2"
+  "directories": {
+    "lib": "src",
+    "test": "test/"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
+  },
+  "dependencies": {
+    "@feathersjs/client": "^4.3.5",
+    "react": "^16.10.1",
+    "react-dom": "^16.10.1",
+    "react-scripts": "3.1.2",
+    "socket.io-client": "^2.3.0"
   },
   "eslintConfig": {
     "extends": "react-app"
