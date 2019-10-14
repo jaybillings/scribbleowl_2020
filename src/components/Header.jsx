@@ -1,40 +1,44 @@
 import React, {Component} from 'react';
-import app from '../services/socketio';
 
-import "../styles/header.css";
+import '../styles/header.css';
 
 export default class Header extends Component {
-    constructor(props) {
-        super(props);
+  constructor(props) {
+    super(props);
 
-        this.state = {title: '', sections: []};
+    this.state = {title: '', sections: []};
 
-        this.miniCRMService = app.service('mini-crm');
-    }
+    this.renderSections = this.renderSections.bind(this);
+  }
 
-    componentDidMount() {
-        this.miniCRMService.get('header')
-            .then(result => {
-                console.log(result);
-                this.setState({title: result.data.title, sections: result.data.sections});
-            })
-            .catch(err => {
-                console.error(err);
-            });
-    }
+  componentDidMount() {
+    this.props.fetchConfig('header').then(result => {
+      this.setState({
+        title: result.data.title,
+        sections: result.data.sections
+      });
+    }).catch(err => {console.error(err)});
+  }
 
-    render() {
-        return (
-            <header>
-                <h1>{this.state.title}</h1>
-                <nav>
-                    <ul>
-                        {
-                            this.state.sections.map(section => <li>{section.title}</li>)
-                        }
-                    </ul>
-                </nav>
-            </header>
-        )
-    }
+  renderSections() {
+    if (!this.state.sections.main) return [];
+
+    const altSection = this.props.forHire ? this.state.sections.for_hire : this.state.sections.contact;
+    let sections = this.state.sections.main.map(section => <li><a href={`#${section[1]}`} title={`Scroll to ${section[0]} section`}>{section[0]}</a></li>);
+
+    sections.push(<li><a href={`#${altSection[1]}`} title={`Scroll to ${altSection[0]} section`}>{altSection[0]}</a></li>);
+
+    return sections;
+  }
+
+  render() {
+    return (
+      <header>
+        <h1>{this.state.title}</h1>
+        <nav>
+          <ul>{this.renderSections()}</ul>
+        </nav>
+      </header>
+    );
+  }
 }
