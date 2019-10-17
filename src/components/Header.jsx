@@ -13,20 +13,17 @@ export default class Header extends Component {
 
   componentDidMount() {
     this.props.fetchConfig('header').then(result => {
-      this.setState({
-        title: result.data.title,
-        sections: result.data.sections
-      });
+      this.setState({title: result.data.title, sections: result.data.sections});
     }).catch(err => {console.error(err)});
   }
 
   renderSections() {
-    if (!this.state.sections.main) return [];
+    if (!this.state.sections.default) return [];
 
     const altSection = this.props.forHire ? this.state.sections.for_hire : this.state.sections.contact;
-    let sections = this.state.sections.main.map(section => <li><a href={`#${section[1]}`} title={`Scroll to ${section[0]} section`}>{section[0]}</a></li>);
+    let sections = this.state.sections.default.map(section => <li key={section[1]}><a href={`#${section[1]}`} title={`Scroll to ${section[0]} section`}>{section[0]}</a></li>);
 
-    sections.push(<li><a href={`#${altSection[1]}`} title={`Scroll to ${altSection[0]} section`}>{altSection[0]}</a></li>);
+    sections.push(<li key={altSection[1]}><a href={`#${altSection[1]}`} title={`Scroll to ${altSection[0]} section`}>{altSection[0]}</a></li>);
 
     return sections;
   }

@@ -6,13 +6,13 @@ export default class About extends Component {
   constructor(props) {
     super(props);
 
-    this.state = {title: '', copy: [], skills: []};
+    this.state = {title: '', copy: []};
   }
 
   componentDidMount() {
     this.props.fetchConfig('about').then(result => {
       this.setState(
-        {title: result.data.title, copy: result.data.copy, skills: result.data.skills});
+        {title: result.data.title, copy: result.data.copy});
     }).catch(err => {
       console.error('err');
     });
@@ -22,18 +22,8 @@ export default class About extends Component {
     return (
       <div className={'section'}>
         <h2>{this.state.title}</h2>
-        {this.state.copy.map(line => <p>{line}</p>)}
-        <h3>Skills Summary</h3>
-        {
-          this.state.skills.map(subsection =>
-            <div>
-              <h4>{subsection.title}</h4>
-              <p>{subsection.desc}</p>
-              <ul></ul>
-            </div>
-          )
-        }
+        {this.state.copy.map((line, iter) => <p key={iter}>{line}</p>)}
       </div>
-    );
+    )
   }
 }

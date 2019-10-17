@@ -26,6 +26,7 @@ export default class ContactForm extends Component {
           <span>Message</span>
           <textarea ref={this.msgRef} />
         </label>
+        <button type={'submit'}>Send Message</button>
       </form>
     )
   }

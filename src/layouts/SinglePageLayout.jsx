@@ -5,6 +5,7 @@ import Header from '../components/Header';
 import About from '../components/About';
 import Portfolio from '../components/Portfolio';
 import Contact from '../components/Contact';
+import Skills from "../components/Skills";
 
 export default class SinglePageLayout extends Component {
   constructor(props) {
@@ -21,10 +22,11 @@ export default class SinglePageLayout extends Component {
 
   render() {
     return [
-      <Header forHire={this.props.forHire} fetchConfig={this.fetchConfig} />,
-      <About fetchConfig={this.fetchConfig} />,
-      <Portfolio fetchConfig={this.fetchConfig} />,
-      <Contact forHire={this.props.forHire} fetchConfig={this.fetchConfig} />,
+      <Header key={'header'} forHire={this.props.forHire} fetchConfig={this.fetchConfig} />,
+      <About key={'aboutSection'} fetchConfig={this.fetchConfig} />,
+      <Skills key={'skillsSection'} fetchConfig={this.fetchConfig} />,
+      <Portfolio key={'portfolioSection'} fetchConfig={this.fetchConfig} />,
+      <Contact key={'contactSection'} forHire={this.props.forHire} fetchConfig={this.fetchConfig} />,
     ];
   }
 }
