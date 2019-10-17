@@ -17,7 +17,7 @@ export default class Skills extends Component {
 
   render() {
     return(
-      <div className={'section'}>
+      <div id={'skills'} className={'section'}>
         <h2>{this.state.title}</h2>
         {this.state.copy.map((line, iter) => <p key={iter}>{line}</p>)}
         {

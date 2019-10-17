@@ -8,6 +8,8 @@ export default class Header extends Component {
 
     this.state = {title: '', sections: []};
 
+    this.contactRef = React.createRef();
+
     this.renderSections = this.renderSections.bind(this);
   }
 

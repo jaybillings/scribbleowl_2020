@@ -30,7 +30,7 @@ export default class Portfolio extends Component {
 
   render() {
     return (
-      <div className={'section'}>
+      <div id={'portfolio'} className={'section'}>
         <h2>{this.state.title}</h2>
         {this.state.copy.map((line, iter) => <p key={iter}>{line}</p>)}
         <nav>
