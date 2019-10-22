@@ -1,6 +1,6 @@
 header {
     padding: 1rem 3rem;
-    background-color: #ccc;
+    background-color: var(--alt-color);
     display: grid;
     grid-template-columns: 1fr 3fr;
 }

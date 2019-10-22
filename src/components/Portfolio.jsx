@@ -6,7 +6,7 @@ export default class Portfolio extends Component {
 
     this.state = {title: '', copy: [], projects: []};
 
-    this.renderGalleryItem = this.renderGalleryItem.bind(this);
+    this.renderPortfolioTile = this.renderPortfolioTile.bind(this);
   }
 
   componentDidMount() {
@@ -17,13 +17,16 @@ export default class Portfolio extends Component {
     });
   }
 
-  renderGalleryItem(item) {
+  renderPortfolioTile(project) {
     return(
-      <div className={'galItem'} key={item.title}>
-        <h3>{item.title}</h3>
-        {item.desc.map((line, iter) => <p key={iter}>{line}</p>)}
-        <strong>Technologies used:</strong> <span>{item.tech.toString()}</span>
-        <ul>{item.images.map((image, iter) => <li key={iter}><img alt={''} src={image[0]} /><p>{image[1]}</p></li>)}</ul>
+      <div className={'tileItem'} key={project.title}>
+        <div className={'sidebar'}>
+          <h3>{project.title},{project.year}</h3>
+          <strong>{project.tech.toString()}</strong>
+          {project.desc.map((line, iter) => <p key={iter}>{line}</p>)}
+          {project.images[0].desc.map((line, iter) => <p className={'imgCopy'} key={iter}>{line}</p>)}
+        </div>
+        <img alt={''} src={project.images[0].path} />
       </div>
     )
   }
@@ -33,17 +36,8 @@ export default class Portfolio extends Component {
       <div id={'portfolio'} className={'section'}>
         <h2>{this.state.title}</h2>
         {this.state.copy.map((line, iter) => <p key={iter}>{line}</p>)}
-        <nav>
-          <strong>Filter by technology:</strong>
-          <ul>
-            <li key={'node'}>NodeJS</li>
-            <li key={'python'}>Python</li>
-            <li key={'php'}>PHP</li>
-            <li key={'dotnet'}>.NET</li>
-          </ul>
-        </nav>
-        <div className={'gallery'}>
-          {this.state.projects.map(item => this.renderGalleryItem(item))}
+        <div className={'tiles'}>
+          {this.state.projects.map(item => this.renderPortfolioTile(item))}
         </div>
       </div>
     )

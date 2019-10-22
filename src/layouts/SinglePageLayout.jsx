@@ -6,6 +6,7 @@ import About from '../components/About';
 import Portfolio from '../components/Portfolio';
 import Contact from '../components/Contact';
 import Skills from "../components/Skills";
+import Footer from "../components/Footer";
 
 export default class SinglePageLayout extends Component {
   constructor(props) {
@@ -27,6 +28,7 @@ export default class SinglePageLayout extends Component {
       <Skills key={'skillsSection'} fetchConfig={this.fetchConfig} />,
       <Portfolio key={'portfolioSection'} fetchConfig={this.fetchConfig} />,
       <Contact key={'contactSection'} forHire={this.props.forHire} fetchConfig={this.fetchConfig} />,
+      <Footer key={'footer'} />
     ];
   }
 }

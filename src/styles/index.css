@@ -1,7 +1,11 @@
+:root {
+  --alt-color: #ccc;
+}
+
 body {
   width: 100%;
   max-width: 1600px;
-  margin: 0 auto 3rem;
+  margin: 0 auto;
   font-size: 14px;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
@@ -22,4 +26,12 @@ a {
 
 a:hover {
   border-bottom: 1px solid black;
+}
+
+.hidden {
+  display: none;
+}
+
+.visible {
+  display: inherit;
 }
