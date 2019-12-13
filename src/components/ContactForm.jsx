@@ -54,8 +54,8 @@ export default class ContactForm extends Component {
   render() {
     return (
       [
-        <div className={'formMsg'}>{this.renderSendStatus()}</div>,
-        <form className={'contactForm'} onSubmit={this.sendMessage}>
+        <div key={'contactMsg'} className={'formMsg'}>{this.renderSendStatus()}</div>,
+        <form key={'contactForm'} className={'contactForm'} onSubmit={this.sendMessage}>
           <label>
             <span>Name</span>
             <input type={'text'} name={'contact_name'} ref={this.nameRef}/>

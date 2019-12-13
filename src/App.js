@@ -1,6 +1,6 @@
 import React from 'react';
 
-import './styles/normalize.css';
+import 'normalize.css/normalize.css';
 import './styles/index.css';
 
 import SinglePageLayout from "./layouts/SinglePageLayout";

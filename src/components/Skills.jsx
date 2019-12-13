@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
 
+import "../styles/section-skills.css";
+
 export default class Skills extends Component {
   constructor(props) {
     super(props);
@@ -19,10 +21,10 @@ export default class Skills extends Component {
     return(
       <div id={'skills'} className={'section'}>
         <h2>{this.state.title}</h2>
-        {this.state.copy.map((line, iter) => <p key={iter}>{line}</p>)}
+        <p>{this.state.copy}</p>
         {
-          this.state.skills.map(subsection =>
-            <div key={subsection.title}>
+          this.state.skills.map((subsection, iter) =>
+            <div key={subsection.title} className={'skillItem'}>
               <h3>{subsection.title}</h3>
               <p>{subsection.desc}</p>
               <ul>{subsection.items.map((item, iter) => <li key={iter}>{item}</li>)}</ul>

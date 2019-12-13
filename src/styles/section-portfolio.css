@@ -1,0 +1,30 @@
+#portfolio {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-gap: 1rem;
+    padding-bottom: 2rem;
+}
+
+#portfolio li {
+    padding: 1rem 0;
+}
+
+#portfolio > h2 {
+    grid-column: 1 / span 2;
+    margin: 2rem 0 0;
+}
+
+#portfolio > nav {
+    border-right: 3px solid blue;
+    text-align: center;
+    align-self: center;
+}
+
+.tileItem {
+    border: 1px solid red;
+}
+
+.tileImageItem {
+    border: 1px solid green;
+}
+
