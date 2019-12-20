@@ -9,6 +9,15 @@
     padding: 1rem 0;
 }
 
+#portfolio li.selected {
+    font-weight: bold;
+}
+
+#portfolio li:not(.selected):hover, #portfolio li:active {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
 #portfolio > h2 {
     grid-column: 1 / span 2;
     margin: 2rem 0 0;
