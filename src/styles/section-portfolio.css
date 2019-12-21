@@ -3,6 +3,7 @@
     grid-template-columns: 1fr 4fr;
     grid-gap: 1rem;
     padding-bottom: 2rem;
+    background: rgba(255,255,255,0.75);
 }
 
 #portfolio li {

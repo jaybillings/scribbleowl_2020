@@ -9,12 +9,13 @@ export default class Portfolio extends Component {
 
     this.state = {title: '', projects: [], currentIndex: 0, galleryOpen: false};
 
+    this.galleryRef = React.createRef();
+
     this.handleNavClick = this.handleNavClick.bind(this);
     this.handleGalleryClick = this.handleGalleryClick.bind(this);
 
     this.renderPortfolioTile = this.renderPortfolioTile.bind(this);
     this.renderTileImage = this.renderTileImage.bind(this);
-    this.renderGallery = this.renderGallery.bind(this);
   }
 
   componentDidMount() {
@@ -26,24 +27,24 @@ export default class Portfolio extends Component {
     });
   }
 
+  handleNavClick(e) {
+    const index = parseInt(e.target.dataset.index) || 0;
+    if (index !== this.state.currentIndex) this.setState({currentIndex: index});
+  }
+
+  handleGalleryClick() {
+    this.setState(prevState => ({galleryOpen: !prevState.galleryOpen}));
+  }
+
   renderPortfolioTile(project) {
     return (
       <div className={'projectTile'}>
         <h3>{project.title} ({project.year})</h3>
         <p><strong>{project.tech.join(', ')}</strong></p>
         {project.desc.map((line, iter) => <p key={iter}>{line}</p>)}
-        <p><button type={'button'} className={'fakeLink'} onClick={this.handleGalleryClick}>Open gallery -></button></p>
+        <button type={'button'} className={'fakeLink'} onClick={this.handleGalleryClick}>Open gallery -></button>
       </div>
     )
-  }
-
-  handleNavClick(e) {
-    const index = parseInt(e.target.dataset.index) || 0;
-    if (index !== this.state.currentIndex) this.setState({currentIndex: index});
-  }
-
-  handleGalleryClick(e) {
-    this.setState({galleryOpen: true});
   }
 
   renderTileImage(key, imageInfo) {
@@ -53,12 +54,6 @@ export default class Portfolio extends Component {
         {imageInfo.desc.map((line, iter) => <p key={iter} className={'imgCopy'}>{line}</p>)}
       </div>
     )*/
-  }
-
-  renderGallery(project) {
-    if (!this.state.galleryOpen) return '';
-
-    return <Gallery cards={project.images} />
   }
 
   render() {
@@ -75,14 +70,14 @@ export default class Portfolio extends Component {
             <ul>{this.state.projects.map((item, iter) =>
               <li key={iter}
                   className={iter === this.state.currentIndex ? 'selected' : ''}
-                  data-index={iter}
+                  data-index={`portfolio-nav-item-${iter}`}
                   onClick={this.handleNavClick}>{item.title}</li>)}
             </ul>
           </nav>
           <div>{this.renderPortfolioTile(project)}</div>
         </div>
       </div>,
-      <div className={'galleryContainer'}>{this.renderGallery(project)}</div>
+      <div className={this.state.galleryOpen ? 'visible' : 'hidden'}><Gallery cards={project.images}/></div>
     ])
   }
 }

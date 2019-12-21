@@ -1,5 +1,7 @@
 import React, {Component} from "react";
 
+import "../styles/gallery.css";
+
 export default class Gallery extends Component {
   constructor(props) {
     super(props);
@@ -8,7 +10,6 @@ export default class Gallery extends Component {
 
     this.state = {cardIndex: 0};
 
-    // noinspection DuplicatedCode
     this.handleCardChange = this.handleCardChange.bind(this);
     this.handleImgClick = this.handleImgClick.bind(this);
 
@@ -23,15 +24,15 @@ export default class Gallery extends Component {
   }
 
   handleImgClick(e) {
-    // TODO: Show full size image
-    console.log(e);
+    console.log(e.target);
+    window.open(e.target.src);
   }
 
   renderCard() {
     const cardInfo = this.props.cards[this.state.cardIndex];
 
     return (
-      <div className={'fullCard'}>
+      <div className={'card full'}>
         <img alt={''} src={cardInfo.path} onClick={this.handleImgClick}/>
         <div>{cardInfo.desc.map((desc, iter) => <p key={iter}>{desc}</p>)}</div>
       </div>
@@ -45,9 +46,9 @@ export default class Gallery extends Component {
     console.log('prev index', cardIndex);
 
     return (
-      <div className={'partialCard'}>
+      <div className={'card partial'}>
         {canGoBack && <button type={'button'} data-index={cardIndex} onClick={this.handleCardChange}>prev</button>}
-        <img src={canGoBack ? this.props.cards[cardIndex].path : ''} alt={''} />
+        <img src={canGoBack ? this.props.cards[cardIndex].path : ''} alt={''}/>
       </div>
     )
   }
@@ -59,17 +60,17 @@ export default class Gallery extends Component {
     console.log('next index', cardIndex);
 
     return (
-      <div className={'partialCard'}>
+      <div className={'card partial'}>
         {canGoFwd && <button type={'button'} data-index={cardIndex} onClick={this.handleCardChange}>next</button>}
-        <img src={canGoFwd ? this.props.cards[cardIndex].path : ''} alt={''} />
+        <img src={canGoFwd ? this.props.cards[cardIndex].path : ''} alt={''}/>
       </div>
     )
   }
 
   render() {
     return (
-      <div className={''}>
-        <ul className={'imageList'}>
+      <div id={'gallery'}>
+        <ul>
           <li>{this.renderPrevCard()}</li>
           <li>{this.renderCard()}</li>
           <li>{this.renderNextCard()}</li>
