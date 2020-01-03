@@ -1,6 +1,8 @@
 header {
+    position: sticky;
+    top: 0;
     padding: 1rem 3rem;
-    background-color: var(--alt-color);
+    background-color: var(--main-color);
     display: grid;
     grid-template-columns: 1fr 3fr;
 }
@@ -28,4 +30,3 @@ header li {
     font-size: 1.1rem;
     padding-left: 2rem;
 }
-

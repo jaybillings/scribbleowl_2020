@@ -1,39 +1,38 @@
 import React, {Component} from 'react';
+import {NavHashLink as NavLink} from "react-router-hash-link";
 
 import '../styles/header.css';
+import {Link} from "react-router-dom";
 
 export default class Header extends Component {
   constructor(props) {
     super(props);
 
-    this.state = {title: '', sections: []};
-
-    this.contactRef = React.createRef();
+    this.defaultSections = [
+      ["About", "about"],
+      ["Skills Summary", "skills"],
+      ["Past Projects", "portfolio"]
+    ];
+    this.contactSection = ["Contact Me", "contact"];
+    this.hireSection = ["Hire Me", "hire"];
 
     this.renderSections = this.renderSections.bind(this);
   }
 
-  componentDidMount() {
-    this.props.fetchConfig('header').then(result => {
-      this.setState({title: result.data.title, sections: result.data.sections});
-    }).catch(err => {console.error(err)});
-  }
-
   renderSections() {
-    if (!this.state.sections.default) return [];
+    const sections = this.defaultSections.concat(this.props.forHire ? [this.hireSection] : [this.contactSection]);
 
-    const altSection = this.props.forHire ? this.state.sections.for_hire : this.state.sections.contact;
-    let sections = this.state.sections.default.map(section => <li key={section[1]}><a href={`#${section[1]}`} title={`Scroll to ${section[0]} section`}>{section[0]}</a></li>);
-
-    sections.push(<li key={altSection[1]}><a href={`#${altSection[1]}`} title={`Scroll to ${altSection[0]} section`}>{altSection[0]}</a></li>);
-
-    return sections;
+    return sections.map(section =>
+      <li key={section[1]}><NavLink to={`/#${section[1]}`} isActive={(match,location) => {
+        if (!match) return false;
+        return location.hash === `#${section[1]}`;
+      }} activeClassName={'current'}>{section[0]}</NavLink></li>);
   }
 
   render() {
     return (
       <header>
-        <h1>{this.state.title}</h1>
+        <h1><Link to={'/'}>Jay Billings</Link></h1>
         <nav>
           <ul>{this.renderSections()}</ul>
         </nav>

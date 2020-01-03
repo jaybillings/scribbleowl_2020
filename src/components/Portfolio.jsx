@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 
 import "../styles/section-portfolio.css";
 import Gallery from "./Gallery";
+import ScrollTop from "./ScrollTop";
 
 export default class Portfolio extends Component {
   constructor(props) {
@@ -37,12 +38,14 @@ export default class Portfolio extends Component {
   }
 
   renderPortfolioTile(project) {
+    const buttonText = this.state.galleryOpen ? 'Close gallery <-' : 'Open gallery ->';
+
     return (
       <div className={'projectTile'}>
         <h3>{project.title} ({project.year})</h3>
         <p><strong>{project.tech.join(', ')}</strong></p>
         {project.desc.map((line, iter) => <p key={iter}>{line}</p>)}
-        <button type={'button'} className={'fakeLink'} onClick={this.handleGalleryClick}>Open gallery -></button>
+        <button type={'button'} className={'fakeLink'} onClick={this.handleGalleryClick}>{buttonText}</button>
       </div>
     )
   }
@@ -63,21 +66,24 @@ export default class Portfolio extends Component {
     const styles = {background: `url(${project.images[0].path})`};
 
     return ([
-      <div style={styles}>
-        <div id={'portfolio'} className={'section'}>
-          <h2>{this.state.title}</h2>
-          <nav>
-            <ul>{this.state.projects.map((item, iter) =>
-              <li key={iter}
-                  className={iter === this.state.currentIndex ? 'selected' : ''}
-                  data-index={`portfolio-nav-item-${iter}`}
-                  onClick={this.handleNavClick}>{item.title}</li>)}
-            </ul>
-          </nav>
-          <div>{this.renderPortfolioTile(project)}</div>
+      <div id={'portfolio'}>
+        <div style={styles}>
+          <div className={'portfolioNav section'}>
+            <h2>{this.state.title}</h2>
+            <nav>
+              <ul>{this.state.projects.map((item, iter) =>
+                <li key={iter}
+                    className={iter === this.state.currentIndex ? 'selected' : ''}
+                    data-index={`portfolio-nav-item-${iter}`}
+                    onClick={this.handleNavClick}>{item.title}</li>)}
+              </ul>
+            </nav>
+            <div>{this.renderPortfolioTile(project)}</div>
+          </div>
         </div>
-      </div>,
-      <div className={this.state.galleryOpen ? 'visible' : 'hidden'}><Gallery cards={project.images}/></div>
+        <div className={this.state.galleryOpen ? 'visible' : 'hidden'}><Gallery cards={project.images}/></div>
+        <ScrollTop/>
+      </div>
     ])
   }
 }

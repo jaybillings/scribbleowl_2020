@@ -19,8 +19,8 @@
 }
 
 #gallery img:hover, #gallery img:active {
-    box-shadow: 0 0 6px 3px #ccc;
-    border: 1px solid #ccc;
+    box-shadow: 0 0 6px 3px var(--alt-color);
+    border: 1px solid var(--alt-color);
 }
 
 #gallery button {

@@ -1,5 +1,11 @@
 :root {
-  --alt-color: #ccc;
+  --accent-gray: #ccc;
+  --light-overlay: rgba(255,255,255,0.75);
+  --main-color: #c2e8ce;
+  --neutral: #f2eee5;
+  --light-neutral: #fdfdfc;
+  --accent-color: #f6ad7b;
+  --dark-accent: #be7575;
 }
 
 body {
@@ -30,6 +36,10 @@ li {
 a {
   color: inherit;
   text-decoration: none;
+}
+
+a.current {
+  color: red;
 }
 
 a:hover {

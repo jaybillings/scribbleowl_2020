@@ -1,12 +1,12 @@
-#skills {
+#skills > div {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
 }
 
-#skills h2 {
+#skills > div h2 {
     grid-column: 1 / span 3;
 }
 
-#skills p {
+#skills > div p {
     grid-column: 1 / span 3;
 }
