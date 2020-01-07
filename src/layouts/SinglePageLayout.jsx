@@ -15,27 +15,19 @@ export default class SinglePageLayout extends Component {
     this.miniCRMService = app.service('mini-crm');
 
     this.fetchConfig = this.fetchConfig.bind(this);
-    this.renderCopy = this.renderCopy.bind(this);
   }
 
   async fetchConfig(fileName) {
     return this.miniCRMService.get(fileName);
   }
 
-  renderCopy(copy) {
-    if (!copy) return;
-    if (!copy.length) return <p>{copy}</p>;
-    return copy.map((line, iter) => <p key={iter}>{line}</p>);
-  }
-
-
   render() {
     return [
       <Header key={'header'} forHire={this.props.forHire} fetchConfig={this.fetchConfig} />,
-      <About key={'aboutSection'} fetchConfig={this.fetchConfig} renderCopy={this.renderCopy} />,
-      <Skills key={'skillsSection'} fetchConfig={this.fetchConfig} renderCopy={this.renderCopy} />,
-      <Portfolio key={'portfolioSection'} fetchConfig={this.fetchConfig} renderCopy={this.renderCopy} />,
-      <Contact key={'contactSection'} forHire={this.props.forHire} fetchConfig={this.fetchConfig} renderCopy={this.renderCopy} />,
+      <About key={'aboutSection'} fetchConfig={this.fetchConfig} />,
+      <Skills key={'skillsSection'} fetchConfig={this.fetchConfig} />,
+      <Portfolio key={'portfolioSection'} fetchConfig={this.fetchConfig} />,
+      <Contact key={'contactSection'} forHire={this.props.forHire} fetchConfig={this.fetchConfig} />,
       <Footer key={'footer'} />
     ];
   }

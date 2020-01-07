@@ -1,4 +1,5 @@
 import React, {Component} from "react";
+import {renderCopy} from "../js/utilities";
 
 import "../styles/gallery.css";
 
@@ -30,7 +31,7 @@ export default class Gallery extends Component {
     return (
       <div className={'card full'}>
         <img alt={''} src={cardInfo.path} onClick={this.handleImgClick}/>
-        <div>{this.props.renderCopy(cardInfo.desc)}</div>
+        <div>{renderCopy(cardInfo.desc)}</div>
       </div>
     )
   }

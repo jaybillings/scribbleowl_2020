@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import {renderCopy} from "../js/utilities";
 
 import ScrollTop from "./ScrollTop";
 
@@ -21,7 +22,7 @@ export default class About extends Component {
     return (
       <div id={'about'} className={'section'}>
         <h2>{this.state.title}</h2>
-        {this.props.renderCopy(this.state.copy)}
+        {renderCopy(this.state.copy)}
         <ScrollTop/>
       </div>
     )

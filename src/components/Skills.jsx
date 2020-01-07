@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import ScrollTop from "./ScrollTop";
+import {renderCopy} from "../js/utilities";
 
 import "../styles/section-skills.css";
 
@@ -23,7 +24,7 @@ export default class Skills extends Component {
       <div id={'skills'} className={'section'}>
         <div>
           <h2>{this.state.title}</h2>
-          {this.props.renderCopy(this.state.copy)}
+          {renderCopy(this.state.copy)}
           {
             this.state.skills.map((subsection, iter) =>
               <div key={subsection.title} className={'skillItem'}>

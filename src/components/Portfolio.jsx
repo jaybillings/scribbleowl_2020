@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import {renderCopy} from "../js/utilities";
 
 import Gallery from "./Gallery";
 import ScrollTop from "./ScrollTop";
@@ -38,7 +39,7 @@ export default class Portfolio extends Component {
       <div className={'projectTile'}>
         <h3>{project.title} ({project.year})</h3>
         <p><strong>{project.tech.join(', ')}</strong></p>
-        {project.desc.map((line, iter) => <p key={iter}>{line}</p>)}
+        {renderCopy(project.desc)}
         <button type={'button'} className={'fakeLink'} onClick={this.handleGalleryClick}>{buttonText}</button>
       </div>
     )
@@ -67,7 +68,7 @@ export default class Portfolio extends Component {
           </div>
         </div>
         <div className={this.state.galleryOpen ? 'visible' : 'hidden'}>
-          <Gallery cards={project.images} renderCopy={this.props.renderCopy} />
+          <Gallery cards={project.images} />
         </div>
         <ScrollTop/>
       </div>

@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import ContactForm from "./ContactForm";
 import ScrollTop from "./ScrollTop";
+import {renderCopy} from "../js/utilities";
 
 export default class Contact extends Component {
   constructor(props) {
@@ -22,7 +23,7 @@ export default class Contact extends Component {
     return (
       <div id={'contact'} className={'section'}>
         <h2>{this.state.title}</h2>
-        {this.props.renderCopy(this.state.copy)}
+        {renderCopy(this.state.copy)}
         <ContactForm/>
         <ScrollTop/>
       </div>
