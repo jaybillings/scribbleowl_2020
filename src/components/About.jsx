@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 
-import '../styles/section.css';
 import ScrollTop from "./ScrollTop";
 
 export default class About extends Component {
@@ -12,21 +11,19 @@ export default class About extends Component {
 
   componentDidMount() {
     this.props.fetchConfig('about').then(result => {
-      this.setState(
-        {title: result.data.title, copy: result.data.copy});
-    }).catch(err => {
-      console.error('err');
-    });
+      this.setState({title: result.data.title, copy: result.data.copy});
+    }).catch(err => console.error('err'));
   }
 
   render() {
-    return ([
+    if (!this.state.title) return <p className={'loading'}>Loading...</p>;
+
+    return (
       <div id={'about'} className={'section'}>
         <h2>{this.state.title}</h2>
-        {this.state.copy.map((line, iter) => <p key={iter}>{line}</p>)}
-
+        {this.props.renderCopy(this.state.copy)}
         <ScrollTop/>
       </div>
-    ])
+    )
   }
 }

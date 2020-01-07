@@ -1,8 +1,9 @@
 import React, {Component} from 'react';
 
-import "../styles/section-portfolio.css";
 import Gallery from "./Gallery";
 import ScrollTop from "./ScrollTop";
+
+import "../styles/section-portfolio.css";
 
 export default class Portfolio extends Component {
   constructor(props) {
@@ -10,22 +11,15 @@ export default class Portfolio extends Component {
 
     this.state = {title: '', projects: [], currentIndex: 0, galleryOpen: false};
 
-    this.galleryRef = React.createRef();
-
     this.handleNavClick = this.handleNavClick.bind(this);
     this.handleGalleryClick = this.handleGalleryClick.bind(this);
-
     this.renderPortfolioTile = this.renderPortfolioTile.bind(this);
-    this.renderTileImage = this.renderTileImage.bind(this);
   }
 
   componentDidMount() {
     this.props.fetchConfig('portfolio').then(result => {
       this.setState({title: result.data.title, projects: result.data.projects});
-      console.log(result.data.projects);
-    }).catch(err => {
-      console.error(err);
-    });
+    }).catch(err => console.error(err));
   }
 
   handleNavClick(e) {
@@ -50,20 +44,11 @@ export default class Portfolio extends Component {
     )
   }
 
-  renderTileImage(key, imageInfo) {
-    /*return (
-      <div key={key} className={'tileImageItem'}>
-        <img alt={''} src={imageInfo.path}/>
-        {imageInfo.desc.map((line, iter) => <p key={iter} className={'imgCopy'}>{line}</p>)}
-      </div>
-    )*/
-  }
-
   render() {
-    if (!this.state.projects[0]) return <p>Loading...</p>;
+    if (!this.state.title) return <p>Loading...</p>;
 
     const project = this.state.projects[this.state.currentIndex];
-    const styles = {background: `url(${project.images[0].path})`};
+    const styles = {background: `url(${project.thumbnail})`};
 
     return ([
       <div id={'portfolio'}>
@@ -72,16 +57,18 @@ export default class Portfolio extends Component {
             <h2>{this.state.title}</h2>
             <nav>
               <ul>{this.state.projects.map((item, iter) =>
-                <li key={iter}
+                <li key={`portfolio-nav-item-${iter}`}
                     className={iter === this.state.currentIndex ? 'selected' : ''}
-                    data-index={`portfolio-nav-item-${iter}`}
+                    data-index={iter}
                     onClick={this.handleNavClick}>{item.title}</li>)}
               </ul>
             </nav>
             <div>{this.renderPortfolioTile(project)}</div>
           </div>
         </div>
-        <div className={this.state.galleryOpen ? 'visible' : 'hidden'}><Gallery cards={project.images}/></div>
+        <div className={this.state.galleryOpen ? 'visible' : 'hidden'}>
+          <Gallery cards={project.images} renderCopy={this.props.renderCopy} />
+        </div>
         <ScrollTop/>
       </div>
     ])

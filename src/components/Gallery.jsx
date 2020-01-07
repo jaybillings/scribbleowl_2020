@@ -6,8 +6,6 @@ export default class Gallery extends Component {
   constructor(props) {
     super(props);
 
-    console.log(this.props.cards);
-
     this.state = {cardIndex: 0};
 
     this.handleCardChange = this.handleCardChange.bind(this);
@@ -19,12 +17,10 @@ export default class Gallery extends Component {
   }
 
   handleCardChange(e) {
-    console.log('clicked handlecardchange');
     this.setState({cardIndex: parseInt(e.target.dataset.index)});
   }
 
   handleImgClick(e) {
-    console.log(e.target);
     window.open(e.target.src);
   }
 
@@ -34,7 +30,7 @@ export default class Gallery extends Component {
     return (
       <div className={'card full'}>
         <img alt={''} src={cardInfo.path} onClick={this.handleImgClick}/>
-        <div>{cardInfo.desc.map((desc, iter) => <p key={iter}>{desc}</p>)}</div>
+        <div>{this.props.renderCopy(cardInfo.desc)}</div>
       </div>
     )
   }
@@ -42,8 +38,6 @@ export default class Gallery extends Component {
   renderPrevCard() {
     const cardIndex = this.state.cardIndex - 1;
     const canGoBack = cardIndex > -1;
-
-    console.log('prev index', cardIndex);
 
     return (
       <div className={'card partial'}>

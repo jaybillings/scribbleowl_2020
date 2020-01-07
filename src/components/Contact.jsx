@@ -12,18 +12,20 @@ export default class Contact extends Component {
   componentDidMount() {
     this.props.fetchConfig('contact').then(result => {
       if (this.props.forHire) this.setState({title: result.data.forHire.title, copy: result.data.forHire.copy});
-      else this.setState({title: result.data.title, copy: result.data.copy});
+      else this.setState({title: result.data.default.title, copy: result.data.default.copy});
     }).catch(err => console.error(err));
   }
 
   render() {
-    return ([
+    if (!this.state.title) return <p className={'loading'}>Loading...</p>;
+
+    return (
       <div id={'contact'} className={'section'}>
         <h2>{this.state.title}</h2>
-        <p>{this.state.copy}</p>
+        {this.props.renderCopy(this.state.copy)}
         <ContactForm/>
         <ScrollTop/>
       </div>
-    ])
+    )
   }
 }
