@@ -8,6 +8,10 @@ import Contact from '../components/Contact';
 import Skills from "../components/Skills";
 import Footer from "../components/Footer";
 
+import 'normalize.css/normalize.css';
+import '../styles/index.css';
+import '../styles/section.css';
+
 export default class SinglePageLayout extends Component {
   constructor(props) {
     super(props);
@@ -23,7 +27,7 @@ export default class SinglePageLayout extends Component {
 
   render() {
     return [
-      <Header key={'header'} forHire={this.props.forHire} fetchConfig={this.fetchConfig} />,
+      <Header key={'header'} forHire={this.props.forHire} />,
       <About key={'aboutSection'} fetchConfig={this.fetchConfig} />,
       <Skills key={'skillsSection'} fetchConfig={this.fetchConfig} />,
       <Portfolio key={'portfolioSection'} fetchConfig={this.fetchConfig} />,

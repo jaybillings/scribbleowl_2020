@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {renderCopy} from "../js/utilities";
+import {Link} from "react-router-dom";
 
-import Gallery from "./Gallery";
 import ScrollTop from "./ScrollTop";
 
 import "../styles/section-portfolio.css";
@@ -10,10 +10,9 @@ export default class Portfolio extends Component {
   constructor(props) {
     super(props);
 
-    this.state = {title: '', projects: [], currentIndex: 0, galleryOpen: false};
+    this.state = {title: '', projects: [], currentIndex: 0};
 
     this.handleNavClick = this.handleNavClick.bind(this);
-    this.handleGalleryClick = this.handleGalleryClick.bind(this);
     this.renderPortfolioTile = this.renderPortfolioTile.bind(this);
   }
 
@@ -28,19 +27,13 @@ export default class Portfolio extends Component {
     if (index !== this.state.currentIndex) this.setState({currentIndex: index});
   }
 
-  handleGalleryClick() {
-    this.setState(prevState => ({galleryOpen: !prevState.galleryOpen}));
-  }
-
   renderPortfolioTile(project) {
-    const buttonText = this.state.galleryOpen ? 'Close gallery <-' : 'Open gallery ->';
-
     return (
       <div className={'projectTile'}>
         <h3>{project.title} ({project.year})</h3>
         <p><strong>{project.tech.join(', ')}</strong></p>
         {renderCopy(project.desc)}
-        <button type={'button'} className={'fakeLink'} onClick={this.handleGalleryClick}>{buttonText}</button>
+        <Link to={'/gallery/' + this.state.currentIndex}>Open full gallery -></Link>
       </div>
     )
   }
@@ -66,9 +59,6 @@ export default class Portfolio extends Component {
             </nav>
             <div>{this.renderPortfolioTile(project)}</div>
           </div>
-        </div>
-        <div className={this.state.galleryOpen ? 'visible' : 'hidden'}>
-          <Gallery cards={project.images} />
         </div>
         <ScrollTop/>
       </div>

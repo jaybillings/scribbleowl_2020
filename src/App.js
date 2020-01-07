@@ -1,14 +1,16 @@
 import React from 'react';
-
-import 'normalize.css/normalize.css';
-
-import './styles/index.css';
-import './styles/section.css';
+import {BrowserRouter as Router, Route} from "react-router-dom";
 
 import SinglePageLayout from "./layouts/SinglePageLayout";
+import GalleryLayout from "./layouts/GalleryLayout";
 
 function App() {
-  return <SinglePageLayout forHire={false} />;
+  return (
+    <Router>
+      <Route exact path={'/'} component={SinglePageLayout}/>
+      <Route exact path={'/gallery/:projid'} component={GalleryLayout}/>
+    </Router>
+  )
 }
 
 export default App;
