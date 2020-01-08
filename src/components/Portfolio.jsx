@@ -54,7 +54,7 @@ export default class Portfolio extends Component {
         <h3>{project.title} ({project.year})</h3>
         <p><strong>{project.tech.join(', ')}</strong></p>
         {renderCopy(project.copy)}
-        <Link to={`/gallery/${project.alias}`}>Open full gallery -></Link>
+        <Link to={`/gallery/${this.state.currentProj}`}>Open full gallery -></Link>
       </div>
     )
   }
