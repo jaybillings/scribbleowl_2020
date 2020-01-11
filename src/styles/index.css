@@ -53,3 +53,11 @@ a:hover {
 .visible {
   display: inherit;
 }
+
+.right {
+  text-align: right;
+}
+
+.left {
+  text-align: left;
+}

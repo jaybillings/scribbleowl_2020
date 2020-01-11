@@ -21,14 +21,14 @@ export default class SinglePageLayout extends Component {
     this.fetchConfig = this.fetchConfig.bind(this);
   }
 
-  async fetchConfig(fileName) {
-    return this.miniCRMService.get(fileName);
+  async fetchConfig(filename) {
+    return this.miniCRMService.get(filename);
   }
 
   render() {
     return [
       <Header key={'header'} forHire={this.props.forHire} />,
-      <About key={'aboutSection'} fetchConfig={this.fetchConfig} />,
+      <About key={'aboutSection'} />,
       <Skills key={'skillsSection'} fetchConfig={this.fetchConfig} />,
       <Portfolio key={'portfolioSection'} fetchConfig={this.fetchConfig} />,
       <Contact key={'contactSection'} forHire={this.props.forHire} fetchConfig={this.fetchConfig} />,
