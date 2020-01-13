@@ -1,28 +1,11 @@
-nav {
-    background: var(--accent-gray);
+#galleryHeader {
+    position: static;
+    grid-template-columns: 3fr 1fr;
 }
 
-nav > ul {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    justify-items: stretch;
+#galleryHeader p {
+    display: inline-block;
+    font-weight: bold;
     margin: 0;
-    padding: 0.5rem 2rem;
-}
-
-nav li {
-    border: 1px solid transparent;
-    padding: 0.5rem 0;
-}
-
-nav li:hover {
-    border: 1px solid black;
-}
-
-.right {
-    padding-right: 0.5rem;
-}
-
-.left {
-    padding-left: 0.5rem;
+    text-align: right;
 }

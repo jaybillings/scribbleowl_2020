@@ -1,26 +1,26 @@
-#gallery {
+#galleryMain {
     position: relative;
 }
 
-#gallery .galleryInner {
+#galleryMain .galleryInner {
     display: grid;
     grid-template-columns: 1fr;
     margin: 0 auto;
 }
 
-#gallery figure {
+#galleryMain figure {
     grid-row: 2;
     max-width: max-content;
     margin: 0 auto;
 }
 
-#gallery figcaption {
+#galleryMain figcaption {
     grid-row: 1;
     padding: 1rem;
     margin: 1rem 0;
 }
 
-#gallery img {
+#galleryMain img {
     max-width: 100%;
 }
 

@@ -11,7 +11,7 @@ function App() {
     <Router>
       <Switch>
         <Route exact path={'/'} component={SinglePageLayout}/>
-        <Route exact path={'/gallery/:alias'} component={GalleryLayout}/>
+        <Route exact path={['/gallery/:alias/:index','/gallery/:alias/']} component={GalleryLayout}/>
         <Route component={NotFound}/>
       </Switch>
     </Router>
