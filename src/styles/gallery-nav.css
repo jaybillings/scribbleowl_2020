@@ -11,6 +11,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     justify-items: stretch;
+    grid-gap: 1rem;
     margin: 0;
     padding: 0.5rem 2rem;
 }
