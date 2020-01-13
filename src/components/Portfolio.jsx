@@ -19,7 +19,6 @@ export default class Portfolio extends Component {
 
   componentDidMount() {
     this.props.fetchConfig('gallery').then(result => {
-      console.info('result', result);
       this.setState({
         currentProj: result.data.projectOrder[0],
         projectList: result.data.projectOrder,

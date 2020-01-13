@@ -7,6 +7,17 @@
     background: var(--light-overlay);
 }
 
+.portfolioNav > h2 {
+    grid-column: 1 / span 2;
+    margin: 2rem 0 0;
+}
+
+.portfolioNav > nav {
+    border-right: 3px solid var(--dark-accent);
+    text-align: center;
+    align-self: center;
+}
+
 .portfolioNav li {
     padding: 1rem 0;
 }
@@ -18,17 +29,6 @@
 .portfolioNav li:not(.selected):hover, #portfolio li:active {
     text-decoration: underline;
     cursor: pointer;
-}
-
-.portfolioNav > h2 {
-    grid-column: 1 / span 2;
-    margin: 2rem 0 0;
-}
-
-.portfolioNav > nav {
-    border-right: 3px solid var(--alt-color);
-    text-align: center;
-    align-self: center;
 }
 
 #portfolio > #jckb-scroller {
