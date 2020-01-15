@@ -4,7 +4,7 @@ import '../styles/footer.css';
 
 export default function Footer(props) {
   return (
-    <footer>By Jay Billings, 2019. View source and copyright on <a
-      href={'https://github.com/jaybillings/scribbleowl_2020'} target={'_blank'}>GitHub</a>.</footer>
+    <footer><p>By Jay Billings, 2019. View source and copyright on <a
+      href={'https://github.com/jaybillings/scribbleowl_2020'} target={'_blank'}>GitHub</a>.</p></footer>
   )
 }

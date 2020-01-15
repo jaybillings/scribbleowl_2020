@@ -1,40 +1,41 @@
-
-.portfolioNav {
+#portfolio .navContainer {
     display: grid;
     grid-template-columns: 1fr 4fr;
     grid-gap: 1rem;
     padding-bottom: 2rem;
+    margin: 0 2rem;
     background: var(--light-overlay);
 }
 
-.portfolioNav > h2 {
+#portfolio .navContainer h2 {
     grid-column: 1 / span 2;
-    margin: 2rem 0 0;
+    margin: 1.5rem 0 0 1rem;
 }
 
-.portfolioNav > nav {
+#portfolio .navContainer nav {
     border-right: 3px solid var(--dark-accent);
     text-align: center;
     align-self: center;
 }
 
-.portfolioNav li {
+#portfolio .navContainer li {
     padding: 1rem 0;
-}
-
-.portfolioNav li.selected {
-    font-weight: bold;
-}
-
-.portfolioNav li:not(.selected):hover, #portfolio li:active {
-    text-decoration: underline;
+    font-weight: 600;
     cursor: pointer;
+}
+
+#portfolio .navContainer li.selected {
+    font-weight: bold;
+    cursor: default;
+}
+
+#portfolio .navContainer li:not(.selected):hover span {
+    border-bottom: 1px solid black;
 }
 
 #portfolio > #jckb-scroller {
     display: inline-block;
-    margin-left: 3rem;
-    margin-bottom: 1rem;
+    margin: 1rem 0 1rem 3rem;
     border-bottom: 1px solid transparent;
 }
 

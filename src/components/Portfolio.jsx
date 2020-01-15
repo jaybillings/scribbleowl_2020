@@ -40,7 +40,7 @@ export default class Portfolio extends Component {
                 data-alias={alias}
                 className={alias === this.state.currentProj ? 'selected' : ''}
                 onClick={this.handleNavClick}>
-              {this.state.projects[alias].title}
+              <span>{this.state.projects[alias].title}</span>
             </li>
           )}
         </ul>
@@ -67,7 +67,7 @@ export default class Portfolio extends Component {
     return ([
       <div id={'portfolio'}>
         <div style={styles}>
-          <div className={'portfolioNav section'}>
+          <div className={'navContainer'}>
             <h2>{this.state.title}</h2>
             <nav>{this.renderPortfolioNav()}</nav>
             <div>{this.renderPortfolioTile(project)}</div>
