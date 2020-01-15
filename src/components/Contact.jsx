@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import ContactForm from "./ContactForm";
 import ScrollTop from "./ScrollTop";
 import {renderCopy} from "../js/utilities";
+import Loading from "./Loading";
 
 export default class Contact extends Component {
   constructor(props) {
@@ -18,7 +19,7 @@ export default class Contact extends Component {
   }
 
   render() {
-    if (!this.state.title) return <p className={'loading'}>Loading...</p>;
+    if (!this.state.title) return <Loading />;
 
     return (
       <div id={'contact'} className={'section'}>

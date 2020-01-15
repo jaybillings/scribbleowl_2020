@@ -3,6 +3,7 @@ import {Link} from "react-router-dom";
 import {renderCopy} from "../js/utilities";
 
 import ScrollTop from "./ScrollTop";
+import Loading from "./Loading";
 
 import "../styles/section-portfolio.css";
 
@@ -59,7 +60,7 @@ export default class Portfolio extends Component {
   }
 
   render() {
-    if (!this.state.projectList.length) return <p>Loading...</p>;
+    if (!this.state.projectList.length) return <Loading />;
 
     const project = this.state.projects[this.state.currentProj];
     const styles = {background: `url(${project.thumbnail})`};

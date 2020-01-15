@@ -11,7 +11,7 @@ export default class GalleryNav extends Component {
   }
 
   renderNavItems() {
-    const projIndex = this.props.projList.indexOf(this.props.projID);
+    const projIndex = this.props.projList.indexOf(this.props.projID) || -1;
 
     let navItems = [];
 
@@ -37,8 +37,6 @@ export default class GalleryNav extends Component {
   }
 
   render() {
-    if (!this.props.projList) return '';
-
     return (
       <nav id={'galleryNav'}>
         <ul>

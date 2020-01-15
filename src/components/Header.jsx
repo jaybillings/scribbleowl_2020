@@ -23,7 +23,7 @@ export default class Header extends Component {
     const sections = this.defaultSections.concat(this.props.forHire ? [this.hireSection] : [this.contactSection]);
 
     return sections.map(section =>
-      <li key={section[1]}><NavLink to={`/#${section[1]}`} isActive={(match,location) => {
+      <li key={section[1]}><NavLink to={`/#${section[1]}`} isActive={(match, location) => {
         if (!match) return false;
         return location.hash === `#${section[1]}`;
       }} activeClassName={'current'}>{section[0]}</NavLink></li>);

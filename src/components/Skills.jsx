@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
-import ScrollTop from "./ScrollTop";
 import {renderCopy} from "../js/utilities";
+
+import ScrollTop from "./ScrollTop";
+import Loading from "./Loading";
 
 import "../styles/section-skills.css";
 
@@ -18,7 +20,7 @@ export default class Skills extends Component {
   }
 
   render() {
-    if (!this.state.title) return <p className={'loading'}>Loading...</p>;
+    if (!this.state.title) return <Loading/>;
 
     return (
       <div id={'skills'} className={'section'}>
