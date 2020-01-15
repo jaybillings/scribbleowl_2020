@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import app from "../services/socketio";
+import {Redirect} from "react-router";
 
 import GalleryHeader from "../components/gallery/GalleryHeader";
 import GalleryNav from "../components/gallery/GalleryNav";
@@ -23,7 +24,7 @@ export default class GalleryLayout extends Component {
   componentDidMount() {
     this.miniCRMService.get('gallery').then(result => {
       this.setState({projList: result.data.projectOrder, projects: result.data.projects});
-    }).catch(err => console.error(err));
+    }).catch(<Redirect push to={'/notfound'} />);
 
     this.fetchImages();
   }
