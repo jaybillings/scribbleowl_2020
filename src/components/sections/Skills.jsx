@@ -1,10 +1,10 @@
 import React, {Component} from 'react';
-import {renderCopy} from "../js/utilities";
+import {renderCopy} from "../../js/utilities";
 
-import ScrollTop from "./ScrollTop";
-import Loading from "./Loading";
+import ScrollTop from "../ScrollTop";
+import Loading from "../Loading";
 
-import "../styles/section-skills.css";
+import "../../styles/section-skills.css";
 
 export default class Skills extends Component {
   constructor(props) {

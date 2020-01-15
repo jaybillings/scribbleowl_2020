@@ -1,9 +1,9 @@
 import React from "react";
-import {renderCopy} from "../js/utilities";
+import {renderCopy} from "../../js/utilities";
 
-import Loading from "./Loading";
+import Loading from "../Loading";
 
-import "../styles/gallery.css";
+import "../../styles/gallery.css";
 
 export default function Gallery(props) {
   if (!this.props.images.length) return <Loading/>;

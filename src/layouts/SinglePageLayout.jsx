@@ -1,12 +1,12 @@
 import React, {Component} from 'react';
 import app from '../services/socketio';
 
-import Header from '../components/Header';
-import About from '../components/About';
-import Portfolio from '../components/Portfolio';
-import Contact from '../components/Contact';
-import Skills from "../components/Skills";
-import Footer from "../components/Footer";
+import Header from '../components/sections/Header';
+import About from '../components/sections/About';
+import Portfolio from '../components/sections/Portfolio';
+import Contact from '../components/sections/Contact';
+import Skills from "../components/sections/Skills";
+import Footer from "../components/sections/Footer";
 
 import 'normalize.css/normalize.css';
 import '../styles/index.css';

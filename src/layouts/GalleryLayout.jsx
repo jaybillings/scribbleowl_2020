@@ -1,10 +1,10 @@
 import React, {Component} from 'react';
 import app from "../services/socketio";
 
-import GalleryHeader from "../components/GalleryHeader";
-import GalleryNav from "../components/GalleryNav";
-import Gallery from "../components/Gallery";
-import Footer from "../components/Footer";
+import GalleryHeader from "../components/gallery/GalleryHeader";
+import GalleryNav from "../components/gallery/GalleryNav";
+import Gallery from "../components/gallery/Gallery";
+import Footer from "../components/sections/Footer";
 
 import 'normalize.css/normalize.css';
 import '../styles/index.css';

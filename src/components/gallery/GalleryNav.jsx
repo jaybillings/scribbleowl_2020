@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {Link} from "react-router-dom";
 
-import '../styles/gallery-nav.css';
+import '../../styles/gallery-nav.css';
 
 export default class GalleryNav extends Component {
   constructor(props) {

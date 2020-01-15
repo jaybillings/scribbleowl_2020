@@ -1,7 +1,7 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 
-import "../styles/gallery-header.css";
+import "../../styles/gallery-header.css";
 
 export default function GalleryHeader() {
   if (!this.props.projects[this.props.projID]) return <header><Link to={'/'}><h1>Jay Billings</h1></Link></header>;
