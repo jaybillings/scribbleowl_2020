@@ -51,12 +51,12 @@ a {
   text-decoration: none;
 }
 
-a.current {
-  color: red;
-}
-
 a:hover {
   border-bottom: 1px solid black;
+}
+
+a.current {
+  color: red;
 }
 
 .hidden {
@@ -77,6 +77,10 @@ a:hover {
 
 .center {
   text-align: center;
+}
+
+.section {
+  margin: 2rem 3rem;
 }
 
 #root {

@@ -1,46 +1,66 @@
-#portfolio .navContainer {
+.portfolio {
+    margin: 2rem 0;
+}
+
+.portfolio .portfolioInner {
     display: grid;
     grid-template-columns: 1fr 4fr;
     grid-gap: 1rem;
-    padding-bottom: 2rem;
     margin: 0 2rem;
+    padding: 1.5rem 0 2rem;
     background: var(--light-overlay);
 }
 
-#portfolio .navContainer h2 {
+.portfolio .portfolioInner h2 {
     grid-column: 1 / span 2;
-    margin: 1.5rem 0 0 1rem;
+    margin: 0 1rem;
 }
 
-#portfolio .navContainer nav {
-    border-right: 3px solid var(--dark-accent);
+.portfolio .portfolioInner h3 {
+    font-size: 1.1rem;
+    margin: 0;
+}
+
+.portfolio .portfolioInner nav {
     text-align: center;
     align-self: center;
 }
 
-#portfolio .navContainer li {
+.portfolio .portfolioInner li {
     padding: 1rem 0;
+    font-size: 0.95rem;
     font-weight: 600;
     cursor: pointer;
 }
 
-#portfolio .navContainer li.selected {
+.portfolio .portfolioInner li.selected {
     font-weight: bold;
     cursor: default;
 }
 
-#portfolio .navContainer li:not(.selected):hover span {
-    border-bottom: 1px solid black;
+.portfolio .portfolioInner li:not(.selected):hover span {
+    font-weight: bold;
 }
 
-#portfolio {}
+.portfolio .projectTile {
+    border-left: 3px solid var(--dark-accent);
+    padding: 0 2rem;
+}
 
-#portfolio > #jckb-scroller {
+.portfolio .projectTile a {
+    vertical-align: text-top;
+}
+
+.portfolio .projectTile .copy {
+    margin: 1.5rem 0;
+}
+
+.portfolio > #jckb-scroller {
     display: inline-block;
-    margin: 1rem 0 1rem 3rem;
+    margin: 1rem 0 0 3rem;
     border-bottom: 1px solid transparent;
 }
 
-#portfolio > #jckb-scroller:hover {
+.portfolio > #jckb-scroller:hover {
     border-bottom: 1px solid black;
 }

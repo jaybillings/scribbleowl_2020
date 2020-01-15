@@ -1,9 +1,9 @@
-#galleryHeader {
+.galleryHeader {
     position: static;
     grid-template-columns: 3fr 1fr;
 }
 
-#galleryHeader p {
+.galleryHeader p {
     display: inline-block;
     font-weight: bold;
     margin: 0;

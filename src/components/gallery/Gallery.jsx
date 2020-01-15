@@ -11,7 +11,7 @@ export default function Gallery(props) {
   const image = this.props.images[this.props.imgIndex];
 
   return (
-    <div id={'galleryMain'} className={'section'}>
+    <div className={'section gallery'}>
       <div className={'galleryInner'}>
         <figure><img alt={''} src={image.path}/></figure>
         <figcaption className={'copy'}>{renderCopy(image.copy)}</figcaption>

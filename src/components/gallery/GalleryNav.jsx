@@ -38,7 +38,7 @@ export default class GalleryNav extends Component {
 
   render() {
     return (
-      <nav id={'galleryNav'}>
+      <nav className={'galleryNav'}>
         <ul>
           {this.renderNavItems().map(item => item)}
         </ul>

@@ -5,32 +5,40 @@
 .contactForm label {
     display: block;
     margin: 1rem 0;
+    text-transform: capitalize;
 }
 
 .contactForm label span {
     display: block;
+    padding-bottom: 0.25rem;
 }
 
 .contactForm input, textarea {
-    font-size: 16px;
     width: 100%;
     padding: 0.75em;
+    border: 1px solid #777777;
+    font-size: 16px;
 }
 
 .contactForm input {
-    max-width: 300px;
+    max-width: 350px;
 }
 
 .contactForm textarea {
-    max-width: 500px;
+    font-size: initial;
+    max-width: 600px;
+}
+
+.contactForm input:hover, .contactForm textarea:hover {
+    border: 1px solid var(--dark-accent);
 }
 
 .contactForm button {
-    color: #222222;
+    color: #444444;
     font-weight: 600;
     padding: 0.5rem 1rem;
     background-color: #eeeeee;
-    border: 1px solid #222222;
+    border: 1px solid #777777;
 }
 
 .contactForm button:hover {

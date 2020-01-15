@@ -35,6 +35,7 @@ export default class Portfolio extends Component {
 
   renderPortfolioNav() {
     return (
+      <nav>
         <ul>
           {this.state.projectList.map(alias =>
             <li key={alias}
@@ -45,6 +46,7 @@ export default class Portfolio extends Component {
             </li>
           )}
         </ul>
+      </nav>
     )
   }
 
@@ -53,25 +55,25 @@ export default class Portfolio extends Component {
       <div className={'projectTile'}>
         <h3>{project.title} ({project.year})</h3>
         <p><strong>{project.tech.join(', ')}</strong></p>
-        {renderCopy(project.copy)}
+        <div className={'copy'}>{renderCopy(project.copy)}</div>
         <Link to={`/gallery/${this.state.currentProj}`}>Open full gallery -></Link>
       </div>
     )
   }
 
   render() {
-    if (!this.state.projectList.length) return <Loading />;
+    if (!this.state.projectList.length) return <Loading/>;
 
     const project = this.state.projects[this.state.currentProj];
     const styles = {background: `url(${project.thumbnail})`};
 
     return ([
-      <div id={'portfolio'}>
+      <div className={'portfolio'}>
         <div style={styles}>
-          <div className={'navContainer'}>
+          <div className={'portfolioInner'}>
             <h2>{this.state.title}</h2>
-            <nav>{this.renderPortfolioNav()}</nav>
-            <div>{this.renderPortfolioTile(project)}</div>
+            {this.renderPortfolioNav()}
+            {this.renderPortfolioTile(project)}
           </div>
         </div>
         <ScrollTop/>

@@ -1,4 +1,4 @@
-#galleryNav {
+.galleryNav {
     position: sticky;
     top: 0;
     background: var(--accent-gray);
@@ -7,7 +7,7 @@
     z-index: 1;
 }
 
-#galleryNav > ul {
+.galleryNav ul {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     justify-items: stretch;
@@ -16,31 +16,31 @@
     padding: 0.5rem 2rem;
 }
 
-#galleryNav li.inactive {
-    padding: 0.5rem 0;
-    color: var(--neutral);
-}
-
-#galleryNav li a {
+.galleryNav li a {
     display: inline-block;
     width: 100%;
     border: 3px solid transparent;
     padding: 0.5rem 0;
 }
 
-#galleryNav li a:hover {
+.galleryNav li a:hover {
     border: 3px dotted black;
     background: #d3d3d3;
 }
 
-#galleryNav .right {
+.galleryNav li.inactive {
+    padding: 0.5rem 0;
+    color: var(--neutral);
+}
+
+.galleryNav .right {
     padding-right: 0.5rem;
 }
 
-#galleryNav .left {
+.galleryNav .left {
     padding-left: 0.5rem;
 }
 
-#galleryNav .center {
+.galleryNav .center {
     padding: 0 0.5rem;
 }

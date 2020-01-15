@@ -2,8 +2,6 @@ import React, {Component} from 'react';
 
 import ScrollTop from "../ScrollTop";
 
-import '../../styles/section.css';
-
 export default class About extends Component {
   constructor(props) {
     super(props);
@@ -19,7 +17,7 @@ export default class About extends Component {
 
   render() {
     return ([
-      <div id={'about'} className={'section'}>
+      <div className={'about section'}>
         <h2>{this.state.title}</h2>
         {this.state.copy.map((line, iter) => <p key={iter}>{line}</p>)}
         <ScrollTop/>

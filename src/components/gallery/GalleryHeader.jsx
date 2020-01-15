@@ -9,7 +9,7 @@ export default function GalleryHeader() {
   const projName = this.props.projects[this.props.projID].title;
 
   return (
-    <header id={'galleryHeader'}>
+    <header className={'galleryHeader'}>
       <h1>"{projName}" by <Link to={'/'}>Jay Billings</Link></h1>
     </header>
   )

@@ -8,7 +8,6 @@ import Footer from "../components/sections/Footer";
 
 import 'normalize.css/normalize.css';
 import '../styles/index.css';
-import '../styles/section.css';
 
 export default class GalleryLayout extends Component {
   constructor(props) {
