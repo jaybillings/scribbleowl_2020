@@ -9,7 +9,7 @@
 
 .galleryNav ul {
     display: grid;
-    grid-template-columns: 1fr 1fr 2fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     justify-items: center;
     grid-gap: 2rem;
     margin: 0;
@@ -22,24 +22,26 @@
 }
 
 .galleryNav li {
+    display: block;
+    width: 100%;
+}
+
+.galleryNav li.inactive {
+    color: var(--neutral);
+    padding: 0.5rem;
+}
+
+
+.galleryNav li a {
     display: inline-block;
     width: 100%;
     padding: 0.5rem;
     border: 1px solid transparent;
 }
 
-.galleryNav li.inactive {
-    color: var(--neutral);
-}
-
-.galleryNav li:not(.inactive):hover {
+.galleryNav li a:hover {
     border: 1px dotted black;
     background: #d3d3d3;
-    cursor: pointer;
-}
-
-.galleryNav li a:hover {
-    border: none;
 }
 
 .galleryNav .right {
