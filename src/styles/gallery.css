@@ -1,5 +1,6 @@
 .gallery {
     position: relative;
+    margin: 0 2rem;
 }
 
 .gallery figure {

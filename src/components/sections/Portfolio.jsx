@@ -30,7 +30,7 @@ export default class Portfolio extends Component {
   }
 
   handleNavClick(e) {
-    const alias = e.target.dataset.alias || '';
+    const alias = e.currentTarget.dataset.alias || '';
     if (alias !== this.state.currentProj) this.setState({currentProj: alias});
   }
 

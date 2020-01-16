@@ -9,28 +9,37 @@
 
 .galleryNav ul {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    justify-items: stretch;
-    grid-gap: 1rem;
+    grid-template-columns: 1fr 1fr 2fr 1fr 1fr;
+    justify-items: center;
+    grid-gap: 2rem;
     margin: 0;
     padding: 0.5rem 2rem;
 }
 
-.galleryNav li a {
-    display: inline-block;
-    width: 100%;
-    border: 3px solid transparent;
-    padding: 0.5rem 0;
+.galleryNav a, .galleryNav li {
+    margin: 0;
+    padding: 0;
 }
 
-.galleryNav li a:hover {
-    border: 3px dotted black;
-    background: #d3d3d3;
+.galleryNav li {
+    display: inline-block;
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid transparent;
 }
 
 .galleryNav li.inactive {
-    padding: 0.5rem 0;
     color: var(--neutral);
+}
+
+.galleryNav li:not(.inactive):hover {
+    border: 1px dotted black;
+    background: #d3d3d3;
+    cursor: pointer;
+}
+
+.galleryNav li a:hover {
+    border: none;
 }
 
 .galleryNav .right {
@@ -39,8 +48,4 @@
 
 .galleryNav .left {
     padding-left: 0.5rem;
-}
-
-.galleryNav .center {
-    padding: 0 0.5rem;
 }

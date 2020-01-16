@@ -6,12 +6,12 @@ import Loading from "../Loading";
 import "../../styles/gallery.css";
 
 export default function Gallery(props) {
-  if (!this.props.images.length) return <Loading/>;
+  if (!props.images.length) return <Loading/>;
 
-  const image = this.props.images[this.props.imgIndex];
+  const image = props.images[props.imgIndex];
 
   return (
-    <div className={'section gallery'}>
+    <div className={'gallery'}>
       <div className={'galleryInner'}>
         <figure><img alt={''} src={image.path}/></figure>
         <figcaption className={'copy'}>{renderCopy(image.copy)}</figcaption>
