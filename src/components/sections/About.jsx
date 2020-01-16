@@ -17,7 +17,7 @@ export default class About extends Component {
 
   render() {
     return ([
-      <div className={'about section'}>
+      <div id={'about'} className={'section'}>
         <h2>{this.state.title}</h2>
         {this.state.copy.map((line, iter) => <p key={iter}>{line}</p>)}
         <ScrollTop/>

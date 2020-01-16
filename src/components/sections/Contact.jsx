@@ -22,7 +22,7 @@ export default class Contact extends Component {
     if (!this.state.title) return <Loading />;
 
     return (
-      <div className={'contact section'}>
+      <div id={'contact'} className={'contact section'}>
         <h2>{this.state.title}</h2>
         {renderCopy(this.state.copy)}
         <ContactForm/>

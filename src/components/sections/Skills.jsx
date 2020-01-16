@@ -23,7 +23,7 @@ export default class Skills extends Component {
     if (!this.state.title) return <Loading/>;
 
     return (
-      <div className={'skills section'}>
+      <div id={'skills'} className={'section'}>
         <div>
           <h2>{this.state.title}</h2>
           {renderCopy(this.state.copy)}

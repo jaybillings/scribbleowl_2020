@@ -11,7 +11,7 @@ export default class Portfolio extends Component {
   constructor(props) {
     super(props);
 
-    this.state = {title: 'Project Gallery', currentProj: '', projectList: [], projects: {}};
+    this.state = {title: 'Past Projects', currentProj: '', projectList: [], projects: {}};
 
     this.handleNavClick = this.handleNavClick.bind(this);
     this.renderPortfolioNav = this.renderPortfolioNav.bind(this);
@@ -68,7 +68,7 @@ export default class Portfolio extends Component {
     const styles = {background: `url(${project.thumbnail})`};
 
     return ([
-      <div className={'portfolio'}>
+      <div id={'portfolio'}>
         <div style={styles}>
           <div className={'portfolioInner'}>
             <h2>{this.state.title}</h2>
