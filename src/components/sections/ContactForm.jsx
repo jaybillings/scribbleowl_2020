@@ -29,7 +29,6 @@ export default class ContactForm extends Component {
     };
 
     this.mailerService.create(email).then(result => {
-      console.info(result);
       this.clearForm();
       this.setState({submitStatus: 1});
     }).catch(err => {

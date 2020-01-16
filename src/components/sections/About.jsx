@@ -21,11 +21,9 @@ export default class About extends Component {
   renderSkillsSection() {
     const skillsSection = [];
 
-    console.log(this.state.skillsSection);
-
-    this.state.skillsSection.forEach(section => {
-      skillsSection.push(<h3>{section.header}</h3>);
-      skillsSection.push(renderCopy(section.copy));
+    this.state.skillsSection.forEach((section, index) => {
+      skillsSection.push(<h3 key={`header_${index}`}>{section.header}</h3>);
+      skillsSection.push(renderCopy(section.copy, 'aboutskills'));
     });
 
     return skillsSection.map(elem => elem);
@@ -33,9 +31,9 @@ export default class About extends Component {
 
   render() {
     return ([
-      <div id={'about'} className={'section'}>
+      <div id={'about'} key={'about'} className={'section'}>
         <h2>{this.state.title}</h2>
-        {this.state.copy.map((line, iter) => <p key={iter}>{line}</p>)}
+        {this.state.copy.map((line, index) => <p key={`aboutmain_${index}`}>{line}</p>)}
         {this.renderSkillsSection()}
         <ScrollTop/>
       </div>

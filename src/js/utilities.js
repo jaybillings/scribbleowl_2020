@@ -1,9 +1,9 @@
 import React from "react";
 
-const renderCopy = function(copy) {
+const renderCopy = function(copy, tag) {
   if (!copy) return;
   if (!copy.length) return <p>{copy}</p>;
-  return copy.map(line => <p key={Math.round(Math.random() * 1000)}>{line}</p>);
+  return copy.map((line, index) => <p key={`copy_${tag}_${index}`}>{line}</p>);
 };
 
 export {

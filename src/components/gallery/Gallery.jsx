@@ -14,7 +14,7 @@ export default function Gallery(props) {
     <div className={'gallery'}>
       <div className={'galleryInner'}>
         <figure><img alt={''} src={image.path}/></figure>
-        <figcaption className={'copy'}>{renderCopy(image.copy)}</figcaption>
+        <figcaption className={'copy'}>{renderCopy(image.copy, 'galimg')}</figcaption>
       </div>
     </div>
   )
