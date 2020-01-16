@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import ContactForm from "../ContactForm";
+import ContactForm from "./ContactForm";
 import ScrollTop from "../ScrollTop";
 import {renderCopy} from "../../js/utilities";
 import Loading from "../Loading";

@@ -11,7 +11,7 @@ export default class Portfolio extends Component {
   constructor(props) {
     super(props);
 
-    this.state = {title: 'Past Projects', currentProj: '', projectList: [], projects: {}};
+    this.state = {title: '', currentProj: '', projectList: [], projects: {}};
 
     this.handleNavClick = this.handleNavClick.bind(this);
     this.renderPortfolioNav = this.renderPortfolioNav.bind(this);
@@ -21,6 +21,7 @@ export default class Portfolio extends Component {
   componentDidMount() {
     this.props.fetchConfig('gallery').then(result => {
       this.setState({
+        title: result.data.title,
         currentProj: result.data.projectOrder[0],
         projectList: result.data.projectOrder,
         projects: result.data.projects
@@ -62,7 +63,7 @@ export default class Portfolio extends Component {
   }
 
   render() {
-    if (!this.state.projectList.length) return <Loading/>;
+    if (!this.state.projectList.length) return <div id={'portfolio'}><Loading/></div>;
 
     const project = this.state.projects[this.state.currentProj];
     const styles = {background: `url(${project.thumbnail})`};

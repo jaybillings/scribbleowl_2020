@@ -10,9 +10,9 @@ function App() {
   return (
     <Router>
       <Switch>
-        <Route exact path={'/'} component={SinglePageLayout}/>
-        <Route exact path={['/gallery/:alias/:index','/gallery/:alias/']} component={GalleryLayout}/>
-        <Route component={NotFound}/>
+        <Route key={'single'} exact path={'/'} component={SinglePageLayout}/>
+        <Route key={'gallery'} exact path={['/gallery/:alias/:index','/gallery/:alias/']} component={GalleryLayout}/>
+        <Route key={'error'} component={NotFound}/>
       </Switch>
     </Router>
   )

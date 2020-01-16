@@ -1,12 +1,11 @@
 import React, {Component} from 'react';
 import app from '../services/socketio';
 
-import Header from '../components/sections/Header';
+import Header from '../components/Header';
 import About from '../components/sections/About';
 import Portfolio from '../components/sections/Portfolio';
 import Contact from '../components/sections/Contact';
-import Skills from "../components/sections/Skills";
-import Footer from "../components/sections/Footer";
+import Footer from "../components/Footer";
 
 import 'normalize.css/normalize.css';
 import '../styles/index.css';
@@ -27,8 +26,7 @@ export default class SinglePageLayout extends Component {
   render() {
     return [
       <Header key={'header'} forHire={this.props.forHire} />,
-      <About key={'about'} />,
-      <Skills key={'skills'} fetchConfig={this.fetchConfig} />,
+      <About key={'about'} fetchConfig={this.fetchConfig} />,
       <Portfolio key={'portfolio'} fetchConfig={this.fetchConfig} />,
       <Contact key={'contact'} forHire={this.props.forHire} fetchConfig={this.fetchConfig} />,
       <Footer key={'footer'} />

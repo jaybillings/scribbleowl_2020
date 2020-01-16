@@ -5,7 +5,7 @@ import {Redirect} from "react-router";
 import GalleryHeader from "../components/gallery/GalleryHeader";
 import GalleryNav from "../components/gallery/GalleryNav";
 import Gallery from "../components/gallery/Gallery";
-import Footer from "../components/sections/Footer";
+import Footer from "../components/Footer";
 
 import 'normalize.css/normalize.css';
 import '../styles/index.css';

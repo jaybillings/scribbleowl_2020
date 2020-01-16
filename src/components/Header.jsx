@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import {Link} from "react-router-dom";
 import {NavHashLink as NavLink} from "react-router-hash-link";
 
-import '../../styles/header.css';
+import '../styles/header.css';
 
 export default class Header extends Component {
   constructor(props) {

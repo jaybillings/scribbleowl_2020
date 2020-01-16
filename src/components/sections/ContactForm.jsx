@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
-import app from '../services/socketio';
+import app from '../../services/socketio';
 
-import '../styles/contact-form.css';
+import '../../styles/contact-form.css';
 
 export default class ContactForm extends Component {
   constructor(props) {
