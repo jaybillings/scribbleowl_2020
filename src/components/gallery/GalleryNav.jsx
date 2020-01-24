@@ -27,7 +27,7 @@ export default class GalleryNav extends Component {
 
     navItems.push(<li key={'home'} className={'center'}><Link to={'/'}>Return Home</Link></li>);
 
-    if (this.props.imgIndex < this.props.images.length - 1) navItems.push(<li key={'nextimg'}>
+    if (this.props.imgIndex < this.props.imgCount - 1) navItems.push(<li key={'nextimg'}>
       <Link to={`/gallery/${this.props.projID}/${this.props.imgIndex + 1}`} className={'right'}>Next image &gt;</Link>
     </li>);
     else navItems.push(<li key={'nextimg'} className={'right inactive'}>Next image &gt;</li>);
@@ -37,14 +37,14 @@ export default class GalleryNav extends Component {
     </li>);
     else navItems.push(<li key={'nextproj'} className={'right inactive'}>Next Project &gt;&gt;</li>);
 
-    return navItems;
+    return navItems.map(item => item);
   }
 
   render() {
     return (
       <nav className={'galleryNav'}>
         <ul>
-          {this.renderNavItems().map(item => item)}
+          {this.renderNavItems()}
         </ul>
       </nav>
     );

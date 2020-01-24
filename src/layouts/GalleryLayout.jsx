@@ -10,33 +10,30 @@ import 'normalize.css/normalize.css';
 import '../styles/index.css';
 
 export default class GalleryLayout extends Component {
-  constructor(props) {
-    super(props);
-
-    this.projID = this.props.match.params.alias || '';
-    this.imgIndex = parseInt(this.props.match.params.index, 10) || 0;
-  }
-
   render() {
-    let galleryConfig, projImages, currentProj;
+    const projID = this.props.match.params.alias || '';
+    const imgIndex = parseInt(this.props.match.params.index, 10) || 0;
+    let galleryConfig, projImages;
 
     try {
       galleryConfig = require('../content/gallery.json');
-      projImages = require(`../content/projects/config_${this.projID}`);
+      projImages = require(`../content/projects/config_${projID}`);
     } catch(err) {
+      console.error(err);
       return <Redirect to={'/oops'} />;
     }
 
-    try {
-      currentProj = galleryConfig.projects[this.projID];
-    } catch(err) {
-      return <Redirect to={'/oops'} />;
+    const currentProj = galleryConfig.projects[projID];
+
+    if (!currentProj) {
+      console.error('currentProj does not exist');
+      return <Redirect to={'/404'} />;
     }
 
     return [
-      <GalleryHeader key={'header'} projID={this.projID} currentProj={currentProj} />,
-      <GalleryNav key={'nav'} projID={this.projID} projList={galleryConfig.projectOrder} projects={galleryConfig.projects} imgIndex={this.imgIndex} imgCount={projImages.length} />,
-      <Gallery key={'gallery'} imgIndex={this.imgIndex} images={projImages} />,
+      <GalleryHeader key={'header'} title={currentProj.title} />,
+      <GalleryNav key={'nav'} projID={projID} projList={galleryConfig.projectOrder} projects={galleryConfig.projects} imgIndex={imgIndex} imgCount={projImages.length} />,
+      <Gallery key={'gallery'} imgIndex={imgIndex} images={projImages} />,
       <Footer key='footer'/>
     ]
   }
