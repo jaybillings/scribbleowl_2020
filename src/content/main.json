@@ -1,0 +1,21 @@
+{
+  "title": "Jay Billings",
+  "navSections": [
+    {
+      "path": "about",
+      "title": "About Me"
+    },
+    {
+      "path": "projects",
+      "title": "Past Projects"
+    },
+    {
+      "path": "contact",
+      "title": "Contact Me"
+    },
+    {
+      "path": "gallery",
+      "title": "Project Gallery"
+    }
+  ]
+}

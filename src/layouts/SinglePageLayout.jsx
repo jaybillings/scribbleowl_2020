@@ -6,13 +6,15 @@ import Portfolio from '../components/sections/Portfolio';
 import Contact from '../components/sections/Contact';
 import Footer from "../components/common/Footer";
 
+import mainConfig from '../content/main.json';
+
 import 'normalize.css/normalize.css';
 import '../styles/index.css';
 
 export default class SinglePageLayout extends Component {
   render() {
     return [
-      <Header key={'header'} />,
+      <Header key={'header'} title={mainConfig.title} navSections={mainConfig.navSections} />,
       <About key={'about'} />,
       <Portfolio key={'portfolio'} />,
       <Contact key={'contact'} />,
