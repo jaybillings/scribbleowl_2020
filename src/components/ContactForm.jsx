@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
-import app from '../../services/socketio';
 
-import '../../styles/contact-form.css';
+import '../styles/contact-form.css';
 
 export default class ContactForm extends Component {
   constructor(props) {
@@ -13,7 +12,7 @@ export default class ContactForm extends Component {
     this.emailRef = React.createRef();
     this.msgRef = React.createRef();
 
-    this.mailerService = app.service('send-mail');
+    //this.mailerService = app.service('send-mail');
 
     this.sendMessage = this.sendMessage.bind(this);
     this.clearForm = this.clearForm.bind(this);
@@ -28,13 +27,15 @@ export default class ContactForm extends Component {
       body: this.msgRef.current.value
     };
 
-    this.mailerService.create(email).then(result => {
+    console.info(email);
+
+    /*this.mailerService.create(email).then(result => {
       this.clearForm();
       this.setState({submitStatus: 1});
     }).catch(err => {
       console.error(err);
       this.setState({submitStatus: 0});
-    });
+    });*/
   }
 
   clearForm() {

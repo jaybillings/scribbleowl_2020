@@ -2,8 +2,10 @@ import React, {Component} from 'react';
 import {Link} from "react-router-dom";
 import {renderCopy} from "../../js/utilities";
 
-import ScrollTop from "../ScrollTop";
-import Loading from "../Loading";
+import ScrollTop from "../common/ScrollTop";
+import Loading from "../common/Loading";
+
+import pageContent from '../../content/gallery';
 
 import "../../styles/section-portfolio.css";
 

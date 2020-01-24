@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
-import ContactForm from "./ContactForm";
-import ScrollTop from "../ScrollTop";
 import {renderCopy} from "../../js/utilities";
 import Loading from "../Loading";
+import ContactForm from "../ContactForm";
+import ScrollTop from "../common/ScrollTop";
 
 export default class Contact extends Component {
   constructor(props) {

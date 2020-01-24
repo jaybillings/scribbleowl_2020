@@ -1,7 +1,9 @@
 import React, {Component} from 'react';
 import {renderCopy} from "../../js/utilities";
 
-import ScrollTop from "../ScrollTop";
+import ScrollTop from "../common/ScrollTop";
+
+import pageContent from '../../content/about.json';
 
 export default class About extends Component {
   constructor(props) {

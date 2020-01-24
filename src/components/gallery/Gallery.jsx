@@ -1,7 +1,7 @@
 import React from "react";
 import {renderCopy} from "../../js/utilities";
 
-import Loading from "../Loading";
+import Loading from "../common/Loading";
 
 import "../../styles/gallery.css";
 
