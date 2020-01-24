@@ -1,0 +1,39 @@
+{
+  "title": "Past Projects",
+  "projectOrder": [
+    "vsem",
+    "mcb"
+  ],
+  "projects": {
+    "vsem": {
+      "title": "Visit Seattle Events Manager",
+      "thumbnail": "https://via.placeholder.com/250/989898.png",
+      "year": "2028",
+      "copy": [
+        "Probably not being used but you never know"
+      ],
+      "tech": [
+        "NodeJS",
+        "FeathersJS",
+        "ReactJS",
+        "CSS",
+        "MariaDB",
+        "KNEX"
+      ]
+    },
+    "mcb": {
+      "title": "Meteor Client Backend",
+      "thumbnail": "https://via.placeholder.com/250/444444.png",
+      "year": "1992",
+      "copy": [
+        "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit,",
+        "sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt."
+      ],
+      "tech": [
+        "Python",
+        "jQuery",
+        "SCSS"
+      ]
+    }
+  }
+}

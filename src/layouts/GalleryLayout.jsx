@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import app from "../services/socketio";
 import {Redirect} from "react-router";
 
 import GalleryHeader from "../components/gallery/GalleryHeader";
@@ -14,43 +13,30 @@ export default class GalleryLayout extends Component {
   constructor(props) {
     super(props);
 
-    this.state = {projList: [], projects: {}, images: []};
-
-    this.miniCRMService = app.service('mini-crm');
-
-    this.fetchImages = this.fetchImages.bind(this);
-  }
-
-  componentDidMount() {
-    this.miniCRMService.get('gallery').then(result => {
-      this.setState({projList: result.data.projectOrder, projects: result.data.projects});
-    }).catch(<Redirect push to={'/notfound'} />);
-
-    this.fetchImages();
-  }
-
-  componentDidUpdate(prevProps, prevState, snapshot) {
-    if (prevProps.match.params.alias !== this.props.match.params.alias) {
-      this.fetchImages();
-    }
-  }
-
-  fetchImages() {
-    const projID = this.props.match.params.alias;
-
-    this.miniCRMService.get(`projects/config_${projID}`).then(result => {
-      this.setState({images: result.data});
-    }).catch(err => console.error(err));
+    this.projID = this.props.match.params.alias || '';
+    this.imgIndex = parseInt(this.props.match.params.index, 10) || 0;
   }
 
   render() {
-    const projID = this.props.match.params.alias || '';
-    const imgIndex = parseInt(this.props.match.params.index, 10) || 0;
+    let galleryConfig, projImages, currentProj;
+
+    try {
+      galleryConfig = require('../content/gallery.json');
+      projImages = require(`../content/projects/config_${this.projID}`);
+    } catch(err) {
+      return <Redirect to={'/oops'} />;
+    }
+
+    try {
+      currentProj = galleryConfig.projects[this.projID];
+    } catch(err) {
+      return <Redirect to={'/oops'} />;
+    }
 
     return [
-      <GalleryHeader key={'header'} projID={projID} projects={this.state.projects} />,
-      <GalleryNav key={'nav'} projID={projID} projList={this.state.projList} projects={this.state.projects} imgIndex={imgIndex} images={this.state.images} />,
-      <Gallery key={'gallery'} images={this.state.images} imgIndex={imgIndex} />,
+      <GalleryHeader key={'header'} projID={this.projID} currentProj={currentProj} />,
+      <GalleryNav key={'nav'} projID={this.projID} projList={galleryConfig.projectOrder} projects={galleryConfig.projects} imgIndex={this.imgIndex} imgCount={projImages.length} />,
+      <Gallery key={'gallery'} imgIndex={this.imgIndex} images={projImages} />,
       <Footer key='footer'/>
     ]
   }
