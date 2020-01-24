@@ -3,9 +3,8 @@ import {Link} from "react-router-dom";
 import {renderCopy} from "../../js/utilities";
 
 import ScrollTop from "../common/ScrollTop";
-import Loading from "../common/Loading";
 
-import pageContent from '../../content/gallery';
+import pageContent from '../../content/gallery.json';
 
 import "../../styles/section-portfolio.css";
 
@@ -13,22 +12,15 @@ export default class Portfolio extends Component {
   constructor(props) {
     super(props);
 
-    this.state = {title: '', currentProj: '', projectList: [], projects: {}};
+    this.title = pageContent.title;
+    this.projects = pageContent.projects;
+    this.projectList = pageContent.projectOrder;
+
+    this.state = {currentProj: this.projectList[0]};
 
     this.handleNavClick = this.handleNavClick.bind(this);
     this.renderPortfolioNav = this.renderPortfolioNav.bind(this);
     this.renderPortfolioTile = this.renderPortfolioTile.bind(this);
-  }
-
-  componentDidMount() {
-    this.props.fetchConfig('gallery').then(result => {
-      this.setState({
-        title: result.data.title,
-        currentProj: result.data.projectOrder[0],
-        projectList: result.data.projectOrder,
-        projects: result.data.projects
-      });
-    }).catch(err => console.error(err));
   }
 
   handleNavClick(e) {
@@ -40,12 +32,12 @@ export default class Portfolio extends Component {
     return (
       <nav>
         <ul>
-          {this.state.projectList.map(alias =>
+          {this.projectList.map(alias =>
             <li key={alias}
                 data-alias={alias}
                 className={alias === this.state.currentProj ? 'selected' : ''}
                 onClick={this.handleNavClick}>
-              <span>{this.state.projects[alias].title}</span>
+              <span>{this.projects[alias].title}</span>
             </li>
           )}
         </ul>
@@ -65,18 +57,16 @@ export default class Portfolio extends Component {
   }
 
   render() {
-    if (!this.state.projectList.length) return <div id={'portfolio'}><Loading/></div>;
-
-    const project = this.state.projects[this.state.currentProj];
-    const styles = {background: `url(${project.thumbnail})`};
+    const currentProject = this.projects[this.state.currentProj];
+    const tileStyle = {background: `url(${currentProject.thumbnail})`};
 
     return ([
       <div key={'portfolio'} id={'portfolio'}>
-        <div style={styles}>
+        <div style={tileStyle}>
           <div className={'portfolioInner'}>
-            <h2>{this.state.title}</h2>
+            <h2>{this.title}</h2>
             {this.renderPortfolioNav()}
-            {this.renderPortfolioTile(project)}
+            {this.renderPortfolioTile(currentProject)}
           </div>
         </div>
         <ScrollTop/>

@@ -24,10 +24,14 @@ export default class ContactForm extends Component {
 
     const email = {
       from: this.emailRef.current.value,
+      subject: `Form Submission From ${this.nameRef.current.value}`,
       body: this.msgRef.current.value
     };
 
     console.info(email);
+
+    this.clearForm();
+    this.setState({submitStatus: 1});
 
     /*this.mailerService.create(email).then(result => {
       this.clearForm();

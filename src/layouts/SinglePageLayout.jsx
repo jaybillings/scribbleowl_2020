@@ -1,34 +1,21 @@
 import React, {Component} from 'react';
-import app from '../services/socketio';
 
 import Header from '../components/Header';
 import About from '../components/sections/About';
 import Portfolio from '../components/sections/Portfolio';
 import Contact from '../components/sections/Contact';
-import Footer from "../components/Footer";
+import Footer from "../components/common/Footer";
 
 import 'normalize.css/normalize.css';
 import '../styles/index.css';
 
 export default class SinglePageLayout extends Component {
-  constructor(props) {
-    super(props);
-
-    this.miniCRMService = app.service('mini-crm');
-
-    this.fetchConfig = this.fetchConfig.bind(this);
-  }
-
-  async fetchConfig(filename) {
-    return this.miniCRMService.get(filename);
-  }
-
   render() {
     return [
-      <Header key={'header'} forHire={this.props.forHire} />,
-      <About key={'about'} fetchConfig={this.fetchConfig} />,
-      <Portfolio key={'portfolio'} fetchConfig={this.fetchConfig} />,
-      <Contact key={'contact'} forHire={this.props.forHire} fetchConfig={this.fetchConfig} />,
+      <Header key={'header'} />,
+      <About key={'about'} />,
+      <Portfolio key={'portfolio'} />,
+      <Contact key={'contact'} />,
       <Footer key={'footer'} />
     ];
   }
