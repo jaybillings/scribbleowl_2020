@@ -1,23 +1,16 @@
-import React, {Component} from 'react';
-import {renderCopy} from "../../js/utilities";
+import React from 'react'
+import {renderCopy} from "../../js/utilities"
 
-import ContactForm from "../ContactForm";
-import ScrollTop from "../common/ScrollTop";
+import ContactForm from "../ContactForm"
+import ScrollTop from "../common/ScrollTop"
 
-import pageContent from '../../content/contact.json';
-
-export default class Contact extends Component {
-  render() {
-    this.title = pageContent.title;
-    this.copy = pageContent.forHire ? pageContent.hireCopy : pageContent.copy;
-
+export default function Contact(props) {
     return (
       <div id={'contact'} className={'contact section'}>
-        <h2>{this.title}</h2>
-        {renderCopy(this.copy)}
+        <h2>{props.title}</h2>
+        {renderCopy(props.copy)}
         <ContactForm/>
         <ScrollTop/>
       </div>
     )
-  }
 }

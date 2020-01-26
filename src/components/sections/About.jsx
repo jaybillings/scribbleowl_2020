@@ -3,15 +3,9 @@ import {renderCopy} from "../../js/utilities";
 
 import ScrollTop from "../common/ScrollTop";
 
-import pageContent from '../../content/about.json';
-
 export default class About extends Component {
   constructor(props) {
     super(props);
-
-    this.title = pageContent.title;
-    this.copy = pageContent.copy;
-    this.skillsSection = pageContent.skillsSection;
 
     this.renderSkillsSection = this.renderSkillsSection.bind(this);
   }
@@ -19,7 +13,7 @@ export default class About extends Component {
   renderSkillsSection() {
     const html = [];
 
-    this.skillsSection.forEach((section, index) => {
+    this.props.skillsSection.forEach((section, index) => {
       html.push(<h3 key={`header_${index}`}>{section.header}</h3>);
       html.push(renderCopy(section.copy, 'aboutskills'));
     });
@@ -30,8 +24,8 @@ export default class About extends Component {
   render() {
     return ([
       <div id={'about'} key={'about'} className={'section'}>
-        <h2>{this.title}</h2>
-        {this.copy.map((line, index) => <p key={`aboutmain_${index}`}>{line}</p>)}
+        <h2>{this.props.title}</h2>
+        {this.props.copy.map((line, index) => <p key={`aboutmain_${index}`}>{line}</p>)}
         {this.renderSkillsSection()}
         <ScrollTop/>
       </div>

@@ -32,7 +32,7 @@ export default class GalleryLayout extends Component {
 
     return [
       <GalleryHeader key={'header'} title={currentProj.title} />,
-      <GalleryNav key={'nav'} projID={projID} projList={galleryConfig.projectOrder} projects={galleryConfig.projects} imgIndex={imgIndex} imgCount={projImages.length} />,
+      <GalleryNav key={'nav'} projID={projID} projList={galleryConfig.projectOrder} imgIndex={imgIndex} imgCount={projImages.length} />,
       <Gallery key={'gallery'} imgIndex={imgIndex} images={projImages} />,
       <Footer key='footer'/>
     ]

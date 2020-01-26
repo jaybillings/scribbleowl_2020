@@ -5,9 +5,9 @@ import {BrowserRouter as Router} from "react-router-dom";
 
 import Header from "../components/Header";
 
+let container = null;
 const navSections = [{"path": "section1", "title": "Section 1"}, {"path": "section2", "title": "Section2"}];
 const title = "Test Title";
-let container = null;
 
 beforeEach(() => {
   // setup a DOM element as a render target
@@ -29,7 +29,7 @@ afterEach(() => {
   container = null;
 });
 
-it("should render the header", () => {
+it("renders from props", () => {
   // Proper title rendering
   expect(container.querySelector('h1').textContent).toEqual(title);
   // Spot check nav title
@@ -38,7 +38,7 @@ it("should render the header", () => {
   expect(container.querySelector('li:last-of-type a').getAttribute('href')).toEqual(`/#${navSections[1].path}`);
 });
 
-it("should change the class on link click", () => {
+it("changes nav anchor class on click", () => {
   const navLink = container.querySelector('li:first-of-type a');
 
   // Initially should not have a class
@@ -48,5 +48,6 @@ it("should change the class on link click", () => {
     navLink.dispatchEvent(new MouseEvent("click", {bubbles: true}));
   });
 
+  // Should now have 'current' class
   expect(navLink.getAttribute('class')).toBe('current');
 });
