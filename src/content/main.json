@@ -3,15 +3,11 @@
   "forHire": true,
   "navSections": [
     {
-      "path": "about",
-      "title": "About Me"
-    },
-    {
-      "path": "projects",
+      "path": "#portfolio",
       "title": "Past Projects"
     },
     {
-      "path": "contact",
+      "path": "#contact",
       "title": "Contact Me"
     },
     {

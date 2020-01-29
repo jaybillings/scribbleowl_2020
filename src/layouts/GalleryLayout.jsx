@@ -6,28 +6,27 @@ import GalleryNav from "../components/gallery/GalleryNav";
 import Gallery from "../components/gallery/Gallery";
 import Footer from "../components/common/Footer";
 
-import 'normalize.css/normalize.css';
-import '../styles/index.css';
+import galleryConfig from '../content/gallery.json';
 
 export default class GalleryLayout extends Component {
   render() {
-    const projID = this.props.match.params.alias || '';
+    const projID = this.props.match.params.alias;
     const imgIndex = parseInt(this.props.match.params.index, 10) || 0;
-    let galleryConfig, projImages;
+    let currentProj, projImages;
+
+    if (!projID) return <Redirect to={`/gallery/${galleryConfig.projectOrder[0]}`} />;
+
+    currentProj = galleryConfig.projects[projID];
+    if (!currentProj) {
+      console.error('currentProj does not exist');
+      return <Redirect to={'/404'} />;
+    }
 
     try {
-      galleryConfig = require('../content/gallery.json');
       projImages = require(`../content/projects/config_${projID}`);
     } catch(err) {
       console.error(err);
       return <Redirect to={'/oops'} />;
-    }
-
-    const currentProj = galleryConfig.projects[projID];
-
-    if (!currentProj) {
-      console.error('currentProj does not exist');
-      return <Redirect to={'/404'} />;
     }
 
     return [

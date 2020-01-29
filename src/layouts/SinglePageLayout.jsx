@@ -11,9 +11,6 @@ import galleryConfig from "../content/gallery.json";
 import aboutConfig from "../content/about.json";
 import contactConfig from "../content/contact.json";
 
-import 'normalize.css/normalize.css';
-import '../styles/index.css';
-
 export default class SinglePageLayout extends Component {
   render() {
     const contactCopy = mainConfig.forHire ? contactConfig.hireCopy : contactConfig.copy;
