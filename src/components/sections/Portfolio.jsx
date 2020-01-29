@@ -43,7 +43,7 @@ export default class Portfolio extends Component {
     return (
       <div className={'projectTile'}>
         <h3>{project.title} ({project.year})</h3>
-        <p><strong>{project.tech.join(', ')}</strong></p>
+        <p className={'tech'}><strong>{project.tech.join(', ')}</strong></p>
         <div className={'copy'}>{renderCopy(project.copy, 'projtile')}</div>
         <Link to={`/gallery/${this.state.currentProj}`}>Open full gallery -></Link>
       </div>
@@ -52,7 +52,7 @@ export default class Portfolio extends Component {
 
   render() {
     const currentProject = this.props.projects[this.state.currentProj];
-    const tileStyle = {background: `url(${currentProject.thumbnail})`};
+    const tileStyle = {background: `gray url(${currentProject.thumbnail})`};
 
     return ([
       <div key={'portfolio'} id={'portfolio'}>

@@ -1,11 +1,9 @@
 .galleryHeader {
     position: static;
     grid-template-columns: 3fr 1fr;
+    margin-bottom: 0;
 }
 
-.galleryHeader p {
-    display: inline-block;
-    font-weight: bold;
-    margin: 0;
-    text-align: right;
+.galleryHeader span {
+    font-size: 1.1rem;
 }

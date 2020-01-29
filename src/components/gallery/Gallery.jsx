@@ -8,6 +8,8 @@ export default function Gallery(props) {
 
   return (
     <div className={'gallery'}>
+      <p className={'tech'}><strong>{props.project.tech.join(', ')}</strong></p>
+      {renderCopy(props.project.copy)}
       <div className={'galleryInner'}>
         <figure><img alt={''} src={currentImage.name}/></figure>
         <figcaption className={'copy'}>{renderCopy(currentImage.copy, 'galimg')}</figcaption>

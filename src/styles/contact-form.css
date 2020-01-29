@@ -13,10 +13,10 @@
     padding-bottom: 0.25rem;
 }
 
-.contactForm input, textarea {
+.contactForm input, .contactForm textarea {
     width: 100%;
     padding: 0.75em;
-    border: 1px solid #777777;
+    border: 2px solid #777777;
     font-size: 16px;
 }
 
@@ -25,18 +25,19 @@
 }
 
 .contactForm textarea {
-    font-size: initial;
+    height: 15rem;
     max-width: 600px;
+    font-size: initial;
 }
 
-.contactForm input:hover, .contactForm textarea:hover {
-    border: 1px solid var(--dark-accent);
+.contactForm input:hover, .contactForm textarea:hover, .contactForm input:active, .contactForm textarea:active {
+    border: 2px solid var(--dark-accent);
 }
 
 .contactForm button {
     color: #444444;
     font-weight: 600;
-    padding: 0.5rem 1rem;
+    padding: 1rem 2.5rem;
     background-color: #eeeeee;
     border: 1px solid #777777;
 }

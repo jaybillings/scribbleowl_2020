@@ -1,8 +1,9 @@
 .galleryNav {
     position: sticky;
     top: 0;
-    background: var(--accent-gray);
+    background: #bbb;
     padding: 0 1rem;
+    margin-bottom: 3rem;
     font-size: initial;
     z-index: 1;
 }
@@ -29,6 +30,7 @@
 .galleryNav li.inactive {
     color: var(--neutral);
     padding: 0.5rem;
+    cursor: not-allowed;
 }
 
 

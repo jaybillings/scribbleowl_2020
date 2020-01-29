@@ -1,6 +1,6 @@
 .gallery {
     position: relative;
-    margin: 0 2rem;
+    margin: 0 3rem;
 }
 
 .gallery figure {
@@ -11,7 +11,7 @@
 
 .gallery figcaption {
     grid-row: 1;
-    padding: 1rem;
+    padding: 1rem 0;
     margin: 0;
 }
 

@@ -7,28 +7,33 @@
     grid-template-columns: 1fr 4fr;
     grid-gap: 1rem;
     margin: 0 2rem;
-    padding: 2rem 0 3rem;
+    padding: 2.5rem 0 3rem;
     background: var(--light-overlay);
 }
 
 #portfolio .portfolioInner h2 {
     grid-column: 1 / span 2;
-    margin: 0 1rem;
+    margin: 0.5rem 1rem 0;
 }
 
 #portfolio .portfolioInner h3 {
-    font-size: 1.1rem;
     margin: 0;
 }
 
 #portfolio .portfolioInner nav {
-    text-align: center;align-self: center;
+    margin-left: 1rem;
+    text-align: center;
+    align-self: center;
+}
+
+#portfolio .portfolioInner ul {
+    margin: 0;
 }
 
 #portfolio .portfolioInner li {
     padding: 1rem 0;
+    line-height: 1.5rem;
     font-size: 0.95rem;
-    font-weight: 600;
     cursor: pointer;
 }
 
@@ -43,10 +48,11 @@
 
 #portfolio .projectTile {
     border-left: 3px solid var(--dark-accent);
-    padding: 0 2rem;
+    padding: 0.5rem 2rem;
 }
 
 #portfolio .projectTile a {
+    font-size: 0.9rem;
     vertical-align: text-top;
 }
 
@@ -54,12 +60,10 @@
     margin: 1.5rem 0;
 }
 
-#portfolio > #jckb-scroller {
-    display: inline-block;
-    margin: 1rem 0 0 3rem;
-    border-bottom: 1px solid transparent;
+#portfolio .tech {
+    font-size: 0.9rem;
 }
 
-#portfolio > #jckb-scroller:hover {
-    border-bottom: 1px solid black;
+#portfolio > #jckb-scroller {
+    margin: 1rem 3rem 0 0;
 }

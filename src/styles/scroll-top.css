@@ -1,4 +1,15 @@
 #jckb-scroller {
+    display: flex;
+    justify-content: flex-end;
     color: #333;
+    font-size: 0.9rem;
     font-weight: bold;
+}
+
+#jckb-scroller a {
+    border-bottom: 1px solid transparent;
+}
+
+#jckb-scroller a:hover {
+    border-bottom: 1px solid black;
 }
