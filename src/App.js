@@ -7,12 +7,16 @@ import GalleryLayout from "./layouts/GalleryLayout";
 import NotFoundPage from "./layouts/NotFoundPage";
 import ErrorPage from "./layouts/ErrorPage";
 
+import 'normalize.css/normalize.css';
+/*import './styles/imports.css';*/
+import './styles/index.css';
+
 function App() {
   return (
     <Router>
       <Switch>
         <Route key={'single'} exact path={'/'} component={SinglePageLayout}/>
-        <Route key={'gallery'} exact path={['/gallery/:alias/:index','/gallery/:alias/']} component={GalleryLayout}/>
+        <Route key={'gallery'} exact path={['/gallery/:alias/:index','/gallery/:alias/', '/gallery']} component={GalleryLayout}/>
         <Route key={'oops'} exact path={'/oops'} component={ErrorPage}/>,
         <Route key={'notfound'} component={NotFoundPage}/>
       </Switch>
