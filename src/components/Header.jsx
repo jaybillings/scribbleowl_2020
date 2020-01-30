@@ -8,10 +8,10 @@ export default class Header extends Component {
   render() {
     return (
       <header>
-        <h1><Link to={'/'}>{this.props.title}</Link></h1>
+        <h1 className={'hvr-underline-from-center'}><Link to={'/'}>{this.props.title}</Link></h1>
         <nav>
           <ul>{this.props.navSections.map(section =>
-            <li key={section.path}><NavLink to={`/${section.path}`} isActive={(match, location) => {
+            <li key={section.path} className={'hvr-underline-from-center'}><NavLink to={`/${section.path}`} isActive={(match, location) => {
               if (!match) return false;
               return location.hash === `#${section.path}`;
             }} activeClassName={'current'}>{section.title}</NavLink></li>)}</ul>
