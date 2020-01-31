@@ -73,7 +73,7 @@ export default class ContactForm extends Component {
             <span>Message</span>
             <textarea ref={this.msgRef}/>
           </label>
-          <button type={'submit'} className={'hvr-pulse-grow'}>Send Message <TiMail/></button>
+          <button type={'submit'} className={'hvr-pulse-grow hvr-fade '}>Send Message <TiMail/></button>
         </form>
       ]
     )
