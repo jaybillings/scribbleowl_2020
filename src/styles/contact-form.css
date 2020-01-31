@@ -31,17 +31,25 @@
 }
 
 .contactForm input:hover, .contactForm textarea:hover, .contactForm input:active, .contactForm textarea:active {
-    border: 2px solid var(--dark-accent);
+    border: 2px solid var(--accent-color);
+    box-shadow: 2px -2px 4px 0 var(--dark-accent);
+    transition: 0.1s linear;
 }
 
 .contactForm button {
-    color: #444444;
     font-weight: 600;
     padding: 1rem 2.5rem;
-    background-color: #eeeeee;
-    border: 1px solid #777777;
+    background-color: white;
+    border: 4px solid var(--accent-color);
+    color: var(--accent-color);
 }
 
 .contactForm button:hover {
     background-color: var(--accent-color);
+    color: white;
+}
+
+.contactForm button svg {
+    vertical-align: bottom;
+    font-size: 1.5rem;
 }

@@ -1,5 +1,8 @@
 #portfolio {
-    margin: 2rem 0;
+    position: relative;
+    padding: 2rem 0;
+    background: var(--accent-gray);
+    box-shadow: 10px 4px 8px 4px #777777;
 }
 
 #portfolio .portfolioInner {
@@ -31,7 +34,7 @@
 }
 
 #portfolio .portfolioInner li {
-    padding: 1rem 0;
+    margin: 1rem 0;
     line-height: 1.5rem;
     font-size: 0.95rem;
     cursor: pointer;
@@ -40,10 +43,6 @@
 #portfolio .portfolioInner li.selected {
     font-weight: bold;
     cursor: default;
-}
-
-#portfolio .portfolioInner li:not(.selected):hover span {
-    font-weight: bold;
 }
 
 #portfolio .projectTile {
@@ -64,6 +63,18 @@
     font-size: 0.9rem;
 }
 
-#portfolio > #jckb-scroller {
-    margin: 1rem 3rem 0 0;
+#portfolio a.gallery-link {
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+#portfolio a.gallery-link:hover {
+    border: 0;
+    text-decoration: underline;
+}
+
+#portfolio #jckb-scroller {
+    position: absolute;
+    right: 3rem;
+    bottom: 3rem;
 }

@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import {TiMail} from "react-icons/ti";
 
 import '../styles/contact-form.css';
 
@@ -72,7 +73,7 @@ export default class ContactForm extends Component {
             <span>Message</span>
             <textarea ref={this.msgRef}/>
           </label>
-          <button type={'submit'}>Send Message</button>
+          <button type={'submit'} className={'hvr-pulse-grow'}>Send Message <TiMail/></button>
         </form>
       ]
     )
