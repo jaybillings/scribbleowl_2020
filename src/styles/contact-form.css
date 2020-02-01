@@ -39,12 +39,12 @@
 .contactForm button {
     font-weight: 600;
     padding: 1rem 2.5rem;
-    background-color: var(--alt-accent);
+    /*background-color: var(--alt-accent);
     color: var(--white);
-    border: 4px solid var(--alt-accent);
-    /*background-color: white;
+    border: 4px solid var(--alt-accent);*/
+    background-color: white;
     border: 4px solid var(--main-color);
-    color: var(--main-color);*/
+    color: var(--main-color);
 }
 
 .contactForm button:hover {

@@ -34,11 +34,24 @@ header li {
     /*font-family: 'Montserrat', sans-serif;*/
     font-size: 1.2rem;
     padding: 0 1rem;
-    color: #eaeaea;
+    color: #ddd;
 }
 
+header li:hover {
+    color: white;
+}
+
+header li:hover::before {
+    background: var(--accent-color);
+}
+
+header a:hover {
+    border: none;
+}
+
+/*
 header a:hover {
     border-bottom: none;
     background: var(--accent-color);
     color: #444;
-}
+}*/

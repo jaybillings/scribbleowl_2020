@@ -1,5 +1,5 @@
 :root {
-    --main-background: #fafafa;
+    --main-background: #F9F9F9;
     --main-color: #4693b8;
     --alt-main: #0b1f65;
 
@@ -71,7 +71,7 @@ a {
 }
 
 a:hover {
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid;
 }
 
 a.current {
@@ -106,5 +106,5 @@ a.current {
     background: white;
     max-width: 1200px;
     margin: 0 auto;
-    /*box-shadow: -2px 10px 10px 0 rgba(0,0,0,0.5);*/
+    box-shadow: -2px 10px 10px 0 rgba(0,0,0,0.5);
 }
