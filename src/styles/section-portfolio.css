@@ -1,8 +1,11 @@
 #portfolio {
     position: relative;
     padding: 2rem 0;
-    background: var(--accent-gray);
-    box-shadow: 0 4px 6px 0 #777777;
+    background: var(--alt-accent);
+}
+
+#portfolio > div {
+    box-shadow: 0 4px 6px 0 var(--gray7);
 }
 
 #portfolio .portfolioInner {
@@ -46,7 +49,7 @@
 }
 
 #portfolio .projectTile {
-    border-left: 3px solid var(--dark-accent);
+    border-left: 3px solid var(--main-color);
     padding: 0.5rem 2rem;
 }
 

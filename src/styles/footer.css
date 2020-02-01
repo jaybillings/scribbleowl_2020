@@ -1,5 +1,6 @@
 footer {
     padding: 1rem 3rem 3rem;
     margin-top: 4rem;
-    background-color: var(--accent-gray);
+    background-color: var(--alt-main);
+    color: white;
 }

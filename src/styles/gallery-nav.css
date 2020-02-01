@@ -28,7 +28,7 @@
 }
 
 .galleryNav li.inactive {
-    color: var(--neutral);
+    color: var(--inactive);
     padding: 0.5rem;
     cursor: not-allowed;
 }

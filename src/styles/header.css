@@ -4,6 +4,7 @@ header {
     margin-bottom: 3rem;
     padding: 3.5rem 3rem 1rem;
     background-color: var(--main-color);
+    color: white;
     z-index: 1;
 }
 
@@ -31,11 +32,13 @@ header ul {
 
 header li {
     /*font-family: 'Montserrat', sans-serif;*/
-    color: white;
     font-size: 1.2rem;
     padding: 0 1rem;
+    color: #eaeaea;
 }
 
 header a:hover {
-    text-decoration: none;
+    border-bottom: none;
+    background: var(--accent-color);
+    color: #444;
 }

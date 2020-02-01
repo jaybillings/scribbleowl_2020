@@ -1,11 +1,23 @@
 :root {
-    --accent-gray: #ccc;
+    --main-background: #fafafa;
+    --main-color: #4693b8;
+    --alt-main: #0b1f65;
+
+    --accent-color: #fad02c;
+    --alt-accent: #fabc5f;
+
+
+    --gradient1: var(--main-color);
+    --gradient2: var(--alt-main);
+
+    --inactive: var(--gray7);
     --light-overlay: rgba(255, 255, 255, 0.75);
-    --main-color: #ccc;
-    --neutral: #f2eee5;
-    --light-neutral: #fdfdfc;
-    --accent-color: #f6ad7b;
-    --dark-accent: #be7575;
+
+    --black: #000000;
+    --white: #ffffff;
+    --medium-gray: #cccccc;
+    --gray7: #777777;
+
 }
 
 html {
@@ -19,15 +31,11 @@ body {
     width: 100%;
     max-width: 1600px;
     margin: 0 auto;
-    background: #fbfbfb;
+    background: var(--main-background);
 }
 
 h1, h2 {
     font-family: 'Montserrat', sans-serif;
-}
-
-h1 {
-    color: #222222;
 }
 
 h2 {
@@ -98,4 +106,5 @@ a.current {
     background: white;
     max-width: 1200px;
     margin: 0 auto;
+    /*box-shadow: -2px 10px 10px 0 rgba(0,0,0,0.5);*/
 }
