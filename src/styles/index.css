@@ -1,11 +1,11 @@
 :root {
-    --main-background: #F9F9F9;
+    --main-background: #dfeef5;
+
     --main-color: #4693b8;
-    --alt-main: #0b1f65;
+    --alt-main: #0b2e63;
 
     --accent-color: #fad02c;
     --alt-accent: #fabc5f;
-
 
     --gradient1: var(--main-color);
     --gradient2: var(--alt-main);
@@ -16,6 +16,8 @@
     --black: #000000;
     --white: #ffffff;
     --medium-gray: #cccccc;
+    --gray4: #444;
+    --gray3: #333;
     --gray7: #777777;
 
 }
@@ -34,18 +36,26 @@ body {
     background: var(--main-background);
 }
 
+h1, h2, h3 {
+    margin: 0;
+    padding: 0;
+}
+
 h1, h2 {
-    font-family: 'Montserrat', sans-serif;
+    color: white;
+}
+
+h1 {
+    font-size: 1.4rem;
 }
 
 h2 {
-    font-size: 1.4rem;
-    color: #444444;
+    font-size: 1.1rem;
 }
 
 h3 {
     font-size: 1.1rem;
-    color: #333333;
+    color: var(--gray3);
 }
 
 p {
@@ -74,10 +84,6 @@ a:hover {
     border-bottom: 1px solid;
 }
 
-a.current {
-    color: red;
-}
-
 .hidden {
     display: none;
 }
@@ -86,16 +92,24 @@ a.current {
     display: inherit;
 }
 
-.right {
+.text-right {
     text-align: right;
 }
 
-.left {
+.text-left {
     text-align: left;
 }
 
-.center {
+.text-center {
     text-align: center;
+}
+
+.grid-start {
+    justify-self: start;
+}
+
+.grid-end {
+    justify-self: end;
 }
 
 .section {

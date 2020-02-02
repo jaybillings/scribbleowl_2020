@@ -16,11 +16,6 @@ header nav {
     justify-self: right;
 }
 
-header h1 {
-    font-size: 1.4rem;
-    margin: 0;
-}
-
 header ul {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
