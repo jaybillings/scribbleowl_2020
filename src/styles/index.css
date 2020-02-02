@@ -36,7 +36,7 @@ body {
     background: var(--main-background);
 }
 
-h1, h2, h3 {
+h1, h2, h3, ul, li, a {
     margin: 0;
     padding: 0;
 }
@@ -67,12 +67,8 @@ code {
     monospace;
 }
 
-ul {
-    padding-left: 0;
-}
-
 li {
-    display: block;
+    display: inline-block;
 }
 
 a {

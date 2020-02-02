@@ -19,7 +19,7 @@ export default class Header extends Component {
             </li>)}
           </ul>
         </nav>
-      </header>
+      </header >
     );
   }
 }

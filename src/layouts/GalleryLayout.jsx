@@ -19,20 +19,20 @@ export default class GalleryLayout extends Component {
     currentProj = galleryConfig.projects[projID];
     if (!currentProj) {
       console.error('currentProj does not exist');
-      return <Redirect to={'/404'} />;
+      return <Redirect to={'/404'}/>;
     }
 
     try {
       projImages = require(`../content/projects/config_${projID}`);
-    } catch(err) {
+    } catch (err) {
       console.error(err);
-      return <Redirect to={'/oops'} />;
+      return <Redirect to={'/oops'}/>;
     }
 
     return [
-      <GalleryHeader key={'header'} title={currentProj.title} year={currentProj.year} />,
-      <GalleryNav key={'nav'} projID={projID} projList={galleryConfig.projectOrder} imgIndex={imgIndex} imgCount={projImages.length} />,
-      <Gallery key={'gallery'} imgIndex={imgIndex} images={projImages} project={currentProj} />,
+      <GalleryHeader key={'header'} title={currentProj.title} year={currentProj.year}/>,
+      <GalleryNav projID={projID} projects={galleryConfig.projects} projectOrder={galleryConfig.projectOrder} />,
+      <Gallery key={'gallery'} imgIndex={imgIndex} images={projImages} project={currentProj}/>,
       <Footer key='footer'/>
     ]
   }
