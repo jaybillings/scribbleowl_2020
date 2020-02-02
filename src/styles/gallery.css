@@ -25,6 +25,9 @@
     margin: 0 auto;
 }
 
+.gallery .tech {
+    color: var(--gray3);
+}
 
 
 

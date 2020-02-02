@@ -6,7 +6,8 @@ import "../../styles/gallery-header.css";
 export default function GalleryHeader(props) {
   return (
     <header className={'galleryHeader'}>
-      <h1>{props.title} ({props.year}) <span>by <Link to={'/'}>Jay Billings</Link></span></h1>
+      <h1 className={'grid-start'}>{props.title} ({props.year})</h1>
+      <h2 className={'grid-end'}>by <Link to={'/#top'}>Jay Billings</Link></h2>
     </header>
   )
 }

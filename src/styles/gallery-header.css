@@ -1,7 +1,17 @@
 .galleryHeader {
+    display: grid;
     position: static;
-    grid-template-columns: 3fr 1fr;
     margin-bottom: 0;
+}
+
+.galleryHeader h1 {
+    font-weight: normal;
+    justify-self: start;
+}
+
+.galleryHeader a {
+    justify-self: end;
+    border-bottom: 2px solid;
 }
 
 .galleryHeader span {
