@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {Link} from "react-router-dom";
-import {TiMediaPlayReverseOutline, TiMediaPlayOutline} from "react-icons/ti";
+import {TiMediaPlayReverseOutline, TiMediaPlayOutline, TiHome} from "react-icons/ti";
 import GalleryImageNav from "./GalleryImageNav";
 
 import '../../styles/gallery-nav.css';
@@ -37,6 +37,7 @@ export default class GalleryNav extends Component {
       <nav className={'galleryNav'}>
         <ul className={'projNav'}>
           <li key={'prev-proj'} className={'grid-start'}>{this.renderProjPrev(projIndex)}</li>
+          <li key={'home'} className={'home-nav'}><Link to={'/#top'} className={'hvr-icon-pop'}><TiHome className={'hvr-icon'} /></Link></li>
           <li key={'next-proj'} className={'grid-end text-right'}>{this.renderProjNext(projIndex)}</li>
         </ul>
         <GalleryImageNav imgIndex={this.props.imgIndex} imgCount={this.props.imgCount} projID={this.props.projID}/>

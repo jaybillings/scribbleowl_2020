@@ -19,7 +19,7 @@
 
 .galleryNav .projNav {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr auto 1fr;
     font-size: 1.1rem;
     padding: 1.5rem 3rem;
     font-weight: bold;
@@ -32,9 +32,17 @@
 }
 
 .galleryNav .projNav a:hover {
-    color: var(--main-text);
+    /*color: var(--main-text);*/
     border: none;
     /*border-bottom: 2px solid var(--main-color);*/
+}
+
+.galleryNav .projNav .home-nav a {
+    font-size: 1.4rem;
+}
+
+.galleryNav .projNav .home-nav a:hover {
+    color: var(--main-color);
 }
 
 .galleryNav .imageNav {
@@ -46,7 +54,7 @@
 }
 
 .galleryNav .imageNav span {
-    color: var(--main-background);
+    color: var(--gray11);
 }
 
 .galleryNav .imageNav a:hover  {

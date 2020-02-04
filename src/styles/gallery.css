@@ -17,6 +17,16 @@
 
 .gallery img {
     max-width: 100%;
+    display: block;
+}
+
+.gallery figure a {
+    display: block;
+}
+
+.gallery figure a:hover {
+    border: 2px solid var(--main-color);
+    box-shadow: 0 0 5px 0 var(--main-color);
 }
 
 .gallery .galleryInner {

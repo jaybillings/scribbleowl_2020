@@ -1,12 +1,10 @@
 .galleryHeader {
-    display: grid;
     position: static;
     margin-bottom: 0;
 }
 
 .galleryHeader h1 {
     font-weight: normal;
-    justify-self: start;
 }
 
 .galleryHeader a {
@@ -15,10 +13,6 @@
 
 .galleryHeader a:hover {
     border-bottom: 1px solid var(--white);
-}
-
-.galleryHeader p {
-    margin: 0;
 }
 
 .galleryHeader small {

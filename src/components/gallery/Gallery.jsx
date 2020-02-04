@@ -1,4 +1,5 @@
 import React from "react";
+import {Link} from "react-router-dom";
 import {renderCopy} from "../../js/utilities";
 
 import "../../styles/gallery.css";
@@ -13,7 +14,7 @@ export default function Gallery(props) {
       {projLink}
       {renderCopy(props.project.copy)}
       <div className={'galleryInner'}>
-        <figure><img alt={''} src={currentImage.name}/></figure>
+        <figure><a href={currentImage.name} target={'_blank'}><img alt={''} src={currentImage.name}/></a></figure>
         <figcaption className={'copy'}>{renderCopy(currentImage.copy, 'galimg')}</figcaption>
       </div>
     </div>
