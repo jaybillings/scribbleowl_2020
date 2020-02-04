@@ -1,5 +1,6 @@
 :root {
     --main-background: #dfeef5;
+    --main-text: #000000;
 
     --main-color: #4693b8;
     --alt-main: #0b2e63;
@@ -106,6 +107,10 @@ a:hover {
 
 .grid-end {
     justify-self: end;
+}
+
+.grid-center {
+    justify-self: center;
 }
 
 .section {

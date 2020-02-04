@@ -10,10 +10,17 @@
 }
 
 .galleryHeader a {
-    justify-self: end;
-    border-bottom: 2px solid;
+    border-bottom: 1px solid transparent;
 }
 
-.galleryHeader span {
-    font-size: 1.1rem;
+.galleryHeader a:hover {
+    border-bottom: 1px solid var(--white);
+}
+
+.galleryHeader p {
+    margin: 0;
+}
+
+.galleryHeader small {
+    font-size: 1rem;
 }
