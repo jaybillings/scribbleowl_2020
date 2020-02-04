@@ -29,5 +29,14 @@
     color: var(--gray3);
 }
 
+.gallery .live-link a {
+    text-decoration: underline;
+}
+
+.gallery .live-link a:hover {
+    color: var(--main-color);
+    border: none;
+}
+
 
 

@@ -12,6 +12,7 @@
       "title": "Visit Seattle Events Manager",
       "thumbnail": "https://via.placeholder.com/250/ffffff.png",
       "year": "2028",
+      "uri": "",
       "copy": [
         "Probably not being used but you never know"
       ],
@@ -28,6 +29,7 @@
       "title": "Meteor Solutions Client Information Backend",
       "thumbnail": "https://via.placeholder.com/250/444444.png",
       "year": "1992",
+      "uri": "https://visitseattle.org",
       "copy": [
         "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit,",
         "sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt."
@@ -42,6 +44,7 @@
       "title": "REI Redesign Main Navigation",
       "thumbnail": "https://via.placeholder.com/250/989898.png",
       "year": "2004",
+      "uri": "https://rei.com",
       "copy": [
         "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit,",
         "sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt."
@@ -56,6 +59,7 @@
       "title": "Xbox One Native Payments Screens",
       "thumbnail": "https://via.placeholder.com/250/444444.png",
       "year": "2017",
+      "uri": "",
       "copy": [
         "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit,",
         "sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt."
@@ -69,6 +73,7 @@
       "title": "Cheezburger TV",
       "thumbnail": "https://via.placeholder.com/250/cccccc.png",
       "year": "2010",
+      "uri": "https://cheezburger.com/tv",
       "copy": [
         "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit,",
         "sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt."
