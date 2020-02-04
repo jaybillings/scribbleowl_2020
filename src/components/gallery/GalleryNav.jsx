@@ -11,6 +11,7 @@ export default class GalleryNav extends Component {
 
     this.renderProjPrev = this.renderProjPrev.bind(this);
     this.renderProjNext = this.renderProjNext.bind(this);
+    /* TODO: Reclaim focus on prev/next paging */
   }
 
   renderProjPrev(projIndex) {

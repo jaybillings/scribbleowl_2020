@@ -30,7 +30,7 @@ export default class Portfolio extends Component {
           {this.props.projectList.map(alias =>
             <li key={alias}
                 data-alias={alias}
-                className={alias === this.state.currentProj ? 'selected' : 'hvr-underline-from-center'}
+                className={alias === this.state.currentProj ? 'selected' : ''}
                 onClick={this.handleNavClick}>
               <span className={''}>{this.props.projects[alias].title}</span>
             </li>
@@ -47,7 +47,7 @@ export default class Portfolio extends Component {
         <p className={'tech'}><strong>{project.tech.join(', ')}</strong></p>
         <div className={'copy'}>{renderCopy(project.copy, 'projtile')}</div>
         {/* Yes, the spaces are significant */}
-        [ <Link className={'hvr-icon-wobble-horizontal gallery-link'} to={`/gallery/${this.state.currentProj}`}>
+        [ <Link className={'hvr-icon-wobble-horizontal gallery-link'} to={`/gallery/${this.state.currentProj}#top`}>
           Open full gallery <TiArrowRightThick className={'hvr-icon'}/>
         </Link> ]
       </div>

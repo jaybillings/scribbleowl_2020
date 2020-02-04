@@ -46,6 +46,7 @@
 #portfolio .portfolioInner li.selected {
     font-weight: bold;
     cursor: default;
+    color: var(--alt-main);
 }
 
 #portfolio .projectTile {
@@ -64,6 +65,11 @@
 
 #portfolio .tech {
     font-size: 0.9rem;
+}
+
+#portfolio nav li:not(.selected):hover {
+    color: var(--main-color);
+    font-weight: bold;
 }
 
 #portfolio a.gallery-link {
