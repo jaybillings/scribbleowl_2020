@@ -2,7 +2,7 @@ header {
     display: grid;
     grid-template-columns: auto 3fr;
     margin-bottom: 3rem;
-    padding: 3.5rem 3rem 1rem;
+    padding: 4rem 3rem 1rem;
     background-color: var(--main-color);
     color: white;
     z-index: 1;
@@ -10,6 +10,18 @@ header {
 
 header nav, header h1, header li {
     display: inline-block;
+}
+
+header h1, header h2 {
+    color: white;
+}
+
+header h1 {
+    font-size: 1.4rem;
+}
+
+header h2 {
+    font-size: 1.1rem;
 }
 
 header nav {

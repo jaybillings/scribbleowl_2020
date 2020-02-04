@@ -16,10 +16,11 @@
 
     --black: #000000;
     --white: #ffffff;
-    --medium-gray: #cccccc;
     --gray4: #444;
     --gray3: #333;
     --gray7: #777777;
+    --gray11: #bbbbbb;
+    --gray12: #cccccc;
 
 }
 
@@ -42,16 +43,9 @@ h1, h2, h3, ul, li, a {
     padding: 0;
 }
 
-h1, h2 {
-    color: white;
-}
-
-h1 {
-    font-size: 1.4rem;
-}
-
 h2 {
-    font-size: 1.1rem;
+    font-size: 1.4rem;
+    color: var(--gray3);
 }
 
 h3 {
@@ -79,6 +73,14 @@ a {
 
 a:hover {
     border-bottom: 1px solid;
+}
+
+.section {
+    margin: 2rem 3rem;
+}
+
+.section h2 {
+    margin: 0 0 2rem;
 }
 
 .hidden {
@@ -111,10 +113,6 @@ a:hover {
 
 .grid-center {
     justify-self: center;
-}
-
-.section {
-    margin: 2rem 3rem;
 }
 
 #root {

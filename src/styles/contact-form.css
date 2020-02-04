@@ -32,7 +32,7 @@
 
 .contactForm input:hover, .contactForm textarea:hover, .contactForm input:active, .contactForm textarea:active {
     border: 2px solid var(--accent-color);
-    box-shadow: -2px 2px 5px 0 var(--medium-gray);
+    box-shadow: -2px 2px 5px 0 var(--gray12);
     transition: 0.1s linear;
 }
 
