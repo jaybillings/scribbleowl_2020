@@ -11,7 +11,7 @@
 
 .gallery figcaption {
     grid-row: 1;
-    padding: 1rem 0;
+    padding: 0 0 0.5rem;
     margin: 0;
 }
 
@@ -22,6 +22,7 @@
 
 .gallery figure a {
     display: block;
+    border: 2px solid transparent;
 }
 
 .gallery figure a:hover {
@@ -39,14 +40,10 @@
     color: var(--gray3);
 }
 
-.gallery .live-link a {
-    text-decoration: underline;
-}
-
-.gallery .live-link a:hover {
+.gallery .social-link a:hover {
     color: var(--main-color);
-    border: none;
 }
 
-
-
+.gallery .copy {
+    margin: 1.5rem 0;
+}
