@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {Link} from "react-router-dom";
 import {renderCopy} from "../../js/utilities";
-import {TiArrowRightThick} from "react-icons/ti";
+import {TiArrowRightThick, TiArrowForwardOutline} from "react-icons/ti";
 
 import ScrollTop from "../common/ScrollTop";
 
@@ -30,7 +30,7 @@ export default class Portfolio extends Component {
           {this.props.projectList.map(alias =>
             <li key={alias}
                 data-alias={alias}
-                className={alias === this.state.currentProj ? 'selected' : ''}
+                className={alias === this.state.currentProj ? 'selected' : 'hvr-grow'}
                 onClick={this.handleNavClick}>
               <span className={''}>{this.props.projects[alias].title}</span>
             </li>
@@ -41,15 +41,23 @@ export default class Portfolio extends Component {
   }
 
   renderPortfolioTile(project) {
+    const liveLink = project.uri ?
+      <span>[ <a href={project.uri}>Live version <TiArrowForwardOutline/></a> ]</span> : '';
+    const sourceLink = project.source ?
+      <span>[ <a href={project.source}>Source <TiArrowForwardOutline/></a> ]</span> : '';
+    const links = project.uri || project.source ? <p>{liveLink} {sourceLink}</p> : '';
+
     return (
       <div className={'projectTile'}>
         <h3>{project.title} ({project.year})</h3>
         <p className={'tech'}><strong>{project.tech.join(', ')}</strong></p>
+        {links}
         <div className={'copy'}>{renderCopy(project.copy, 'projtile')}</div>
         {/* Yes, the spaces are significant */}
-        [ <Link className={'hvr-icon-wobble-horizontal gallery-link'} to={`/gallery/${this.state.currentProj}#top`}>
-          Open full gallery <TiArrowRightThick className={'hvr-icon'}/>
-        </Link> ]
+        <p className={'gallery-link'}>
+          [ <Link to={`/gallery/${this.state.currentProj}#top`}>
+          Open full gallery <TiArrowRightThick /></Link> ]
+        </p>
       </div>
     )
   }

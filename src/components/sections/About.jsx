@@ -24,6 +24,7 @@ export default class About extends Component {
   render() {
     return ([
       <div id={'about'} key={'about'} className={'section'}>
+        <h2>{this.props.title}</h2>
         {this.props.copy.map((line, index) => <p key={`aboutmain_${index}`}>{line}</p>)}
         {this.renderSkillsSection()}
         <ScrollTop/>

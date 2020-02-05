@@ -26,7 +26,7 @@
 
 .gallery figure a:hover {
     border: 2px solid var(--main-color);
-    box-shadow: 0 0 5px 0 var(--main-color);
+    box-shadow: 0 0 5px 0 var(--gray11);
 }
 
 .gallery .galleryInner {

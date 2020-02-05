@@ -25,7 +25,7 @@
 #portfolio ul {
     max-height: 400px;
     margin: 0;
-    /*background: linear-gradient(rgba(255,255,255,0.5) 5%, rgba(0,0,0,0) 10%, rgba(0,0,0,0) 90%, rgba(255,255,255,0.5) 95%);*/
+    padding: 0 1rem;
     background: linear-gradient(rgba(0,0,0,0) 10%, rgba(255,255,255,0.5) 50%, rgba(0,0,0,0) 90%);
     overflow: auto;
     scrollbar-width: thin;
@@ -46,17 +46,16 @@
 
 #portfolio li:not(.selected):hover {
     color: var(--main-color);
-    font-weight: bold;
+    /*font-weight: bold;*/
 }
 
-#portfolio a.gallery-link {
+#portfolio p.gallery-link {
+    position: absolute;
+    bottom: 0;
+}
+#portfolio .gallery-link a {
     font-size: 0.8rem;
     font-weight: bold;
-}
-
-#portfolio a.gallery-link:hover {
-    border: 0;
-    text-decoration: underline;
 }
 
 #portfolio .portfolioInner {
@@ -68,6 +67,7 @@
 }
 
 #portfolio .projectTile {
+    position: relative;
     border-left: 3px solid var(--main-color);
     padding: 0.5rem 2rem;
 }
@@ -77,6 +77,9 @@
 }
 
 #portfolio .projectTile .copy {
+    max-height: 235px;
+    overflow: auto;
+    scrollbar-width: thin;
     margin: 1.5rem 0;
 }
 

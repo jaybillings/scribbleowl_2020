@@ -30,17 +30,15 @@ header nav {
 
 header ul {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 2fr 2fr 2fr auto auto;
+    grid-gap: 1rem;
     justify-items: center;
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
 }
 
 header li {
     /*font-family: 'Montserrat', sans-serif;*/
     font-size: 1.2rem;
-    padding: 0 1rem;
+    /*padding: 0 1rem;*/
     color: #ddd;
 }
 
@@ -54,6 +52,14 @@ header li:hover::before {
 
 header a:hover {
     border: none;
+}
+
+header a:hover svg {
+    color: var(--accent-color);
+}
+
+header svg {
+    font-size: 1.75rem;
 }
 
 /*

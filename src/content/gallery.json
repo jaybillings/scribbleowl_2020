@@ -1,5 +1,5 @@
 {
-  "title": "Past Projects",
+  "title": "Previous Projects",
   "projectOrder": [
     "vsem",
     "mcb",
@@ -13,6 +13,7 @@
       "thumbnail": "https://via.placeholder.com/250/ffffff.png",
       "year": "2028",
       "uri": "",
+      "source": "",
       "copy": [
         "Probably not being used but you never know"
       ],
@@ -30,6 +31,7 @@
       "thumbnail": "https://via.placeholder.com/250/444444.png",
       "year": "1992",
       "uri": "https://visitseattle.org",
+      "source": "https://github.com",
       "copy": [
         "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit,",
         "sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt."
@@ -60,6 +62,7 @@
       "thumbnail": "https://via.placeholder.com/250/444444.png",
       "year": "2017",
       "uri": "",
+      "source": "",
       "copy": [
         "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit,",
         "sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt."
@@ -74,6 +77,7 @@
       "thumbnail": "https://via.placeholder.com/250/cccccc.png",
       "year": "2010",
       "uri": "https://cheezburger.com/tv",
+      "source": "https://github.com",
       "copy": [
         "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit,",
         "sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt."

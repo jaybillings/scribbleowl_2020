@@ -45,7 +45,7 @@ h1, h2, h3, ul, li, a {
 
 h2 {
     font-size: 1.4rem;
-    color: var(--gray3);
+    color: var(--gray4);
 }
 
 h3 {
@@ -113,6 +113,17 @@ a:hover {
 
 .grid-center {
     justify-self: center;
+}
+
+.sr-only {
+    position: absolute;
+    clip: rect(1px, 1px, 1px, 1px);
+    clip-path: inset(50%);
+    height: 1px;
+    width: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
 }
 
 #root {
