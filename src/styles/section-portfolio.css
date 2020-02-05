@@ -77,10 +77,10 @@
 }
 
 #portfolio .projectTile .copy {
-    max-height: 235px;
+    max-height: 240px;
     overflow: auto;
     scrollbar-width: thin;
-    margin: 1.5rem 0;
+    margin: 1.5rem 0 1rem;
 }
 
 #portfolio .tech {

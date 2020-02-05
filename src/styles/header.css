@@ -4,7 +4,7 @@ header {
     margin-bottom: 3rem;
     padding: 4rem 3rem 1rem;
     background-color: var(--main-color);
-    color: white;
+    /*color: white;*/
     z-index: 1;
 }
 
@@ -50,8 +50,13 @@ header li:hover::before {
     background: var(--accent-color);
 }
 
+header a {
+    color: var(--gray14);
+}
+
 header a:hover {
     border: none;
+    color: var(--white);
 }
 
 header a:hover svg {
