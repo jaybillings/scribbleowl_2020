@@ -3,7 +3,7 @@ import {TiArrowForwardOutline} from "react-icons/ti";
 import {renderCopy} from "../../js/utilities";
 import ScrollTop from "../common/ScrollTop";
 
-import "../../styles/gallery.css";
+import "../../styles/scss/gallery.scss";
 
 export default function Gallery(props) {
   const currentImage = props.images[props.imgIndex];

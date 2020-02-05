@@ -5,7 +5,7 @@ import {TiArrowRightThick, TiArrowForwardOutline} from "react-icons/ti";
 
 import ScrollTop from "../common/ScrollTop";
 
-import "../../styles/section-portfolio.css";
+import "../../styles/scss/section-portfolio.scss";
 
 export default class Portfolio extends Component {
   constructor(props) {

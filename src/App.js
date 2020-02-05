@@ -8,11 +8,10 @@ import NotFoundPage from "./layouts/NotFoundPage";
 import ErrorPage from "./layouts/ErrorPage";
 
 import 'normalize.css/normalize.css';
-import './styles/imports.css';
  /* TODO: Transitions should be togglable */
 import 'hover.css/css/hover-min.css';
 import './styles/hover-overrides.css';
-import './styles/index.css';
+import './styles/scss/index.scss';
 
 function App() {
   return (

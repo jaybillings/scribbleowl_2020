@@ -1,0 +1,65 @@
+header {
+    display: grid;
+    grid-template-columns: auto 3fr;
+    margin-bottom: 3rem;
+    padding: 4rem 3rem 1rem;
+    background-color: var(--main-color);
+    z-index: 1;
+}
+
+header nav, header h1, header li {
+    display: inline-block;
+}
+
+header h1, header h2 {
+    color: white;
+}
+
+header h1 {
+    font-size: 1.4rem;
+}
+
+header h2 {
+    font-size: 1.1rem;
+}
+
+header nav {
+    justify-self: right;
+}
+
+header ul {
+    display: grid;
+    grid-template-columns: 2fr 2fr 2fr auto auto;
+    grid-gap: 1rem;
+    justify-items: center;
+}
+
+header li {
+    font-size: 1.2rem;
+    color: #ddd;
+}
+
+header li:hover, header li:focus, header li:active {
+    color: white;
+}
+
+header li:hover::before, header li:active::before, header li:focus::before {
+    background: var(--accent-color);
+}
+
+header a {
+    color: var(--gray14);
+}
+
+header a:hover, header a:active, header a:focus {
+    border: none;
+    color: var(--white);
+}
+
+header a:hover svg, header a:focus svg, header a:active svg {
+    color: var(--accent-color);
+}
+
+header svg {
+    font-size: 1.75rem;
+}

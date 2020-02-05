@@ -1,7 +1,7 @@
 import React from 'react';
 import {TiArrowUpThick} from "react-icons/ti";
 
-import '../../styles/scroll-top.css';
+import '../../styles/scss/scroll-top.scss';
 
 export default function ScrollTop(props) {
   return <div id={'jckb-scroller'}>

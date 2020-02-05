@@ -1,7 +1,7 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 
-import "../../styles/gallery-header.css";
+import "../../styles/scss/gallery-header.scss";
 
 export default function GalleryHeader(props) {
   return (

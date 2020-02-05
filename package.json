@@ -15,6 +15,7 @@
   "dependencies": {
     "@feathersjs/client": "^4.3.5",
     "hover.css": "^2.3.2",
+    "node-sass": "^4.13.1",
     "normalize.css": "^8.0.1",
     "react": "^16.10.1",
     "react-dom": "^16.10.1",

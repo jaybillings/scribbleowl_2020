@@ -16,18 +16,13 @@
 }
 
 .gallery img {
-    max-width: 100%;
     display: block;
-    border: 1px solid var(--gray12);
-}
-
-.gallery img:hover, .gallery img:active, .gallery img:focus {
-    border: none;
+    max-width: 100%;
 }
 
 .gallery figure a {
     display: block;
-    border: 2px solid transparent;
+    border: 2px solid var(--gray12);
 }
 
 .gallery figure a:hover, .gallery figure a:focus, .gallery figure a:active {

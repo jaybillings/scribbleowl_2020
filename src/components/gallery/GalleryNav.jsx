@@ -3,7 +3,7 @@ import {Link} from "react-router-dom";
 import {TiMediaPlayReverseOutline, TiMediaPlayOutline, TiHome} from "react-icons/ti";
 import GalleryImageNav from "./GalleryImageNav";
 
-import '../../styles/gallery-nav.css';
+import '../../styles/scss/gallery-nav.scss';
 
 export default class GalleryNav extends Component {
   constructor(props) {

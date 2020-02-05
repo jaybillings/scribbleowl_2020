@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import {TiSocialGithub, TiSocialLinkedin} from "react-icons/ti";
 import {NavHashLink as NavLink} from "react-router-hash-link";
 
-import '../styles/header.css';
+import '../styles/scss/header.scss';
 
 export default class Header extends Component {
   render() {

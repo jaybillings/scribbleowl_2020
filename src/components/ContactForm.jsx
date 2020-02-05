@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {TiMail} from "react-icons/ti";
 
-import '../styles/contact-form.css';
+import '../styles/scss/contact-form.scss';
 
 export default class ContactForm extends Component {
   constructor(props) {
