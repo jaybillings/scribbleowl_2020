@@ -44,9 +44,8 @@
     color: var(--alt-main);
 }
 
-#portfolio li:not(.selected):hover {
+#portfolio li:not(.selected):hover, #portfolio li:not(.selected):focus, #portfolio li:not(.selected):active {
     color: var(--main-color);
-    /*font-weight: bold;*/
 }
 
 #portfolio p.gallery-link {

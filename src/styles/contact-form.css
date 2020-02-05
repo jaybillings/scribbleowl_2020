@@ -30,7 +30,8 @@
     font-size: initial;
 }
 
-.contactForm input:hover, .contactForm textarea:hover, .contactForm input:active, .contactForm textarea:active {
+.contactForm input:hover, .contactForm input:active, .contactForm input:focus,
+.contactForm textarea:hover, .contactForm textarea:active, .contactForm textarea:focus {
     border: 2px solid var(--accent-color);
     box-shadow: -2px 2px 5px 0 var(--gray12);
     transition: 0.1s linear;
@@ -39,20 +40,15 @@
 .contactForm button {
     font-weight: 600;
     padding: 1rem 2.5rem;
-    /*background-color: var(--alt-accent);
-    color: var(--white);
-    border: 4px solid var(--alt-accent);*/
     background-color: white;
     border: 4px solid var(--main-color);
     color: var(--main-color);
 }
 
-.contactForm button:hover {
-     /*background-color: var(--alt-main);
-     border-color: var(--alt-main);*/
+.contactForm button:hover, .contactForm button:focus, .contactForm button:active {
     background: var(--accent-color);
     border-color: var(--accent-color);
- }
+}
 
 .contactForm button svg {
     vertical-align: bottom;

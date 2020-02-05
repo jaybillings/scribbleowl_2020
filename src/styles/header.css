@@ -4,7 +4,6 @@ header {
     margin-bottom: 3rem;
     padding: 4rem 3rem 1rem;
     background-color: var(--main-color);
-    /*color: white;*/
     z-index: 1;
 }
 
@@ -36,17 +35,15 @@ header ul {
 }
 
 header li {
-    /*font-family: 'Montserrat', sans-serif;*/
     font-size: 1.2rem;
-    /*padding: 0 1rem;*/
     color: #ddd;
 }
 
-header li:hover {
+header li:hover, header li:focus, header li:active {
     color: white;
 }
 
-header li:hover::before {
+header li:hover::before, header li:active::before, header li:focus::before {
     background: var(--accent-color);
 }
 
@@ -54,22 +51,15 @@ header a {
     color: var(--gray14);
 }
 
-header a:hover {
+header a:hover, header a:active, header a:focus {
     border: none;
     color: var(--white);
 }
 
-header a:hover svg {
+header a:hover svg, header a:focus svg, header a:active svg {
     color: var(--accent-color);
 }
 
 header svg {
     font-size: 1.75rem;
 }
-
-/*
-header a:hover {
-    border-bottom: none;
-    background: var(--accent-color);
-    color: #444;
-}*/

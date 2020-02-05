@@ -31,17 +31,15 @@
     /*border-bottom: 2px solid transparent;*/
 }
 
-.galleryNav .projNav a:hover {
-    /*color: var(--main-text);*/
+.galleryNav .projNav a:hover, .galleryNav .projNav a:focus, .galleryNav .projNav a:active {
     border: none;
-    /*border-bottom: 2px solid var(--main-color);*/
 }
 
-.galleryNav .projNav .home-nav a {
+.galleryNav .home-nav a {
     font-size: 1.4rem;
 }
 
-.galleryNav .projNav .home-nav a:hover {
+.galleryNav .home-nav a:hover, .galleryNav .home-nav a:focus, .galleryNav .home-nav a:active {
     color: var(--main-color);
 }
 
@@ -57,7 +55,7 @@
     color: var(--white);
 }
 
-.galleryNav .imageNav a:hover  {
+.galleryNav .imageNav a:hover, .galleryNav .imageNav a:focus, .galleryNav .imageNav a:active  {
     color: var(--main-color);
     border-bottom: none;
 }

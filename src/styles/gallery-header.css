@@ -11,7 +11,7 @@
     border-bottom: 1px solid transparent;
 }
 
-.galleryHeader a:hover {
+.galleryHeader a:hover, .galleryHeader a:focus, .galleryHeader a:active {
     border-bottom: 1px solid var(--white);
 }
 

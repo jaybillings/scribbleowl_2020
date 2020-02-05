@@ -10,6 +10,6 @@
     border-bottom: 1px solid transparent;
 }
 
-#jckb-scroller a:hover {
+#jckb-scroller a:hover, #jckb-scroller a:focus, #jckb-scroller a:active {
     text-decoration: underline;
 }

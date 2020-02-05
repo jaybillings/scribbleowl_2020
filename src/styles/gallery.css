@@ -21,7 +21,7 @@
     border: 1px solid var(--gray12);
 }
 
-.gallery img:hover {
+.gallery img:hover, .gallery img:active, .gallery img:focus {
     border: none;
 }
 
@@ -30,7 +30,7 @@
     border: 2px solid transparent;
 }
 
-.gallery figure a:hover {
+.gallery figure a:hover, .gallery figure a:focus, .gallery figure a:active {
     border: 2px solid var(--main-color);
     box-shadow: 0 0 5px 0 var(--gray11);
 }
@@ -45,7 +45,7 @@
     color: var(--gray3);
 }
 
-.gallery .social-link a:hover {
+.gallery .social-link a:hover, .gallery .social-link a:active, .gallery .social-link a:focus {
     color: var(--main-color);
 }
 
