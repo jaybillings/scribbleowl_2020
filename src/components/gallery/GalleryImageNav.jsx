@@ -27,7 +27,7 @@ export default class GalleryImageNav extends Component {
 
   renderImgBack() {
     if (this.props.imgIndex > 0) return <Link
-      to={`/gallery/${this.props.projID}/${this.props.imgIndex - 1}`} className={'hvr-icon-wobble-horizontal wobble-horizontal-reverse wobble-horizontal-min'}>
+      to={`/gallery/${this.props.projID}/${this.props.imgIndex - 1}`} className={'hvr-icon-wobble-horizontal wobble-horizontal-reverse-min'}>
       <TiMediaPlayReverseOutline className={'hvr-icon'}/> Previous Image</Link>;
 
     return <span><TiMediaPlayReverseOutline/> Previous Image</span>;

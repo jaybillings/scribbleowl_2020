@@ -1,7 +1,7 @@
 import React from "react";
-import {Link} from "react-router-dom";
 import {TiArrowForwardOutline} from "react-icons/ti";
 import {renderCopy} from "../../js/utilities";
+import ScrollTop from "../common/ScrollTop";
 
 import "../../styles/gallery.css";
 
@@ -23,6 +23,7 @@ export default function Gallery(props) {
         <figure><a href={currentImage.name} target={'_blank'}><img alt={''} src={currentImage.name}/></a></figure>
         <figcaption>{renderCopy(currentImage.copy, 'galimg')}</figcaption>
       </div>
+      <ScrollTop/>
     </div>
   )
 }
