@@ -52,7 +52,7 @@ a {
 }
 
 .section {
-  padding: $side-whitespace;
+  padding: $whitespace;
   margin: 1rem 0;
   background: $white;
 
@@ -96,6 +96,10 @@ a {
   margin: -1px;
   overflow: hidden;
   padding: 0;
+}
+
+:root {
+  max-width: 1200px;
 }
 
 /* Only for larger formats */
