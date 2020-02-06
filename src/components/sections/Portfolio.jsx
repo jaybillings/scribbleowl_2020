@@ -30,7 +30,7 @@ export default class Portfolio extends Component {
           {this.props.projectList.map(alias =>
             <li key={alias}
                 data-alias={alias}
-                className={alias === this.state.currentProj ? 'selected' : 'hvr-grow'}
+                className={alias === this.state.currentProj ? 'selected' : ''}
                 onClick={this.handleNavClick}>
               <span className={''}>{this.props.projects[alias].title}</span>
             </li>
@@ -56,7 +56,7 @@ export default class Portfolio extends Component {
         {/* Yes, the spaces are significant */}
         <p className={'gallery-link'}>
           [ <Link to={`/gallery/${this.state.currentProj}#top`}>
-          Open full gallery <TiArrowRightThick /></Link> ]
+          Open full gallery <TiArrowRightThick/></Link> ]
         </p>
       </div>
     )
@@ -64,19 +64,17 @@ export default class Portfolio extends Component {
 
   render() {
     const currentProject = this.props.projects[this.state.currentProj];
-    const tileStyle = {background: `gray url(${currentProject.thumbnail})`};
+    /*const tileStyle = {background: `gray url(${currentProject.thumbnail})`};*/
 
-    return ([
-      <div key={'portfolio'} id={'portfolio'}>
-        <div style={tileStyle}>
-          <div className={'portfolioInner'}>
-            <h2>{this.props.title}</h2>
-            {this.renderPortfolioNav()}
-            {this.renderPortfolioTile(currentProject)}
-          </div>
+    return (
+      <div id={'portfolio'} className={'section'}>
+        <div className={'portfolioInner'}>
+          <h2>{this.props.title}</h2>
+          {this.renderPortfolioNav()}
+          {this.renderPortfolioTile(currentProject)}
           <ScrollTop/>
         </div>
-      </div>,
-    ])
+      </div>
+    )
   }
 }
