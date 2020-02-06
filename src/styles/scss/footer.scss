@@ -1,0 +1,21 @@
+@import '_variables.scss';
+
+footer {
+  padding: 2rem $side-whitespace 2rem;
+  background-color: $alt-main;
+  color: $white;
+
+  a {
+    color: $white;
+    border-bottom: 1px solid $white;
+
+    &:hover, &:focus, &:active {
+      color: $accent-color;
+    }
+  }
+
+  p {
+    padding: 0;
+    margin: 0.5rem 0;
+  }
+}

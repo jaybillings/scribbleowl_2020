@@ -1,0 +1,19 @@
+@import "_variables.scss";
+
+#jckb-scroller {
+  display: flex;
+  justify-content: flex-end;
+  font-weight: bold;
+  font-size: 0.9rem;
+
+  a {
+    border-bottom: 1px solid transparent;
+    color: $gray3;
+    margin-right: 0.25rem;
+    text-transform: capitalize;
+
+    &:hover, &:focus, &:active {
+      border-bottom: 1px solid $black;
+    }
+  }
+}

@@ -1,0 +1,63 @@
+@import '_variables.scss';
+
+header {
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: 1fr auto;
+  padding: 3.5em $side-whitespace 1em;
+  background-color: $main-color;
+  z-index: 1;
+
+  h1 {
+    grid-area: 1 / 1 / 2 / 2;
+    color: $white;
+    font-size: 1.4rem;
+  }
+
+  h2 {
+    font-size: 1.1rem;
+  }
+
+  a {
+    color: $gray13;
+
+    &:hover {
+      color: $white;
+      border: none;
+    }
+  }
+
+  .main-nav {
+    grid-area: 2 / 1 / 3 / 3;
+    margin-top: 0.5rem;
+
+    ul {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    li {
+      &:not(:last-of-type) {
+        padding-right: 0.5rem;
+      }
+      &:hover, &:focus, &:active {
+        color: $white;
+
+        &::before {
+          background: $accent-color;
+        }
+      }
+    }
+  }
+
+  .social-nav {
+    grid-area: 1 / 2 / 2 / 3;
+    font-size: 1.5rem;
+
+    a {
+      &:hover, &:focus, &:active {
+        color: $accent-color;
+      }
+    }
+  }
+}

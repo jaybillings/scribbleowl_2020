@@ -1,0 +1,48 @@
+@import "_variables.scss";
+
+.contactForm {
+  margin: 1rem 0 1.5rem;
+
+  label, input, textarea {
+    display: block;
+  }
+
+  label {
+    margin: 1rem 0;
+    text-transform: capitalize;
+
+    span {
+      display: block;
+      padding-bottom: 0.25rem;
+    }
+  }
+
+  input, textarea {
+    width: 100%;
+    border: 2px solid $gray7;
+
+    &:hover, &:focus, &:active {
+      border: 2px solid $accent-color;
+      box-shadow: -2px 2px 5px 0 $shadow;
+      transition: 0.1s linear;
+    }
+  }
+
+  textarea {
+    height: 10rem;
+  }
+
+  button {
+    width: 100%;
+    padding: 1rem;
+    background: $white;
+    border: 4px solid $main-color;
+    color: $main-color;
+    font-weight: bold;
+
+    &:hover, &:focus, &:active {
+      background: $main-color;
+      border-color: $main-color;
+    }
+  }
+}
