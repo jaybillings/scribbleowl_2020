@@ -1,10 +1,20 @@
 @import '_variables.scss';
+@import '~include-media/dist/_include-media.scss';
 
 footer {
-  padding: 2rem $whitespace 2rem;
+  padding: 2rem $whitespace;
   background-color: $alt-main;
   color: $white;
   font-size: 0.91rem;
+
+  @include media(">=small") {
+    padding: 1rem $whitespace-med 2rem;
+  }
+
+  @include media(">=large") {
+    padding: 2rem $whitespace-lg 3rem;
+    font-size: 1rem;
+  }
 
   a {
     color: $white;
@@ -18,5 +28,13 @@ footer {
   p {
     padding: 0;
     margin: 0.5rem 0;
+
+    @include media(">=small") {
+      display: inline-block;
+
+      &:first-of-type {
+        margin-right: 0.5rem;
+      }
+    }
   }
 }

@@ -1,6 +1,8 @@
 @import "_variables.scss";
+@import '~include-media/dist/_include-media.scss';
 
 #portfolio {
+  position: relative;
   background: $accent-color;
   padding: 1rem 0;
 
@@ -17,16 +19,34 @@
   }
 
   nav {
-    background: $main-background;
+    background: $gray14;
     padding: 0.5rem 0;
     margin: 0 -1rem 1.5rem;
     overflow: auto;
     scrollbar-width: thin;
     border: 2px solid $alt-accent;
+    border-left: none;
+    border-right: none;
+
+    @include media(">=medium") {
+      max-height: 25rem;
+      background: linear-gradient(rgba(255,255,255,0.1) 10%, rgba(255,255,255,0.5) 45%, rgba(255,255,255,0.5) 55%, rgba(255,255,255,0.1) 90%);
+      overflow-y: auto;
+      overflow-x: hidden;
+      text-align: left;
+      margin: 0 0 2rem;
+      border: none;
+      border-right: 3px solid $main-color;
+    }
 
     ul {
       display: flex;
       margin: 1rem 0;
+
+      @include media(">=medium") {
+        display: block;
+        margin: 0;
+      }
     }
 
     li {
@@ -34,6 +54,12 @@
       padding: 0 0.5rem;
       cursor: pointer;
       line-height: 1.5rem;
+
+      @include media(">=medium") {
+        margin: 0.5rem 0;
+        padding: 0 1rem 0 0;
+        cursor: pointer;
+      }
 
       &.selected {
         cursor: default;
@@ -55,23 +81,76 @@
     span {
       display: inline-block;
       width: max-content;
+
+      @include media(">=medium") {
+        display: inline;
+      }
     }
   }
 
   .portfolioInner {
     background: $light-overlay;
-    padding: 0 $whitespace;
+    margin: 0 $whitespace;
+
+    @include media(">=medium") {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      margin: 0 ($whitespace-med / 2);
+      padding: 0 ($whitespace-med / 2);
+
+      h2 {
+        grid-column: 1 / span 2;
+      }
+    }
+
+    @include media(">=large") {
+      grid-template-columns: 1fr 3fr;
+      margin: 0 ($whitespace-lg / 2);
+      padding: 0 ($whitespace-lg / 2)
+    }
+  }
+
+  @include media(">=medium") {
+    .projectTile {
+      position: relative;
+      padding: 0 1rem 0 2rem;
+      margin-bottom: 2rem;
+    }
+  }
+
+  .copy {
+    p {
+      font-size: 1rem;
+    }
+
+    @include media(">=medium") {
+      max-height: 15rem;
+      overflow: auto;
+      scrollbar-width: thin;
+    }
   }
 
   .gallery-link {
     font-weight: bold;
-  }
 
-  .copy p {
-    font-size: 1rem;
+    @include media(">=medium") {
+      position: absolute;
+      bottom: 0;
+      margin: 0 0 0.25rem;
+    }
   }
 
   #jckb-scroller {
     padding-bottom: 1rem;
+
+    @include media(">=medium") {
+      position: absolute;
+      right: $whitespace-med;
+      bottom: 2rem;
+    }
+
+    @include media(">=large") {
+      right: $whitespace-lg;
+    }
   }
 }

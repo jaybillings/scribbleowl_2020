@@ -27,3 +27,7 @@ $font-stack: 'Open Sans', sans-serif;
 $default-font-size: 16px;
 
 $whitespace: 1rem;
+$whitespace-med: 2rem;
+$whitespace-lg: 3rem;
+
+$breakpoints: (small: 35em, medium: 44em, large: 64rem) !default;

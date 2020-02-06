@@ -1,4 +1,5 @@
 @import '_variables.scss';
+@import '~include-media/dist/_include-media.scss';
 
 html {
   font-size: $default-font-size;
@@ -55,6 +56,14 @@ a {
   padding: $whitespace;
   margin: 1rem 0;
   background: $white;
+
+  @include media(">=small") {
+    padding: $whitespace-med;
+  }
+
+  @include media(">=large") {
+    padding: $whitespace-lg;
+  }
 
   h2 {
     margin: 0 0 1em;

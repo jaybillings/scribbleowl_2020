@@ -1,4 +1,5 @@
 @import "_variables.scss";
+@import '~include-media/dist/_include-media.scss';
 
 .contactForm {
   margin: 1rem 0 1.5rem;
@@ -19,9 +20,17 @@
 
   input, textarea {
     width: 95%;
-    max-width: 400px;
+    max-width: 600px;
     border: 2px solid $gray7;
     padding: 0.5rem;
+
+    @include media(">=small") {
+      width: 96%;
+    }
+
+    @include media(">=medium") {
+      width: 97%;
+    }
 
     &:hover, &:focus, &:active {
       border: 2px solid $accent-color;
@@ -41,6 +50,10 @@
     border: 4px solid $main-color;
     color: $main-color;
     font-weight: bold;
+
+    @include media(">=medium") {
+      width: 12rem;
+    }
 
     &:hover, &:focus, &:active {
       background: $main-color;
