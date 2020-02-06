@@ -1,7 +1,7 @@
 @import "_variables.scss";
 
 #portfolio {
-  background: $alt-accent;
+  background: $accent-color;
   padding: 1rem 0;
 
   h2 {
@@ -17,12 +17,12 @@
   }
 
   nav {
-    background: $gray13 linear-gradient(90deg, rgba(0, 0, 0, 0.01), rgba(255, 255, 255, 0.75) 45%,
-            rgba(255, 255, 255, 0.75) 55%, rgba(0, 0, 0, 0.01));
+    background: $main-background;
     padding: 0.5rem 0;
     margin: 0 -1rem 1.5rem;
     overflow: auto;
     scrollbar-width: thin;
+    border: 2px solid $alt-accent;
 
     ul {
       display: flex;
@@ -59,7 +59,7 @@
   }
 
   .portfolioInner {
-    background: $white;
+    background: $light-overlay;
     padding: 0 $side-whitespace;
   }
 

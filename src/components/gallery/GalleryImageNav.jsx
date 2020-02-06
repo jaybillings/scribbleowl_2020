@@ -19,36 +19,38 @@ export default class GalleryImageNav extends Component {
 
   renderImgFirst() {
     if (this.props.imgIndex > 0) return <Link
-      to={`/gallery/${this.props.projID}/0`} className={'hvr-icon-wobble-horizontal wobble-horizontal-reverse'}>
-      <TiMediaRewindOutline className={'hvr-icon'}/> First Image</Link>;
+      to={`/gallery/${this.props.projID}/0`} className={'active hvr-icon-wobble-horizontal wobble-horizontal-reverse'}>
+      <span>First Image </span><TiMediaRewindOutline className={'hvr-icon'}/></Link>;
 
-    return <span><TiMediaRewindOutline/> First Image</span>;
+    return <div className={'inactive'}><span>First Image</span><TiMediaRewindOutline/></div>;
   }
 
   renderImgBack() {
     if (this.props.imgIndex > 0) return <Link
-      to={`/gallery/${this.props.projID}/${this.props.imgIndex - 1}`} className={'hvr-icon-wobble-horizontal wobble-horizontal-reverse-min'}>
-      <TiMediaPlayReverseOutline className={'hvr-icon'}/> Previous Image</Link>;
+      to={`/gallery/${this.props.projID}/${this.props.imgIndex - 1}`}
+      className={'active hvr-icon-wobble-horizontal wobble-horizontal-reverse-min'}>
+      <span>Previous Image</span><TiMediaPlayReverseOutline className={'hvr-icon'}/></Link>;
 
-    return <span><TiMediaPlayReverseOutline/> Previous Image</span>;
+    return <div className={'inactive'}><span>Previous Image </span><TiMediaPlayReverseOutline/></div>;
   }
 
   renderImgNext() {
     if (this.props.imgIndex < this.props.imgCount - 1) return <Link
-      to={`/gallery/${this.props.projID}/${this.props.imgIndex + 1}`} className={'hvr-icon-wobble-horizontal wobble-horizontal-min'}>Next
-      Image <TiMediaPlayOutline className={'hvr-icon'}/></Link>;
+      to={`/gallery/${this.props.projID}/${this.props.imgIndex + 1}`}
+      className={'active hvr-icon-wobble-horizontal wobble-horizontal-min'}>
+      <span>Next Image </span><TiMediaPlayOutline className={'hvr-icon'}/></Link>;
 
-    return <span>Next Image <TiMediaPlayOutline/></span>;
+    return <div className={'inactive'}><span>Next Image <TiMediaPlayOutline/></span></div>;
   }
 
   renderImgLast() {
     const lastIndex = this.props.imgCount - 1;
 
     if (this.props.imgIndex < lastIndex) return <Link
-      to={`/gallery/${this.props.projID}/${lastIndex}`} className={'hvr-icon-wobble-horizontal'}>Last
-      Image <TiMediaFastForwardOutline className={'hvr-icon'}/></Link>;
+      to={`/gallery/${this.props.projID}/${lastIndex}`} className={'active hvr-icon-wobble-horizontal'}>
+      <span>Last Image </span><TiMediaFastForwardOutline className={'hvr-icon'}/></Link>;
 
-    return <span>Last Image <TiMediaFastForwardOutline/></span>;
+    return <div className={'inactive'}><span>Last Image</span> <TiMediaFastForwardOutline/></div>;
   }
 
   render() {
@@ -57,7 +59,7 @@ export default class GalleryImageNav extends Component {
         <li key={'img-first'} className={'grid-start'}>{this.renderImgFirst()}</li>
         <li key={'img-prev'} className={'grid-start'}>{this.renderImgBack()}</li>
         <li key={'nav-location'} className={'nav-location grid-center text-center'}>
-          <span>Image {this.props.imgIndex + 1} of {this.props.imgCount}</span>
+          <span>Image</span> <span>{this.props.imgIndex + 1} of {this.props.imgCount}</span>
         </li>
         <li key={'img-next'} className={'grid-end text-right'}>{this.renderImgNext()}</li>
         <li key={'img-last'} className={'grid-end text-right'}>{this.renderImgLast()}</li>

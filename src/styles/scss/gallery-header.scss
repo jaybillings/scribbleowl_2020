@@ -1,0 +1,21 @@
+@import "_variables.scss";
+
+.galleryHeader {
+  h1 {
+    font-weight: normal;
+  }
+
+  a {
+    border-bottom: 1px solid transparent;
+    color: $white;
+
+    &:hover, &:focus, &:active {
+      border-bottom: 1px solid $white;
+    }
+  }
+
+  small {
+    display: block;
+    font-size: 1rem;
+  }
+}

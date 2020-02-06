@@ -1,0 +1,44 @@
+@import "_variables.scss";
+
+.gallery {
+  position: relative;
+  margin: 0 $side-whitespace;
+
+  img {
+    display: block;
+    max-width: 100%;
+  }
+
+  .galleryInner {
+    display: grid;
+    grid-template-columns: 1fr;
+
+    figure {
+      grid-row: 2;
+      margin: 0 auto;
+
+      a {
+        display: block;
+        border: 2px solid $gray12;
+
+        &:hover, &:focus, &:active {
+          border: 2px solid $main-color;
+          box-shadow: 0 0 5px 0 $shadow;
+        }
+      }
+    }
+
+    figcaption {
+      grid-row: 1;
+    }
+  }
+
+  .tech, .social-link {
+    font-size: 0.9rem;
+    color: $gray3;
+  }
+
+  #jckb-scroller {
+    margin: 1rem 0;
+  }
+}
