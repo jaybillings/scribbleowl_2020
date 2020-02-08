@@ -3,7 +3,6 @@
 .galleryNav {
   position: sticky;
   top: 0;
-  margin: 0 0 2rem;
   background: $alt-accent;
   box-shadow: 0 2px 10px 0 $shadow;
   z-index: 1;
@@ -16,7 +15,7 @@
   }
 
   svg {
-    vertical-align: bottom;
+    vertical-align: text-bottom;
   }
 
   a {
@@ -32,7 +31,7 @@
     display: grid;
     grid-template-columns: 1fr auto 1fr;
     grid-gap: 0.25rem;
-    padding: 0.5rem;
+    padding: 1rem 0.5rem;
   }
 
   .home-nav {
@@ -49,8 +48,9 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     grid-gap: 1rem;
-    background: rgba(255, 255, 255, 0.25);
+    align-items: center;
     padding: 0.5rem;
+    background: rgba(255, 255, 255, 0.25);
 
     a {
       &:hover, &:focus, &:active {
@@ -71,7 +71,7 @@
 
     .inactive {
       span, svg {
-        color: $white;
+        color: $gray11;
       }
     }
 

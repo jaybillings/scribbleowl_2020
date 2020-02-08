@@ -9,6 +9,10 @@
     max-width: 100%;
   }
 
+  &.section {
+    padding: 1rem $whitespace;
+  }
+
   .galleryInner {
     display: grid;
     grid-template-columns: 1fr;
@@ -30,15 +34,26 @@
 
     figcaption {
       grid-row: 1;
+
+      p {
+        margin-bottom: 2rem;
+      }
     }
   }
-
   .tech, .social-link {
     font-size: 0.9rem;
     color: $gray3;
   }
 
+  .tech {
+    margin-top: 0;
+  }
+
+  .social-link svg {
+    color: $alt-main;
+  }
+
   #jckb-scroller {
-    margin: 1rem 0;
+    margin: 1.5rem 0 0;
   }
 }
