@@ -54,9 +54,9 @@ export default class Portfolio extends Component {
         {links}
         <div className={'copy'}>{renderCopy(project.copy, 'projtile')}</div>
         {/* Yes, the spaces are significant */}
-        <p className={'gallery-link'}>
+        <p className={'gallery-link hvr-icon-wobble-horizontal'}>
           [ <Link to={`/gallery/${this.state.currentProj}#top`}>
-          Open full gallery <TiArrowRightThick/></Link> ]
+          Open full gallery <TiArrowRightThick className={'hvr-icon'}/></Link> ]
         </p>
       </div>
     )

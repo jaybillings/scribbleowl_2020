@@ -6,6 +6,7 @@
   justify-content: flex-end;
   font-weight: bold;
   font-size: 0.9rem;
+  padding: 0.5rem 0;
 
   @include media(">=medium") {
     margin-top: 1.5rem;

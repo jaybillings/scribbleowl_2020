@@ -5,7 +5,8 @@ header {
   display: grid;
   grid-template-rows: auto;
   grid-template-columns: 1fr auto;
-  padding: 3.5em $whitespace 1em;
+  grid-row-gap: 1rem;
+  padding: 1.5rem $whitespace 1rem;
   background: $main-color;
   z-index: 1;
 
@@ -41,17 +42,12 @@ header {
   }
 
   a {
-    color: $gray13;
-
-    &:hover {
-      color: $white;
-      border: none;
-    }
+    color: $white;
   }
 
   .main-nav {
     grid-area: 2 / 1 / 3 / 3;
-    margin-top: 0.5rem;
+    font-size: 1.2rem;
 
     @include media(">=small") {
       grid-area: nav;
@@ -64,31 +60,42 @@ header {
     }
 
     ul {
-      text-align: right;
+      display: flex;
+      justify-content: space-between;
     }
 
-    li {
-      &:not(:last-of-type) {
-        padding-right: 0.5rem;
 
-        @include media(">=small") {
+    li {
+      @include media(">=small") {
+        &:not(:last-of-type) {
           padding-right: 1rem;
         }
       }
 
       &:hover, &:focus, &:active {
-        color: $white;
-
         &::before {
           background: $accent-color;
         }
+      }
+    }
+
+    a {
+      display: inline-block;
+      text-decoration: underline;
+
+      &:hover, &:focus, &:active {
+        text-decoration: none;
       }
     }
   }
 
   .social-nav {
     grid-area: 1 / 2 / 2 / 3;
-    font-size: 1.5rem;
+    font-size: 2rem;
+
+    li:first-of-type {
+      margin-right: 0.5rem;
+    }
 
     @include media(">=small") {
       grid-area: social;
