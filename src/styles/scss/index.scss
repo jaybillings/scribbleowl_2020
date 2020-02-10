@@ -51,20 +51,20 @@ a {
 }
 
 .section {
-  padding: $whitespace;
   margin: 1rem 0;
+  padding: 1rem $whitespace;
   background: $white;
 
   @include media(">=small") {
-    padding: $whitespace-med;
+    padding: 1rem $whitespace-med;
   }
 
   @include media(">=large") {
-    padding: $whitespace-lg;
+    padding: 2rem $whitespace-lg;
   }
 
   h2 {
-    margin: 0 0 2rem;
+    margin: 0 0 1rem;
   }
 }
 
@@ -86,9 +86,11 @@ a {
   &-start {
     justify-self: start;
   }
+
   &-end {
     justify-self: end;
   }
+
   &-center {
     justify-self: center;
   }

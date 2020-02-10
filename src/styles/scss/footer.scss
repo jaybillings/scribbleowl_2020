@@ -21,13 +21,14 @@ footer {
 
     &:hover, &:focus, &:active {
       color: $accent-color;
+      border-color: $accent-color;
     }
   }
 
   p {
     color: $white;
 
-    @include media(">=small") {
+    @include media(">=medium") {
       display: inline-block;
 
       &:first-of-type {

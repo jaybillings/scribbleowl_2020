@@ -45,7 +45,7 @@ export default class Portfolio extends Component {
       <span>[ <a href={project.uri}>Live version <TiArrowForwardOutline/></a> ]</span> : '';
     const sourceLink = project.source ?
       <span>[ <a href={project.source}>Source <TiArrowForwardOutline/></a> ]</span> : '';
-    const links = project.uri || project.source ? <p>{liveLink} {sourceLink}</p> : '';
+    const links = project.uri || project.source ? <p className={'external-links'}>{liveLink} {sourceLink}</p> : '';
 
     return (
       <div className={'projectTile'}>

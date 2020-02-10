@@ -9,7 +9,11 @@
   padding: 0.5rem 0;
 
   @include media(">=medium") {
-    margin-top: 1.5rem;
+    padding: 1rem 0;
+  }
+
+  @include media(">=large") {
+    padding: 1rem 0 0;
   }
 
   a {
@@ -19,7 +23,7 @@
     text-transform: capitalize;
 
     &:hover, &:focus, &:active {
-      border-bottom: 1px solid $black;
+      text-decoration: underline;
     }
   }
 }
