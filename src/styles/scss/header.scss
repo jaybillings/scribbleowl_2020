@@ -7,7 +7,7 @@ header {
   / 1fr auto;
   grid-row-gap: 1rem;
   padding: 2.5em $whitespace 1.5em;
-  background: $main-color;
+  background: $main-color-dark;
   z-index: 1;
 
   @include media(">=small") {

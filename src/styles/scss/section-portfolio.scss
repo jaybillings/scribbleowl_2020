@@ -49,7 +49,6 @@
       padding: 0 0.5rem;
       cursor: pointer;
       line-height: 1.5rem;
-      font-weight: bold;
 
       @include media(">=medium") {
         margin: 0.5rem 0;
@@ -59,10 +58,11 @@
       &.selected {
         cursor: default;
         color: $alt-main;
+        font-weight: bold;
       }
 
       &:not(.selected) {
-        color: $gray6;
+        color: $gray4;
         transition: transform ease-out 0.1s;
 
         &:hover, &:focus, &:active {

@@ -14,6 +14,7 @@ export default class Portfolio extends Component {
     this.state = {currentProj: this.props.projectList[0]};
 
     this.handleNavClick = this.handleNavClick.bind(this);
+    this.handleNavKeyDown = this.handleNavKeyDown.bind(this);
     this.renderPortfolioNav = this.renderPortfolioNav.bind(this);
     this.renderPortfolioTile = this.renderPortfolioTile.bind(this);
   }
@@ -23,15 +24,22 @@ export default class Portfolio extends Component {
     if (alias !== this.state.currentProj) this.setState({currentProj: alias});
   }
 
+  handleNavKeyDown(e) {
+    console.log(e.keyCode);
+    if (e.keyCode !== 13) return;
+
+    this.handleNavClick(e);
+  }
+
   renderPortfolioNav() {
     return (
       <nav>
         <ul>
           {this.props.projectList.map(alias =>
-            <li key={alias}
-                data-alias={alias}
+            <li key={alias} tabIndex={0} data-alias={alias}
                 className={alias === this.state.currentProj ? 'selected' : ''}
-                onClick={this.handleNavClick}>
+                onClick={this.handleNavClick}
+                onKeyDown={this.handleNavKeyDown}>
               <span className={''}>{this.props.projects[alias].title}</span>
             </li>
           )}
@@ -68,7 +76,7 @@ export default class Portfolio extends Component {
 
     return (
       <div id={'portfolio'} className={'section'}>
-        <div  style={tileStyle}>
+        <div style={tileStyle}>
           <div className={'portfolioInner'}>
             <h2>{this.props.title}</h2>
             {this.renderPortfolioNav()}
