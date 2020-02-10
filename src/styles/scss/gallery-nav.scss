@@ -1,4 +1,5 @@
 @import "_variables.scss";
+@import '~include-media/dist/_include-media.scss';
 
 .galleryNav {
   position: sticky;
@@ -7,8 +8,21 @@
   box-shadow: 0 2px 10px 0 $shadow;
   z-index: 1;
 
+  ul {
+    padding: 0.5rem;
+    grid-gap: 0.5rem;
+
+    @include media(">=small") {
+      padding: 0.5rem 1.5rem;
+      grid-gap: 1rem;
+    }
+
+    @include media(">=large") {
+      padding: 1rem $whitespace-lg;
+    }
+  }
+
   li {
-    width: 100%;
     text-transform: capitalize;
     padding: 0.25rem;
 
@@ -30,12 +44,23 @@
   .projNav {
     display: grid;
     grid-template-columns: 1fr auto 1fr;
-    grid-gap: 0.25rem;
-    padding: 1rem 0.5rem;
+
+    @include media(">=large") {
+      font-size: 1.1rem;
+    }
+
+    li {
+      width: 100%;
+    }
   }
 
   .home-nav {
     font-size: 1.3rem;
+    text-align: center;
+
+    @include media(">=medium") {
+      font-size: 1.5rem;
+    }
 
     a {
       &:hover, &:focus, &:active {
@@ -47,10 +72,12 @@
   .imageNav {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    grid-gap: 1rem;
-    align-items: center;
-    padding: 0.5rem;
+    align-items: start;
     background: rgba(255, 255, 255, 0.25);
+
+    @include media(">=medium") {
+      align-items: center;
+    }
 
     a {
       &:hover, &:focus, &:active {
@@ -75,10 +102,14 @@
       }
     }
 
-    .nav-location span {
-      display: block;
-      text-transform: initial;
-      color: $gray3;
+    .nav-location {
+      align-self: start;
+
+      span {
+        display: block;
+        text-transform: initial;
+        color: $gray3;
+      }
     }
   }
 }

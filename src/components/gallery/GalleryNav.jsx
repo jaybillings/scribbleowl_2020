@@ -41,7 +41,7 @@ export default class GalleryNav extends Component {
       <nav className={'galleryNav'}>
         <ul className={'projNav'}>
           <li key={'prev-proj'} className={'grid-start'}>{this.renderProjPrev(projIndex)}</li>
-          <li key={'home'} className={'home-nav'}><Link to={'/#top'} className={'hvr-icon-pop'}><TiHome
+          <li key={'home'} className={'home-nav grid-center'}><Link to={'/#top'} className={'hvr-icon-pop'}><TiHome
             className={'hvr-icon'}/></Link></li>
           <li key={'next-proj'} className={'grid-end text-right'}>{this.renderProjNext(projIndex)}</li>
         </ul>

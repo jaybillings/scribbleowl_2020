@@ -1,4 +1,5 @@
 @import "_variables.scss";
+@import '~include-media/dist/_include-media.scss';
 
 .gallery {
   position: relative;
@@ -9,8 +10,19 @@
     max-width: 100%;
   }
 
-  &.section {
-    padding: 1rem $whitespace;
+  hr {
+    background-color: $main-color;
+    border: 1px solid transparent;
+    margin: 0 auto;
+    height: 0.01rem;
+
+    @include media(">=small") {
+      width: 80%;
+    }
+
+    @include media(">=medium") {
+      margin: 1.5rem auto 0.5rem;
+    }
   }
 
   .galleryInner {
@@ -35,7 +47,7 @@
     figcaption {
       grid-row: 1;
 
-      p {
+      p:last-of-type {
         margin-bottom: 2rem;
       }
     }

@@ -19,6 +19,7 @@ export default function Gallery(props) {
       <p className={'tech'}><strong>{props.project.tech.join(', ')}</strong></p>
       {links}
       <div className={'copy'}>{renderCopy(props.project.copy)}</div>
+      <hr />
       <div className={'galleryInner'}>
         <figure><a href={currentImage.name} target={'_blank'}><img alt={''} src={currentImage.name}/></a></figure>
         <figcaption>{renderCopy(currentImage.copy, 'galimg')}</figcaption>

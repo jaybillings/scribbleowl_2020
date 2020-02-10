@@ -1,8 +1,10 @@
 @import "_variables.scss";
+@import '~include-media/dist/_include-media.scss';
 
 .galleryHeader {
   h1 {
     font-weight: normal;
+    font-size: 1.4rem;
   }
 
   a {
@@ -18,5 +20,9 @@
     display: block;
     margin-top: 0.5rem;
     font-size: 1rem;
+
+    @include media(">=small") {
+      display: inline-block;
+    }
   }
 }

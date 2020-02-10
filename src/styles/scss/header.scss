@@ -15,11 +15,11 @@ header {
   }
 
   @include media(">=medium") {
-    padding: 2em $whitespace-med 1em;
+    padding: 2.5em $whitespace-med 1.5em;
   }
 
   @include media(">=large") {
-    padding: 2em $whitespace-lg 1em;
+    padding: 2.5em $whitespace-lg 1.5em;
   }
 
   h1 {
