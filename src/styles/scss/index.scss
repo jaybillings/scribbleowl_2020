@@ -108,6 +108,6 @@ a {
 #root {
   max-width: 1200px;
   margin: 0 auto;
-  box-shadow: $shadow-fuzzy;
-  background: $contrast-color;
+  box-shadow: $box-shadow-close;
+  background: $contrast-color-alt;
 }

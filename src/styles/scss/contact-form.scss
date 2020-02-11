@@ -36,8 +36,8 @@
     }
 
     &:hover, &:focus, &:active {
-      border: 2px solid $contrast-color;
-      box-shadow: $shadow-crisp;
+      border: 2px solid $contrast-color-alt;
+      box-shadow: $box-shadow-crisp;
     }
   }
 

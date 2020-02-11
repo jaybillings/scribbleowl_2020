@@ -78,7 +78,7 @@ header {
 
       &:hover, &:focus, &:active {
         &::before {
-          background: $contrast-color;
+          background: $contrast-color-alt;
         }
       }
     }
@@ -109,7 +109,7 @@ header {
 
     a {
       &:hover, &:focus, &:active {
-        color: $contrast-color;
+        color: $contrast-color-alt;
       }
     }
 

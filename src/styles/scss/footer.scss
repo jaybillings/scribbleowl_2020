@@ -20,8 +20,8 @@ footer {
     border-bottom: 1px solid $text-color-reverse;
 
     &:hover, &:focus, &:active {
-      color: $contrast-color;
-      border-color: $contrast-color-dark;
+      color: $contrast-color-alt;
+      border-color: $contrast-color;
     }
   }
 
