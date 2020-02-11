@@ -1,30 +1,36 @@
-$main-background: #dfeef5;
-$main-text: #222;
-
-$main-color: #189bc7;
-$main-color-dark: #167FA2;
-$alt-main: #0b2e63;
-
-$accent-color: #fad02c;
-$alt-accent: #fabc5f;
+$main-color: #0d7e83;
+$main-color-dark: #13293d;
+$main-color-desaturated: #394053;
+$contrast-color: #ffaf87;
+$contrast-color-dark: #a75265;
+$contrast-color-pale: #faf4e1;
 
 $light-overlay: rgba(255, 255, 255, 0.75);
-$shadow: rgba(0, 0, 0, 0.5);
+
+$shadow: rgba(0,0,0,0.5);
+$shadow-crisp: -2px 4px 3px 0 rgba(0,0,0,0.5);
+$shadow-fuzzy: -2px 10px 10px 0 rgba(0,0,0,0.5);
 
 $black: #000000;
 $white: #ffffff;
+$gray2: #222;
 $gray3: #333;
 $gray4: #444;
-$gray5: #555;
-$gray7: #777777;
+$gray5: #47565b;
 $gray6: #666666;
+$gray7: #777777;
 $gray8: #888888;
 $gray11: #bbbbbb;
 $gray12: #cccccc;
 $gray13: #dddddd;
 $gray14: #eeeeee;
 
+$background-color: $contrast-color-pale;
+$text-color: $gray2;
+$text-color-reverse: $white;
+
 $font-stack: 'Open Sans', sans-serif;
+$font-stack-code: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 $default-font-size: 16px;
 
 $whitespace: 1.5rem;

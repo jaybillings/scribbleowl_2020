@@ -37,10 +37,10 @@ export default class Portfolio extends Component {
         <ul>
           {this.props.projectList.map(alias =>
             <li key={alias} tabIndex={0} data-alias={alias}
-                className={alias === this.state.currentProj ? 'selected' : ''}
+                className={alias === this.state.currentProj ? 'selected' : 'text-grow-out'}
                 onClick={this.handleNavClick}
                 onKeyDown={this.handleNavKeyDown}>
-              <span className={''}>{this.props.projects[alias].title}</span>
+              <span>{this.props.projects[alias].title}</span>
             </li>
           )}
         </ul>

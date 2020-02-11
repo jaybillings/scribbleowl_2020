@@ -3,8 +3,8 @@
 
 footer {
   padding: 2rem $whitespace;
-  background-color: $alt-main;
-  color: $white;
+  background-color: $main-color-dark;
+  color: $text-color-reverse;
 
   @include media(">=small") {
     padding: 1rem $whitespace-med 2rem;
@@ -16,18 +16,16 @@ footer {
   }
 
   a {
-    color: $white;
-    border-bottom: 1px solid $white;
+    color: $text-color-reverse;
+    border-bottom: 1px solid $text-color-reverse;
 
     &:hover, &:focus, &:active {
-      color: $accent-color;
-      border-color: $accent-color;
+      color: $contrast-color;
+      border-color: $contrast-color-dark;
     }
   }
 
   p {
-    color: $white;
-
     @include media(">=medium") {
       display: inline-block;
 

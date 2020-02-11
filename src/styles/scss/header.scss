@@ -7,7 +7,8 @@ header {
   / 1fr auto;
   grid-row-gap: 1rem;
   padding: 2.5em $whitespace 1.5em;
-  background: $main-color-dark;
+  background: $main-color;
+  color: $text-color-reverse;
   z-index: 1;
 
   @include media(">=small") {
@@ -24,7 +25,6 @@ header {
 
   h1 {
     grid-area: header;
-    color: $white;
     font-size: 1.4rem;
 
     @include media(">=medium") {
@@ -41,7 +41,7 @@ header {
   }
 
   a {
-    color: $white;
+    color: $text-color-reverse;
   }
 
   .main-nav {
@@ -67,7 +67,6 @@ header {
     }
 
     li {
-
       &:not(:last-of-type) {
         @include media(">=small") {
           margin-right: 1rem;
@@ -77,10 +76,9 @@ header {
         }
       }
 
-
       &:hover, &:focus, &:active {
         &::before {
-          background: $accent-color;
+          background: $contrast-color;
         }
       }
     }
@@ -111,7 +109,7 @@ header {
 
     a {
       &:hover, &:focus, &:active {
-        color: $accent-color;
+        color: $contrast-color;
       }
     }
 

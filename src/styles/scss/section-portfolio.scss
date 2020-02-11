@@ -3,7 +3,7 @@
 
 #portfolio {
   position: relative;
-  background: $alt-accent;
+  background: $contrast-color-dark;
   padding: 1rem 0;
 
   h2 {
@@ -57,17 +57,13 @@
 
       &.selected {
         cursor: default;
-        color: $alt-main;
+        color: $main-color-dark;
         font-weight: bold;
       }
 
       &:not(.selected) {
-        color: $gray4;
-        transition: transform ease-out 0.1s;
-
         &:hover, &:focus, &:active {
-          color: $main-color;
-          transform: scale(1.05) translateY(-0.1rem);
+          text-decoration: underline;
         }
       }
     }
@@ -129,14 +125,15 @@
   .external-links a {
     &:hover, &:focus, &:active {
       text-decoration: underline;
+
+      svg {
+        color: $main-color;
+      }
     }
   }
 
   .gallery-link, .tech {
     font-size: 0.92rem;
-  }
-
-  .tech {
     color: $gray4;
   }
 
@@ -149,6 +146,7 @@
     }
 
     a {
+      color: inherit;
       &:hover, &:focus, &:active {
         text-decoration: underline;
       }

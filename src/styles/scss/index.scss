@@ -11,8 +11,8 @@ html {
 body {
   width: 100%;
   margin: 0 auto;
-  background: $main-background;
-  color: $main-text;
+  background: $background-color;
+  color: $text-color;
 }
 
 h1, h2, h3, ul, li, a {
@@ -27,18 +27,16 @@ h2 {
 
 h3 {
   font-size: 1.2em;
-  color: $alt-main;
+  color: $main-color-dark;
 }
 
 p {
   line-height: 1.2em;
   margin: 1rem 0;
-  color: $black;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-  monospace;
+  font-family: $font-stack-code
 }
 
 li {
@@ -46,7 +44,7 @@ li {
 }
 
 a {
-  color: $main-text;
+  color: $text-color;
   text-decoration: none;
 }
 
@@ -107,17 +105,9 @@ a {
   padding: 0;
 }
 
-:root {
+#root {
   max-width: 1200px;
   margin: 0 auto;
-  box-shadow: -2px 10px 10px 0 $shadow;
+  box-shadow: $shadow-fuzzy;
+  background: $contrast-color;
 }
-
-/* Only for larger formats */
-/*#root {
-  background: $white;
-  max-width: 1200px;
-  margin: 0 auto;
-  box-shadow: -2px 10px 10px 0 $shadow;
-}*/
-
