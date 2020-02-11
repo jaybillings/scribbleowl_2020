@@ -63,15 +63,15 @@ export default class ContactForm extends Component {
         <form key={'contactForm'} className={'contactForm'} onSubmit={this.sendMessage}>
           <label>
             <span>Name</span>
-            <input type={'text'} name={'contact_name'} ref={this.nameRef}/>
+            <input type={'text'} name={'contact_name'} className={'generic-linear-transition'} ref={this.nameRef}/>
           </label>
           <label>
             <span>Email Address</span>
-            <input type={'email'} name={'email'} ref={this.emailRef}/>
+            <input type={'email'} name={'email'} className={'generic-linear-transition'} ref={this.emailRef}/>
           </label>
           <label>
             <span>Message</span>
-            <textarea ref={this.msgRef}/>
+            <textarea className={'generic-linear-transition'} ref={this.msgRef}/>
           </label>
           <button type={'submit'} className={'hvr-pulse-grow hvr-fade '}>Send Message <TiMail/></button>
         </form>

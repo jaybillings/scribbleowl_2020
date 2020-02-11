@@ -10,7 +10,7 @@ import ErrorPage from "./layouts/ErrorPage";
 import 'normalize.css/normalize.css';
  /* TODO: Transitions should be togglable */
 import 'hover.css/css/hover-min.css';
-import './styles/hover-overrides.css';
+import './styles/scss/transitions.scss';
 import './styles/scss/index.scss';
 
 function App() {

@@ -1,0 +1,130 @@
+.text-grow-out {
+  transition: transform ease-out 0.1s;
+
+  &:hover, &:focus, &:active {
+    transform: scale(1.05) translateY(-0.1rem);
+  }
+}
+
+.generic-linear-transition {
+  &:hover, &:focus, &:active {
+    transition: 0.1s linear;
+  }
+}
+
+/* Overrides certain transitions from [hover.scss](https://github.com/IanLunn/Hover) */
+
+/* hvr-icon-wobble-horizontal with reversed animation */
+
+@keyframes wobble-horizontal-reverse {
+  16.65% {
+    transform: translateX(-6px);
+  }
+  33.3% {
+    transform: translateX(5px);
+  }
+  49.95% {
+    transform: translateX(-4px);
+  }
+  66.6% {
+    transform: translateX(2px);
+  }
+  83.25% {
+    transform: translateX(-1px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.wobble-horizontal-reverse {
+  &:hover, &:focus, &:active {
+    .hvr-icon {
+      animation-name: wobble-horizontal-reverse;
+    }
+  }
+}
+
+/* hvr-icon-wobble-horizontal with minimized animation */
+
+@keyframes wobble-horizontal-min {
+  25% {
+    transform: translateX(4px);
+  }
+  50% {
+    transform: translateX(-2px);
+  }
+  75% {
+    transform: translateX(2px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.wobble-horizontal-min {
+  &:hover, &:focus, &:active {
+    .hvr-icon {
+      animation-name: wobble-horizontal-min;
+      animation-duration: 0.5s;
+    }
+  }
+}
+
+/* hvr-icon-wobble-horizontal with reversed and minimized animation */
+
+@keyframes wobble-horizontal-reverse-min {
+  25% {
+    transform: translateX(-4px);
+  }
+  50% {
+    transform: translateX(2px);
+  }
+  75% {
+    transform: translateX(-2px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.wobble-horizontal-reverse-min {
+  &:hover, &:focus, &:active {
+    .hvr-icon {
+      animation-name: wobble-horizontal-reverse-min;
+      animation-duration: 0.5s;
+    }
+  }
+}
+
+/* hvr-icon-wobble-vertical with reversed animation */
+
+@keyframes wobble-vertical-reverse {
+  16.65% {
+    transform: translateY(-6px);
+  }
+  33.3% {
+    transform: translateY(5px);
+  }
+  49.95% {
+    transform: translateY(-4px);
+  }
+  66.6% {
+    transform: translateY(2px);
+  }
+  83.25% {
+    transform: translateY(-1px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.wobble-vertical-reverse {
+  &:hover, &:focus, &:active {
+    .hvr-icon {
+      animation-name: wobble-vertical-reverse;
+      -webkit-animation-name: wobble-vertical-reverse;
+    }
+  }
+}
