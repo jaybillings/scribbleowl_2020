@@ -35,11 +35,11 @@
 
       a {
         display: block;
-        border: 2px solid $gray12;
+        border: 2px solid transparent;
 
         &:hover, &:focus, &:active {
-          border: 2px solid $main-color;
-          box-shadow: 0 0 5px 0 $shadow;
+          border: 2px solid $main-color-bright;
+          box-shadow: $box-shadow-close;
         }
       }
     }
@@ -53,17 +53,24 @@
     }
   }
 
-  .tech, .social-link {
-    font-size: 0.9rem;
-    color: $gray3;
-  }
-
   .tech {
+    color: $gray4;
     margin-top: 0;
   }
 
-  .social-link svg {
-    color: $alt-main;
+  .social-link a {
+    &:hover, &:focus, &:active {
+      text-decoration: underline;
+      svg {
+        color: $main-color;
+      }
+    }
+  }
+
+  .copy {
+    @include media(">=large") {
+      margin-top: 2rem;
+    }
   }
 
   #jckb-scroller {

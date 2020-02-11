@@ -4,8 +4,9 @@
 .galleryNav {
   position: sticky;
   top: 0;
-  background: $alt-accent;
-  box-shadow: 0 2px 10px 0 $shadow;
+  background: $contrast-color;
+  box-shadow: $box-shadow-distant;
+  color: $text-color-reverse;
   z-index: 1;
 
   ul {
@@ -25,7 +26,6 @@
   li {
     text-transform: capitalize;
     padding: 0.25rem;
-
   }
 
   svg {
@@ -34,10 +34,10 @@
 
   a {
     width: 100%;
-    color: $gray3;
+    color: $text-color-reverse;
 
-    &:hover, &:focus, &:active {
-      border: none;
+    &:before {
+      background: $contrast-color-light;
     }
   }
 
@@ -46,7 +46,7 @@
     grid-template-columns: 1fr auto 1fr;
 
     @include media(">=large") {
-      font-size: 1.1rem;
+      font-size: 1.2rem;
     }
 
     li {
@@ -61,19 +61,13 @@
     @include media(">=medium") {
       font-size: 1.5rem;
     }
-
-    a {
-      &:hover, &:focus, &:active {
-        color: $main-color;
-      }
-    }
   }
 
   .imageNav {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     align-items: start;
-    background: rgba(255, 255, 255, 0.25);
+    background: $dark-overlay;
 
     @include media(">=medium") {
       align-items: center;
@@ -81,7 +75,6 @@
 
     a {
       &:hover, &:focus, &:active {
-        color: $main-color;
         border-bottom: none;
       }
     }
@@ -97,9 +90,7 @@
     }
 
     .inactive {
-      span, svg {
-        color: $gray11;
-      }
+      color: $text-color;
     }
 
     .nav-location {
@@ -108,7 +99,6 @@
       span {
         display: block;
         text-transform: initial;
-        color: $gray3;
       }
     }
   }
