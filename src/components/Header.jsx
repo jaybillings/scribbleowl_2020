@@ -21,11 +21,15 @@ export default class Header extends Component {
           </ul>
         </nav>
         <ul className={'social-nav'}>
-          <li className={'hvr-icon-pop'}><a href={'https://github.com/jaybillings'} target={'_blank'}>
-            <TiSocialGithub className={'hvr-icon'}/><span className={'sr-only'}>GitHub Profile</span></a>
+          <li className={'hvr-icon-pop'}>
+            <a href={'https://github.com/jaybillings'} target={'_blank'}>
+              <TiSocialGithub className={'hvr-icon'} title={'Go to Jay\'s GitHub profile'} role={'img'} />
+            </a>
           </li>
-          <li className={'hvr-icon-pop'}><a href={'https://www.linkedin.com/in/jaybillings/'} target={'_blank'}>
-            <TiSocialLinkedin className={'hvr-icon'}/><span className={'sr-only'}>LinkedIn Profile</span></a>
+          <li className={'hvr-icon-pop'}>
+            <a href={'https://www.linkedin.com/in/jaybillings/'} target={'_blank'}>
+              <TiSocialLinkedin className={'hvr-icon'} title={'Go to Jay\'s LinkedIn profile'} role={'img'} />
+            </a>
           </li>
         </ul>
       </header>

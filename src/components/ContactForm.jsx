@@ -62,18 +62,18 @@ export default class ContactForm extends Component {
         <div key={'contactMsg'} className={'formMsg'}>{this.renderSendStatus()}</div>,
         <form key={'contactForm'} className={'contactForm'} onSubmit={this.sendMessage}>
           <label>
-            <span>Name</span>
+            <span>your name</span>
             <input type={'text'} name={'contact_name'} className={'generic-linear-transition'} ref={this.nameRef}/>
           </label>
           <label>
-            <span>Email Address</span>
+            <span>your email address</span>
             <input type={'email'} name={'email'} className={'generic-linear-transition'} ref={this.emailRef}/>
           </label>
           <label>
-            <span>Message</span>
-            <textarea className={'generic-linear-transition'} ref={this.msgRef}/>
+            <span>a brief message</span>
+            <textarea className={'generic-linear-transition'} ref={this.msgRef} />
           </label>
-          <button type={'submit'} className={'hvr-pulse-grow hvr-fade '}>Send Message <TiMail/></button>
+          <button type={'submit'} className={'hvr-pulse-grow hvr-fade '}>Send Message <TiMail aria-hidden={true} /></button>
         </form>
       ]
     )

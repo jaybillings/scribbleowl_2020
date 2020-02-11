@@ -25,10 +25,7 @@ export default class Portfolio extends Component {
   }
 
   handleNavKeyDown(e) {
-    console.log(e.keyCode);
-    if (e.keyCode !== 13) return;
-
-    this.handleNavClick(e);
+    if (e.keyCode === 13) this.handleNavClick(e);
   }
 
   renderPortfolioNav() {
@@ -50,9 +47,9 @@ export default class Portfolio extends Component {
 
   renderPortfolioTile(project) {
     const liveLink = project.uri ?
-      <span>[ <a href={project.uri}>Live version <TiArrowForwardOutline/></a> ]</span> : '';
+      <span>[ <a href={project.uri}>Live version <TiArrowForwardOutline aria-hidden={true} /></a> ]</span> : '';
     const sourceLink = project.source ?
-      <span>[ <a href={project.source}>Source <TiArrowForwardOutline/></a> ]</span> : '';
+      <span>[ <a href={project.source}>Source <TiArrowForwardOutline aria-hidden={true} /></a> ]</span> : '';
     const links = project.uri || project.source ? <p className={'external-links'}>{liveLink} {sourceLink}</p> : '';
 
     return (
@@ -61,10 +58,9 @@ export default class Portfolio extends Component {
         <p className={'tech'}><strong>{project.tech.join(', ')}</strong></p>
         {links}
         <div className={'copy'}>{renderCopy(project.copy, 'projtile')}</div>
-        {/* Yes, the spaces are significant */}
         <p className={'gallery-link hvr-icon-wobble-horizontal'}>
           [ <Link to={`/gallery/${this.state.currentProj}#top`}>
-          Open full gallery <TiArrowRightThick className={'hvr-icon'}/></Link> ]
+          Open full gallery <TiArrowRightThick className={'hvr-icon'} aria-hidden={true} /></Link> ]
         </p>
       </div>
     )

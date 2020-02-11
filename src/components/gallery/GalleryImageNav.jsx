@@ -22,25 +22,25 @@ export default class GalleryImageNav extends Component {
       to={`/gallery/${this.props.projID}/0`} className={'active hvr-icon-wobble-horizontal wobble-horizontal-reverse'}>
       <span>First Image </span><TiMediaRewindOutline className={'hvr-icon'}/></Link>;
 
-    return <div className={'inactive'}><span>First Image</span><TiMediaRewindOutline/></div>;
+    return <div className={'inactive'}><span>First Image</span><TiMediaRewindOutline aria-hidden={true}/></div>;
   }
 
   renderImgBack() {
     if (this.props.imgIndex > 0) return <Link
       to={`/gallery/${this.props.projID}/${this.props.imgIndex - 1}`}
       className={'active hvr-icon-wobble-horizontal wobble-horizontal-reverse-min'}>
-      <span>Previous Image</span><TiMediaPlayReverseOutline className={'hvr-icon'}/></Link>;
+      <span>Previous Image</span><TiMediaPlayReverseOutline className={'hvr-icon'} aria-hidden={true}/></Link>;
 
-    return <div className={'inactive'}><span>Previous Image </span><TiMediaPlayReverseOutline/></div>;
+    return <div className={'inactive'}><span>Previous Image </span><TiMediaPlayReverseOutline aria-hidden={true}/></div>;
   }
 
   renderImgNext() {
     if (this.props.imgIndex < this.props.imgCount - 1) return <Link
       to={`/gallery/${this.props.projID}/${this.props.imgIndex + 1}`}
       className={'active hvr-icon-wobble-horizontal wobble-horizontal-min'}>
-      <span>Next Image </span><TiMediaPlayOutline className={'hvr-icon'}/></Link>;
+      <span>Next Image </span><TiMediaPlayOutline className={'hvr-icon'} aria-hidden={true}/></Link>;
 
-    return <div className={'inactive'}><span>Next Image <TiMediaPlayOutline/></span></div>;
+    return <div className={'inactive'}><span>Next Image <TiMediaPlayOutline aria-hidden={true}/></span></div>;
   }
 
   renderImgLast() {
@@ -48,9 +48,9 @@ export default class GalleryImageNav extends Component {
 
     if (this.props.imgIndex < lastIndex) return <Link
       to={`/gallery/${this.props.projID}/${lastIndex}`} className={'active hvr-icon-wobble-horizontal'}>
-      <span>Last Image </span><TiMediaFastForwardOutline className={'hvr-icon'}/></Link>;
+      <span>Last Image </span><TiMediaFastForwardOutline className={'hvr-icon'} aria-hidden={true}/></Link>;
 
-    return <div className={'inactive'}><span>Last Image</span> <TiMediaFastForwardOutline/></div>;
+    return <div className={'inactive'}><span>Last Image</span> <TiMediaFastForwardOutline aria-hidden={true}/></div>;
   }
 
   render() {

@@ -87,8 +87,12 @@ header {
       display: inline-block;
       text-decoration: underline;
 
-      &:hover, &:focus, &:active {
+      &:hover {
         text-decoration: none;
+      }
+
+      &:focus, &:active {
+        color: $contrast-color-alt;
       }
     }
   }

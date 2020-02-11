@@ -18,10 +18,9 @@ export default class GalleryNav extends Component {
     const prevProjIndex = projIndex === 0 ? (this.props.projectOrder.length - 1) : projIndex - 1;
     const prevProjAlias = this.props.projectOrder[prevProjIndex];
 
-    return (
-      <Link to={`/gallery/${prevProjAlias}`} className={'hvr-underline-from-left'}>
-        <TiMediaPlayReverseOutline/>{this.props.projects[prevProjAlias].title}
-      </Link>);
+    return <Link to={`/gallery/${prevProjAlias}`} className={'hvr-underline-from-left'}>
+      <TiMediaPlayReverseOutline title={'To previous project'}/>{this.props.projects[prevProjAlias].title}
+    </Link>;
   }
 
   renderProjNext(projIndex) {
@@ -30,8 +29,9 @@ export default class GalleryNav extends Component {
 
     const nextProjAlias = this.props.projectOrder[nextProjIndex];
 
-    return <Link to={`/gallery/${nextProjAlias}`}
-                 className={'hvr-underline-from-right'}>{this.props.projects[nextProjAlias].title} <TiMediaPlayOutline/></Link>;
+    return <Link to={`/gallery/${nextProjAlias}`} className={'hvr-underline-from-right'}>
+      {this.props.projects[nextProjAlias].title} <TiMediaPlayOutline title={'Go next project'}/>
+    </Link>;
   }
 
   render() {
@@ -41,8 +41,11 @@ export default class GalleryNav extends Component {
       <nav className={'galleryNav'}>
         <ul className={'projNav'}>
           <li key={'prev-proj'} className={'grid-start'}>{this.renderProjPrev(projIndex)}</li>
-          <li key={'home'} className={'home-nav grid-center'}><Link to={'/#top'} className={'hvr-icon-pop'}><TiHome
-            className={'hvr-icon'}/></Link></li>
+          <li key={'home'} className={'home-nav grid-center'}>
+            <Link to={'/#top'} className={'hvr-icon-pop'}>
+              <TiHome className={'hvr-icon'} title={'Back to home page'}/>
+            </Link>
+          </li>
           <li key={'next-proj'} className={'grid-end text-right'}>{this.renderProjNext(projIndex)}</li>
         </ul>
         <GalleryImageNav imgIndex={this.props.imgIndex} imgCount={this.props.imgCount} projID={this.props.projID}/>

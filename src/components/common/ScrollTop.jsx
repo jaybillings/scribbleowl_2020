@@ -7,7 +7,7 @@ export default function ScrollTop(props) {
   return <div id={'jckb-scroller'}>
     <div className={'scroll-inner hvr-icon-wobble-vertical wobble-vertical-reverse'}>
       <a href={'#top'}>To Top</a>
-      <TiArrowUpThick className={'hvr-icon'}/>
+      <TiArrowUpThick className={'hvr-icon'} aria-hidden={true} />
     </div>
   </div>
 }

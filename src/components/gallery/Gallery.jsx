@@ -15,7 +15,7 @@ export default function Gallery(props) {
 
 
   return (
-    <div className={'gallery section'}>
+    <div id={'content'} className={'gallery section'}>
       <p className={'tech'}><strong>{props.project.tech.join(', ')}</strong></p>
       {links}
       <div className={'copy'}>{renderCopy(props.project.copy)}</div>
