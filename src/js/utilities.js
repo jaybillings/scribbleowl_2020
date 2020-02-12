@@ -21,27 +21,23 @@ const renderCopy = function (copy, tag) {
 const handleAnchorClick = function (e) {
   if (!e.target.href) {
     console.error('Could not scroll to anchor -- no anchor.');
-    console.error('currentTarget', e.target);
     return;
   }
 
   const anchorArr = e.target.href.split('#');
-  if (anchorArr.length <= 1) {
-    return;
-  }
-
-  console.info('anchorArr', anchorArr);
+  if (anchorArr.length <= 1) return;
 
   const anchorID = anchorArr[anchorArr.length - 1];
-
-  console.info('anchorID', anchorID);
-
   const target = document.querySelector(`#${anchorID}`);
   const section = document.querySelector(`#${anchorID}-section`);
 
-
   target.focus({preventScroll: true});
-  section.scrollIntoView();
+
+  if (section.scrollIntoViewIfNeeded) {
+    section.scrollIntoViewIfNeeded();
+  } else {
+    section.scrollIntoView();
+  }
 };
 
 export {
