@@ -124,4 +124,27 @@ header {
       }
     }
   }
+
+  #top {
+    grid-row: 1;
+    grid-column: 1;
+  }
+
+  /* Overrides some hover effects for small screens */
+
+  .hvr-grow {
+    @include media("<small") {
+      &:focus, &:active {
+        transform: scale(1);
+      }
+    }
+  }
+
+  .hvr-underline-from-center {
+    @include media("<small") {
+      &:before {
+        position: static;
+      }
+    }
+  }
 }

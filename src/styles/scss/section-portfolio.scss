@@ -1,7 +1,7 @@
 @import "_variables.scss";
 @import '~include-media/dist/_include-media.scss';
 
-#portfolio {
+.portfolio {
   position: relative;
   background: $contrast-color;
   padding: 1rem 0;

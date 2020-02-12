@@ -71,10 +71,10 @@ export default class Portfolio extends Component {
     const tileStyle = {background: `gray url(${currentProject.thumbnail})`};
 
     return (
-      <div id={'portfolio'} className={'section'}>
+      <div id={'portfolio-section'} className={'portfolio'}>
         <div style={tileStyle}>
           <div className={'portfolioInner'}>
-            <h2>{this.props.title}</h2>
+            <h2><Link id={'portfolio'} to={'#portfolio'} className={'sr-only show-on-focus'}>#</Link> {this.props.title}</h2>
             {this.renderPortfolioNav()}
             {this.renderPortfolioTile(currentProject)}
             <ScrollTop/>
