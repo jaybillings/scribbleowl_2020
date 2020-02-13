@@ -6,7 +6,7 @@ import {BrowserRouter as Router} from "react-router-dom";
 import Header from "../components/Header";
 
 let container = null;
-const navSections = [{"path": "section1", "title": "Section 1"}, {"path": "section2", "title": "Section2"}];
+const navSections = [{"path": "section1", "title": "Section 1"}, {"path": "#section2", "title": "Section2"}];
 const title = "Test Title";
 
 beforeEach(() => {
@@ -31,23 +31,9 @@ afterEach(() => {
 
 it("renders from props", () => {
   // Proper title rendering
-  expect(container.querySelector('h1').textContent).toEqual(title);
+  expect(container.querySelector('h1').textContent).toEqual(`# ${title}`);
   // Spot check nav title
   expect(container.querySelector('li:first-of-type').textContent).toEqual(navSections[0].title);
   // Spot check nav link path
-  expect(container.querySelector('li:last-of-type a').getAttribute('href')).toEqual(`/#${navSections[1].path}`);
-});
-
-it("changes nav anchor class on click", () => {
-  const navLink = container.querySelector('li:first-of-type a');
-
-  // Initially should not have a class
-  expect(navLink.getAttribute('class')).toBeFalsy();
-
-  act(() => {
-    navLink.dispatchEvent(new MouseEvent("click", {bubbles: true}));
-  });
-
-  // Should now have 'current' class
-  expect(navLink.getAttribute('class')).toBe('current');
+  expect(container.querySelector('li:last-of-type a').getAttribute('href')).toEqual(`/${navSections[1].path}`);
 });

@@ -3,6 +3,7 @@ import {render, unmountComponentAtNode} from "react-dom";
 import {act} from "react-dom/test-utils";
 
 import About from "../components/sections/About";
+import {BrowserRouter as Router} from "react-router-dom";
 
 let container = null;
 
@@ -31,7 +32,7 @@ it('renders from props', () => {
   }];
 
   act(() => {
-    render(<About title={title} copy={copy} skillsSection={skillsSection}/>, container)
+    render(<Router><About title={title} copy={copy} skillsSection={skillsSection}/></Router>, container)
   });
 
   // Title

@@ -68,7 +68,7 @@ export default class Portfolio extends Component {
 
   render() {
     const currentProject = this.props.projects[this.state.currentProj];
-    const tileStyle = {background: `gray url(${currentProject.thumbnail})`};
+    const tileStyle = {background: `url(${currentProject.thumbnail})`};
 
     return (
       <div id={'portfolio-section'} className={'portfolio'}>

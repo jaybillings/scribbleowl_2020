@@ -58,15 +58,15 @@ afterEach(() => {
 
 it("renders from props", () => {
   // Title matches
-  expect(container.querySelector('h2').textContent).toBe(title);
+  expect(container.querySelector('h2').textContent).toBe(`# ${title}`);
   // Background image matches
-  expect(container.querySelector('#portfolio > div').style.background).toBe(`url(${projects[projectList[0]].thumbnail})`);
+  expect(container.querySelector('.portfolio > div').style.background).toBe(`url(${projects[projectList[0]].thumbnail})`);
   // Nav item has proper class
   expect(container.querySelector('li.selected').textContent).toBe(projects[projectList[0]].title);
   // Nav item below lacks this class
   expect(container.querySelector('li:nth-of-type(2)').className).not.toMatch(/selected/);
   // Tile gallery link directs to correct location
-  expect(container.querySelector('.projectTile a').getAttribute('href')).toBe(`/gallery/${projectList[0]}`);
+  expect(container.querySelector('.projectTile a').getAttribute('href')).toBe(`/gallery/${projectList[0]}#top`);
 });
 
 it("changes the rendered tile on nav click", () => {
@@ -75,11 +75,11 @@ it("changes the rendered tile on nav click", () => {
   });
 
   // Background image matches
-  expect(container.querySelector('#portfolio > div').style.background).toBe(`url(${projects[projectList[1]].thumbnail})`);
+  expect(container.querySelector('.portfolio > div').style.background).toBe(`url(${projects[projectList[1]].thumbnail})`);
   // Nav item has proper class
   expect(container.querySelector('li.selected').textContent).toBe(projects[projectList[1]].title);
   // Nav item above lacks this class
   expect(container.querySelector('li:first-of-type').className).not.toMatch(/selected/);
   // Tile gallery link directs to correct location
-  expect(container.querySelector('.projectTile a').getAttribute('href')).toBe(`/gallery/${projectList[1]}`);
+  expect(container.querySelector('.projectTile a').getAttribute('href')).toBe(`/gallery/${projectList[1]}#top`);
 });

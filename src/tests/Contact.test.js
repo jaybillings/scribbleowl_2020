@@ -1,6 +1,7 @@
 import React from 'react';
 import {render, unmountComponentAtNode} from "react-dom";
 import {act} from "react-dom/test-utils";
+import {BrowserRouter as Router} from "react-router-dom";
 
 import Contact from "../components/sections/Contact";
 
@@ -24,11 +25,11 @@ it('renders from props', () => {
   const copy = ["Test copy"];
 
   act(() => {
-    render(<Contact title={title} copy={copy} />, container);
+    render(<Router><Contact title={title} copy={copy} /></Router>, container);
   });
 
   // Title matches
-  expect(container.querySelector('h2').textContent).toBe(title);
+  expect(container.querySelector('h2').textContent).toBe(`# ${title}`);
   // Contact form is present
   expect(container.querySelector('form.contactForm')).toBeTruthy();
 });
