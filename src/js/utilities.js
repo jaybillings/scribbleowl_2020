@@ -40,6 +40,19 @@ const handleAnchorClick = function (e) {
   }
 };
 
+const postData = async function(url = '', data = {}) {
+  console.log(JSON.stringify(data));
+  const response = await fetch(url, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(data)
+  });
+
+  return await response.json();
+};
+
 export {
-  renderCopy, handleAnchorClick
+  renderCopy, handleAnchorClick, postData
 }

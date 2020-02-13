@@ -99,6 +99,23 @@ a {
   }
 }
 
+.contactMsg span {
+  height: 0;
+  transition: all 1s linear;
+}
+
+.success {
+  height: auto;
+  font-weight: bold;
+  color: $text-color-success;
+}
+
+.failure {
+  height: auto;
+  font-weight: bold;
+  color: $text-color-failure;
+}
+
 .sr-only {
   position: absolute;
   left: -1000px;
@@ -115,6 +132,17 @@ a {
       height: auto;
     }
   }
+}
+
+/* Honeypot class -- name intentionally vague */
+.jckb-field {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 0;
+  width: 0;
+  z-index: -1;
 }
 
 #root {

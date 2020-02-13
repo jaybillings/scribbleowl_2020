@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import {TiMail} from "react-icons/ti";
+import {postData} from "../js/utilities";
 
 import '../styles/scss/contact-form.scss';
 
@@ -7,51 +8,53 @@ export default class ContactForm extends Component {
   constructor(props) {
     super(props);
 
-    this.state = {submitStatus: null}; // null = unsent, 1 = sent, 0 = error
+    this.state = {submitStatus: null, errorMsg: ''}; // null = unsent, 1 = sent, 0 = error
 
     this.nameRef = React.createRef();
     this.emailRef = React.createRef();
     this.msgRef = React.createRef();
+    this.honeyRef = React.createRef();
 
-    //this.mailerService = app.service('send-mail');
-
-    this.sendMessage = this.sendMessage.bind(this);
-    this.clearForm = this.clearForm.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
+    this.resetForm = this.resetForm.bind(this);
     this.renderSendStatus = this.renderSendStatus.bind(this);
   }
 
-  sendMessage(e) {
+  handleSubmit(e) {
     e.preventDefault();
 
-    const email = {
-      from: this.emailRef.current.value,
-      subject: `Form Submission From ${this.nameRef.current.value}`,
-      body: this.msgRef.current.value
+    // Honeypot caught -- post vague error
+    if (this.honeyRef.current.value.length) this.setState({
+      submitStatus: 0,
+      errMsg: 'Something went wrong. If you are using autocomplete, try disabling it.'
+    });
+
+    const formData = {
+      name: this.nameRef.current.value,
+      email: this.emailRef.current.value,
+      message: this.msgRef.current.value
     };
+    const url = `http://${process.env.REACT_APP_SERVER_ADDRESS}/contact-form.php`;
 
-    console.info(email);
-
-    this.clearForm();
-    this.setState({submitStatus: 1});
-
-    /*this.mailerService.create(email).then(result => {
-      this.clearForm();
-      this.setState({submitStatus: 1});
+    postData(url, formData).then(data => {
+      console.info('data', data);
+      this.setState({errorMsg: data.reason ?? '', submitStatus: data.status ?? null});
+      this.resetForm(e.target);
     }).catch(err => {
       console.error(err);
       this.setState({submitStatus: 0});
-    });*/
+    });
   }
 
-  clearForm() {
-    this.nameRef.current.value = '';
-    this.emailRef.current.value = '';
-    this.msgRef.current.value = '';
+  resetForm(form) {
+    document.querySelector('.contactForm button').blur();
+    form.reset();
   }
 
   renderSendStatus() {
-    if (this.state.submitStatus) return 'Message sent. Thank you for your message.';
-    if (this.state.submitStatus !== null) return 'Message could not be sent. Please try again.';
+    if (this.state.submitStatus) return <span className={'success'}>Thank you for your message. I will get back to you as soon as I can.</span>;
+    if (this.state.submitStatus !== null) return <span
+      className={'failure'}>Message could not be sent. {this.state.errorMsg}</span>;
 
     return '';
   }
@@ -60,20 +63,28 @@ export default class ContactForm extends Component {
     return (
       [
         <div key={'contactMsg'} className={'formMsg'}>{this.renderSendStatus()}</div>,
-        <form key={'contactForm'} className={'contactForm'} onSubmit={this.sendMessage}>
+        <form key={'contactForm'} className={'contactForm'} onSubmit={this.handleSubmit}>
           <label>
             <span>your name</span>
-            <input type={'text'} name={'contact_name'} className={'generic-linear-transition'} ref={this.nameRef}/>
+            <input type={'text'} name={'contact_name_jckb'} className={'generic-linear-transition'} ref={this.nameRef}
+                   autoComplete={'name'} required/>
           </label>
           <label>
             <span>your email address</span>
-            <input type={'email'} name={'email'} className={'generic-linear-transition'} ref={this.emailRef}/>
+            <input type={'email'} name={'email_jckb'} className={'generic-linear-transition'} ref={this.emailRef}
+                   autoComplete={'email'} required/>
           </label>
           <label>
             <span>a brief message</span>
-            <textarea className={'generic-linear-transition'} ref={this.msgRef} />
+            <textarea name={'message_jckb'} className={'generic-linear-transition'} ref={this.msgRef} required/>
           </label>
-          <button type={'submit'} className={'hvr-pulse-grow hvr-fade '}>Send Message <TiMail aria-hidden={true} /></button>
+          {/* Honeypot field */}
+          <label className={'jckb-field'}>
+            <span>your address</span>
+            <input type={'text'} name={'address'} tabIndex={-1} autoComplete={'off'} ref={this.honeyRef}/>
+          </label>
+          <button type={'submit'} className={'hvr-pulse-grow hvr-fade '}>Send Message <TiMail aria-hidden={true}/>
+          </button>
         </form>
       ]
     )
