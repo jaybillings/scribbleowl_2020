@@ -37,7 +37,6 @@ export default class ContactForm extends Component {
     const url = `http://${process.env.REACT_APP_SERVER_ADDRESS}/contact-form.php`;
 
     postData(url, formData).then(data => {
-      console.info('data', data);
       this.setState({errorMsg: data.reason ?? '', submitStatus: data.status ?? null});
       this.resetForm(e.target);
     }).catch(err => {

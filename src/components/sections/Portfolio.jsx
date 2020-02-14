@@ -47,34 +47,38 @@ export default class Portfolio extends Component {
 
   renderPortfolioTile(project) {
     const liveLink = project.uri ?
-      <span>[ <a href={project.uri}>Live version <TiArrowForwardOutline aria-hidden={true} /></a> ]</span> : '';
+      <span>[ <a href={project.uri} target={"_blank"}>Live version <TiArrowForwardOutline aria-hidden={true}/></a> ]</span> : '';
     const sourceLink = project.source ?
-      <span>[ <a href={project.source}>Source <TiArrowForwardOutline aria-hidden={true} /></a> ]</span> : '';
+      <span>[ <a href={project.source} target={"_blank"}>Source <TiArrowForwardOutline aria-hidden={true}/></a> ]</span> : '';
     const links = project.uri || project.source ? <p className={'external-links'}>{liveLink} {sourceLink}</p> : '';
+
+    const galleryLink = project.gallery ? <p className={'gallery-link hvr-icon-wobble-horizontal'}>
+      [ <Link to={`/gallery/${this.state.currentProj}#top`}>
+      Open full gallery <TiArrowRightThick className={'hvr-icon'} aria-hidden={true}/></Link> ]
+    </p> : '';
 
     return (
       <div className={'projectTile'}>
-        <h3>{project.title} ({project.year})</h3>
+        <h3>{project.title} {project.year ? `(${project.year})` : ''}</h3>
         <p className={'tech'}><strong>{project.tech.join(', ')}</strong></p>
         {links}
         <div className={'copy'}>{renderCopy(project.copy, 'projtile')}</div>
-        <p className={'gallery-link hvr-icon-wobble-horizontal'}>
-          [ <Link to={`/gallery/${this.state.currentProj}#top`}>
-          Open full gallery <TiArrowRightThick className={'hvr-icon'} aria-hidden={true} /></Link> ]
-        </p>
+        {galleryLink}
       </div>
     )
   }
 
   render() {
     const currentProject = this.props.projects[this.state.currentProj];
-    const tileStyle = {background: `url(${currentProject.thumbnail})`};
+    const imgSrc = process.env.REACT_APP_LOCAL_IMAGES ? `/img/${this.state.currentProj}/${currentProject.thumbnail}` : currentProject.thumbnail;
+    const tileStyle = {background: `url(${imgSrc})`};
 
     return (
       <div id={'portfolio-section'} className={'portfolio'}>
         <div style={tileStyle}>
           <div className={'portfolioInner'}>
-            <h2><Link id={'portfolio'} to={'#portfolio'} className={'sr-only show-on-focus'}>#</Link> {this.props.title}</h2>
+            <h2><Link id={'portfolio'} to={'#portfolio'} className={'sr-only show-on-focus'}>#</Link> {this.props.title}
+            </h2>
             {this.renderPortfolioNav()}
             {this.renderPortfolioTile(currentProject)}
             <ScrollTop/>

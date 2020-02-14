@@ -39,7 +39,7 @@
       margin: 1rem 0;
 
       @include media(">=medium") {
-        display: block;
+        flex-flow: column;
         margin: 0;
       }
     }
@@ -100,7 +100,6 @@
       padding: 0 ($whitespace-lg / 2)
     }
   }
-
 
   .projectTile {
     margin: 2rem 0;

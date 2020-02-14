@@ -13,6 +13,7 @@ export default function Gallery(props) {
     <span>[ <a href={props.project.source}>Source <TiArrowForwardOutline/></a> ]</span> : '';
   const links = props.project.uri || props.project.source ?
     <p className={'social-link'}>{liveLink} {sourceLink}</p> : '';
+  const imgSrc = process.env.REACT_APP_LOCAL_IMAGES ? `/img/${props.projID}/${currentImage.name}` : currentImage.name;
 
   return (
       <div id={'content-section'} className={'gallery section'}>
@@ -22,7 +23,7 @@ export default function Gallery(props) {
         <div className={'copy'}>{renderCopy(props.project.copy)}</div>
         <hr/>
         <div className={'galleryInner'}>
-          <figure><a href={currentImage.name} target={'_blank'}><img alt={''} src={currentImage.name}/></a></figure>
+          <figure><a href={currentImage.name} target={'_blank'}><img alt={''} src={imgSrc}/></a></figure>
           <figcaption>{renderCopy(currentImage.copy, 'galimg')}</figcaption>
         </div>
         <ScrollTop/>
