@@ -1,82 +1,90 @@
 {
   "title": "Previous Projects",
-  "projectOrder": [
-    "vsem",
-    "mcb",
-    "xone",
-    "rei",
-    "chz"
-  ],
+  "projectOrder": ["vseivspi", "xbox", "reinav","cheeztv","mtrlike","mtradmin"],
   "projects": {
     "vsem": {
       "title": "Visit Seattle Events Manager",
-      "thumbnail": "https://via.placeholder.com/250/ffffff.png",
-      "year": "2028",
-      "uri": "",
+      "thumbnail": "",
+      "year": "",
       "source": "",
-      "copy": [
-        "Probably not being used but you never know"
-      ],
-      "tech": [
-        "NodeJS",
-        "FeathersJS",
-        "ReactJS",
-        "CSS",
-        "MariaDB",
-        "KNEX"
-      ]
+      "copy": [],
+      "tech": [],
+      "gallery": true
     },
-    "mcb": {
-      "title": "Meteor Solutions Client Information Backend",
-      "thumbnail": "https://via.placeholder.com/250/444444.png",
-      "year": "1992",
-      "uri": "https://visitseattle.org",
-      "source": "https://github.com",
-      "copy": [
-        "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit,",
-        "sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt."
-      ],
-      "tech": [
-        "Python",
-        "jQuery",
-        "SCSS"
-      ]
-    },
-    "rei": {
-      "title": "REI Redesign Main Navigation",
-      "thumbnail": "https://via.placeholder.com/250/989898.png",
-      "year": "2004",
-      "uri": "https://rei.com",
-      "copy": [
-        "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit,",
-        "sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt."
-      ],
-      "tech": [
-        "JvaScript",
-        "Component Library",
-        "LESS"
-      ]
-    },
-    "xone": {
-      "title": "Xbox One Native Payments Screens",
-      "thumbnail": "https://via.placeholder.com/250/444444.png",
-      "year": "2017",
-      "uri": "",
+    "vseivspi": {
+      "title": "Visit Seattle Events/Partners Importer",
+      "thumbnail": "importer-request.png",
+      "year": "",
       "source": "",
-      "copy": [
-        "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit,",
-        "sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt."
-      ],
-      "tech": [
-        "EmberJS",
-        "Node.js"
-      ]
+      "copy": [],
+      "tech": [],
+      "gallery": true
     },
-    "chz": {
+    "xbox": {
+      "title": "Xbox One Purchase Flow",
+      "thumbnail": "Purchase-NuiVui.png",
+      "year": "2015",
+      "uri": "https://xbox.com",
+      "copy": ["The purchase flow for the Xbox One console."],
+      "tech": ["Meteor.js", "NodeJS", "VBScript", "Xbox One platform"],
+      "gallery": true
+    },
+    "mtrlike": {
+      "title": "Meteor Solutions Like Tool",
+      "thumbnail": "liketool-pre.png",
+      "year": "",
+      "copy": [],
+      "tech": [],
+      "gallery": true
+    },
+    "mtradmin": {
+      "title": "Meteor Solutions Admin Dashboard",
+      "thumbnail": "admindash-pre.png",
+      "year": "",
+      "copy": [],
+      "tech": [],
+      "gallery": true
+    },
+    "cheeztv": {
       "title": "Cheezburger TV",
+      "thumbnail": "cheez-pre.png",
+      "year": "",
+      "uri": "https://cheezburger.com",
+      "copy": [],
+      "tech": [],
+      "gallery": false
+    },
+    "reinav": {
+      "title": "REI Navigation",
+      "thumbnail": "rei-pre.png",
+      "year": "",
+      "uri": "https://rei.com",
+      "copy": [],
+      "tech": [],
+      "gallery": false
+    },
+    "vsmain": {
+      "title": "Visit Seattle Main Website",
+      "thumbnail": "",
+      "year": "",
+      "uri": "https://visitseattle.org",
+      "copy": [],
+      "tech": [],
+      "gallery": true
+    },
+    "vssearch": {
+      "title": "Visit Seattle Search",
+      "thumbnail": "",
+      "year": "",
+      "uri": "https://visitseattle.org/?=ice+cream",
+      "copy": [],
+      "tech": [],
+      "gallery": true
+    },
+    "test": {
+      "title": "Test Project",
       "thumbnail": "https://via.placeholder.com/250/cccccc.png",
-      "year": "2010",
-      "uri": "https://cheezburger.com/tv",
+      "year": "20XX",
       "source": "https://github.com",
       "copy": [
         "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit,",
@@ -87,7 +95,8 @@
         "CSS",
         "LESS",
         "Angular"
-      ]
+      ],
+      "gallery": true
     }
   }
 }

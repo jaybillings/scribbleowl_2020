@@ -1,0 +1,28 @@
+[
+  {
+    "name": "Purchase.png",
+    "copy": [
+      "Layout for the Purchase page on the Xbox One console. This flow is also optimized for Xbox.com and the Windows 8 desktop."
+    ]
+  },
+  {
+    "name": "Purchase-ChangePi.png",
+    "copy": ["When a user wants to change their payment instrument, a sub-flow is loaded in an iframe."]
+  },
+  {
+    "name": "Purchase-NuiVui.png",
+    "copy": ["This shows support for VUI (voice control) and NUI (motion control)."]
+  },
+  {
+    "name": "PaymentAndBilling.png",
+    "copy": ["The Xbox One settings page for managing payment options."]
+  },
+  {
+    "name": "AddPI.png",
+    "copy": ["The first of several subviews that allow the user to add a new payment instrument."]
+  },
+  {
+    "name": "Legal.png",
+    "copy": ["A subview for viewing the legal terms and conditions upon account creation."]
+  }
+]
