@@ -5,7 +5,26 @@
   position: relative;
   margin: 0 $whitespace;
 
+  &.thumb-only {
+    @include media(">=med-lg") {
+      display: grid;
+      grid-template-columns:  2fr 1fr;
+      grid-gap: 1rem;
+
+      .gallery-content {
+        grid-column: 1/2;
+        grid-row: 1 / 2;
+      }
+
+      .gallery-image {
+        grid-column: 2/3;
+        grid-row: 1 / 2;
+      }
+    }
+  }
+
   img {
+    margin: 0 auto;
     display: block;
     max-width: 100%;
   }
@@ -53,6 +72,10 @@
     }
   }
 
+  .gallery-content {
+    margin-bottom: 2rem;
+  }
+
   .tech {
     color: $gray4;
     margin-top: 0;
@@ -61,6 +84,7 @@
   .social-link a {
     &:hover, &:focus, &:active {
       text-decoration: underline;
+
       svg {
         color: $main-color;
       }

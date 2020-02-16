@@ -38,5 +38,5 @@ $whitespace: 1.5rem;
 $whitespace-med: 2rem;
 $whitespace-lg: 3rem;
 
-// small: 560px, medium: 704px, large: 1024px
-$breakpoints: (small: 35em, medium: 44em, large: 64rem) !default;
+// small: 560px, medium: 704px, med-lg: 960px, large: 1024px
+$breakpoints: (small: 35em, medium: 44em, med-lg: 60rem, large: 64rem) !default;

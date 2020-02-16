@@ -8,7 +8,7 @@ export default function PortfolioNav(props) {
       <ul>
         {props.projectNames.map(([alias, title]) =>
           <li key={alias} tabIndex={0} data-alias={alias}
-              className={alias === props.currentAlias ? 'selected' : 'text-grow-out'}
+              className={alias === props.projAlias ? 'selected' : 'text-grow-out'}
               onClick={props.handleNavClick}
               onKeyDown={props.handleNavKeyDown}>
             <span>{title}</span>

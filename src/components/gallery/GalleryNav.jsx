@@ -11,7 +11,6 @@ export default class GalleryNav extends Component {
 
     this.renderProjPrev = this.renderProjPrev.bind(this);
     this.renderProjNext = this.renderProjNext.bind(this);
-    /* TODO: Reclaim focus on prev/next paging */
   }
 
   renderProjPrev(projIndex) {
@@ -48,7 +47,7 @@ export default class GalleryNav extends Component {
           </li>
           <li key={'next-proj'} className={'grid-end text-right'}>{this.renderProjNext(projIndex)}</li>
         </ul>
-        <GalleryImageNav imgIndex={this.props.imgIndex} imgCount={this.props.imgCount} projID={this.props.projID}/>
+        {this.props.imgCount > 0 ? <GalleryImageNav imgIndex={this.props.imgIndex} imgCount={this.props.imgCount} projID={this.props.projID}/> : ''}
       </nav>
     )
   }

@@ -12,7 +12,7 @@ export default class GalleryLayout extends Component {
   render() {
     const projID = this.props.match.params.alias || galleryConfig.projectOrder[0];
     const imgIndex = parseInt(this.props.match.params.index, 10) || 0;
-    let currentProj, projImages;
+    let currentProj = {}, projImages = [];
 
     currentProj = galleryConfig.projects[projID];
     if (!currentProj) {
@@ -24,7 +24,6 @@ export default class GalleryLayout extends Component {
       projImages = require(`../content/projects/config_${projID}`);
     } catch (err) {
       console.error(err);
-      return <Redirect to={'/oops'}/>;
     }
 
     return [

@@ -9,91 +9,141 @@
     "mtradmin"
   ],
   "projects": {
-    "vsem": {
-      "title": "Visit Seattle Events Manager",
-      "thumbnail": "",
-      "year": "",
-      "source": "",
-      "copy": [],
-      "tech": [],
-      "gallery": true
-    },
-    "vseivspi": {
-      "title": "Visit Seattle Events/Partners Importer",
-      "thumbnail": "importer-request.png",
-      "year": "",
-      "source": "",
-      "copy": [],
-      "tech": [],
-      "gallery": true
-    },
-    "xbox": {
-      "title": "Xbox One Purchase Flow",
-      "thumbnail": "Purchase-NuiVui.png",
-      "year": "2015",
-      "uri": "https://xbox.com",
+    "cheeztv": {
+      "title": "Cheezburger TV",
+      "thumbnail": "cheez-pre.png",
+      "year": "2014",
+      "uri": "https://cheezburger.com",
       "copy": [
-        "The purchase flow for the Xbox One console."
+        "* Unfortunately, this has since been removed from the live site.",
+        "* Live site code does not necessarily contain my work."
       ],
       "tech": [
-        "Meteor.js",
-        "NodeJS",
-        "VBScript",
-        "Xbox One platform"
-      ],
-      "gallery": true
+        "Backbone.js",
+        "ASP.NET",
+        "3rd party video APIs",
+        "Bootstrap.js"
+      ]
     },
     "mtrlike": {
       "title": "Meteor Solutions Like Tool",
       "thumbnail": "liketool-pre.png",
-      "year": "",
-      "copy": [],
-      "tech": [],
-      "gallery": true
+      "year": "2012",
+      "copy": [
+        "A user interface for customizing the Meteor Solutions like bar."
+      ],
+      "tech": [
+        "Django",
+        "Bootstrap",
+        "jQuery"
+      ]
     },
     "mtradmin": {
       "title": "Meteor Solutions Admin Dashboard",
       "thumbnail": "admindash-pre.png",
-      "year": "",
-      "copy": [],
-      "tech": [],
-      "gallery": true
-    },
-    "cheeztv": {
-      "title": "Cheezburger TV",
-      "thumbnail": "cheez-pre.png",
-      "year": "",
-      "uri": "https://cheezburger.com",
-      "copy": [],
-      "tech": [],
-      "gallery": false
+      "year": "2011-12",
+      "copy": [
+        "A dashboard made for administrators of multiple Meteor Solutions campaigns."
+      ],
+      "tech": [
+        "Django",
+        "Bootstrap",
+        "jQuery"
+      ]
     },
     "reinav": {
       "title": "REI Navigation",
       "thumbnail": "rei-pre.png",
-      "year": "",
+      "year": "2015",
       "uri": "https://rei.com",
-      "copy": [],
-      "tech": [],
-      "gallery": false
+      "copy": [
+        "The header, footer, and mobile menu of the REI main site for the circa 2015 redesign.",
+        "* Live site code does not necessarily contain my work."
+      ],
+      "tech": [
+        "UI component library"
+      ]
     },
     "vsmain": {
       "title": "Visit Seattle Main Website",
-      "thumbnail": "",
+      "thumbnail": "2016-19",
       "year": "",
       "uri": "https://visitseattle.org",
-      "copy": [],
-      "tech": [],
-      "gallery": true
+      "copy": [
+        "The main Visit Seattle homepage.",
+        "* Live site code appears to, but does not necessarily, represent my work."
+      ],
+      "tech": [
+        "Open-source WordPress",
+        "SASS",
+        "PHP5 & 7",
+        "JavaScript",
+        "MySQL",
+        "CSS3"
+      ]
     },
     "vssearch": {
       "title": "Visit Seattle Search",
       "thumbnail": "",
-      "year": "",
+      "year": "2017",
       "uri": "https://visitseattle.org/?=ice+cream",
-      "copy": [],
-      "tech": [],
-      "gallery": true
+      "copy": [
+        "The search function in the Visit Seattle website.",
+        "* Live site code appears to, but does not necessarily, represent my work."
+      ],
+      "tech": [
+        "PHP5",
+        "MySQL",
+        "Open-source WordPress"
+      ]
+    },
+    "vsem": {
+      "title": "Visit Seattle Events Manager",
+      "thumbnail": "",
+      "year": "2019",
+      "source": "https://github.com/jaybillings/events-manager-client-public",
+      "copy": [
+        "A React webapp providing a user-friendly visual interface for managing listings of events."
+      ],
+      "tech": [
+        "React",
+        "FeathersJS",
+        "MariaDB",
+        "Knex.js",
+        "socket.io",
+        "ECMAScript 6",
+        "vanilla CSS"
+      ]
+    },
+    "vseivspi": {
+      "title": "Visit Seattle Events/Partners Importer",
+      "thumbnail": "importer-request.png",
+      "year": "2018",
+      "source": "",
+      "copy": [
+        "Two plugins for retrieving information from external APIs and consuming it as a WordPress data type. The plugins are largely the same, with variations having to do with the difference between data."
+      ],
+      "tech": [
+        "PHP7",
+        "WordPress plugins",
+        "MySQL"
+      ]
+    },
+    "xbox": {
+      "title": "Xbox One Purchase Flow",
+      "thumbnail": "Purchase-NuiVui.png",
+      "year": "2014",
+      "uri": "https://xbox.com",
+      "copy": [
+        "The purchase flow for the Xbox One console.",
+        "* Live site is not an example of my work, which is consumed by the Xbox One console."
+      ],
+      "tech": [
+        "Ember.js",
+        "Node.js",
+        ".NET",
+        "Xbox One platform"
+      ]
     },
     "test": {
       "title": "Test Project",
@@ -109,8 +159,7 @@
         "CSS",
         "LESS",
         "Angular"
-      ],
-      "gallery": true
+      ]
     }
   }
 }
