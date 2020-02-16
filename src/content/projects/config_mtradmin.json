@@ -1,1 +1,22 @@
-[]
+[
+  {
+    "name": "admintools-cal.png",
+    "copy": [
+      "A dashboard for administrators of multiple campaigns, designed to allow large amounts of data to be fetched as easily and quickly as possible."
+    ]
+  },
+  {
+    "name": "admintools-fetch",
+    "copy": [
+      "Multiple organizations can be specified via the Organization and ID # searches."
+    ]
+  },
+  {
+    "name": "admintools-results.png",
+    "copy": "All results are summed up, with values displayed in the Totals table."
+  },
+  {
+    "name": "admintools-search.png",
+    "copy": "Users can search through multiple criteria, including a free text search of campaign names."
+  }
+]

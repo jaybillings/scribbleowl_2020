@@ -1,1 +1,39 @@
-[]
+[
+  {
+    "name": "liketool-fb.jpg",
+    "copy": [
+      "The WYSIWYG config page for Meteor's streamlined sharing tool.",
+      "I coded both the tool itself, which serves as an implementation for Meteor tracking via common share widgets, and the config page."
+    ]
+  },
+  {
+    "name": "liketool-google.jpg",
+    "copy": [
+      "Widgets were chosen based on user request and usage statistics."
+    ]
+  },
+  {
+    "name": "liketool-pinterest.jpg",
+    "copy": [
+      "Pinterest was added due to user requet. Although it has no public API, I was able to reverse-engineer their widget for use in the tool."
+    ]
+  },
+  {
+    "name": "liketool-twitter.jpg",
+    "copy": [
+      "Common features can be changed via this config page. Other features were implimented and can be changed via JavaScript."
+    ]
+  },
+  {
+    "name": "liketool-save.jpg",
+    "copy": [
+      "A notification informs the user of a successful save."
+    ]
+  },
+  {
+    "name": "liketool-doc.jpg",
+    "copy": [
+      "Documentation of the tool was provided for advanced users who do not want to use the config page."
+    ]
+  }
+]
