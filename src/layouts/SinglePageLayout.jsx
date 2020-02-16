@@ -16,11 +16,13 @@ export default class SinglePageLayout extends Component {
     const contactCopy = mainConfig.forHire ? contactConfig.hireCopy : contactConfig.copy;
 
     return [
-      <Header key={'header'} title={mainConfig.title} navSections={mainConfig.navSections} />,
-      <About key={'about'} title={aboutConfig.title} copy={aboutConfig.copy} skillsSection={aboutConfig.skillsSection} />,
-      <Portfolio key={'portfolio'} title={galleryConfig.title} projects={galleryConfig.projects} projectList={galleryConfig.projectOrder} />,
-      <Contact key={'contact'} title={contactConfig.title} copy={contactCopy} />,
-      <Footer key={'footer'} />
+      <Header key={'header'} title={mainConfig.title} navSections={mainConfig.navSections}/>,
+      <About key={'about'} title={aboutConfig.title} copy={aboutConfig.copy}
+             skillsSection={aboutConfig.skillsSection}/>,
+      <Portfolio key={'portfolio'} title={galleryConfig.title} projects={galleryConfig.projects}
+                 projectList={galleryConfig.projectOrder}/>,
+      <Contact key={'contact'} title={contactConfig.title} copy={contactCopy}/>,
+      <Footer key={'footer'}/>
     ];
   }
 }

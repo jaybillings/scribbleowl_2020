@@ -1,6 +1,13 @@
 {
   "title": "Previous Projects",
-  "projectOrder": ["vseivspi", "xbox", "reinav","cheeztv","mtrlike","mtradmin"],
+  "projectOrder": [
+    "vseivspi",
+    "xbox",
+    "reinav",
+    "cheeztv",
+    "mtrlike",
+    "mtradmin"
+  ],
   "projects": {
     "vsem": {
       "title": "Visit Seattle Events Manager",
@@ -25,8 +32,15 @@
       "thumbnail": "Purchase-NuiVui.png",
       "year": "2015",
       "uri": "https://xbox.com",
-      "copy": ["The purchase flow for the Xbox One console."],
-      "tech": ["Meteor.js", "NodeJS", "VBScript", "Xbox One platform"],
+      "copy": [
+        "The purchase flow for the Xbox One console."
+      ],
+      "tech": [
+        "Meteor.js",
+        "NodeJS",
+        "VBScript",
+        "Xbox One platform"
+      ],
       "gallery": true
     },
     "mtrlike": {

@@ -15,69 +15,6 @@
     }
   }
 
-  nav {
-    background: $gray14;
-    padding: 0.5rem 0;
-    margin: 0 ($whitespace / -1) 0;
-    overflow: auto;
-    scrollbar-width: thin;
-    border: 4px solid $main-color;
-    border-left: none;
-    border-right: none;
-
-    @include media(">=medium") {
-      max-height: 25rem;
-      background: linear-gradient(rgba(255, 255, 255, 0.1) 10%, rgba(255, 255, 255, 0.5) 45%, rgba(255, 255, 255, 0.5) 55%, rgba(255, 255, 255, 0.1) 90%);
-      overflow-y: auto;
-      overflow-x: hidden;
-      text-align: center;
-      margin: 0;
-    }
-
-    ul {
-      display: flex;
-      margin: 1rem 0;
-
-      @include media(">=medium") {
-        flex-flow: column;
-        margin: 0;
-      }
-    }
-
-    li {
-      flex-basis: max-content;
-      padding: 0 0.5rem;
-      cursor: pointer;
-      line-height: 1.5rem;
-
-      @include media(">=medium") {
-        margin: 0.5rem 0;
-        cursor: pointer;
-      }
-
-      &.selected {
-        cursor: default;
-        color: $main-color-dark;
-        font-weight: bold;
-      }
-
-      &:not(.selected) {
-        &:hover, &:focus, &:active {
-          text-decoration: underline;
-        }
-      }
-    }
-
-    span {
-      display: inline-block;
-      width: max-content;
-
-      @include media(">=medium") {
-        display: inline;
-      }
-    }
-  }
-
   .portfolioInner {
     background: $light-overlay;
     margin: 0 (($whitespace / 3) * 2);
@@ -98,57 +35,6 @@
       grid-template-columns: 1fr 3fr;
       margin: 0 ($whitespace-lg / 2);
       padding: 0 ($whitespace-lg / 2)
-    }
-  }
-
-  .projectTile {
-    margin: 2rem 0;
-
-    @include media(">=medium") {
-      margin: 0;
-      padding: 0 1rem 0 2rem;
-    }
-  }
-
-  .copy {
-    margin: 2rem 0;
-
-    @include media(">=medium") {
-      max-height: 15rem;
-      overflow: auto;
-      scrollbar-width: thin;
-      margin: 0;
-    }
-  }
-
-  .external-links a {
-    &:hover, &:focus, &:active {
-      text-decoration: underline;
-
-      svg {
-        color: $main-color;
-      }
-    }
-  }
-
-  .gallery-link, .tech {
-    font-size: 0.92rem;
-    color: $gray4;
-  }
-
-  .gallery-link {
-    margin: 0;
-    font-weight: bold;
-
-    @include media(">=medium") {
-      margin: 1rem 0;
-    }
-
-    a {
-      color: inherit;
-      &:hover, &:focus, &:active {
-        text-decoration: underline;
-      }
     }
   }
 
