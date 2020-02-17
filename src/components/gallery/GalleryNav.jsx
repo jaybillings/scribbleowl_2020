@@ -9,16 +9,35 @@ export default class GalleryNav extends Component {
   constructor(props) {
     super(props);
 
+    this.projPrev = React.createRef();
+    this.projNext = React.createRef();
+
     this.renderProjPrev = this.renderProjPrev.bind(this);
     this.renderProjNext = this.renderProjNext.bind(this);
+  }
+
+  componentDidMount() {
+    document.onkeydown = (e) => {
+      console.log('proj key', e.key);
+      switch(e.key) {
+        case 'ArrowRight':
+          this.projPrev.current && this.projPrev.current.click();
+          break;
+        case 'ArrowLeft':
+          this.projNext.current && this.projNext.current.click();
+          break;
+        default:
+          break;
+      }
+    }
   }
 
   renderProjPrev(projIndex) {
     const prevProjIndex = projIndex === 0 ? (this.props.projectOrder.length - 1) : projIndex - 1;
     const prevProjAlias = this.props.projectOrder[prevProjIndex];
 
-    return <Link to={`/gallery/${prevProjAlias}`} className={'hvr-underline-from-left'}>
-      <TiMediaPlayReverseOutline title={'To previous project'}/>{this.props.projects[prevProjAlias].title}
+    return <Link ref={this.projPrev} to={`/gallery/${prevProjAlias}`} className={'hvr-underline-from-left'}>
+      <TiMediaPlayReverseOutline title={'Type left arrow to go to previous project'}/>{this.props.projects[prevProjAlias].title}
     </Link>;
   }
 
@@ -28,8 +47,8 @@ export default class GalleryNav extends Component {
 
     const nextProjAlias = this.props.projectOrder[nextProjIndex];
 
-    return <Link to={`/gallery/${nextProjAlias}`} className={'hvr-underline-from-right'}>
-      {this.props.projects[nextProjAlias].title} <TiMediaPlayOutline title={'Go next project'}/>
+    return <Link ref={this.projNext} to={`/gallery/${nextProjAlias}`} className={'hvr-underline-from-right'}>
+      {this.props.projects[nextProjAlias].title} <TiMediaPlayOutline title={'Type right arrow to go to next project'}/>
     </Link>;
   }
 
