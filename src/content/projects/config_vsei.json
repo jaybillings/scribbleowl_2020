@@ -1,0 +1,30 @@
+[
+  {
+    "name": "importer-running.png",
+    "copy": []
+  },
+  {
+    "name": "importer-request-import.png",
+    "copy": []
+  },
+  {
+    "name": "importer-free.png",
+    "copy": []
+  },
+  {
+    "name": "importer-inprogress.png",
+    "copy": []
+  },
+  {
+    "name": "importer-advanced.png",
+    "copy": []
+  },
+  {
+    "name": "importer-request.png",
+    "copy": []
+  },
+  {
+    "name": "importer-error.png",
+    "copy": []
+  }
+]

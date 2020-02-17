@@ -1,7 +1,8 @@
 {
   "title": "Previous Projects",
   "projectOrder": [
-    "vseivspi",
+    "vsei",
+    "vsmain",
     "xbox",
     "reinav",
     "cheeztv",
@@ -66,20 +67,18 @@
     },
     "vsmain": {
       "title": "Visit Seattle Main Website",
-      "thumbnail": "2016-19",
-      "year": "",
+      "thumbnail": "banner_styled.png",
+      "year": "2016-19",
       "uri": "https://visitseattle.org",
-      "copy": [
-        "The main Visit Seattle homepage.",
-        "* Live site code appears to, but does not necessarily, represent my work."
-      ],
+      "copy": "The main Visit Seattle homepage. For three years, one of my primary duties was maintaining this website, which while I was there <traffic stuff>. In addition to responding to user requests, I proactively made visual improvements, organized the code base, and maintained stability and security of the server itself. Below are examples of my day to day work maintaining this website.\n\n *The live site likely still contains much of my work, though I cannot confirm this.*",
       "tech": [
-        "Open-source WordPress",
+        "Custom WordPress",
         "SASS",
         "PHP5 & 7",
         "JavaScript",
         "MySQL",
-        "CSS3"
+        "CSS3",
+        "API consumption"
       ]
     },
     "vssearch": {
@@ -115,14 +114,26 @@
         "vanilla CSS"
       ]
     },
-    "vseivspi": {
-      "title": "Visit Seattle Events/Partners Importer",
+    "vsei": {
+      "title": "Visit Seattle Events Importer",
       "thumbnail": "importer-request.png",
       "year": "2018",
       "source": "",
       "copy": [
         "Two plugins for retrieving information from external APIs and consuming it as a WordPress data type. The plugins are largely the same, with variations having to do with the difference between data."
       ],
+      "tech": [
+        "PHP7",
+        "WordPress plugins",
+        "MySQL"
+      ]
+    },
+    "vspi": {
+      "title": "Visit Seattle Partners Importer",
+      "thumbnail": "importer-partners-advanced.png",
+      "year": "2018",
+      "source": "",
+      "copy": [],
       "tech": [
         "PHP7",
         "WordPress plugins",

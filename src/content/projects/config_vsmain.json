@@ -1,1 +1,40 @@
-[]
+[
+  {
+    "name": "vs_mobile_old.png",
+    "title": "Mobile front page -- phone, old",
+    "copy": "A previous version of the mobile front page, phone view. Note the awkward spacing of visual blocks as well as the improper nesting in the DOM (div is an invalid child of a), which contributed to the visual issues."
+  },
+  {
+    "name": "vs_mobile_new.png",
+    "title": "Mobile front page -- phone, edited",
+    "copy": "My edits to the mobile front page, phone view. I aligned the visual blocks and re-nested the HTML elements to ensure validity."
+  },
+  {
+    "name": "vs_tablet_old.png",
+    "title": "Mobile front page -- tablet, old",
+    "copy": "A previous version of the mobile front page, tablet view. Note the whitespace between the main image that is not beneath the lower right image as well as the invalid HTML (div as a child of a). The images are also quite small."
+  },
+  {
+    "name": "vs_tablet_new.png",
+    "title": "Mobile front page -- tablet, edited",
+    "copy": "My edits to the mobile front page, phone view. I aligned all visual blocks, altered the background images to be larger and more centered, and fixed the HTML to ensure validity."
+  },
+  {
+    "name": "banner_current.png",
+    "title": "GDPR Compliance: Subscription Banner - No Link",
+    "alt": "A screenshot of the Visit Seattle website circa 2017, scrolled down to a newsletter subscription banner.",
+    "copy": "To prepare for GDPR compliance, I was tasked with adding a link to the Visit Seattle privacy policy and a checkbox confirming the user has read and agrees to the policy.\n\nThe banner's form comes from the GravityForms plugin for WordPress."
+  },
+  {
+    "name": "banner_nostyle.png",
+    "title": "Subscription Banner - Link, No Style",
+    "alt": "A screenshot of the Visit Seattle subscription banner without styling.",
+    "copy": "The subscription banner, with the new link and checkbox, but without styling. I edited the form on the WordPress admin to add these elements."
+  },
+  {
+    "name": "banner_styled.png",
+    "title": "Subscription Banner - With Link, Styled",
+    "alt": "A screenshot of the Visit Seattle subscription banner with new styling, as well as a GDPR-compliant privacy policy notice and agreement.",
+    "copy": "The subscription banner, with the new link and checkbox, styled. In addition to placing the link and checkbox, I took the opportunity to widen the subscription input fields to help with accessibility and visual balance.\n\nThis image also shows the sticky banner that asks the user to consent to cookies, another GDPR compliance requirement. The banner is an implementation of [Cookie Content Banner Generator](https://www.websitepolicies.com/cookie-consent-banner-generator). At this point in development, the banner was using temporary copy."
+  }
+]
