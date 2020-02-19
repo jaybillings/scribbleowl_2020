@@ -1,14 +1,10 @@
 [
   {
-    "name": "importer-partners-advanced.png",
-    "copy": []
-  },
-  {
-    "name": "importer-thinking.png",
-    "copy": []
-  },
-  {
     "name": "importer-idle.png",
-    "copy": []
+    "copy": "The client in the idle state, displaying the basic view. When idle, the import status panel shows the timestamp and results summary of the last successful import, as well as the total number of listings currently live.\n\nTo decrease plugin complexity, the actions provided vary depending on the plugin's state. While idle, the user can start a new job. While a job is running, the user can cancel that job. If a job has been canceled, the user can either resume that job or start a new one. This is accomplished by saving state variables about the job in a custom table."
+  },
+  {
+    "name": "importer-partners-advanced.png",
+    "copy": "The client in an idle state, in the advanced view.\n\nThis is the advanced view, requested by adding '&advanced' to the end of the plugin URL, and shows the comprehensive nature of the actions that can be initiated by the user. Note the \"Import Images\" action, which was added after the initial release, in response to a frequent issue having to do with Partner images being stored on an external S3 bucket.\n\nThe client's AJAX calls to the server can be seen at the bottom of the network console tab."
   }
 ]

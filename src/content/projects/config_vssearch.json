@@ -8,6 +8,14 @@
     "copy": "Another top results view, with the search term 'rainier'. In coordination with design, the thumbnails are designed to take advantage of the beautiful photography."
   },
   {
+    "name": "results-pages-debug.png",
+    "copy": "A debug view the search results for \"art\", showing the specific MySQL query used to retrieve page results. Note the numbers next to the results row, which show the relevancy ranking. Also note the long list of page IDs, which is the retrieved list of pages to be manually excluded. This prevents pages such as form success notifications from showing up in search results."
+  },
+  {
+    "name": "results-partners-debug.png",
+    "copy": "A debug view of the search results for \"art\", showing the specific MySQL query used to retrieve partner results. This query provides an example of how queries search over various metadata, as well as how relevancy rankings are calculated. Note the transformations to uppercase, which prevents results being excluded because of capitalization. Also note the different queries for strict equality as well as substring matching."
+  },
+  {
     "name": "results-rainier2.png",
     "copy": "A scrolled down view of the 'rainier' results, showing the partner listings. Since partners must pay for inclusion, these are larger than other thumbnails and designed to be eye-catching."
   },
