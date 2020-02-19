@@ -10,6 +10,19 @@ const renderCopy = function (copy, tag) {
   });
 };
 
+const renderTechList = function (sections) {
+  const itemList = sections.map((item, iter) => {
+    if (typeof item !== "string" && item.length) {
+      const itemTxt = iter < sections.length - 1 ? `${item[0]},` : item[0];
+      return <a href={item[1]}>{itemTxt}</a>;
+    }
+    else if (iter < sections.length - 1) return `${item},`;
+    else return item;
+  });
+
+  return itemList.map((item, iter) => <li key={iter}>{item}</li>);
+};
+
 /**
  * handleAnchorClick manually scrolls to and focuses on a pre-defined anchor.
  *
@@ -54,5 +67,5 @@ const postData = async function(url = '', data = {}) {
 };
 
 export {
-  renderCopy, handleAnchorClick, postData
+  renderCopy, renderTechList, handleAnchorClick, postData
 }

@@ -4,6 +4,7 @@ import {TiArrowForwardOutline, TiArrowRightThick} from "react-icons/all";
 
 import "../../styles/scss/portfolio-tile.scss";
 import ReactMarkdown from "react-markdown";
+import { renderTechList } from "../../js/utilities";
 
 export default function PortfolioTile(props) {
   const liveLink = props.project.uri ?
@@ -18,7 +19,7 @@ export default function PortfolioTile(props) {
     <div className={'portfolioTile'}>
       <header>
         <h3>{props.project.title} {props.project.year ? `(${props.project.year})` : ''}</h3>
-        <p className={'tech'}><strong>{props.project.tech.join(', ')}</strong></p>
+        <ul className={'tech'}>{renderTechList(props.project.tech)}</ul>
         {links}
       </header>
       <div className={'copy'}><ReactMarkdown source={props.project.copy} /></div>

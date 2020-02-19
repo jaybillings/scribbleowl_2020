@@ -1,28 +1,18 @@
 [
   {
     "name": "admintools-cal.png",
-    "subhead": "",
-    "alt": "",
-    "copy": [
-      "A dashboard for administrators of multiple campaigns, designed to allow large amounts of data to be fetched as easily and quickly as possible."
-    ]
+    "copy": "The home screen of the dashboard. Since different users are interested in different sets of data, I provide multiple ways of querying. From left to right: a list of campaigns owned by the admin, with allows multi-selection; an input for campaign IDs; and (hidden by the calendar) a free tech search over campaign names. A calendar is also provided to restrict results to a certain timeframe."
   },
   {
-    "name": "admintools-fetch",
-    "copy": [
-      "Multiple organizations can be specified via the Organization and ID # searches."
-    ]
+    "name": "admintools-fetch.png",
+    "copy": "An example of a request, in this case multi-selection of campaign names. A notification bar informs the user that the request is pending.\n\nTwo submit buttons are included: \"Display Data\" and \"Download CSV\", for users who want the raw data for their own analysis.\n\nIf the \"Display Data\" request times out, the notification message informs the user of this and includes a direct link to download the raw data. This was implemented because particularly complex requests could take a very long time to process, resulting in errors and user confusion.\n\n."
   },
   {
     "name": "admintools-results.png",
-    "copy": [
-      "All results are summed up, with values displayed in the Totals table."
-    ]
+    "copy": "An example of a consolidated campaign data view. The top table shows a single row, which is the summation of each data column across all requested campaigns. The bottom table shows data columns for each campaign, so administrators can easily compare performance across the requested campaigns. This data is provided as a CSV file using the \"Download CSV\" button."
   },
   {
     "name": "admintools-search.png",
-    "copy": [
-      "Users can search through multiple criteria, including a free text search of campaign names."
-    ]
+    "copy": "Example results from a free text search, searching for the word \"meteor\".\n\nAs the user types, results are populated, allowing the user to know which campaigns will be included before submitting the request. The user can also click each result to manually include it in the request, at which point the query becomes a comma-separated list of campaign names."
   }
 ]

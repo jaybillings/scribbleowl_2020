@@ -52,4 +52,18 @@
       }
     }
   }
+
+  .tech {
+    display: block;
+    margin: 1rem 0;
+    font-weight: bold;
+
+    a {
+      text-decoration: $text-color underline solid 1px;
+    }
+
+    li:not(:last-of-type) {
+      padding-right: 0.25rem;
+    }
+  }
 }

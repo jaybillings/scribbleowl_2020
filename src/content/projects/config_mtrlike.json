@@ -1,39 +1,26 @@
 [
   {
     "name": "liketool-fb.jpg",
-    "copy": [
-      "The WYSIWYG config page for Meteor's streamlined sharing tool.",
-      "I coded both the tool itself, which serves as an implementation for Meteor tracking via common share widgets, and the config page."
-    ]
+    "copy": "The config page for Meteor Solutions's Like Tool. Note the textarea with live code, the customization options, and the WISYWIG preview."
   },
   {
     "name": "liketool-google.jpg",
-    "copy": [
-      "Widgets were chosen based on user request and usage statistics."
-    ]
+    "copy": "Options for the Google+ share button. Social media widgets were included based on usage statistics and customer request."
   },
   {
     "name": "liketool-pinterest.jpg",
-    "copy": [
-      "Pinterest was added due to user requet. Although it has no public API, I was able to reverse-engineer their widget for use in the tool."
-    ]
+    "copy": "Options for the Pinterest share button. Pinterest was added due to user request. Although it had no public API at the time of release, I was able to reverse-engineer their widget for use in the tool."
   },
   {
     "name": "liketool-twitter.jpg",
-    "copy": [
-      "Common features can be changed via this config page. Other features were implimented and can be changed via JavaScript."
-    ]
+    "copy": "Options for the Twitter share button. Twitter, in particular, exposes a number of advanced configuration options that can be changed by directly altering the tool's JavaScript code."
   },
   {
     "name": "liketool-save.jpg",
-    "copy": [
-      "A notification informs the user of a successful save."
-    ]
+    "copy": "A notification informs the user of a successful save. Subsequent page loads will display the saved configuration."
   },
   {
     "name": "liketool-doc.jpg",
-    "copy": [
-      "Documentation of the tool was provided for advanced users who do not want to use the config page."
-    ]
+    "copy": "The like tool's documentation page, provided both for technical and non-technical users. Explains the options for each tool, including advanced options beyond the scope of most implementations. Using advanced options, users can customize individual buttons, multiple buttons together, as well as the tool as a whole."
   }
 ]

@@ -3,11 +3,13 @@
   "projectOrder": [
     "vsei",
     "vsmain",
+    "vssearch",
     "xbox",
     "reinav",
     "cheeztv",
     "mtrlike",
-    "mtradmin"
+    "mtradmin",
+    "test"
   ],
   "projects": {
     "cheeztv": {
@@ -15,41 +17,36 @@
       "thumbnail": "cheez-pre.png",
       "year": "2014",
       "uri": "https://cheezburger.com",
-      "copy": [
-        "* Unfortunately, this has since been removed from the live site.",
-        "* Live site code does not necessarily contain my work."
-      ],
+      "copy": "*Unfortunately, this webapp has since been removed from the live site. The link provided is to the main site, which does not necessarily contain my work.*\n\nA single page webapp, created for the Cheezburger website. The intent was to create a video player flexible enough to handle multiple video types with minimal to no interruption to the user experience.\n\nThe app is made up of three main views -- the video container, the main video, and the navigation ribbon. The container behaves like other content blocks on the site, accepting social media plugins that can be customized by non-technical users on the site admin.\n\nUsing the navigation ribbon, users can page through video thumbnails and manually select the video of their choice. An autoplay feature was also implemented, with a visible countdown that the user was able to cancel. This required manual implementation, since the app required autoplay to function across video APIs. Communication of state between each view was accomplished via the window.postMessage methods. was accomplished by using the window.postMessage method. On request, certain partners altered their APIs to enable compatibility with this service, most notably [CollegeHumor](CollegeHumor.com)",
       "tech": [
-        "Backbone.js",
-        "ASP.NET",
+        [ "window.postMessage", "https://developer.mozilla.org/en-US/docs/Web/API/Window/postMessage" ],
         "3rd party video APIs",
-        "Bootstrap.js"
+        [ "Backbone.js", "https://backbonejs.org/" ],
+        [ "ASP.NET", "https://dotnet.microsoft.com/apps/aspnet" ],
+        [ "Bootstrap", "https://getbootstrap.com/" ],
+        "Custom CMS"
       ]
     },
     "mtrlike": {
       "title": "Meteor Solutions Like Tool",
       "thumbnail": "liketool-pre.png",
       "year": "2012",
-      "copy": [
-        "A user interface for customizing the Meteor Solutions like bar."
-      ],
+      "copy": "The Meteor Solutions Like Tool implements popular social media like buttons in a way that allows Meteor tracking code to record each button's social reach. This data is then made available in the campaign dashboard, providing the campaign's administrators with information about its effectiveness.\n\nOn the campaign dashboard, users can access an interface that allows them to create this tool in a WISYWIG manner, making it available to non-technical users such as campaign admins. I was responsible for both the tool itself and the customization interface.\n\nThe interface has two main views -- the config view and the WISYWIG view, which generates the tool's UI using the same code as the live version. The JavaScript block is displayed at the bottom and updates with each change. The tool's configuration can be saved to the campaign dashboard; subsequent loads will show these settings.\n\nDocumentation, including advanced configuration, is provided on a separate page for technical users who have experience in JavaScript.",
       "tech": [
-        "Django",
-        "Bootstrap",
-        "jQuery"
+        [ "Django", "https://www.djangoproject.com/" ],
+        [ "Bootstrap", "https://getbootstrap.com/" ],
+        [ "jQuery", "https://jquery.com/" ]
       ]
     },
     "mtradmin": {
       "title": "Meteor Solutions Admin Dashboard",
       "thumbnail": "admindash-pre.png",
       "year": "2011-12",
-      "copy": [
-        "A dashboard made for administrators of multiple Meteor Solutions campaigns."
-      ],
+      "copy": "The Meteor Solutions admin dashboard provides a integrated data view for organizations who are using Meteor Solutions code to track multiple ad campaigns. Previously, users had to go to each campaign page, individually download data, and build their own spreadsheets to analyze it.",
       "tech": [
-        "Django",
-        "Bootstrap",
-        "jQuery"
+        [ "Django", "https://www.djangoproject.com/" ],
+        [ "Bootstrap", "https://getbootstrap.com/" ],
+        [ "jQuery", "https://jquery.com/" ]
       ]
     },
     "reinav": {
@@ -57,12 +54,10 @@
       "thumbnail": "rei-pre.png",
       "year": "2015",
       "uri": "https://rei.com",
-      "copy": [
-        "The header, footer, and mobile menu of the REI main site for the circa 2015 redesign.",
-        "* Live site code does not necessarily contain my work."
-      ],
+      "copy": "Although I did not spend long at REI, I was able to finish the header, footer, and mobile menu of the REI main site for the circa 2015 redesign. I used elements from the component library, suggesting edits as needed.\n\n*Live site code does not necessarily contain my work.*",
       "tech": [
-        "UI component library"
+        "UI component library",
+        "Standard web stack"
       ]
     },
     "vsmain": {
@@ -86,14 +81,12 @@
       "thumbnail": "",
       "year": "2017",
       "uri": "https://visitseattle.org/?=ice+cream",
-      "copy": [
-        "The search function in the Visit Seattle website.",
-        "* Live site code appears to, but does not necessarily, represent my work."
-      ],
+      "copy": "The search function in the Visit Seattle website, a highly customized replacement to the standard WordPress search. On the backend, search options are translated to custom MySQL queries. I was responsible for the backend -- the actual query building and execution -- as well as the user interface. In addition to queries and filters, a semi-hidden field allows users to choose from sources customized to various user types (tourist, meeting planner, trip planner, etc.\n\n*The live site likely still contains my work, though I cannot guarantee this.*",
       "tech": [
+        "Custom WordPress",
         "PHP5",
         "MySQL",
-        "Open-source WordPress"
+        "Standard web stack"
       ]
     },
     "vsem": {
@@ -119,9 +112,7 @@
       "thumbnail": "importer-request.png",
       "year": "2018",
       "source": "",
-      "copy": [
-        "Two plugins for retrieving information from external APIs and consuming it as a WordPress data type. The plugins are largely the same, with variations having to do with the difference between data."
-      ],
+      "copy": "Two plugins for retrieving information from external APIs and consuming it as a WordPress data type. The plugins are largely the same, with variations having to do with the difference between data.",
       "tech": [
         "PHP7",
         "WordPress plugins",
@@ -133,7 +124,7 @@
       "thumbnail": "importer-partners-advanced.png",
       "year": "2018",
       "source": "",
-      "copy": [],
+      "copy": "",
       "tech": [
         "PHP7",
         "WordPress plugins",
@@ -145,26 +136,21 @@
       "thumbnail": "Purchase-NuiVui.png",
       "year": "2014",
       "uri": "https://xbox.com",
-      "copy": [
-        "The purchase flow for the Xbox One console.",
-        "* Live site is not an example of my work, which is consumed by the Xbox One console."
-      ],
+      "copy": "The purchase flow for the Xbox One console. In coordination with the Reach team at Microsoft, I helped create views for the console settings, which were created with Ember.js and consumed byb the console.\n\n*Live site is not an example of my work, which is consumed by the Xbox One console.*",
       "tech": [
         "Ember.js",
         "Node.js",
         ".NET",
-        "Xbox One platform"
+        "Xbox One platform",
+        "Standard web stack"
       ]
     },
     "test": {
-      "title": "Test Project",
+      "title": "The Test Project With the Very Long Name",
       "thumbnail": "https://via.placeholder.com/250/cccccc.png",
       "year": "20XX",
       "source": "https://github.com",
-      "copy": [
-        "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit,",
-        "sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt."
-      ],
+      "copy": "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit,\n\nsed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.",
       "tech": [
         "HTML",
         "CSS",
