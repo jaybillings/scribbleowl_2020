@@ -4,6 +4,8 @@ import ReactMarkdown from "react-markdown";
 import {TiArrowForwardOutline} from "react-icons/ti";
 
 import "../../styles/scss/gallery.scss";
+import { renderTechList } from "../../js/utilities";
+import { Redirect } from "react-router";
 
 export default class Gallery extends Component {
   constructor(props) {
@@ -20,7 +22,7 @@ export default class Gallery extends Component {
       <div id={'content-section'} className={'gallery section thumb-only'}>
         <div className={'gallery-content'}>
           <a id={'content'} className={'sr-only show-on-focus'} href={'#content'}>#</a>
-          <p className={'tech'}><strong>{this.props.project.tech.join(', ')}</strong></p>
+          <ul className={'tech'}>{renderTechList(this.props.project.tech)}</ul>
           {links}
           <div className={'copy'}><ReactMarkdown source={this.props.project.copy}/></div>
         </div>
@@ -30,13 +32,17 @@ export default class Gallery extends Component {
   }
 
   renderGalleryLayout(links) {
+    if (typeof this.props.images[this.props.imgIndex] === 'undefined') return <Redirect to={'/404'} />;
+
     const imageData = this.props.images[this.props.imgIndex];
     const imgSrc = process.env.REACT_APP_LOCAL_IMAGES ? `/img/${this.props.projID}/${imageData.name}` : imageData.name;
+
+    if (!imageData) return <Redirect to={'/oops'} />;
 
     return (
       <div id={'content-section'} className={'gallery section'}>
         <a id={'content'} className={'sr-only show-on-focus'} href={'#content'}>#</a>
-        <p className={'tech'}><strong>{this.props.project.tech.join(', ')}</strong></p>
+        <ul className={'tech'}>{renderTechList(this.props.project.tech)}</ul>
         {links}
         <div className={'copy'}><ReactMarkdown source={this.props.project.copy}/></div>
         <hr/>
@@ -53,9 +59,9 @@ export default class Gallery extends Component {
     const liveLink = this.props.project.uri ?
       <span>[ <a href={this.props.project.uri}>Live version <TiArrowForwardOutline/></a> ]</span> : '';
     const sourceLink = this.props.project.source ?
-      <span>[ <a href={this.props.project.source}>Source <TiArrowForwardOutline/></a> ]</span> : '';
+      <span>[ <a href={this.props.project.source} target={'_blank'}>Source <TiArrowForwardOutline/></a> ]</span> : '';
     const links = this.props.project.uri || this.props.project.source ?
-      <p className={'social-link'}>{liveLink} {sourceLink}</p> : '';
+      <p className={'external-link'}>{liveLink} {sourceLink}</p> : '';
 
     if (this.props.images.length) {
       return this.renderGalleryLayout(links);

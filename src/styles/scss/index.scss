@@ -75,6 +75,46 @@ a {
   text-decoration: underline;
 }
 
+.external-link, .tech {
+  font-size: 0.92rem;
+  color: $gray4;
+}
+
+.external-link {
+  margin: 0;
+  font-weight: bold;
+
+  @include media(">=medium") {
+    margin: 1rem 0;
+  }
+
+  a {
+    color: inherit;
+
+    &:hover, &:focus, &:active {
+      text-decoration: $text-color underline solid 1px;
+
+      svg {
+        color: $main-color;
+      }
+    }
+  }
+}
+
+.tech {
+  color: $gray4;
+  margin: 1rem 0;
+  font-weight: bold;
+
+  a {
+    text-decoration: $text-color underline solid 1px;
+  }
+
+  li:not(:last-of-type) {
+    padding-right: 0.25rem;
+  }
+}
+
 .text {
   &-right {
     text-align: right;

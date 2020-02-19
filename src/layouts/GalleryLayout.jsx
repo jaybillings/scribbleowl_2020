@@ -15,15 +15,15 @@ export default class GalleryLayout extends Component {
     let currentProj = {}, projImages = [];
 
     currentProj = galleryConfig.projects[projID];
-    if (!currentProj) {
-      console.error('currentProj does not exist');
+    if (!currentProj || !galleryConfig.projectOrder.includes(projID)) {
+      console.error('currentProj does not exist or is not included in projectOrder');
       return <Redirect to={'/404'}/>;
     }
 
     try {
       projImages = require(`../content/projects/config_${projID}`);
     } catch (err) {
-      console.error(err);
+      return <Redirect to={'/oops'}/>;
     }
 
     return [

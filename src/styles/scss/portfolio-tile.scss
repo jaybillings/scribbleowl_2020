@@ -21,49 +21,4 @@
       margin: 0;
     }
   }
-
-  .external-link a {
-    &:hover, &:focus, &:active {
-      text-decoration: underline;
-
-      svg {
-        color: $main-color;
-      }
-    }
-  }
-
-  .portfolio-link, .tech {
-    font-size: 0.92rem;
-    color: $gray4;
-  }
-
-  .portfolio-link {
-    margin: 0;
-    font-weight: bold;
-
-    @include media(">=medium") {
-      margin: 1rem 0;
-    }
-
-    a {
-      color: inherit;
-      &:hover, &:focus, &:active {
-        text-decoration: underline;
-      }
-    }
-  }
-
-  .tech {
-    display: block;
-    margin: 1rem 0;
-    font-weight: bold;
-
-    a {
-      text-decoration: $text-color underline solid 1px;
-    }
-
-    li:not(:last-of-type) {
-      padding-right: 0.25rem;
-    }
-  }
 }

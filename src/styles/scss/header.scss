@@ -141,6 +141,10 @@
   }
 
   .hvr-underline-from-center {
+    &:before {
+      background: inherit;
+    }
+
     @include media("<small") {
       &:before {
         position: static;

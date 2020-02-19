@@ -48,7 +48,8 @@
 
     &:not(.selected) {
       &:hover, &:focus, &:active {
-        text-decoration: underline;
+        font-weight: bold;
+        color: $main-color-dark;
       }
     }
   }
