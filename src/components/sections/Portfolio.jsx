@@ -1,5 +1,5 @@
-import React, {Component} from 'react';
-import {Link} from "react-router-dom";
+import React, { Component } from 'react';
+import { Link } from "react-router-dom";
 
 import PortfolioNav from "../portfolio/PortfolioNav";
 import PortfolioTile from "../portfolio/PortfolioTile";
@@ -29,16 +29,20 @@ export default class Portfolio extends Component {
   render() {
     const projectNames = this.props.projectList.map(alias => [alias, this.props.projects[alias].title]);
     const currentProject = this.props.projects[this.state.currentAlias];
-    const imgSrc = process.env.REACT_APP_LOCAL_IMAGES ? `/img/${this.state.currentAlias}/${currentProject.thumbnail}` : currentProject.thumbnail;
+    const imgSrc = process.env.REACT_APP_LOCAL_IMAGES ? `/img/${this.state.currentAlias}/${currentProject.thumbnail}`
+      : currentProject.thumbnail;
 
     return (
       <div id={'portfolio-section'} className={'portfolio'}>
         <div style={{background: `url(${imgSrc})`}}>
           <div className={'portfolioInner'}>
-            <h2><Link id={'portfolio'} to={'#portfolio'} className={'sr-only show-on-focus'}>#</Link> {this.props.title}</h2>
-            <PortfolioNav projAlias={this.state.currentAlias} projectNames={projectNames} handleNavClick={this.handleNavClick} handleNavKeyDown={this.handleNavKeyDown} />
+            <h2>
+              <Link id={'portfolio'} to={'#portfolio'} className={'sr-only show-on-focus'}>#</Link> {this.props.title}
+            </h2>
+            <PortfolioNav projAlias={this.state.currentAlias} projectNames={projectNames}
+                          handleNavClick={this.handleNavClick} handleNavKeyDown={this.handleNavKeyDown} />
             <PortfolioTile alias={this.state.currentAlias} project={currentProject} />
-            <ScrollTop/>
+            <ScrollTop />
           </div>
         </div>
       </div>

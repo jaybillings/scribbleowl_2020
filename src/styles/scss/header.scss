@@ -1,7 +1,7 @@
 @import '_variables.scss';
 @import '~include-media/dist/_include-media.scss';
 
-header {
+#root > header {
   display: grid;
   grid-template: [row-1-start] "header social" [row-1-end] [row-2-start] "nav nav" [row-2-end]
   / 1fr auto;
