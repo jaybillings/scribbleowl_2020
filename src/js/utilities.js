@@ -1,7 +1,13 @@
 import React from "react";
 
+/**
+ * `renderCopy` transforms a string array into an array of paragraph blocks with keys, for use in React components.
+ * @param {[string]} copy
+ * @param {string} tag
+ * @returns {[]}
+ */
 const renderCopy = function (copy, tag) {
-  if (!copy) return;
+  if (!copy) return null;
   if (!copy.length) return <p>{copy}</p>;
 
   return copy.map((line, index) => {
@@ -10,13 +16,18 @@ const renderCopy = function (copy, tag) {
   });
 };
 
+/**
+ * `renderTechList` renders an array of values into an array of list item blocks that contain either simple text or
+ * links, depending on the list item. For use in React components.
+ * @param {[]} sections // array of elements, either [{string} name] or [{string} name, {string} uri]
+ * @returns {[]}
+ */
 const renderTechList = function (sections) {
   const itemList = sections.map((item, iter) => {
     if (typeof item !== "string" && item.length) {
       const itemTxt = iter < sections.length - 1 ? `${item[0]},` : item[0];
       return <a href={item[1]}>{itemTxt}</a>;
-    }
-    else if (iter < sections.length - 1) return `${item},`;
+    } else if (iter < sections.length - 1) return `${item},`;
     else return item;
   });
 
@@ -24,11 +35,8 @@ const renderTechList = function (sections) {
 };
 
 /**
- * handleAnchorClick manually scrolls to and focuses on a pre-defined anchor.
- *
+ * `handleAnchorClick` manually scrolls the browser window to and focuses on a pre-defined anchor.
  * Add this function to the onlick handler of the link directing users to the anchor.
- * TODO: Why doesn't Link work properly with anchors in the first place?
- *
  * @param {Event} e
  */
 const handleAnchorClick = function (e) {
@@ -47,14 +55,20 @@ const handleAnchorClick = function (e) {
   target.focus({preventScroll: true});
 
   if (section.scrollIntoViewIfNeeded) {
+    // Not supported by all browsers but useful if present
     section.scrollIntoViewIfNeeded();
   } else {
     section.scrollIntoView();
   }
 };
 
-const postData = async function(url = '', data = {}) {
-  console.log(JSON.stringify(data));
+/**
+ * `postData` uses the fetch API to send POST HTTP requests.
+ * @param {string} url
+ * @param {*} data - JSON-compatible data
+ * @returns {Promise<JSON>}
+ */
+const postData = async function (url = '', data = {}) {
   const response = await fetch(url, {
     method: 'POST',
     headers: {
