@@ -1,9 +1,9 @@
 import React from "react";
 import {Link} from "react-router-dom";
 import {TiArrowForwardOutline, TiArrowRightThick} from "react-icons/all";
-import {renderCopy} from "../../js/utilities";
 
 import "../../styles/scss/portfolio-tile.scss";
+import ReactMarkdown from "react-markdown";
 
 export default function PortfolioTile(props) {
   const liveLink = props.project.uri ?
@@ -12,15 +12,17 @@ export default function PortfolioTile(props) {
   const sourceLink = props.project.source ?
     <span>[ <a href={props.project.source} target={"_blank"}>Source <TiArrowForwardOutline
       aria-hidden={true}/></a> ]</span> : '';
-  const links = props.project.uri || props.project.source ? <p className={'external-links'}>{liveLink}{sourceLink}</p> : '';
+  const links = props.project.uri || props.project.source ? <p className={'portfolio-link external-link'}>{liveLink}{sourceLink}</p> : '';
 
   return (
     <div className={'portfolioTile'}>
-      <h3>{props.project.title} {props.project.year ? `(${props.project.year})` : ''}</h3>
-      <p className={'tech'}><strong>{props.project.tech.join(', ')}</strong></p>
-      {links}
-      <div className={'copy'}>{renderCopy(props.project.copy, 'projtile')}</div>
-      <p className={'gallery-link hvr-icon-wobble-horizontal'}>
+      <header>
+        <h3>{props.project.title} {props.project.year ? `(${props.project.year})` : ''}</h3>
+        <p className={'tech'}><strong>{props.project.tech.join(', ')}</strong></p>
+        {links}
+      </header>
+      <div className={'copy'}><ReactMarkdown source={props.project.copy} /></div>
+      <p className={'portfolio-link hvr-icon-wobble-horizontal'}>
         [ <Link to={`/gallery/${props.alias}#top`}>
         Open full gallery <TiArrowRightThick className={'hvr-icon'} aria-hidden={true}/></Link> ]
       </p>
