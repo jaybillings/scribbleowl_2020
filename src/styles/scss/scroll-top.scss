@@ -16,14 +16,12 @@
     padding: 1rem 0 0;
   }
 
+  a, svg {
+    color: $main-color-alt-desaturated;
+  }
+
   a {
-    border-bottom: 1px solid transparent;
-    color: $main-color-desaturated;
     margin-right: 0.25rem;
     text-transform: capitalize;
-
-    &:hover, &:focus, &:active {
-      text-decoration: underline;
-    }
   }
 }

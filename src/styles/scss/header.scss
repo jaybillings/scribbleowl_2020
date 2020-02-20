@@ -84,9 +84,6 @@
     }
 
     a {
-      display: inline;
-      text-decoration: underline;
-
       &:hover {
         text-decoration: none;
       }
@@ -114,6 +111,10 @@
     a {
       &:hover, &:focus, &:active {
         color: $contrast-color-alt;
+
+        svg {
+          color: inherit;
+        }
       }
     }
 
@@ -132,7 +133,7 @@
 
   /* Overrides some hover effects for small screens */
 
-  .hvr-grow {
+  .text-grow-out {
     @include media("<small") {
       &:focus, &:active {
         transform: scale(1);
@@ -142,7 +143,7 @@
 
   .hvr-underline-from-center {
     &:before {
-      background: inherit;
+      background: $contrast-color-alt;
     }
 
     @include media("<small") {

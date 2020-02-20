@@ -37,19 +37,18 @@
 
     @include media(">=medium") {
       margin: 0.5rem 0;
-      cursor: pointer;
     }
 
     &.selected {
       cursor: default;
-      color: $main-color-dark;
+      color: $main-color-alt;
       font-weight: bold;
     }
 
     &:not(.selected) {
       &:hover, &:focus, &:active {
         font-weight: bold;
-        color: $main-color-dark;
+        color: $main-color-alt-bright;
       }
     }
   }

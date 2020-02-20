@@ -32,7 +32,7 @@ h2 {
 
 h3 {
   font-size: 1.2em;
-  color: $main-color-dark;
+  color: $main-color-alt;
 }
 
 p {
@@ -41,7 +41,7 @@ p {
 }
 
 code {
-  font-family: $font-stack-code
+  font-family: $font-stack-code;
 }
 
 li {
@@ -51,6 +51,15 @@ li {
 a {
   color: $text-color;
   text-decoration: none;
+
+  &:hover, &:focus, &:active {
+    color: $main-color-alt-bright;
+    text-decoration: underline;
+
+    svg {
+      color: $main-color;
+    }
+  }
 }
 
 .section {
@@ -71,43 +80,31 @@ a {
   }
 }
 
-.copy a {
-  text-decoration: underline;
-}
-
-.external-link, .tech {
+.standalone-link, .tech {
   font-size: 0.92rem;
   color: $gray4;
 }
 
-.external-link {
-  margin: 0;
+.standalone-link {
   font-weight: bold;
+  margin: 0;
 
   @include media(">=medium") {
     margin: 1rem 0;
   }
 
-  a {
-    color: inherit;
-
-    &:hover, &:focus, &:active {
-      text-decoration: $text-color underline solid 1px;
-
-      svg {
-        color: $main-color;
-      }
-    }
+  span + span {
+    margin-left: 0.5rem;
   }
 }
 
 .tech {
-  color: $gray4;
   margin: 1rem 0;
-  font-weight: bold;
 
   a {
-    text-decoration: $text-color underline solid 1px;
+    text-decoration-line: underline;
+    //noinspection CssUnknownProperty
+    text-decoration-thickness: 1px;
   }
 
   li:not(:last-of-type) {
@@ -144,6 +141,7 @@ a {
 }
 
 .contactMsg span {
+  // TODO: Does this even work? If so, move to other sheet.
   height: 0;
   transition: all 1s linear;
 }
@@ -157,7 +155,12 @@ a {
 .failure {
   height: auto;
   font-weight: bold;
-  color: $text-color-failure;
+  color: $text-color-important;
+}
+
+.important {
+  font-weight: bold;
+  color: $text-color-important;
 }
 
 .sr-only {
@@ -170,6 +173,7 @@ a {
 
   &.show-on-focus {
     &:focus, &:active {
+      color: $text-color;
       position: static;
       left: auto;
       width: auto;

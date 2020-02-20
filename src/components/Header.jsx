@@ -13,10 +13,9 @@ export default class Header extends Component {
           <Link to={'#top'} id={'top'} className={'sr-only show-on-focus'}>#</Link> {this.props.title}
         </h1>
         <nav className={'main-nav'}>
-          <ul>{this.props.navSections.map((section, idx) =>
-            <li key={section.path} className={'nav-item hvr-grow hvr-underline-from-center'}>
-              <Link to={section.path} onClick={handleAnchorClick}
-                    className={'nav-item hvr-grow hvr-underline-from-center'} replace>{section.title}</Link>
+          <ul>{this.props.navSections.map((section) =>
+            <li key={section.path} className={'nav-item text-grow-out hvr-underline-from-center'}>
+              <Link to={section.path} onClick={handleAnchorClick} replace>{section.title}</Link>
             </li>)}
           </ul>
         </nav>

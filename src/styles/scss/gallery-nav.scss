@@ -67,7 +67,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     align-items: start;
-    background: $dark-overlay;
+    background: rgba(0,0,0,0.25);
 
     @include media(">=medium") {
       align-items: center;

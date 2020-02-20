@@ -3,7 +3,7 @@
 
 footer {
   padding: 2rem $whitespace;
-  background-color: $main-color-dark;
+  background-color: $main-color-alt;
   color: $text-color-reverse;
 
   @include media(">=small") {
@@ -17,11 +17,10 @@ footer {
 
   a {
     color: $text-color-reverse;
-    border-bottom: 1px solid $text-color-reverse;
 
     &:hover, &:focus, &:active {
       color: $contrast-color-alt;
-      border-color: $contrast-color;
+      text-decoration-color: $contrast-color;
     }
   }
 

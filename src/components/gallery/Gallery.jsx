@@ -61,7 +61,7 @@ export default class Gallery extends Component {
     const sourceLink = this.props.project.source ?
       <span>[ <a href={this.props.project.source} target={'_blank'}>Source <TiArrowForwardOutline/></a> ]</span> : '';
     const links = this.props.project.uri || this.props.project.source ?
-      <p className={'external-link'}>{liveLink} {sourceLink}</p> : '';
+      <p className={'standalone-link'}>{liveLink} {sourceLink}</p> : '';
 
     if (this.props.images.length) {
       return this.renderGalleryLayout(links);
