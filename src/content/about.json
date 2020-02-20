@@ -1,30 +1,18 @@
 {
   "title": "About Jay",
-  "copy": [
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. ",
-    "Curabitur sodales ligula in libero. Sed dignissim lacinia nunc. Curabitur tortor. Pellentesque nibh. Aenean quam. In scelerisque sem at dolor. Maecenas mattis. Sed convallis tristique sem. Proin ut ligula vel nunc egestas porttitor. Morbi lectus risus, iaculis vel, suscipit quis, luctus non, massa. Fusce ac turpis quis ligula lacinia aliquet. Mauris ipsum. "
-  ],
+  "copy": "I am a software developer based in the Seattle area with a Bachelor's degree in Computer Science and over a decade of experience in a wide range of technical disciplines, but particularly in webapp development. If you are looking for a developer with cross-discipline knowledge, who can quickly pick up and apply whatever technologies are needed for the project at hand, [send me a message](/#contact).",
   "skillsSection": [
     {
       "header": "Development",
-      "copy": [
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nisi lacus sed viverra tellus in.",
-        "Dignissim diam quis enim lobortis scelerisque fermentum dui faucibus. Dis parturient montes nascetur ridiculus mus mauris vitae ultricies leo. Phasellus egestas tellus rutrum tellus pellentesque eu."
-      ]
+      "copy": "My career began with front end development, and I still maintain an opinionated passion about making technology comprehensible and accessible for every audience. I've since grown into a full-stack developer and can comfortably handle all layers of the typical webapp, from provisioning to database creation to API development. I keep current with new technology -- currently, I'm focusing on the Node.js ecosystem, especially React, but I have experience with a multitude of languages and technology and I'm always excited to develop new skills."
     },
     {
       "header": "Design",
-      "copy": [
-        "Adipiscing commodo elit at imperdiet dui. Turpis cursus in hac habitasse platea dictumst quisque sagittis. Amet risus nullam eget felis eget.",
-        "Sed risus pretium quam vulputate dignissim suspendisse in est ante.",
-        "Non enim praesent elementum facilisis leo vel fringilla est. Lectus quam id leo in vitae turpis massa. Tincidunt nunc pulvinar sapien et ligula ullamcorper malesuada proin."
-      ]
+      "copy": "Beyond technology, my two main passions are writing and visual art. Development, especially front end development, is about more than the code. The most beautifully coded webapp will still fail if users don't want to or can't use it. With a strong background in visual art, I understand concepts like negative space, color harmony, visual symmetry, and can work with design teams to ensure their vision is properly translated to the application itself."
     },
     {
       "header": "Communication",
-      "copy": [
-        "hasellus egestas tellus rutrum tellus pellentesque eu. Aliquam etiam erat velit scelerisque in."
-      ]
+      "copy": "Writing code is one thing, but occasionally developers need to talk to actual people. As a developer with background in IT, I know how important it is to be able to communicate with both technical and non-technical audiences. I am also a great believer in cross-department communication and have historically worked closely with marketing and design teams.\n\nCommunication is ultimately the purpose of all software development, and I strive to enable clear communication in all aspects of what I do, from managing projects to designing interfaces to the code itself."
     }
   ]
 }

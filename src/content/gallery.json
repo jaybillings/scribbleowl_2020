@@ -171,8 +171,9 @@
     },
     "test": {
       "title": "The Test Project With the Very Long Name",
-      "thumbnail": "https://via.placeholder.com/250/cccccc.png",
+      "thumbnail": "goat-blep.jpg",
       "year": "20XX",
+      "uri": "https://scribbleowl.com",
       "source": "https://github.com",
       "copy": "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit,\n\nsed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.",
       "tech": [
