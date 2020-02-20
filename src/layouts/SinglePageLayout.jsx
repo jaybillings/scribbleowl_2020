@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 
 import Header from '../components/Header';
 import About from '../components/sections/About';
@@ -13,16 +13,14 @@ import contactConfig from "../content/contact.json";
 
 export default class SinglePageLayout extends Component {
   render() {
-    const contactCopy = mainConfig.forHire ? contactConfig.hireCopy : contactConfig.copy;
-
     return [
-      <Header key={'header'} title={mainConfig.title} navSections={mainConfig.navSections}/>,
+      <Header key={'header'} title={mainConfig.title} navSections={mainConfig.navSections} />,
       <About key={'about'} title={aboutConfig.title} copy={aboutConfig.copy}
-             skillsSection={aboutConfig.skillsSection}/>,
+             skillsSection={aboutConfig.skillsSection} />,
       <Portfolio key={'portfolio'} title={galleryConfig.title} projects={galleryConfig.projects}
-                 projectList={galleryConfig.projectOrder}/>,
-      <Contact key={'contact'} title={contactConfig.title} copy={contactCopy}/>,
-      <Footer key={'footer'}/>
+                 projectList={galleryConfig.projectOrder} />,
+      <Contact key={'contact'} title={contactConfig.title} forHire={mainConfig.forHire} forHireCTA={contactConfig.cta.forHire} noHireCTA={contactConfig.cta.noHire} />,
+      <Footer key={'footer'} />
     ];
   }
 }
