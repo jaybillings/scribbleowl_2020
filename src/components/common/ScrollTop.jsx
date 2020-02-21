@@ -1,9 +1,8 @@
 import React from 'react';
-import {TiArrowUpThick} from "react-icons/ti";
-
+import { Link } from "react-router-dom";
+import { TiArrowUpThick } from "react-icons/ti";
+import { handleAnchorClick } from "../../js/utilities";
 import '../../styles/scss/scroll-top.scss';
-import {handleAnchorClick} from "../../js/utilities";
-import {Link} from "react-router-dom";
 
 export default function ScrollTop(props) {
   return <div id={'jckb-scroller'}>

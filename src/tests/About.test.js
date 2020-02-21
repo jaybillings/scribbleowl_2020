@@ -22,13 +22,10 @@ afterEach(() => {
 
 it('renders from props', () => {
   const title = 'Test Title';
-  const copy = ['test copy'];
+  const copy = 'test copy';
   const skillsSection = [{
     "header": "Development",
-    "copy": [
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nisi lacus sed viverra tellus in.",
-      "Dignissim diam quis enim lobortis scelerisque fermentum dui faucibus. Dis parturient montes nascetur ridiculus mus mauris vitae ultricies leo. Phasellus egestas tellus rutrum tellus pellentesque eu."
-    ]
+    "copy": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nisi lacus sed viverra tellus in.\n\nDignissim diam quis enim lobortis scelerisque fermentum dui faucibus. Dis parturient montes nascetur ridiculus mus mauris vitae ultricies leo. Phasellus egestas tellus rutrum tellus pellentesque eu."
   }];
 
   act(() => {

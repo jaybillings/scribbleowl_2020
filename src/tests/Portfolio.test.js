@@ -12,9 +12,7 @@ const projects = {
     "title": "Visit Seattle Events Manager",
     "thumbnail": "https://via.placeholder.com/250/989898.png",
     "year": "2028",
-    "copy": [
-      "Probably not being used but you never know"
-    ],
+    "copy": "Probably not being used but you never know",
     "tech": [
       "NodeJS",
       "FeathersJS",
@@ -28,10 +26,7 @@ const projects = {
     "title": "Meteor Client Backend",
     "thumbnail": "https://via.placeholder.com/250/444444.png",
     "year": "1992",
-    "copy": [
-      "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit,",
-      "sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt."
-    ],
+    "copy": "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit\n\nsed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.",
     "tech": [
       "Python",
       "jQuery",
@@ -66,7 +61,7 @@ it("renders from props", () => {
   // Nav item below lacks this class
   expect(container.querySelector('li:nth-of-type(2)').className).not.toMatch(/selected/);
   // Tile gallery link directs to correct location
-  expect(container.querySelector('.projectTile a').getAttribute('href')).toBe(`/gallery/${projectList[0]}#top`);
+  expect(container.querySelector('.gallery-link').getAttribute('href')).toBe(`/gallery/${projectList[0]}#top`);
 });
 
 it("changes the rendered tile on nav click", () => {
@@ -81,5 +76,5 @@ it("changes the rendered tile on nav click", () => {
   // Nav item above lacks this class
   expect(container.querySelector('li:first-of-type').className).not.toMatch(/selected/);
   // Tile gallery link directs to correct location
-  expect(container.querySelector('.projectTile a').getAttribute('href')).toBe(`/gallery/${projectList[1]}#top`);
+  expect(container.querySelector('.gallery-link').getAttribute('href')).toBe(`/gallery/${projectList[1]}#top`);
 });

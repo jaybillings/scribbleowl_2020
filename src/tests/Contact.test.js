@@ -22,7 +22,7 @@ afterEach(() => {
 
 it('renders from props', () => {
   const title = "Test Title";
-  const copy = ["Test copy"];
+  const copy = "Test copy";
 
   act(() => {
     render(<Router><Contact title={title} copy={copy} /></Router>, container);
@@ -31,5 +31,5 @@ it('renders from props', () => {
   // Title matches
   expect(container.querySelector('h2').textContent).toBe(`# ${title}`);
   // Contact form is present
-  expect(container.querySelector('form.contactForm')).toBeTruthy();
+  expect(container.querySelector('form.contact-form')).toBeTruthy();
 });

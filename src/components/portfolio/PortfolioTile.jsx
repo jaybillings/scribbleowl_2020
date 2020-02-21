@@ -1,10 +1,10 @@
 import React from "react";
+import ReactMarkdown from "react-markdown";
 import { Link } from "react-router-dom";
 import { TiArrowForwardOutline, TiArrowRightThick } from "react-icons/all";
+import { renderTechList } from "../../js/utilities";
 
 import "../../styles/scss/portfolio-tile.scss";
-import ReactMarkdown from "react-markdown";
-import { renderTechList } from "../../js/utilities";
 
 export default function PortfolioTile(props) {
   const liveLink = props.project.uri ?
@@ -24,7 +24,7 @@ export default function PortfolioTile(props) {
       </header>
       <div className={'copy'}><ReactMarkdown source={props.project.copy} /></div>
       <p className={'standalone-link hvr-icon-wobble-horizontal wobble-horizontal-min'}>
-        [ <Link to={`/gallery/${props.alias}#top`}>
+        [ <Link className={'gallery-link'} to={`/gallery/${props.alias}#top`}>
         Open full gallery <TiArrowRightThick className={'hvr-icon'} aria-hidden={true} /></Link> ]
       </p>
     </div>
