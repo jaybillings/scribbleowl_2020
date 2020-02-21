@@ -48,7 +48,7 @@ export default class ContactForm extends Component {
   }
 
   resetForm(form) {
-    document.querySelector('.contactForm button').blur();
+    document.querySelector('.contact-form button').blur();
     form.reset();
   }
 
@@ -64,7 +64,7 @@ export default class ContactForm extends Component {
     return (
       [
         <div key={'contactMsg'} className={'formMsg'}>{this.renderSendStatus()}</div>,
-        <form key={'contactForm'} className={'contactForm'} onSubmit={this.handleSubmit}>
+        <form key={'contact-form'} className={'contact-form'} onSubmit={this.handleSubmit}>
           <label>
             <span>your name</span>
             <input type={'text'} name={'contact_name_jckb'} className={'generic-linear-transition'} ref={this.nameRef}

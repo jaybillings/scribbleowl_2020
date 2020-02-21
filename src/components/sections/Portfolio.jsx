@@ -35,7 +35,7 @@ export default class Portfolio extends Component {
     return (
       <div id={'portfolio-section'} className={'portfolio'}>
         <div style={{background: `url(${imgSrc})`}}>
-          <div className={'portfolioInner'}>
+          <div className={'portfolio-inner'}>
             <h2>
               <Link id={'portfolio'} to={'#portfolio'} className={'sr-only show-on-focus'}>#</Link> {this.props.title}
             </h2>

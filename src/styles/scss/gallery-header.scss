@@ -1,7 +1,7 @@
 @import "_variables.scss";
 @import '~include-media/dist/_include-media.scss';
 
-#root > .galleryHeader {
+#root > .gallery-header {
   display: block;
 
   @include media (">=small") {

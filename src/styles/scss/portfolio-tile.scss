@@ -1,7 +1,7 @@
 @import "_variables.scss";
 @import '~include-media/dist/_include-media.scss';
 
-.portfolioTile {
+.portfolio-tile {
   margin: 2rem 0;
 
   @include media(">=medium") {
@@ -20,6 +20,7 @@
     @include media(">=medium") {
       max-height: 15rem;
       overflow: auto;
+      //noinspection CssUnknownProperty
       scrollbar-width: thin;
       margin: 0;
     }

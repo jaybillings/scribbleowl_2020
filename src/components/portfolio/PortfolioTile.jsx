@@ -16,7 +16,7 @@ export default function PortfolioTile(props) {
     <p className={'standalone-link'}>{liveLink}{sourceLink}</p> : '';
 
   return (
-    <div className={'portfolioTile'}>
+    <div className={'portfolio-tile'}>
       <header>
         <h3>{props.project.title} {props.project.year ? `(${props.project.year})` : ''}</h3>
         <ul className={'tech'}>{renderTechList(props.project.tech)}</ul>

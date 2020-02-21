@@ -4,7 +4,7 @@ import "../../styles/scss/portfolio-nav.scss";
 
 export default function PortfolioNav(props) {
   return (
-    <nav className={'portfolioNav'}>
+    <nav className={'portfolio-nav'}>
       <ul>
         {props.projectNames.map(([alias, title]) =>
           <li key={alias} tabIndex={0} data-alias={alias}

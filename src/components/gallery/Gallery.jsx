@@ -46,7 +46,7 @@ export default class Gallery extends Component {
         <ul className={'tech'}>{renderTechList(this.props.project.tech)}</ul>
         <div className={'copy'}><ReactMarkdown source={this.props.project.copy}/></div>
         <hr/>
-        <div className={'galleryInner'}>
+        <div className={'gallery-inner'}>
           <figure><a href={imgSrc} target={'_blank'}><img alt={imageData.alt || ''} src={imgSrc}/></a></figure>
           <figcaption className={'copy'}>{imageData.title ? <h3>{imageData.title}</h3> : ''}<ReactMarkdown source={imageData.copy}/></figcaption>
         </div>

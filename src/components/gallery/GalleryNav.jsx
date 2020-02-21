@@ -56,8 +56,8 @@ export default class GalleryNav extends Component {
     const projIndex = this.props.projectOrder.indexOf(this.props.projID);
 
     return (
-      <nav className={'galleryNav'}>
-        <ul className={'projNav'}>
+      <nav className={'gallery-nav'}>
+        <ul className={'proj-nav'}>
           <li key={'prev-proj'} className={'grid-start'}>{this.renderProjPrev(projIndex)}</li>
           <li key={'home'} className={'home-nav grid-center'}>
             <Link to={'/#top'} className={'hvr-icon-pop'}>

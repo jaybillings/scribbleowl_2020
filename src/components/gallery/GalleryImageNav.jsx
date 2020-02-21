@@ -82,7 +82,7 @@ export default class GalleryImageNav extends Component {
 
   render() {
     return (
-      <ul className={'imageNav'}>
+      <ul className={'image-nav'}>
         <li key={'img-first'} className={'grid-start'}>{this.renderImgFirst()}</li>
         <li key={'img-prev'} className={'grid-start'}>{this.renderImgBack()}</li>
         <li key={'nav-location'} className={'nav-location grid-center text-center'}>
