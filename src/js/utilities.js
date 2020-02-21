@@ -50,15 +50,14 @@ const handleAnchorClick = function (e) {
 
   const anchorID = anchorArr[anchorArr.length - 1];
   const target = document.querySelector(`#${anchorID}`);
-  const section = document.querySelector(`#${anchorID}-section`);
 
   target.focus({preventScroll: true});
 
-  if (section.scrollIntoViewIfNeeded) {
+  if (target.scrollIntoViewIfNeeded) {
     // Not supported by all browsers but useful if present
-    section.scrollIntoViewIfNeeded();
+    target.scrollIntoViewIfNeeded();
   } else {
-    section.scrollIntoView();
+    target.scrollIntoView();
   }
 };
 

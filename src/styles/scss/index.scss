@@ -36,7 +36,7 @@ h3 {
 }
 
 p {
-  line-height: 1.2em;
+  line-height: 1.3rem;
   margin: 1rem 0;
 }
 
@@ -71,7 +71,7 @@ a {
     padding: 1rem $whitespace-med;
   }
 
-  @include media(">=large") {
+  @include media(">=medium") {
     padding: 2rem $whitespace-lg;
   }
 
@@ -155,7 +155,7 @@ a {
 .failure {
   height: auto;
   font-weight: bold;
-  color: $text-color-important;
+  color: $text-color-failure;
 }
 
 .important {
@@ -173,6 +173,7 @@ a {
 
   &.show-on-focus {
     &:focus, &:active {
+      border: none !important; // Overrides iOS browser style to prevent double border
       color: $text-color;
       position: static;
       left: auto;

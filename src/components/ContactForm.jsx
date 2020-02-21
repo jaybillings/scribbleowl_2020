@@ -1,6 +1,6 @@
-import React, {Component} from 'react';
-import {TiMail} from "react-icons/ti";
-import {postData} from "../js/utilities";
+import React, { Component } from 'react';
+import { TiMail } from "react-icons/ti";
+import { postData } from "../js/utilities";
 
 import '../styles/scss/contact-form.scss';
 
@@ -22,6 +22,8 @@ export default class ContactForm extends Component {
 
   handleSubmit(e) {
     e.preventDefault();
+
+    document.getElementById(this.props.anchorID).focus();
 
     // Honeypot caught -- post vague error
     if (this.honeyRef.current.value.length) this.setState({
@@ -66,23 +68,23 @@ export default class ContactForm extends Component {
           <label>
             <span>your name</span>
             <input type={'text'} name={'contact_name_jckb'} className={'generic-linear-transition'} ref={this.nameRef}
-                   autoComplete={'name'} required/>
+                   autoComplete={'name'} required />
           </label>
           <label>
             <span>your email address</span>
             <input type={'email'} name={'email_jckb'} className={'generic-linear-transition'} ref={this.emailRef}
-                   autoComplete={'email'} required/>
+                   autoComplete={'email'} required />
           </label>
           <label>
             <span>a brief message</span>
-            <textarea name={'message_jckb'} className={'generic-linear-transition'} ref={this.msgRef} required/>
+            <textarea name={'message_jckb'} className={'generic-linear-transition'} ref={this.msgRef} required />
           </label>
           {/* Honeypot field */}
           <label className={'jckb-field'}>
             <span>your address</span>
-            <input type={'text'} name={'address'} tabIndex={-1} autoComplete={'off'} ref={this.honeyRef}/>
+            <input type={'text'} name={'address'} tabIndex={-1} autoComplete={'off'} ref={this.honeyRef} />
           </label>
-          <button type={'submit'} className={'hvr-pulse-grow hvr-fade '}>Send Message <TiMail aria-hidden={true}/>
+          <button type={'submit'} className={'hvr-pulse-grow hvr-fade'}>Send Message <TiMail aria-hidden={true} />
           </button>
         </form>
       ]

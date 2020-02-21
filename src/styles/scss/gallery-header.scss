@@ -3,7 +3,14 @@
 
 #root > .galleryHeader {
   display: block;
-  padding-top: 4.5em;
+
+  @include media (">=small") {
+    padding-top: 4rem;
+  }
+
+  @include media(">=medium") {
+    padding-top: 5rem;
+  }
 
   h1 {
     font-weight: normal;

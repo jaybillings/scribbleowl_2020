@@ -10,15 +10,12 @@
   z-index: 1;
 
   ul {
-    padding: 0.5rem;
-    grid-gap: 0.5rem;
+    padding: 1rem $whitespace;
 
     @include media(">=small") {
-      padding: 0.5rem $whitespace;
-      grid-gap: 1rem;
+      padding: 1rem $whitespace-med;
     }
-
-    @include media(">=large") {
+    @include media(">=medium") {
       padding: 1rem $whitespace-lg;
     }
   }
@@ -52,10 +49,8 @@
   .projNav {
     display: grid;
     grid-template-columns: 1fr auto 1fr;
-
-    @include media(">=large") {
-      font-size: 1.2rem;
-    }
+    grid-column-gap: 1rem;
+    font-size: 1.1rem;
 
     li {
       width: 100%;
@@ -69,7 +64,7 @@
   }
 
   .home-nav {
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     text-align: center;
 
     @include media(">=medium") {
@@ -80,8 +75,9 @@
   .imageNav {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    align-items: start;
     background: rgba(0, 0, 0, 0.25);
+    font-size: 0.9rem;
+    align-items: center;
     padding: 0.5rem $whitespace;
 
     @include media(">=small") {
@@ -89,7 +85,6 @@
     }
     @include media(">=medium") {
       padding: 0.5rem $whitespace-lg;
-      align-items: center;
     }
 
     .inactive, .active {
@@ -107,8 +102,6 @@
     }
 
     .nav-location {
-      align-self: start;
-
       span {
         display: block;
         text-transform: initial;

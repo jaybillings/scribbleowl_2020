@@ -6,20 +6,17 @@
   grid-template: [row-1-start] "header social" [row-1-end] [row-2-start] "nav nav" [row-2-end]
   / 1fr auto;
   grid-row-gap: 1rem;
-  padding: 2.5em $whitespace 1.5em;
+  padding: 1.5em $whitespace;
   background: $main-color;
   color: $text-color-reverse;
   z-index: 1;
 
   @include media(">=small") {
+    padding: 1.5em $whitespace-med;
     grid-template: [row-1-start] ". social" [row-1-end] [row-2-start] "header nav" [row-2-end] / 1fr auto;
   }
 
   @include media(">=medium") {
-    padding: 2.5em $whitespace-med 1.5em;
-  }
-
-  @include media(">=large") {
     padding: 2.5em $whitespace-lg 1.5em;
   }
 
@@ -28,10 +25,6 @@
     font-size: 1.4rem;
 
     @include media(">=medium") {
-      font-size: 1.1rem;
-    }
-
-    @include media(">=large") {
       font-size: 1.2rem;
     }
   }
@@ -46,15 +39,12 @@
 
   .main-nav {
     grid-area: nav;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
+    align-self: center;
 
     @include media(">=medium") {
       margin: 0;
       font-size: 1.2rem;
-    }
-
-    @include media(">=large") {
-      font-size: 1.3rem;
     }
 
     ul {
@@ -71,7 +61,7 @@
         @include media(">=small") {
           margin-right: 1rem;
         }
-        @include media(">=large") {
+        @include media(">=medium") {
           margin-right: 1.5rem;
         }
       }
@@ -99,6 +89,10 @@
     justify-content: flex-end;
     grid-area: social;
     font-size: 2rem;
+
+    @include media(">=medium") {
+      font-size: 1.8rem;
+    }
 
     li:first-of-type {
       margin-right: 0.5rem;

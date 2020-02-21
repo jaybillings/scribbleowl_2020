@@ -12,7 +12,8 @@ $contrast-color-alt: #ffaf87;
 $contrast-color-alt-light: #faf4e1;
 
 $text-color-success: #10979e;
-$text-color-important: #bf3051;
+$text-color-failure: #bf3051;
+$text-color-important: $contrast-color;
 
 $shadow: rgba(0,0,0,0.5);
 $box-shadow-crisp: -2px 4px 3px 0 $shadow;
@@ -33,11 +34,11 @@ $text-color-reverse: $white;
 
 $font-stack: 'Open Sans', sans-serif;
 $font-stack-code: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
-$default-font-size: 16px;
+$default-font-size: 18px;
 
-$whitespace: 1.5rem;
-$whitespace-med: 2rem;
-$whitespace-lg: 3rem;
+$whitespace: 1rem;
+$whitespace-med: 1.5rem;
+$whitespace-lg: 2rem;
 
 // small: 560px, medium: 704px, med-lg: 960px, large: 1024px
 $breakpoints: (small: 35em, medium: 44em, med-lg: 60rem, large: 64rem) !default;

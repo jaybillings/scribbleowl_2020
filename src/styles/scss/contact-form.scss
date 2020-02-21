@@ -24,6 +24,7 @@
     width: -moz-available;
     border: 2px solid $gray7;
     padding: 0.5rem;
+    border-radius: unset;
 
     @include media(">=small") {
       width: 96%;
@@ -66,6 +67,12 @@
     &:hover, &:focus, &:active {
       background: $main-color;
       border-color: $main-color;
+    }
+
+    @media (hover: none) {
+      &:hover {
+        animation: none;
+      }
     }
 
     svg {
