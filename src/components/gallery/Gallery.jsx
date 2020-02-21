@@ -22,8 +22,8 @@ export default class Gallery extends Component {
       <div id={'content-section'} className={'gallery section thumb-only'}>
         <div className={'gallery-content'}>
           <a id={'content'} className={'sr-only show-on-focus'} href={'#content'}>#</a>
-          <ul className={'tech'}>{renderTechList(this.props.project.tech)}</ul>
           {links}
+          <ul className={'tech'}>{renderTechList(this.props.project.tech)}</ul>
           <div className={'copy'}><ReactMarkdown source={this.props.project.copy}/></div>
         </div>
         <div className={'gallery-image'}><a href={imgSrc} target={'_blank'}><img src={imgSrc} alt={''}/></a></div>
@@ -42,8 +42,8 @@ export default class Gallery extends Component {
     return (
       <div id={'content-section'} className={'gallery section'}>
         <a id={'content'} className={'sr-only show-on-focus'} href={'#content'}>#</a>
-        <ul className={'tech'}>{renderTechList(this.props.project.tech)}</ul>
         {links}
+        <ul className={'tech'}>{renderTechList(this.props.project.tech)}</ul>
         <div className={'copy'}><ReactMarkdown source={this.props.project.copy}/></div>
         <hr/>
         <div className={'galleryInner'}>

@@ -1,12 +1,13 @@
 @import "_variables.scss";
 @import '~include-media/dist/_include-media.scss';
 
-.galleryHeader {
+#root > .galleryHeader {
   display: block;
+  padding-top: 4.5em;
 
   h1 {
     font-weight: normal;
-    font-size: 1.4rem;
+    font-size: 1.5rem;
   }
 
   a {

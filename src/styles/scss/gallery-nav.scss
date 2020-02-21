@@ -14,7 +14,7 @@
     grid-gap: 0.5rem;
 
     @include media(">=small") {
-      padding: 0.5rem 1.5rem;
+      padding: 0.5rem $whitespace;
       grid-gap: 1rem;
     }
 
@@ -39,6 +39,14 @@
     &:before {
       background: $contrast-color-light;
     }
+
+    &:hover, &:active, &:focus {
+      color: inherit;
+
+      svg {
+        color: inherit;
+      }
+    }
   }
 
   .projNav {
@@ -51,6 +59,12 @@
 
     li {
       width: 100%;
+    }
+
+    a {
+      &:hover, &:focus, &:active {
+        text-decoration: none;
+      }
     }
   }
 
@@ -67,16 +81,15 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     align-items: start;
-    background: rgba(0,0,0,0.25);
+    background: rgba(0, 0, 0, 0.25);
+    padding: 0.5rem $whitespace;
 
-    @include media(">=medium") {
-      align-items: center;
+    @include media(">=small") {
+      padding: 0.5rem $whitespace-med;
     }
-
-    a {
-      &:hover, &:focus, &:active {
-        border-bottom: none;
-      }
+    @include media(">=medium") {
+      padding: 0.5rem $whitespace-lg;
+      align-items: center;
     }
 
     .inactive, .active {

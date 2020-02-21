@@ -17,7 +17,7 @@ function App() {
   return (
     <Router>
       <Switch>
-        <Route key={'single'} exact path={'/'} component={SinglePageLayout}/>
+        <Route key={'single'} exact path={'/'} component={SinglePageLayout} />
         <Route key={'gallery'} exact path={['/gallery/:alias/:index','/gallery/:alias/', '/gallery']} component={GalleryLayout}/>
         <Route key={'oops'} exact path={'/oops'} component={ErrorPage}/>,
         <Route key={'notfound'} component={NotFoundPage}/>

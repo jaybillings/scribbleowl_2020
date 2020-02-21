@@ -17,6 +17,7 @@ footer {
 
   a {
     color: $text-color-reverse;
+    text-decoration: underline;
 
     &:hover, &:focus, &:active {
       color: $contrast-color-alt;

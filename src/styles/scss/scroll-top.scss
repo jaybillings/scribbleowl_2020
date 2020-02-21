@@ -23,5 +23,12 @@
   a {
     margin-right: 0.25rem;
     text-transform: capitalize;
+
+    &:hover, &:focus, &:active {
+      color: $text-color;
+      & + svg {
+        color: $text-color;
+      }
+    }
   }
 }
