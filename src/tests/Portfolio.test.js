@@ -61,7 +61,7 @@ it("renders from props", () => {
   // Nav item below lacks this class
   expect(container.querySelector('li:nth-of-type(2)').className).not.toMatch(/selected/);
   // Tile gallery link directs to correct location
-  expect(container.querySelector('.gallery-link').getAttribute('href')).toBe(`/gallery/${projectList[0]}#top`);
+  expect(container.querySelector('.gallery-link').getAttribute('href')).toBe(`/gallery/${projectList[0]}`);
 });
 
 it("changes the rendered tile on nav click", () => {
@@ -76,5 +76,5 @@ it("changes the rendered tile on nav click", () => {
   // Nav item above lacks this class
   expect(container.querySelector('li:first-of-type').className).not.toMatch(/selected/);
   // Tile gallery link directs to correct location
-  expect(container.querySelector('.gallery-link').getAttribute('href')).toBe(`/gallery/${projectList[1]}#top`);
+  expect(container.querySelector('.gallery-link').getAttribute('href')).toBe(`/gallery/${projectList[1]}`);
 });
