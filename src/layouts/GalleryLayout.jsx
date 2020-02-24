@@ -7,6 +7,7 @@ import Gallery from "../components/gallery/Gallery";
 import Footer from "../components/common/Footer";
 
 import galleryConfig from '../content/gallery.json';
+import GalleryImageNav from "../components/gallery/GalleryImageNav";
 
 export default class GalleryLayout extends Component {
   render() {
@@ -28,8 +29,10 @@ export default class GalleryLayout extends Component {
 
     return [
       <GalleryHeader key={'header'} title={currentProj.title} year={currentProj.year} />,
-      <GalleryNav key={'gallery-nav'} projID={projID} projects={galleryConfig.projects}
-                  projectOrder={galleryConfig.projectOrder} imgIndex={imgIndex} imgCount={projImages.length}/>,
+      <nav className={'gallery-nav'}>
+        <GalleryNav key={'gallery-nav'} projID={projID} projects={galleryConfig.projects} projectOrder={galleryConfig.projectOrder} />
+        {projImages.length > 0 ? <GalleryImageNav imgIndex={imgIndex} imgCount={projImages.length} projID={this.props.projID}/> : ''}
+      </nav>,
       <Gallery key={'gallery'} imgIndex={imgIndex} images={projImages} projID={projID} project={currentProj}/>,
       <Footer key='footer'/>
     ]

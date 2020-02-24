@@ -10,7 +10,7 @@ export default class Header extends Component {
     return (
       <header id={'top-section'}>
         <h1>
-          <Link to={'#top'} id={'top'} className={'sr-only show-on-focus'}>#</Link> {this.props.title}
+          <Link to={'#'} id={'top'} className={'sr-only show-on-focus'}>#</Link> {this.props.title}
         </h1>
         <nav className={'main-nav'}>
           <ul>{this.props.navSections.map((section) =>

@@ -13,9 +13,7 @@
   },
   {
     "name": "AddPI.png",
-    "copy": [
-      "The first of several subviews that allow the user to add a new payment instrument."
-    ]
+    "copy": "The first of several subviews that allow the user to add a new payment instrument."
   },
   {
     "name": "Purchase-NuiVui.png",

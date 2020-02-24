@@ -11,7 +11,7 @@ export default function ErrorPage(props) {
   return [
     <Header key={'header'} title={title} navSections={navSections} />,
     <div key='content' className={'section'}>
-      <h2>Oops, something went wrong. <Link to={'/#top'}>Return home.</Link></h2>
+      <h2>Oops, something went wrong. <Link to={'/'}>Return home.</Link></h2>
     </div>,
     <Footer key={'footer'} />
   ]

@@ -23,14 +23,14 @@ export default class GalleryImageNav extends Component {
   }
 
   componentDidMount() {
-    document.onkeydown = (e) => {
-      console.log('img key', e.key);
+    document.addEventListener("keydown",  (e) => {
       switch(e.key) {
         case 'a':
-          if (this.imgPrevRef.current) this.imgPrevRef.current.click();
+          this.imgPrevRef.current && this.imgPrevRef.current.click();
           break;
         case 'd':
-          if (this.imgNextRef.current) this.imgNextRef.current.click();
+          console.info('!!!');
+          this.imgNextRef.current && this.imgNextRef.current.click();
           break;
         case 'w':
           if (this.imgFirstRef.current) this.imgFirstRef.current.click();
@@ -41,7 +41,7 @@ export default class GalleryImageNav extends Component {
         default:
           break;
       }
-    }
+    }, false)
   }
 
   renderImgFirst() {
@@ -49,7 +49,7 @@ export default class GalleryImageNav extends Component {
       to={`/gallery/${this.props.projID}/0`} className={'active hvr-icon-wobble-horizontal wobble-horizontal-reverse'}>
       <span>First Image </span><TiMediaRewindOutline className={'hvr-icon'} title={'Type W to go to first image.'}/></Link>;
 
-    return <div className={'inactive'}><span>First Image</span><TiMediaRewindOutline aria-hidden={true}/></div>;
+    return <div className={'inactive'}><span>First Image</span><TiMediaRewindOutline aria-hidden={true}/></div>
   }
 
   renderImgBack() {
