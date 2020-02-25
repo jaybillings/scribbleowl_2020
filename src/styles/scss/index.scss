@@ -96,20 +96,14 @@ a {
 .standalone-link, .tech {
   font-size: 0.92rem;
   color: $gray4;
+  margin: 0.5rem 0;
 }
 
 .standalone-link {
   font-weight: bold;
-  margin: 0;
-
-  @include media(">=medium") {
-    margin: 1rem 0;
-  }
 }
 
 .tech {
-  margin: 1rem 0;
-
   a {
     text-decoration-line: underline;
     //noinspection CssUnknownProperty

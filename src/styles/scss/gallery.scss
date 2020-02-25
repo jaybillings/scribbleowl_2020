@@ -37,14 +37,14 @@
     background-color: $main-color;
     border: 1px solid transparent;
     margin: 0 auto;
-    height: 0.01rem;
+    height: 1px;
 
     @include media(">=small") {
       width: 80%;
     }
 
     @include media(">=medium") {
-      margin: 1.5rem auto 0.5rem;
+      margin: 1.5rem auto;
     }
   }
 
@@ -69,7 +69,6 @@
 
     figcaption {
       p:last-of-type {
-        margin-bottom: 2rem;
       }
     }
   }
@@ -86,9 +85,5 @@
         color: $main-color;
       }
     }
-  }
-
-  #jckb-scroller {
-    margin: 1.5rem 0 0;
   }
 }

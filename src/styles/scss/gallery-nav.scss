@@ -15,6 +15,7 @@
     @include media(">=small") {
       padding: 1rem $whitespace-med;
     }
+
     @include media(">=medium") {
       padding: 1rem $whitespace-lg;
     }
@@ -22,7 +23,6 @@
 
   li {
     text-transform: capitalize;
-    padding: 0.25rem;
   }
 
   svg {
@@ -30,12 +30,7 @@
   }
 
   a {
-    width: 100%;
     color: $text-color-reverse;
-
-    &:before {
-      background: $contrast-color-light;
-    }
 
     &:hover, &:active, &:focus {
       color: inherit;
@@ -44,17 +39,17 @@
         color: inherit;
       }
     }
+
+    &:before {
+      background: $contrast-color-light;
+    }
   }
 
   .proj-nav {
     display: grid;
     grid-template-columns: 1fr auto 1fr;
-    grid-column-gap: 1rem;
-    font-size: 1.1rem;
-
-    li {
-      width: 100%;
-    }
+    align-items: start;
+    grid-column-gap: 0.5rem;
 
     a {
       &:hover, &:focus, &:active {
@@ -66,15 +61,17 @@
   .home-nav {
     font-size: 1.5rem;
     text-align: center;
+    align-self: center;
 
-    @include media(">=medium") {
-      font-size: 1.5rem;
+    svg {
+      vertical-align: text-top;
     }
   }
 
   .image-nav {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-column-gap: 0.5rem;
     background: rgba(0, 0, 0, 0.25);
     font-size: 0.9rem;
     align-items: center;
@@ -83,8 +80,9 @@
     @include media(">=small") {
       padding: 0.5rem $whitespace-med;
     }
+
     @include media(">=medium") {
-      padding: 0.5rem $whitespace-lg;
+      padding: 1rem $whitespace-lg;
     }
 
     .inactive, .active {

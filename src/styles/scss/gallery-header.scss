@@ -4,19 +4,6 @@
 #root > .gallery-header {
   display: block;
 
-  @include media (">=small") {
-    padding-top: 4rem;
-  }
-
-  @include media(">=medium") {
-    padding-top: 5rem;
-  }
-
-  h1 {
-    font-weight: normal;
-    font-size: 1.5rem;
-  }
-
   a {
     border-bottom: 1px solid transparent;
 
@@ -27,8 +14,6 @@
 
   small {
     display: block;
-    margin-top: 0.5rem;
-    font-size: 1rem;
 
     @include media(">=small") {
       display: inline-block;
