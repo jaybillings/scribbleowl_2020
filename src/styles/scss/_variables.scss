@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Share+Tech+Mono&display=swap');
+
 $main-color: #0d7e83;
 $main-color-bright: #12b1ba;
 
@@ -32,9 +34,11 @@ $background-color: $contrast-color-alt-light;
 $text-color: $gray2;
 $text-color-reverse: $white;
 
-$font-stack: 'Open Sans', sans-serif;
+$font-stack: "Montserrat", Tahoma, Arial, Helvetica, sans-serif;
+$header-font-stack: "Share Tech Mono", "Courier New", Monaco, sans-serif;
 $font-stack-code: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 $default-font-size: 18px;
+$desktop-font-size: 16px;
 
 $whitespace: 1rem;
 $whitespace-med: 1.5rem;

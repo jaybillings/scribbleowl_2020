@@ -11,6 +11,10 @@ html {
   @media screen and (prefers-reduced-motion: reduce) {
     scroll-behavior: auto;
   }
+
+  @include media(">=medium") {
+    font-size: $desktop-font-size;
+  }
 }
 
 body {
@@ -18,6 +22,11 @@ body {
   margin: 0 auto;
   background: $background-color;
   color: $text-color;
+}
+
+h1, h2, h3 {
+  font-family: $header-font-stack;
+  font-kerning: auto;
 }
 
 h1, h2, h3, ul, li, a {
@@ -36,7 +45,7 @@ h3 {
 }
 
 p {
-  line-height: 1.3rem;
+  line-height: 1.4rem;
   margin: 1rem 0;
 }
 
