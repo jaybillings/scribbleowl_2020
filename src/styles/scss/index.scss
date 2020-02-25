@@ -45,8 +45,12 @@ h3 {
 }
 
 p {
-  line-height: 1.4rem;
   margin: 1rem 0;
+  line-height: 1.4rem;
+
+  @include media(">=small") {
+    line-height: 1.5rem;
+  }
 }
 
 code {
@@ -73,15 +77,15 @@ a {
 
 .section {
   margin: 1rem 0;
-  padding: 1rem $whitespace;
+  padding: $whitespace;
   background: $white;
 
   @include media(">=small") {
-    padding: 1rem $whitespace-med;
+    padding: $whitespace-med;
   }
 
   @include media(">=medium") {
-    padding: 2rem $whitespace-lg;
+    padding: $whitespace-lg;
   }
 
   h2 {

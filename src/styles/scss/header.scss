@@ -12,25 +12,18 @@
   z-index: 1;
 
   @include media(">=small") {
-    padding: 1.5em $whitespace-med;
+    padding: 2rem $whitespace-med 1.5rem;
     grid-template: [row-1-start] ". social" [row-1-end] [row-2-start] "header nav" [row-2-end] / 1fr auto;
   }
 
   @include media(">=medium") {
-    padding: 2.5em $whitespace-lg 1.5em;
+    padding: 2.5em $whitespace-lg 2em;
   }
 
   h1 {
     grid-area: header;
-    font-size: 1.4rem;
-
-    @include media(">=medium") {
-      font-size: 1.2rem;
-    }
-  }
-
-  h2 {
-    font-size: 1.1rem;
+    font-size: 1.3rem;
+    align-self: center;
   }
 
   a {
@@ -39,11 +32,13 @@
 
   .main-nav {
     grid-area: nav;
-    font-size: 1.1rem;
     align-self: center;
 
+    @include media(">=small") {
+      font-size: 1.1rem;
+    }
+
     @include media(">=medium") {
-      margin: 0;
       font-size: 1.2rem;
     }
 
@@ -62,7 +57,7 @@
           margin-right: 1rem;
         }
         @include media(">=medium") {
-          margin-right: 1.5rem;
+          margin-right: 2rem;
         }
       }
 
@@ -88,7 +83,7 @@
     display: flex;
     justify-content: flex-end;
     grid-area: social;
-    font-size: 2rem;
+    font-size: 1.7rem;
 
     @include media(">=medium") {
       font-size: 1.8rem;
@@ -98,7 +93,7 @@
       margin-right: 0.5rem;
 
       @include media(">=medium") {
-        margin: 0;
+        margin-right: 1rem;
       }
     }
 
@@ -113,10 +108,7 @@
     }
 
     svg {
-      @include media(">=medium") {
-        vertical-align: top;
-        margin-left: 0.5rem;
-      }
+      vertical-align: top;
     }
   }
 

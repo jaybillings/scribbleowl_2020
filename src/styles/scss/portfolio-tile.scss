@@ -2,20 +2,40 @@
 @import '~include-media/dist/_include-media.scss';
 
 .portfolio-tile {
-  margin: 2rem 0;
+  margin: 1.5rem 0;
 
   @include media(">=medium") {
     margin: 0;
-    padding: 0 1rem 0 1.5rem;
+    padding: 0 ($whitespace-lg / 2) 0 0.5rem;
+  }
+
+  @include media(">=large") {
+    padding: 0 ($whitespace-lg / 2) 0 1rem;
+  }
+
+  & > header, & > .standalone-link {
+    padding: 0 ($whitespace / 2);
+
+    @include media(">=small") {
+      padding: 0 ($whitespace-med / 2);
+    }
+  }
+
+  li {
+    line-height: 1.5rem;
   }
 
   .copy {
-    margin: 2rem 0;
-    padding-left: 0.25rem;
-    background: rgba(255,255,255,0.5);
+    margin: 1rem 0;
+    padding: 0 ($whitespace / 2);
+    background: rgba(255, 255, 255, 0.75);
     border: 1px solid $gray14;
     border-left: none;
     border-right: none;
+
+    @include media(">=small") {
+      padding: 0 ($whitespace-med / 2);
+    }
 
     @include media(">=medium") {
       max-height: 15rem;

@@ -65,17 +65,17 @@ export default class ContactForm extends Component {
       [
         <div key={'contactMsg'} className={'formMsg'}>{this.renderSendStatus()}</div>,
         <form key={'contact-form'} className={'contact-form'} onSubmit={this.handleSubmit}>
-          <label>
+          <label className={'form-name'}>
             <span>your name</span>
             <input type={'text'} name={'contact_name_jckb'} className={'generic-linear-transition'} ref={this.nameRef}
                    autoComplete={'name'} required />
           </label>
-          <label>
+          <label className={'form-address'}>
             <span>your email address</span>
             <input type={'email'} name={'email_jckb'} className={'generic-linear-transition'} ref={this.emailRef}
                    autoComplete={'email'} required />
           </label>
-          <label>
+          <label className={'form-msg'}>
             <span>a brief message</span>
             <textarea name={'message_jckb'} className={'generic-linear-transition'} ref={this.msgRef} required />
           </label>
@@ -84,7 +84,7 @@ export default class ContactForm extends Component {
             <span>your address</span>
             <input type={'text'} name={'address'} tabIndex={-1} autoComplete={'off'} ref={this.honeyRef} />
           </label>
-          <button type={'submit'} className={'hvr-pulse-grow hvr-fade'}>Send Message <TiMail aria-hidden={true} />
+          <button type={'submit'} className={'form-button hvr-pulse-grow hvr-fade'}>Send Message <TiMail aria-hidden={true} />
           </button>
         </form>
       ]

@@ -4,18 +4,33 @@
 .contact-form {
   margin: 1.5rem 0;
 
+  @include media(">=medium") {
+    margin: 0;
+    display: grid;
+    grid-template-areas: "name address" "message message" "button .";
+    grid-column-gap: 1rem;
+  }
+
   label, input, textarea {
     display: block;
   }
 
   label {
-    max-width: 40em;
+    max-width: 44em;
     margin: 1rem 0;
     text-transform: capitalize;
+
+    @include media(">=medium") {
+      max-width: none;
+    }
 
     span {
       display: block;
       padding-bottom: 0.25rem;
+
+      @include media(">=medium") {
+        padding-bottom: 0.5rem;
+      }
     }
   }
 
@@ -28,11 +43,6 @@
 
     @include media(">=small") {
       width: 96%;
-      width: -moz-available;
-    }
-
-    @include media(">=medium") {
-      width: 97%;
       width: -moz-available;
     }
 
@@ -60,10 +70,6 @@
       width: 15rem;
     }
 
-    @include media(">=medium") {
-      width: 12rem;
-    }
-
     &:hover, &:focus, &:active {
       background: $main-color;
       border-color: $main-color;
@@ -79,5 +85,21 @@
       font-size: 1.25rem;
       vertical-align: bottom;
     }
+  }
+
+  .form-name {
+    grid-area: name;
+  }
+
+  .form-email {
+    grid-area: email;
+  }
+
+  .form-msg {
+    grid-area: message;
+  }
+
+  .form-button {
+    grid-area: button;
   }
 }

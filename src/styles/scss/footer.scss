@@ -10,9 +10,12 @@ footer {
     padding: 1rem $whitespace-med 2rem;
   }
 
+  @include media(">=medium") {
+    padding: 1rem $whitespace-lg 3rem;
+  }
+
   @include media(">=large") {
-    padding: 2rem $whitespace-lg 3rem;
-    font-size: 1rem;
+    padding: 1.5rem $whitespace-lg 3rem;
   }
 
   a {
@@ -26,7 +29,7 @@ footer {
   }
 
   p {
-    @include media(">=medium") {
+    @include media(">=small") {
       display: inline-block;
 
       &:first-of-type {

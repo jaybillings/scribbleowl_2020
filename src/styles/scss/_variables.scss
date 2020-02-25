@@ -17,7 +17,7 @@ $text-color-success: #10979e;
 $text-color-failure: #bf3051;
 $text-color-important: $contrast-color;
 
-$shadow: rgba(0,0,0,0.5);
+$shadow: rgba(0, 0, 0, 0.5);
 $box-shadow-crisp: -2px 4px 3px 0 $shadow;
 $box-shadow-close: 0px 0px 10px 1px $shadow;
 $box-shadow-distant: 0 4px 8px -3px $shadow;
@@ -44,5 +44,10 @@ $whitespace: 1rem;
 $whitespace-med: 1.5rem;
 $whitespace-lg: 2rem;
 
-// small: 560px, medium: 704px, med-lg: 960px, large: 1024px
-$breakpoints: (small: 35em, medium: 44em, med-lg: 60rem, large: 64rem) !default;
+/* Rough breakpoint equivalents:
+ default: phone (portrait)
+ >=small: phone (landscape), tablet (portrait)
+ >=medium: tablet (landscape)
+ >=large: laptop, desktop
+ */
+$breakpoints: (small: 560px, medium: 840px, large: 1000px) !default;
