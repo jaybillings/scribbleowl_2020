@@ -1,5 +1,5 @@
-import React, {Component} from 'react';
-import {Link} from "react-router-dom";
+import React, { Component } from 'react';
+import { Link } from "react-router-dom";
 import {
   TiMediaFastForwardOutline,
   TiMediaPlayOutline,
@@ -23,13 +23,12 @@ export default class GalleryImageNav extends Component {
   }
 
   componentDidMount() {
-    document.addEventListener("keydown",  (e) => {
-      switch(e.key) {
+    document.addEventListener("keydown", (e) => {
+      switch (e.key) {
         case 'a':
           this.imgPrevRef.current && this.imgPrevRef.current.click();
           break;
         case 'd':
-          console.info('!!!');
           this.imgNextRef.current && this.imgNextRef.current.click();
           break;
         case 'w':
@@ -45,39 +44,53 @@ export default class GalleryImageNav extends Component {
   }
 
   renderImgFirst() {
-    if (this.props.imgIndex > 0) return <Link ref={this.imgFirstRef}
-      to={`/gallery/${this.props.projID}/0`} className={'active hvr-icon-wobble-horizontal wobble-horizontal-reverse'}>
-      <span>First Image </span><TiMediaRewindOutline className={'hvr-icon'} title={'Type W to go to first image.'}/></Link>;
+    if (this.props.imgIndex > 0) return (
+      <Link ref={this.imgFirstRef}
+            to={`/gallery/${this.props.projID}/0`}
+            className={'active hvr-icon-wobble-horizontal wobble-horizontal-reverse'}
+            title={'Type W to go to first image.'}>
+        <span>First Image </span><TiMediaRewindOutline className={'hvr-icon'} aria-hidden={true} />
+      </Link>);
 
-    return <div className={'inactive'}><span>First Image</span><TiMediaRewindOutline aria-hidden={true}/></div>
+    return <div className={'inactive'}><span>First Image</span><TiMediaRewindOutline aria-hidden={true} /></div>
   }
 
   renderImgBack() {
-    if (this.props.imgIndex > 0) return <Link ref={this.imgPrevRef}
-      to={`/gallery/${this.props.projID}/${this.props.imgIndex - 1}`}
-      className={'active hvr-icon-wobble-horizontal wobble-horizontal-reverse-min'}>
-      <span>Previous Image</span><TiMediaPlayReverseOutline className={'hvr-icon'} title={'Type A to go to previous image.'}/></Link>;
+    if (this.props.imgIndex > 0) return (
+      <Link ref={this.imgPrevRef}
+            to={`/gallery/${this.props.projID}/${this.props.imgIndex - 1}`}
+            className={'active hvr-icon-wobble-horizontal wobble-horizontal-reverse-min'}
+            rel={'prev'}
+            title={'Type A to go to previous image.'}>
+        <span>Previous Image</span><TiMediaPlayReverseOutline className={'hvr-icon'} aria-hidden={true} /></Link>);
 
-    return <div className={'inactive'}><span>Previous Image </span><TiMediaPlayReverseOutline aria-hidden={true}/></div>;
+    return <div className={'inactive'}><span>Previous Image </span><TiMediaPlayReverseOutline aria-hidden={true} />
+    </div>;
   }
 
   renderImgNext() {
-    if (this.props.imgIndex < this.props.imgCount - 1) return <Link ref={this.imgNextRef}
-      to={`/gallery/${this.props.projID}/${this.props.imgIndex + 1}`}
-      className={'active hvr-icon-wobble-horizontal wobble-horizontal-min'}>
-      <span>Next Image </span><TiMediaPlayOutline className={'hvr-icon'} title={'Type D to go to next image.'}/></Link>;
+    if (this.props.imgIndex < this.props.imgCount - 1) return (
+      <Link ref={this.imgNextRef}
+            to={`/gallery/${this.props.projID}/${this.props.imgIndex + 1}`}
+            rel={'next'}
+            className={'active hvr-icon-wobble-horizontal wobble-horizontal-min'}
+            title={'Type D to go to next image.'}>
+        <span>Next Image </span><TiMediaPlayOutline className={'hvr-icon'} aria-hidden={true} /></Link>);
 
-    return <div className={'inactive'}><span>Next Image <TiMediaPlayOutline aria-hidden={true}/></span></div>;
+    return <div className={'inactive'}><span>Next Image <TiMediaPlayOutline aria-hidden={true} /></span></div>;
   }
 
   renderImgLast() {
     const lastIndex = this.props.imgCount - 1;
 
-    if (this.props.imgIndex < lastIndex) return <Link ref={this.imgLastRef}
-      to={`/gallery/${this.props.projID}/${lastIndex}`} className={'active hvr-icon-wobble-horizontal'}>
-      <span>Last Image </span><TiMediaFastForwardOutline className={'hvr-icon'} title={'Type S to go to last image.'} /></Link>;
+    if (this.props.imgIndex < lastIndex) return (
+      <Link ref={this.imgLastRef}
+            to={`/gallery/${this.props.projID}/${lastIndex}`}
+            className={'active hvr-icon-wobble-horizontal'}
+            title={'Type S to go to last image.'}>
+        <span>Last Image </span><TiMediaFastForwardOutline className={'hvr-icon'} aria-hidden={true} /></Link>);
 
-    return <div className={'inactive'}><span>Last Image</span> <TiMediaFastForwardOutline aria-hidden={true}/></div>;
+    return <div className={'inactive'}><span>Last Image</span> <TiMediaFastForwardOutline aria-hidden={true} /></div>;
   }
 
   render() {

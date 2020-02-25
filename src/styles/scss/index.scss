@@ -92,10 +92,6 @@ a {
   @include media(">=medium") {
     margin: 1rem 0;
   }
-
-  span + span {
-    margin-left: 0.5rem;
-  }
 }
 
 .tech {

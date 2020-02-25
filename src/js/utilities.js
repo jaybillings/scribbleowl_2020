@@ -26,7 +26,7 @@ const renderTechList = function (sections) {
   const itemList = sections.map((item, iter) => {
     if (typeof item !== "string" && item.length) {
       const itemTxt = iter < sections.length - 1 ? `${item[0]},` : item[0];
-      return <a href={item[1]} target={'_blank'}>{itemTxt}</a>;
+      return <a href={item[1]} target={'_blank'} rel={'noopener noreferrer'}>{itemTxt}</a>;
     } else if (iter < sections.length - 1) return `${item},`;
     else return item;
   });

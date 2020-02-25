@@ -8,12 +8,13 @@ import "../../styles/scss/portfolio-tile.scss";
 
 export default function PortfolioTile(props) {
   const liveLink = props.project.uri ?
-    <span>[ <a href={props.project.uri} target={"_blank"}>Live version <TiArrowForwardOutline aria-hidden={true} /></a> ]</span> : '';
+    <span>[ <a href={props.project.uri} target={"_blank"}
+               rel={'noopener noreferrer'}>Live version <TiArrowForwardOutline aria-hidden={true} /></a> ]</span> : '';
   const sourceLink = props.project.source ?
-    <span>[ <a href={props.project.source} target={"_blank"}>Source <TiArrowForwardOutline
+    <span>[ <a href={props.project.source} target={"_blank"} rel={'noopener noreferrer'}>Source <TiArrowForwardOutline
       aria-hidden={true} /></a> ]</span> : '';
   const links = props.project.uri || props.project.source ?
-    <p className={'standalone-link'}>{liveLink}{sourceLink}</p> : '';
+    <p className={'standalone-link'}>{liveLink} {sourceLink}</p> : '';
 
   return (
     <div className={'portfolio-tile'}>

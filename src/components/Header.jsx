@@ -1,7 +1,7 @@
-import React, {Component} from 'react';
-import {Link} from "react-router-dom";
-import {handleAnchorClick} from "../js/utilities";
-import {TiSocialGithub, TiSocialLinkedin} from "react-icons/ti";
+import React, { Component } from 'react';
+import { Link } from "react-router-dom";
+import { handleAnchorClick } from "../js/utilities";
+import { TiSocialGithub, TiSocialLinkedin } from "react-icons/ti";
 
 import '../styles/scss/header.scss';
 
@@ -21,13 +21,13 @@ export default class Header extends Component {
         </nav>
         <ul className={'social-nav'}>
           <li className={'hvr-icon-pop'}>
-            <a href={'https://github.com/jaybillings'} target={'_blank'}>
-              <TiSocialGithub className={'hvr-icon'} title={'Go to Jay\'s GitHub profile'} role={'img'}/>
+            <a href={'https://github.com/jaybillings'} target={'_blank'} rel={'noopener noreferrer'}>
+              <TiSocialGithub className={'hvr-icon'} title={'Go to Jay\'s GitHub profile'} role={'img'} />
             </a>
           </li>
           <li className={'hvr-icon-pop'}>
-            <a href={'https://www.linkedin.com/in/jaybillings/'} target={'_blank'}>
-              <TiSocialLinkedin className={'hvr-icon'} title={'Go to Jay\'s LinkedIn profile'} role={'img'}/>
+            <a href={'https://www.linkedin.com/in/jaybillings/'} target={'_blank'} rel={'noopener noreferrer'}>
+              <TiSocialLinkedin className={'hvr-icon'} title={'Go to Jay\'s LinkedIn profile'} role={'img'} />
             </a>
           </li>
         </ul>
