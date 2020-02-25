@@ -1,18 +1,19 @@
 {
   "title": "About Jay",
-  "copy": "I am a software developer based in the Seattle area with a Bachelor's degree in Computer Science and over a decade of experience in a wide range of technical disciplines, but particularly in webapp development. If you are looking for a developer with cross-discipline knowledge, who can quickly pick up and apply whatever technologies are needed for the project at hand, [send me a message](/#contact).",
+  "copy": "I am a webapp developer based in the Seattle area with a Bachelor's degree in Computer Science and over a decade of experience across a wide range of technical areas. Not only am I full-stack, I'm also cross-discipline, with a strong artistic sense that compliments my technical skills. If you're looking for a developer who takes pride in everything he does, who can and will learn whatever is necessary to get your project done, [send me a message](/#contact).",
   "skillsSection": [
     {
       "header": "Development",
-      "copy": "My career began with front end development, and I still maintain an opinionated passion about making technology comprehensible and accessible for every audience. I've since grown into a full-stack developer and can comfortably handle all layers of the typical webapp, from provisioning to database creation to API development. I keep current with new technology -- currently, I'm focusing on the Node.js ecosystem, especially React, but I have experience with a multitude of languages and technology and I'm always excited to develop new skills."
+      "copy": "I have been programming professionally for over a decade, but web development has been a passion of mine since I published my first Geocities page in the late 90s. And while my career began in the front end, I've intentionally grown my knowledge over the years to include backend work as well as provisioning. I have developed within a variety of languages and frameworks, from Java applets to Python MVC to .NET-powered Angular to WordPress. My most recent projects been within the Node.js ecosystem, specifically React."
     },
     {
       "header": "Design",
-      "copy": "Beyond technology, my two main passions are writing and visual art. Development, especially front end development, is about more than the code. The most beautifully coded webapp will still fail if users don't want to or can't use it. With a strong background in visual art, I understand concepts like negative space, color harmony, visual symmetry, and can work with design teams to ensure their vision is properly translated to the application itself."
+      "copy": "Development, especially front end development, is about more than the code. The most beautifully coded webapp is useless if users don't want to or can't use it. Aside from technology, my two main passions are visual art and fiction writing, and this has combined into a strong sense of interactive design which informs all my development decisions. I understand what the design team is trying to say and can work with them to ensure their ideas translate to the finished project."
     },
     {
       "header": "Communication",
-      "copy": "Writing code is one thing, but occasionally developers need to talk to actual people. As a developer with background in IT, I know how important it is to be able to communicate with both technical and non-technical audiences. I am also a great believer in cross-department communication and have historically worked closely with marketing and design teams.\n\nCommunication is ultimately the purpose of all software development, and I strive to enable clear communication in all aspects of what I do, from managing projects to designing interfaces to the code itself."
+      "copy": "The best developers are those who know their code well enough to explain it to a non-technical audience. I am a great believer in the importance of clear communication in all its forms, whether it means adding documentation for a new API or meeting with the marketing team to ensure everyone's goals are aligned for the upcoming launch. It also means ensuring everyone has access to the same information by coding with accessibility in mind."
     }
-  ]
+  ],
+  "cta": "Interested in my work? Browse [my portfolio](/#portfolio) for a summary of my work, or visit my [project gallery](/gallery) for more details. You can also [view the source](https://github.com/jaybillings/scribbleowl_2020) of this website, which provides a practical example of my coding ability and standards. Like what you see? [Contact me](/#contact) using the form below."
 }
