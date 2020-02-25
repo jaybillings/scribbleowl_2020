@@ -21,12 +21,12 @@ export default class Header extends Component {
         </nav>
         <ul className={'social-nav'}>
           <li className={'hvr-icon-pop'}>
-            <a href={'https://github.com/jaybillings'} target={'_blank'} rel={'noopener noreferrer'}>
+            <a href={this.props.gitHubURI} target={'_blank'} rel={'noopener noreferrer'}>
               <TiSocialGithub className={'hvr-icon'} title={'Go to Jay\'s GitHub profile'} role={'img'} />
             </a>
           </li>
           <li className={'hvr-icon-pop'}>
-            <a href={'https://www.linkedin.com/in/jaybillings/'} target={'_blank'} rel={'noopener noreferrer'}>
+            <a href={this.props.linkedInURI} target={'_blank'} rel={'noopener noreferrer'}>
               <TiSocialLinkedin className={'hvr-icon'} title={'Go to Jay\'s LinkedIn profile'} role={'img'} />
             </a>
           </li>

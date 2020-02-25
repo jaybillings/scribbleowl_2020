@@ -14,13 +14,15 @@ import contactConfig from "../content/contact.json";
 export default class SinglePageLayout extends Component {
   render() {
     return [
-      <Header key={'header'} title={mainConfig.title} navSections={mainConfig.navSections} />,
-      <About key={'about'} title={aboutConfig.title} copy={aboutConfig.copy}
-             skillsSection={aboutConfig.skillsSection} />,
+      <Header key={'header'} title={mainConfig.title} navSections={mainConfig.navSections} gitHubURI={mainConfig.github}
+              linkedInURI={mainConfig.linkedin} />,
+      <About key={'about'} title={aboutConfig.title} copy={aboutConfig.copy} skillsSection={aboutConfig.skillsSection}
+             cta={aboutConfig.cta} />,
       <Portfolio key={'portfolio'} title={galleryConfig.title} projects={galleryConfig.projects}
                  projectList={galleryConfig.projectOrder} />,
-      <Contact key={'contact'} title={contactConfig.title} forHire={mainConfig.forHire} forHireCTA={contactConfig.cta.forHire} noHireCTA={contactConfig.cta.noHire} />,
-      <Footer key={'footer'} />
+      <Contact key={'contact'} title={contactConfig.title} forHire={mainConfig.forHire}
+               forHireCTA={contactConfig.cta.forHire} noHireCTA={contactConfig.cta.noHire} />,
+      <Footer key={'footer'} siteURI={mainConfig.siteSource} />
     ];
   }
 }
