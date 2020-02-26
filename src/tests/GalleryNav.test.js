@@ -53,7 +53,7 @@ afterEach(() => {
   container = null;
 });
 
-it('displays first project first/image navigation', () => {
+it('displays project navigation', () => {
   const projID = 'test';
 
   act(() => {
@@ -64,7 +64,7 @@ it('displays first project first/image navigation', () => {
   expect(container.querySelector('li:last-of-type a').textContent).toContain('The Other Test');
 });
 
-it('displays last project nav', () => {
+it('displays project navigation wrapping', () => {
   const projID = 'test3';
 
   act(() => {
