@@ -23,8 +23,10 @@
     }
   }
 
-  h3 {
+  h2 {
+    font-size: 1.1rem;
     margin-top: 1rem;
+    text-transform: capitalize;
   }
 
   img {
@@ -48,11 +50,22 @@
     }
   }
 
+  p > a {
+    text-decoration: underline;
+  }
+
   .standalone-link {
     margin: 0;
+
+    span + span {
+      margin-left: 0.5rem;
+    }
   }
 
   .gallery-inner {
+    display: flex;
+    flex-flow: column-reverse;
+
     figure {
       margin: 1rem auto;
 
