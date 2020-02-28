@@ -1,0 +1,37 @@
+[
+  {
+    "name": "importer-idle.png",
+    "title": "Partners Plugin &mdash; Basic, Idle",
+    "copy": "The basic admin view, in its default (idle) state. When idle, the import status panel shows a summary of the last successful import and the number of listings currently live.\n\nIn both the basic and advanced modes, the available actions vary by the plugin's state, with invalid actions hidden or grayed out (for basic/advanced views, respectively).\n\nWhen an import is running, the 'import' button is replaced by a 'cancel' button, which helps clarify to the user what is happening and what actions they can take. The client requests the state from the server every few seconds (more frequently when an import is in progress). It reports that state to the user and uses it to determine what action it should request next. In this way, the plugin overcomes PHP process timeouts by relying on the browser's ability to run indefinitely."
+  },
+  {
+    "name": "importer-partners-advanced.png",
+    "title": "Partners Plugin &mdash; Advanced, Idle",
+    "copy": "The advanced admin view, in its default (idle) state. This view is requested by adding `&advanced` to the end of the plugin URL; this view was designed as a resource for technical staff who are asked to manage this data (as informed by my own experience).\n\nNote the \"Import Images\" action, which was added to the Partners importer (Events don't have images) after the initial release, in response to a number of issues relating to missing/incorrect images and differing storage locations.\n\nThe client's AJAX calls can be seen at the bottom of the network console."
+  },
+  {
+    "name": "importer-running.png",
+    "title": "Events Plugin &mdash; Basic, Action Init",
+    "copy": "The importer's state immediately after an action is initiated, before the server responds.\n\nNote that the 'resume' contextual action is available here because the previous action was canceled, but is grayed out because no actions can be initiated while a request is being processed."
+  },
+  {
+    "name": "importer-inprogress.png",
+    "title": "Events Plugin &mdash; Basic, Deletion",
+    "copy": "An example of the importer's deletion phase. 'Dropped' listings are those which have been removed from the 3rd party data store. Here, the contextual actions are 'import' and 'cancel. Being the main function of the importer, the 'import' button is always visible, but is grayed out when the action is not available."
+  },
+  {
+    "name": "importer-request.png",
+    "title": "Events Plugin &mdash; advanced, deletion",
+    "copy": "An example of the deletion phase using the advanced view. The advanced view provides a number of additional actions, including the pruning of dropped listings. Any destructive operations require the user to click a confirm dialogue before they are initiated.\n\nThe network panel on the right displays a standard server response for this phase. The importer uses a simple daemon to grab the server's state and request an appropriate action over a given interval (the interval is shorter when an import process is running)."
+  },
+  {
+    "name": "importer-request-import.png",
+    "title": "Events Plugin &mdash; Advanced, import",
+    "copy": "An example of the plugin importing fresh data. In the import action, the client triggers this action once all stale data has been removed. In the advanced view, this action can be initiated on its own, and is also runs in a number of other actions.\n\nThe network panel on the right displays the standard server response for this phase. Note the `method` parameter, which is a two part representation of the current action. In this case, 'import' is the action and 'update' is the action's current phase, meaning the original action requested was a standard import and it is on the import phase (named 'update' to avoid confusion). The client will request the same action again, incrementing the page, until 'processed' equals 'total'. At that point, the client will request the next phase, which in this case is a final clean-up."
+  },
+  {
+    "name": "importer-error.png",
+    "title": "Events plugin &mdash; Basic, error",
+    "copy": "An example of the plugin encountering an error. Error messages are made with non-technical users in mind and whenever possible include recovery suggestions. On error, the client provides a 'resume' contextual action. The 'resume' action retrieves the last recorded state from the server and resumes the action. The user can also opt to restart entirely by choosing 'import'."
+  }
+]

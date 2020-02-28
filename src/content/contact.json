@@ -1,7 +1,7 @@
 {
   "title": "Contact Me",
   "cta": {
-    "forHire": "Interested in hiring me? Use the contact form to [send me a message](/#contact) and I'll get back to you as soon as I can.",
-    "noHire": "I am not currently available for hire, but feel free to [contact me](/#contact) using the form below."
+    "forHire": "Interested in hiring me? Use the contact form to send me a message.",
+    "noHire": "I am not currently available for hire, but feel free to contact me using the form below."
   }
 }

@@ -1,16 +1,14 @@
 {
   "title": "Previous Projects",
   "projectOrder": [
-    "vspi",
-    "vsei",
+    "vspivsei",
     "vsmain",
     "vssearch",
     "xbox",
     "reinav",
     "cheeztv",
     "mtrlike",
-    "mtradmin",
-    "test"
+    "mtradmin"
   ],
   "projects": {
     "cheeztv": {
@@ -18,7 +16,7 @@
       "thumbnail": "cheez-pre.png",
       "year": "2014",
       "uri": "https://cheezburger.com",
-      "copy": "*Unfortunately, this webapp has since been removed from the live site. The link provided is to the main site, which does not necessarily contain my work.*\n\nA single page webapp, created for the Cheezburger website. The intent was to create a video player flexible enough to handle multiple video types with minimal to no interruption to the user experience.\n\nThe app is made up of three main views -- the video container, the main video, and the navigation ribbon. The container behaves like other content blocks on the site, accepting social media plugins that can be customized by non-technical users on the site admin.\n\nUsing the navigation ribbon, users can page through video thumbnails and manually select the video of their choice. An autoplay feature was also implemented, with a visible countdown that the user was able to cancel. This required manual implementation, since the app required autoplay to function across video APIs. Communication of state between each view was accomplished via the window.postMessage methods. was accomplished by using the window.postMessage method. On request, certain partners altered their APIs to enable compatibility with this service, most notably [CollegeHumor](CollegeHumor.com).",
+      "copy": "*Unfortunately, this webapp has since been removed from the live site. The link provided is to the main site, which does not necessarily contain my work.*\n\nA single page webapp, created for the Cheezburger website. The request was to create a video player flexible enough to handle multiple video providers with minimal or no interruption to the user experience.\n\nThe app is made up of three main views -- the video container, the main video, and the navigation ribbon. The container behaves like other content blocks on the site, accepting social media plugins which can be customized by non-technical publishers.\n\nUsing the navigation ribbon, users can page through video thumbnails and manually initiate playback. Videos also autoplay, which is indicated by a cancel-able countdown.\n\nCommunication of state between various video APIs accomplished via `window.postMessage`. On request, certain partners altered their APIs to enable compatibility with this service, most notably [CollegeHumor](CollegeHumor.com).",
       "tech": [
         [ "window.postMessage", "https://developer.mozilla.org/en-US/docs/Web/API/Window/postMessage" ],
         "3rd party video APIs",
@@ -33,7 +31,7 @@
       "title": "Meteor Solutions Like Tool",
       "thumbnail": "liketool-pre.png",
       "year": "2012",
-      "copy": "The Meteor Solutions Like Tool implements popular social media like buttons in a way that allows Meteor tracking code to record each button's social reach. This data is then made available in the campaign dashboard, providing the campaign's administrators with information about its effectiveness.\n\nOn the campaign dashboard, users can access an interface that allows them to create this tool in a WISYWIG manner, making it available to non-technical users such as campaign admins. I was responsible for both the tool itself and the customization interface.\n\nThe interface has two main views -- the config view and the WISYWIG view, which generates the tool's UI using the same code as the live version. The JavaScript block is displayed at the bottom and updates with each change. The tool's configuration can be saved to the campaign dashboard; subsequent loads will show these settings.\n\nDocumentation, including advanced configuration, is provided on a separate page for technical users who have experience in JavaScript.",
+      "copy": "Created for Meteor Solutions, the Like Tool wraps Meteor Solutions' tracking code around popular social media widgets. This provides ad campaign administrators an additional data source for assessing the reach of their campaigns. These data, along with others, are made available on the campaign's dashboard.\n\nIn addition to implementing the widgets themselves, I created a dashboard page that allows users to customize the widgets in a WISYWIG manner. Since individual campaigns implement these widgets within a variety of contexts, the tool was created with flexibility in mind. The WISYWIG editor provides the most common implementation and customization options, but a documentation page describes more advanced options for technically inclined users.",
       "tech": [
         [ "Django", "https://www.djangoproject.com/" ],
         [ "Python 2.7", "https://www.python.org/download/releases/2.7/" ],
@@ -45,7 +43,7 @@
       "title": "Meteor Solutions Admin Dashboard",
       "thumbnail": "admindash-pre.png",
       "year": "2011-12",
-      "copy": "The Meteor Solutions admin dashboard provides a integrated data view for organizations who are using Meteor Solutions code to track multiple ad campaigns. Previously, users had to go to each campaign page, individually download data, and build their own spreadsheets to analyze it.",
+      "copy": "The Meteor Solutions admin dashboard provides an integrated data view for organizations that use Meteor Solutions' code to track multiple ad campaigns. Previously, data views were only available per-campaign, meaning users had to manually compile various data sources for multi-campaign assessments.",
       "tech": [
         [ "Django", "https://www.djangoproject.com/" ],
         [ "Python 2.7", "https://www.python.org/download/releases/2.7/" ],
@@ -69,14 +67,18 @@
       "thumbnail": "banner_styled.png",
       "year": "2016-19",
       "uri": "https://visitseattle.org",
-      "copy": "*As of February 2020, the live site still contains much of my work.*\n\nThe main Visit Seattle homepage. During my time at Visit Seattle, one of my primary duties was maintaining all organization websites, including the main site. I was responsible for all aspects of this maintenance, from creating and editing WordPress templates to keeping the site code, plugins, and server stack up to date to maintaining uptime and security. Below are examples of minor visual updates I made to various templates, responding to requests from the design department.",
+      "copy": "*As of February 2020, the live site still contains much of my work.*\n\nThe homepage of Visit Seattle, a destination marketing organization for the city of Seattle. My work on this site was wide-ranging and not limited to the web layer -- I also maintained the server and supporting technologies.\n\nThis gallery includes examples of the work I did with the design team to maintain site main site on the frontend.",
       "tech": [
         [ "WordPress", "https://wordpress.org/" ],
         [ "SASS", "https://sass-lang.com/" ],
+        [ "Backbone.js", "https://backbonejs.org/" ],
         [ "PHP5 & 7", "https://www.php.net/" ],
         [ "MySQL", "https://www.mysql.com/" ],
         [ "AWS", "https://aws.amazon.com/" ],
         [ "jQuery", "https://jquery.com/" ],
+        [ "Advanced Custom Fields (plugin)", "https://www.advancedcustomfields.com/" ],
+        ["Gravity Forms (plugin)", "https://www.gravityforms.com/"],
+        ["Cookie Content Banner Generator", "https://www.websitepolicies.com/cookie-consent-banner-generator"],
         "API consumption"
       ]
     },
@@ -85,7 +87,7 @@
       "thumbnail": "results-rainier-partners.png",
       "year": "2017",
       "uri": "https://visitseattle.org/?=ice+cream",
-      "copy": "*As of February 2020, the live site still contains much of my work.*\n\nThe search function for the Visit Seattle website, a highly customized replacement to standard WordPress search.  I developed both the backend and UI.\n\nIn addition to text search, the user can filter the result set, or change the data source via a field available on certain searches (e.g. to listings designed for meeting planners).\n\nOn the backend, standard WordPress search is routed to a new class, which builds complex search queries customized to each result type. Depending on the result type, queries match across a variety of metadata, including post titles, categories, tags, and text content.\n\nEach result in a set includes a ranking value from 0 to 1, which represents how strongly a given result satisfies the query, which allows results to be shown in decreasing order of relevancy.",
+      "copy": "*As of February 2020, the live site still contains much of my work.*\n\nThe search function for the Visit Seattle website, a highly customized replacement to the built-in WordPress search that implements ordering search results by relevancy.\n\nThe Visit Seattle website has a number of custom WordPress taxonomies, each with a number of metadata, which provide the filters and sub-filters for search results. Each possible match has a relevancy weight (from 0 to 1), which is configurable on  the WordPress admin. Considering the complicated nature of the search class, I took care to lay out the codebase in a logical manner that future coders can quickly comprehend.\n\nWorking with design, I also updated the front-end, in particular the 'top results' view, which displays a configurable number of results for each matched taxonomy.",
       "tech": [
         [ "WordPress", "https://wordpress.org/" ],
         [ "SASS", "https://sass-lang.com/" ],
@@ -123,28 +125,20 @@
         [ "ECMAScript 6", "http://www.ecma-international.org/ecma-262/6.0/" ]
       ]
     },
-    "vsei": {
-      "title": "Visit Seattle Events Importer",
-      "thumbnail": "importer-request.png",
-      "year": "2018",
-      "source": "https://github.com/jaybillings/vs-wp-events-importer-public",
-      "copy": "One of two similar plugins made to ingest 3rd party data as a custom taxonomy, in this case \"Events\". This data type was made available via an internal API which, in turn, sourced its data from BeDynamic. This plugin was an improvement on the plugin provided by the original site authors. I developed both the UI, available on the WordPress admin, and the backend code that retrieves, transforms, and saves the event data.\n\nThe plugin provides a number of actions that can be initiated by an end user, as well as two cron processes to manage data autonomously. Users can import all, one, or updated events; delete all or stale events; and prime or clear the cache. Because large requests sent via PHP frequently time out, the data is consumed in chunks, with process data saved in the database and each new chunk initiated by the client. The user may also cancel and resume jobs. Other actions provide communication between the server and client.\n\nThe code is written with an eye to maintainability; I structured the code itself as logically as possible, with PHPDoc comments explaining each function and giving hints to IDEs.",
-      "tech": [
-        [ "WordPress", "https://wordpress.org/" ],
-        "WordPress plugins",
-        [ "SASS", "https://sass-lang.com/" ],
-        [ "PHP7", "https://www.php.net/" ],
-        [ "MySQL", "https://www.mysql.com/" ],
-        [ "jQuery", "https://jquery.com/" ],
-        "Internal API"
-      ]
-    },
-    "vspi": {
-      "title": "Visit Seattle Partners Importer",
+    "vspivsei": {
+      "title": "Visit Seattle Partners/Events Importer",
       "thumbnail": "importer-partners-advanced.png",
       "year": "2018",
-      "source": "https://github.com/jaybillings/vs-wp-partners-importer-public",
-      "copy": "One of two similar plugins made to ingest 3rd party data as a custom taxonomy, in this case \"Partners\". This data type was populated by a SimpleView data source edited by individuals within Visit Seattle. This plugin was an improvement on the plugin provided by the original site authors. I developed both the user-facing admin view, which lets users manually initiate plugin actions, and the server code that actually imports, transforms, and saves the data.\n\nThe plugin provides a number of actions, designed to allow end users to import all, specified, or all new events; delete all or only stale events; and prime or clear the cache. Because of the limitations of PHP, large requests easily time out, so any large process is broken into multiple requests, initiated by the JavaScript client code via a simple daemon. For this reason, the admin screen must remain open during manual actions, which is consistent with many WordPress plugins.\n\nEach action can also be canceled and resumed; the state is saved to one of two plugin tables (the other containing the data cache). Other actions provide communication endpoints between the client and server; client requests were balanced to provide frequent updates to the user without overloading the server or database. Request intervals vary; longer when not in an active process.\n\nIn addition to manual actions, the plugin creates two cron processes which by default run once a week, one to invalidate the old cache, the other to import fresh data.",
+      "source": [
+        {
+          "name": "Partners",
+          "uri": "https://github.com/jaybillings/vs-wp-partners-importer-public"
+        },{
+          "name": "Events",
+          "uri": "https://github.com/jaybillings/vs-wp-events-importer-public"
+        }
+      ],
+      "copy": "Two highly similar plugins created for Visit Seattle, the Importers are designed to import 3rd party data as a custom WordPress taxonomy, either \"Partners\" or \"Events\". The plugins refresh their listings on a scheduled basis, via cron, and provide interfaces on the client admin for manual actions.\n\nThese plugins were requested as a functioning version of the plugins provided by the original site authors, which had availability and consistency issues stemming from PHP's limitations on requests. To overcome these issues, the new plugins' server actions are additive, atomic, and operate over a subset of listings. This is what makes it possible for the client to handle the overall process, since each phase is discrete and can be individually requested, and also makes it possible to cancel and resume processes. Here as everywhere, care has been taken to structure the code for comprehensibility and maintainability.\n\nAlthough imports run automatically, there is also an admin client which allows users to manually refresh data. The client has two views -- basic, for non-technical users who only want to refresh the data; and advanced, for technical users who need to manage the dataset on a larger scale.",
       "tech": [
         [ "WordPress", "https://wordpress.org/" ],
         "WordPress plugins",
@@ -159,8 +153,7 @@
       "title": "Xbox One Purchase Flow",
       "thumbnail": "Purchase-NuiVui.png",
       "year": "2014",
-      "uri": "https://xbox.com",
-      "copy": "The purchase flow for the Xbox One console. In coordination with the Reach team at Microsoft, I helped create views for the console settings, which were created with Ember.js and consumed byb the console.\n\n*Live site is not an example of my work, which is consumed by the Xbox One console.*",
+      "copy": "In coordination with the Reach team, I implemented views for the Xbox One, in particular the purchase flow. Originally hired for my front-end skills, I was also able to fully contribute to service, routing, and component development.",
       "tech": [
         "Ember.js",
         "Node.js",

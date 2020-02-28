@@ -1,51 +1,51 @@
 [
   {
     "name": "topresults1.png",
-    "copy": "The top results page, which is shown to the user after a standard search. (Here, no query is input.) Page results appear first, but this behavior is customizable on the WordPress admin. The number of results displayed for each block of this view can also be customized."
+    "copy": "The default view, which shows a selection of results for each category. This is what the user sees when they search via the main searchbar. (In this example, the search has been run on a blank string.) Results are shown by taxonomy; both the order of taxonomies and the number of results shown per taxonomy are customizable from the admin."
   },
   {
     "name": "results-rainier.png",
-    "copy": "Another top results view, with the search term 'rainier'. In coordination with design, the thumbnails are designed to take advantage of the beautiful photography."
+    "copy": "Another top results view, with the search term 'rainier'. The thumbnails were implemented in coordination with design and are designed to emphasize the website's beautiful photography."
   },
   {
     "name": "results-pages-debug.png",
-    "copy": "A debug view the search results for \"art\", showing the specific MySQL query used to retrieve page results. Note the numbers next to the results row, which show the relevancy ranking. Also note the long list of page IDs, which is the retrieved list of pages to be manually excluded. This prevents pages such as form success notifications from showing up in search results."
+    "copy": "A debug view of the search results for \"art\", which displays the MySQL query used to retrieve page results. It also displays the relevancy calculations for each result, from 1 - 100. Page results can be configured to exclude specific results, in particular form confirmation pages."
   },
   {
     "name": "results-partners-debug.png",
-    "copy": "A debug view of the search results for \"art\", showing the specific MySQL query used to retrieve partner results. This query provides an example of how queries search over various metadata, as well as how relevancy rankings are calculated. Note the transformations to uppercase, which prevents results being excluded because of capitalization. Also note the different queries for strict equality as well as substring matching."
+    "copy": "A debug view of the search results for \"art\", which displays the MySQL query used to retrieve partner results. This query provides an example of how queries search over various metadata as well as how relevancy rankings are calculated.\n\nWhen writing the queries, I tried to ensure all valid results would be included &mdash; among other things, I transformed all text to uppercase and included both strict and fuzzy equality where relevant."
   },
   {
     "name": "results-rainier2.png",
-    "copy": "A scrolled down view of the 'rainier' results, showing the partner listings. Since partners must pay for inclusion, these are larger than other thumbnails and designed to be eye-catching."
+    "copy": "A scrolled down view of the \"rainier\" search, showing partner listing results. As with the page results, photography is emphasized."
   },
   {
     "name": "topresults-iphone.png",
-    "copy": "The top results search landing page, as seen on extra small screens (like mobile phones)."
+    "copy": "The top results search landing page for small viewports (i.e. mobile phones)."
   },
   {
     "name": "topresults-ipad.png",
-    "copy": "The top results search landing page, as seen on small screens (like tablets)."
+    "copy": "The top results search landing page for medium viewports (i.e tablets)."
   },
   {
     "name": "topresults-ipad2.png",
-    "copy": "A scrolled-down view of the search landing page, as seen on a tablet. This is the narrowest width that shows this view."
+    "copy": "A scrolled-down view of the search landing page for medium viewports. This is the narrowest width that shows this view."
   },
 
   {
-    "name": "filter-desktop2.png",
+    "name": "results-rainier-partners.png",
     "copy": "Users can filter the search results to show only a certain result type. Here, the results are being filtered to only include local business listings."
   },
   {
-    "name": "results-rainier-partners.png",
-    "copy": "Search results, filtered to only show local businesses. Many data types have additional filters specific to that type, which display after the type has been selected. Here, the business sub-filters can be seen."
+    "name": "filter-desktop2.png",
+    "copy": "Results can be further filtered to match various metadata, depending on the taxonomy. Here, sub-filters specific to the Partners taxonomy can be seen."
   },
   {
     "name": "filter-desktop.png",
-    "copy": "The local business results filter includes a region sub-filter. Multiple regions can be chosen via checkbox. For convenience, when hovering over the sub filter lists, the user is provided with a quick link to refine the search."
+    "copy": "The region sub-filter of the Partners taxonomy was a particular visual challenge. Because of the large number of locations available, this filter can take up a large amount of screen real estate. On larger screens, the list expands to multiple columns using flex positioning. To accommodate smaller screens and those who might have difficulty scrolling, any \"active\" (hovered or active) option will display a link which triggers the search. This is also present in the mobile filter."
   },
   {
     "name": "filter-mobile.png",
-    "copy": "The mobile filter view. It appears as an layer over the main page, to allow the user sufficient room to view and understand their options."
+    "copy": "The search filter for small viewports. It appears as an layer over the main page, to allow the user sufficient room to view and understand their options."
   }
 ]

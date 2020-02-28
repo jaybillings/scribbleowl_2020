@@ -1,26 +1,26 @@
 [
   {
-    "name": "liketool-fb.jpg",
+    "name": "liketool-fb.png",
     "copy": "The config page for Meteor Solutions's Like Tool. Note the textarea with live code, the customization options, and the WISYWIG preview."
   },
   {
-    "name": "liketool-google.jpg",
+    "name": "liketool-google.png",
     "copy": "Options for the Google+ share button. Social media widgets were included based on usage statistics and customer request."
   },
   {
-    "name": "liketool-pinterest.jpg",
+    "name": "liketool-pinterest.png",
     "copy": "Options for the Pinterest share button. Pinterest was added due to user request. Although it had no public API at the time of release, I was able to reverse-engineer their widget for use in the tool."
   },
   {
-    "name": "liketool-twitter.jpg",
+    "name": "liketool-twitter.png",
     "copy": "Options for the Twitter share button. Twitter, in particular, exposes a number of advanced configuration options that can be changed by directly altering the tool's JavaScript code."
   },
   {
-    "name": "liketool-save.jpg",
+    "name": "liketool-save.png",
     "copy": "A notification informs the user of a successful save. Subsequent page loads will display the saved configuration."
   },
   {
-    "name": "liketool-doc.jpg",
+    "name": "liketool-doc.png",
     "copy": "The like tool's documentation page, provided both for technical and non-technical users. Explains the options for each tool, including advanced options beyond the scope of most implementations. Using advanced options, users can customize individual buttons, multiple buttons together, as well as the tool as a whole."
   }
 ]
