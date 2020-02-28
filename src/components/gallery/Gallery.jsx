@@ -13,17 +13,18 @@ export default class Gallery extends Component {
 
     this.renderThumbOnlyLayout = this.renderThumbOnlyLayout.bind(this);
     this.renderGalleryLayout = this.renderGalleryLayout.bind(this);
+    this.renderExternalLinks();
   }
 
-  renderThumbOnlyLayout(links) {
+  renderThumbOnlyLayout() {
     let imgSrc = process.env.REACT_APP_LOCAL_IMAGES ? `/img/${this.props.projID}/${this.props.project.thumbnail}`
       : this.props.project.thumbnail;
 
     return (
-      <div id={'content-section'} className={'gallery section thumb-only'}>
+      <div className={'gallery section thumb-only'}>
         <div className={'gallery-content'}>
           <a id={'content'} className={'sr-only show-on-focus'} href={'#content'}>#</a>
-          {links}
+          {this.renderExternalLinks()}
           <ul className={'tech'}>{renderTechList(this.props.project.tech)}</ul>
           <div className={'copy'}><ReactMarkdown source={this.props.project.copy} /></div>
         </div>
@@ -32,7 +33,7 @@ export default class Gallery extends Component {
     )
   }
 
-  renderGalleryLayout(links) {
+  renderGalleryLayout(inks) {
     if (typeof this.props.images[this.props.imgIndex] === 'undefined') return <Redirect to={'/404'} />;
 
     const imageData = this.props.images[this.props.imgIndex];
@@ -41,35 +42,48 @@ export default class Gallery extends Component {
     if (!imageData) return <Redirect to={'/oops'} />;
 
     return (
-      <div id={'content-section'} className={'gallery section'}>
+      <div className={'gallery section'}>
         <a id={'content'} className={'sr-only show-on-focus'} href={'#content'}>#</a>
-        {links}
+        {this.renderExternalLinks()}
         <ul className={'tech'}>{renderTechList(this.props.project.tech)}</ul>
         <div className={'copy'}><ReactMarkdown source={this.props.project.copy} /></div>
         <hr />
         <div className={'gallery-inner'}>
           <figure><a href={imgSrc}><img alt={imageData.alt || ''} src={imgSrc} /></a></figure>
-          <figcaption className={'copy'}>{imageData.title ? <h3>{imageData.title}</h3> : ''}<ReactMarkdown
-            source={imageData.copy} /></figcaption>
+          <figcaption className={'copy'}>
+            {imageData.title ? <h2><ReactMarkdown source={imageData.title} /></h2> : ''}
+            <ReactMarkdown source={imageData.copy} />
+          </figcaption>
         </div>
         <ScrollTop />
       </div>
     )
   }
 
-  render() {
-    const liveLink = this.props.project.uri ?
-      <span>[ <a href={this.props.project.uri} target={'_blank'}
-                 rel={'noreferrer noopener'}>Live version <TiArrowForwardOutline
-        aria-hidden={true} /></a> ]</span> : '';
-    const sourceLink = this.props.project.source ?
-      <span>[ <a href={this.props.project.source} target={'_blank'}
-                 rel={'noreferrer noopener'}>Source <TiArrowForwardOutline
-        aria-hidden={true} /></a> ]</span> : '';
-    const links = this.props.project.uri || this.props.project.source ?
-      <p className={'standalone-link'}>{liveLink} {sourceLink}</p> : '';
+  renderExternalLinks() {
+    let links = [];
 
-    if (this.props.images.length) return this.renderGalleryLayout(links);
-    return this.renderThumbOnlyLayout(links);
+    const projURI = this.props.project.uri;
+    if (projURI) links.push(<span>[ <a href={projURI} target={'_blank'} rel={'noreferrer noopener'}>
+      Live version <TiArrowForwardOutline aria-hidden={true} /></a> ]</span>);
+
+    const projSource = this.props.project.source;
+    if (projSource) {
+      if (projSource.length) {
+        projSource.forEach(link => {
+          links.push(<span key={link.name}>[ <a href={link.uri} target={'_blank'} rel={'noreferrer noopener'}>
+            {link.name} Source <TiArrowForwardOutline aria-hidden={true} /></a> ]</span>);
+        });
+      } else {
+        links.push(<span>[ <a href={projSource} target={'_blank'} rel={'noreferrer noopener'}>Source <TiArrowForwardOutline aria-hidden={true} /></a> ]</span>)
+      }
+    }
+
+    return <p className={'standalone-link'}>{links.map(link => link)}</p>
+  }
+
+  render() {
+    if (this.props.images.length) return this.renderGalleryLayout();
+    return this.renderThumbOnlyLayout();
   }
 }

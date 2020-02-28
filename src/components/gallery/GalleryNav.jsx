@@ -17,8 +17,8 @@ export default class GalleryNav extends Component {
 
   componentDidMount() {
     document.addEventListener('keydown', (e) => {
-      if (e.key === 'ArrowRight') this.projPrev.current && this.projPrev.current.click();
-      if (e.key === 'ArrowLeft') this.projNext.current && this.projNext.current.click();
+      if (e.key === 'ArrowLeft') this.projPrev.current && this.projPrev.current.click();
+      if (e.key === 'ArrowRight') this.projNext.current && this.projNext.current.click();
     }, false);
   }
 
@@ -28,7 +28,7 @@ export default class GalleryNav extends Component {
 
     return <Link ref={this.projPrev} to={`/gallery/${prevProjAlias}`} rel={'prev'}
                  className={'hvr-underline-from-left'} title={'Type left arrow to go to previous project'}>
-      <TiMediaPlayReverseOutline aria-hidden={true} />{this.props.projects[prevProjAlias].title}
+      <TiMediaPlayReverseOutline aria-hidden={true} />{this.props.projects[prevProjAlias].title} [Left arrow]
     </Link>;
   }
 
@@ -40,7 +40,7 @@ export default class GalleryNav extends Component {
 
     return <Link ref={this.projNext} to={`/gallery/${nextProjAlias}`} rel={'next'}
                  className={'hvr-underline-from-right'} title={'Type right arrow to go to next project'}>
-      {this.props.projects[nextProjAlias].title} <TiMediaPlayOutline aria-hidden={true} />
+      {this.props.projects[nextProjAlias].title} [Right Arrow] <TiMediaPlayOutline aria-hidden={true} />
     </Link>;
   }
 

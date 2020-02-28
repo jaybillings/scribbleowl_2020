@@ -49,10 +49,10 @@ export default class GalleryImageNav extends Component {
             to={`/gallery/${this.props.projID}/0`}
             className={'active hvr-icon-wobble-horizontal wobble-horizontal-reverse'}
             title={'Type W to go to first image.'}>
-        <span>First Image </span><TiMediaRewindOutline className={'hvr-icon'} aria-hidden={true} />
+        <span>First Image [W]</span><TiMediaRewindOutline className={'hvr-icon'} aria-hidden={true} />
       </Link>);
 
-    return <div className={'inactive'}><span>First Image</span><TiMediaRewindOutline aria-hidden={true} /></div>
+    return <div className={'inactive'}><span>First Image [W]</span><TiMediaRewindOutline aria-hidden={true} /></div>
   }
 
   renderImgBack() {
@@ -62,9 +62,9 @@ export default class GalleryImageNav extends Component {
             className={'active hvr-icon-wobble-horizontal wobble-horizontal-reverse-min'}
             rel={'prev'}
             title={'Type A to go to previous image.'}>
-        <span>Previous Image</span><TiMediaPlayReverseOutline className={'hvr-icon'} aria-hidden={true} /></Link>);
+        <span>Previous Image [A]</span><TiMediaPlayReverseOutline className={'hvr-icon'} aria-hidden={true} /></Link>);
 
-    return <div className={'inactive'}><span>Previous Image </span><TiMediaPlayReverseOutline aria-hidden={true} />
+    return <div className={'inactive'}><span>Previous Image [A]</span><TiMediaPlayReverseOutline aria-hidden={true} />
     </div>;
   }
 
@@ -75,9 +75,9 @@ export default class GalleryImageNav extends Component {
             rel={'next'}
             className={'active hvr-icon-wobble-horizontal wobble-horizontal-min'}
             title={'Type D to go to next image.'}>
-        <span>Next Image </span><TiMediaPlayOutline className={'hvr-icon'} aria-hidden={true} /></Link>);
+        <span>Next Image [D]</span><TiMediaPlayOutline className={'hvr-icon'} aria-hidden={true} /></Link>);
 
-    return <div className={'inactive'}><span>Next Image <TiMediaPlayOutline aria-hidden={true} /></span></div>;
+    return <div className={'inactive'}><span>Next Image [D]<TiMediaPlayOutline aria-hidden={true} /></span></div>;
   }
 
   renderImgLast() {
@@ -88,9 +88,9 @@ export default class GalleryImageNav extends Component {
             to={`/gallery/${this.props.projID}/${lastIndex}`}
             className={'active hvr-icon-wobble-horizontal'}
             title={'Type S to go to last image.'}>
-        <span>Last Image </span><TiMediaFastForwardOutline className={'hvr-icon'} aria-hidden={true} /></Link>);
+        <span>Last Image [S]</span><TiMediaFastForwardOutline className={'hvr-icon'} aria-hidden={true} /></Link>);
 
-    return <div className={'inactive'}><span>Last Image</span> <TiMediaFastForwardOutline aria-hidden={true} /></div>;
+    return <div className={'inactive'}><span>Last Image [S]</span> <TiMediaFastForwardOutline aria-hidden={true} /></div>;
   }
 
   render() {
