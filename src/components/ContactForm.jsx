@@ -36,7 +36,7 @@ export default class ContactForm extends Component {
       email: this.emailRef.current.value,
       message: this.msgRef.current.value
     };
-    const url = `https://${process.env.REACT_APP_SERVER_ADDRESS}/contact-form.php`;
+    const url = './contact-form.php';
 
     postData(url, formData).then(data => {
       this.setState({errorMsg: data.reason ?? '', submitStatus: data.status ?? null});
