@@ -26,10 +26,13 @@ export default class ContactForm extends Component {
     document.getElementById(this.props.anchorID).focus();
 
     // Honeypot caught -- post vague error
-    if (this.honeyRef.current.value.length) this.setState({
-      submitStatus: 0,
-      errMsg: 'Something went wrong. If you are using autocomplete, try disabling it.'
-    });
+    if (this.honeyRef.current.value.length) {
+      this.setState({
+        submitStatus: 0,
+        errorMsg: 'If you are using autocomplete, try disabling it.'
+      });
+     /* return;*/
+    }
 
     const formData = {
       name: this.nameRef.current.value,
@@ -39,17 +42,18 @@ export default class ContactForm extends Component {
     const url = './contact-form.php';
 
     postData(url, formData).then(data => {
-      this.setState({errorMsg: data.reason ?? '', submitStatus: data.status ?? null});
-      this.resetForm(e.target);
+      this.setState({errorMsg: data.reason ?? '', submitStatus: data.status ?? 0});
+      this.resetForm();
     }).catch(err => {
       console.error(err);
-      this.setState({submitStatus: 0});
+      this.setState({submitStatus: 0, errorMsg: err.message});
     });
   }
 
-  resetForm(form) {
-    document.querySelector('.contact-form button').blur();
+  resetForm() {
+    const form = document.querySelector('.contact-form');
     form.reset();
+    form.blur();
   }
 
   renderSendStatus() {
