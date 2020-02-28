@@ -29,7 +29,7 @@ export default class Portfolio extends Component {
   render() {
     const projectNames = this.props.projectList.map(alias => [alias, this.props.projects[alias].title]);
     const currentProject = this.props.projects[this.state.currentAlias];
-    const imgSrc = process.env.REACT_APP_LOCAL_IMAGES ? `/img/${this.state.currentAlias}/${currentProject.thumbnail}`
+    const imgSrc = process.env.REACT_APP_LOCAL_IMAGES ? `${process.env.PUBLIC_URL}/img/${this.state.currentAlias}/${currentProject.thumbnail}`
       : currentProject.thumbnail;
 
     return (

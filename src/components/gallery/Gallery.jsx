@@ -17,7 +17,7 @@ export default class Gallery extends Component {
   }
 
   renderThumbOnlyLayout() {
-    let imgSrc = process.env.REACT_APP_LOCAL_IMAGES ? `/img/${this.props.projID}/${this.props.project.thumbnail}`
+    let imgSrc = process.env.REACT_APP_LOCAL_IMAGES ? `${process.env.PUBLIC_URL}/img/${this.props.projID}/${this.props.project.thumbnail}`
       : this.props.project.thumbnail;
 
     return (
