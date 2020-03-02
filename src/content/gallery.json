@@ -29,7 +29,7 @@
     },
     "mtrlike": {
       "title": "Meteor Solutions Like Tool",
-      "thumbnail": "liketool-pre.png",
+      "thumbnail": "liketool-google.png",
       "year": "2012",
       "copy": "Created for Meteor Solutions, the Like Tool wraps Meteor Solutions' tracking code around popular social media widgets. This provides ad campaign administrators an additional data source for assessing the reach of their campaigns. These data, along with others, are made available on the campaign's dashboard.\n\nIn addition to implementing the widgets themselves, I created a dashboard page that allows users to customize the widgets in a WISYWIG manner. Since individual campaigns implement these widgets within a variety of contexts, the tool was created with flexibility in mind. The WISYWIG editor provides the most common implementation and customization options, but a documentation page describes more advanced options for technically inclined users.",
       "tech": [

@@ -6,6 +6,7 @@ import { TiArrowForwardOutline } from "react-icons/ti";
 import "../../styles/scss/gallery.scss";
 import { renderTechList } from "../../js/utilities";
 import { Redirect } from "react-router";
+import ExternalLinks from "../common/ExternalLinks";
 
 export default class Gallery extends Component {
   constructor(props) {
@@ -13,7 +14,6 @@ export default class Gallery extends Component {
 
     this.renderThumbOnlyLayout = this.renderThumbOnlyLayout.bind(this);
     this.renderGalleryLayout = this.renderGalleryLayout.bind(this);
-    this.renderExternalLinks();
   }
 
   renderThumbOnlyLayout() {
@@ -24,7 +24,7 @@ export default class Gallery extends Component {
       <div className={'gallery section thumb-only'}>
         <div className={'gallery-content'}>
           <a id={'content'} className={'sr-only show-on-focus'} href={'#content'}>#</a>
-          {this.renderExternalLinks()}
+          <ExternalLinks source={this.props.project.source} uri={this.props.project.uri} />
           <ul className={'tech'}>{renderTechList(this.props.project.tech)}</ul>
           <div className={'copy'}><ReactMarkdown source={this.props.project.copy} /></div>
         </div>
@@ -44,7 +44,7 @@ export default class Gallery extends Component {
     return (
       <div className={'gallery section'}>
         <a id={'content'} className={'sr-only show-on-focus'} href={'#content'}>#</a>
-        {this.renderExternalLinks()}
+        <ExternalLinks source={this.props.project.source} uri={this.props.project.uri} />
         <ul className={'tech'}>{renderTechList(this.props.project.tech)}</ul>
         <div className={'copy'}><ReactMarkdown source={this.props.project.copy} /></div>
         <hr />
@@ -58,28 +58,6 @@ export default class Gallery extends Component {
         <ScrollTop />
       </div>
     )
-  }
-
-  renderExternalLinks() {
-    let links = [];
-
-    const projURI = this.props.project.uri;
-    if (projURI) links.push(<span>[ <a href={projURI} target={'_blank'} rel={'noreferrer noopener'}>
-      Live version <TiArrowForwardOutline aria-hidden={true} /></a> ]</span>);
-
-    const projSource = this.props.project.source;
-    if (projSource) {
-      if (projSource.length) {
-        projSource.forEach(link => {
-          links.push(<span key={link.name}>[ <a href={link.uri} target={'_blank'} rel={'noreferrer noopener'}>
-            {link.name} Source <TiArrowForwardOutline aria-hidden={true} /></a> ]</span>);
-        });
-      } else {
-        links.push(<span>[ <a href={projSource} target={'_blank'} rel={'noreferrer noopener'}>Source <TiArrowForwardOutline aria-hidden={true} /></a> ]</span>)
-      }
-    }
-
-    return <p className={'standalone-link'}>{links.map(link => link)}</p>
   }
 
   render() {

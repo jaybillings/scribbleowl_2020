@@ -10,6 +10,16 @@ import galleryConfig from '../content/gallery.json';
 import GalleryImageNav from "../components/gallery/GalleryImageNav";
 
 export default class GalleryLayout extends Component {
+  constructor(props) {
+    super(props);
+
+    this.headerRef = React.createRef();
+  }
+
+  componentDidMount() {
+    this.headerRef.current.scrollIntoView();
+  }
+
   render() {
     const projID = this.props.match.params.alias || galleryConfig.projectOrder[0];
     let currentProj = {};
@@ -30,7 +40,7 @@ export default class GalleryLayout extends Component {
     const imgIndex = parseInt(this.props.match.params.index, 10) || 0;
 
     return [
-      <GalleryHeader key={'header'} title={currentProj.title} year={currentProj.year} />,
+      <GalleryHeader key={'header'} ref={this.headerRef} title={currentProj.title} year={currentProj.year} />,
       <nav className={'gallery-nav'} key={'gallery-nav'}>
         <GalleryNav projID={projID} projects={galleryConfig.projects} projectOrder={galleryConfig.projectOrder} />
         {projImages.length > 0

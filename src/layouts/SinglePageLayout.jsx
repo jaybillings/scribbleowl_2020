@@ -12,9 +12,19 @@ import aboutConfig from "../content/about.json";
 import contactConfig from "../content/contact.json";
 
 export default class SinglePageLayout extends Component {
+  constructor(props) {
+    super(props);
+
+    this.headerRef = React.createRef();
+  }
+
+  componentDidMount() {
+    this.headerRef.current.scrollIntoView();
+  }
+
   render() {
     return [
-      <Header key={'header'} title={mainConfig.title} navSections={mainConfig.navSections} gitHubURI={mainConfig.github}
+      <Header key={'header'} ref={this.headerRef} title={mainConfig.title} navSections={mainConfig.navSections} gitHubURI={mainConfig.github}
               linkedInURI={mainConfig.linkedin} />,
       <About key={'about'} title={aboutConfig.title} copy={aboutConfig.copy} skillsSection={aboutConfig.skillsSection}
              cta={aboutConfig.cta} />,
