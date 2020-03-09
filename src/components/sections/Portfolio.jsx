@@ -29,12 +29,12 @@ export default class Portfolio extends Component {
   render() {
     const projectNames = this.props.projectList.map(alias => [alias, this.props.projects[alias].title]);
     const currentProject = this.props.projects[this.state.currentAlias];
-    const imgSrc = process.env.REACT_APP_LOCAL_IMAGES ? `${process.env.PUBLIC_URL}/img/${this.state.currentAlias}/${currentProject.thumbnail}`
-      : currentProject.thumbnail;
+    const imgStyle = currentProject.thumbnail ? {background: `url(${process.env.PUBLIC_URL}/img/${this.state.currentAlias}/${currentProject.thumbnail})`}
+      : {};
 
     return (
       <div id={'portfolio-section'} className={'portfolio'}>
-        <div style={{background: `url(${imgSrc})`}}>
+        <div style={imgStyle}>
           <div className={'portfolio-inner'}>
             <h2>
               <Link id={'portfolio'} to={'#portfolio'} className={'sr-only show-on-focus'}>#</Link> {this.props.title}
