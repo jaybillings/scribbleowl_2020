@@ -6,7 +6,7 @@
 
   @include media(">=medium") {
     margin: 0;
-    padding: 0 ($whitespace-lg / 2) 0 0.5rem;
+    padding: 0 ($whitespace-lg / 3) 0 0.5rem;
   }
 
   @include media(">=large") {
@@ -34,7 +34,7 @@
   .copy {
     margin: 1rem 0;
     padding: 0 ($whitespace / 2);
-    background: rgba(255, 255, 255, 0.75);
+    background: $portfolio-overlay;
     border: 1px solid $gray14;
     border-left: none;
     border-right: none;

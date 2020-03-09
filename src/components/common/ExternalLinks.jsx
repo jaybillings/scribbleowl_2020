@@ -9,8 +9,9 @@ export default function ExternalLinks(props) {
       Live version <TiArrowForwardOutline aria-hidden={true} /></a> ]</span>);
 
   const projSource = props.source || null;
+
   if (projSource) {
-    if (projSource.length) {
+    if (Array.isArray(projSource)) {
       projSource.forEach(link => {
         links.push(<span key={link.name}>[ <a href={link.uri} target={'_blank'} rel={'noreferrer noopener'}>
             {link.name} Source <TiArrowForwardOutline aria-hidden={true} /></a> ]</span>);

@@ -5,9 +5,9 @@ import GalleryHeader from "../components/gallery/GalleryHeader";
 import GalleryNav from "../components/gallery/GalleryNav";
 import Gallery from "../components/gallery/Gallery";
 import Footer from "../components/common/Footer";
+import GalleryImageNav from "../components/gallery/GalleryImageNav";
 
 import galleryConfig from '../content/gallery.json';
-import GalleryImageNav from "../components/gallery/GalleryImageNav";
 
 export default class GalleryLayout extends Component {
   constructor(props) {
