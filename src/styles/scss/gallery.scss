@@ -5,24 +5,6 @@
   position: relative;
   margin: 0 $whitespace;
 
-  &.thumb-only {
-    @include media(">=medium") {
-      display: grid;
-      grid-template-columns: 2fr 1fr;
-      grid-gap: 1rem;
-
-      .gallery-content {
-        grid-column: 1 / 2;
-        grid-row: 1 / 2;
-      }
-
-      .gallery-image {
-        grid-column: 2 / 3;
-        grid-row: 1 / 2;
-      }
-    }
-  }
-
   h2 {
     font-size: 1.1rem;
     margin-top: 1rem;
@@ -64,7 +46,7 @@
 
   .gallery-inner {
     display: flex;
-    flex-flow: column-reverse;
+    flex-flow: column;
 
     figure {
       margin: 1rem auto;

@@ -23,6 +23,7 @@
 
   li {
     text-transform: capitalize;
+    align-self: center;
   }
 
   svg {
@@ -64,7 +65,7 @@
     align-self: center;
 
     svg {
-      vertical-align: text-top;
+      vertical-align: baseline;
     }
   }
 

@@ -12,28 +12,18 @@ export default class Gallery extends Component {
   constructor(props) {
     super(props);
 
-    this.renderThumbOnlyLayout = this.renderThumbOnlyLayout.bind(this);
+    this.renderThumbLayoutImage = this.renderThumbLayoutImage.bind(this);
     this.renderGalleryLayout = this.renderGalleryLayout.bind(this);
   }
 
-  renderThumbOnlyLayout() {
-    let imgSrc = process.env.REACT_APP_LOCAL_IMAGES ? `${process.env.PUBLIC_URL}/img/${this.props.projID}/${this.props.project.thumbnail}`
-      : this.props.project.thumbnail;
+  renderThumbLayoutImage() {
+    if (!this.props.project.thumbnail) return '';
 
-    return (
-      <div className={'gallery section thumb-only'}>
-        <div className={'gallery-content'}>
-          <a id={'content'} className={'sr-only show-on-focus'} href={'#content'}>#</a>
-          <ExternalLinks source={this.props.project.source} uri={this.props.project.uri} />
-          <ul className={'tech'}>{renderTechList(this.props.project.tech)}</ul>
-          <div className={'copy'}><ReactMarkdown source={this.props.project.copy} /></div>
-        </div>
-        <div className={'gallery-image'}><a href={imgSrc}><img src={imgSrc} alt={''} /></a></div>
-      </div>
-    )
+    const imgSrc = `${process.env.PUBLIC_URL}/img/${this.props.projID}/${this.props.project.thumbnail}`;
+    return <div className={'gallery-image'}><a href={imgSrc}><img src={imgSrc} alt={''} /></a></div>;
   }
 
-  renderGalleryLayout(inks) {
+  renderGalleryLayout() {
     if (typeof this.props.images[this.props.imgIndex] === 'undefined') return <Redirect to={'/404'} />;
 
     const imageData = this.props.images[this.props.imgIndex];
@@ -62,6 +52,19 @@ export default class Gallery extends Component {
 
   render() {
     if (this.props.images.length) return this.renderGalleryLayout();
-    return this.renderThumbOnlyLayout();
+
+    // Thumbnail only layout
+    return (
+      <div className={'gallery section thumb-only'}>
+        <div className={'gallery-content'}>
+          <a id={'content'} className={'sr-only show-on-focus'} href={'#content'}>#</a>
+          <ExternalLinks source={this.props.project.source} uri={this.props.project.uri} />
+          <ul className={'tech'}>{renderTechList(this.props.project.tech)}</ul>
+          <div className={'copy'}><ReactMarkdown source={this.props.project.copy} /></div>
+        </div>
+        {this.renderThumbLayoutImage()}
+        <ScrollTop/>
+      </div>
+    )
   }
 }
