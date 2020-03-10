@@ -8,6 +8,7 @@ export default function Footer(props) {
       <p>By Jay Billings, 2019-2020.</p>
       <p><a href={props.siteURI} target={'_blank'} rel={'noopener noreferrer'}>
         View source and copyright on GitHub</a>.</p>
+      <p>Last edited 2020-03-10.</p>
     </footer>
   )
 }

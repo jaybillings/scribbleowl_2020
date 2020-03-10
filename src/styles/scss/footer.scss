@@ -31,10 +31,7 @@ footer {
   p {
     @include media(">=small") {
       display: inline-block;
-
-      &:first-of-type {
-        margin-right: 0.5rem;
-      }
+      margin-right: 0.5rem;
     }
   }
 }
