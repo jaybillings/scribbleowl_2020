@@ -39,6 +39,10 @@
     border-left: none;
     border-right: none;
 
+    a {
+      text-decoration: underline;
+    }
+
     @include media(">=small") {
       padding: 0 ($whitespace-med / 2);
     }

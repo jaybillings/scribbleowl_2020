@@ -1,14 +1,16 @@
 {
   "title": "Previous Projects",
   "projectOrder": [
+    "vsem",
+    "vsemserver",
     "vspivsei",
     "vsmain",
     "vssearch",
     "xbox",
-    "reinav",
-    "cheeztv",
     "mtrlike",
-    "mtradmin"
+    "mtradmin",
+    "reinav",
+    "cheeztv"
   ],
   "projects": {
     "cheeztv": {
@@ -77,8 +79,8 @@
         [ "AWS", "https://aws.amazon.com/" ],
         [ "jQuery", "https://jquery.com/" ],
         [ "Advanced Custom Fields (plugin)", "https://www.advancedcustomfields.com/" ],
-        ["Gravity Forms (plugin)", "https://www.gravityforms.com/"],
-        ["Cookie Content Banner Generator", "https://www.websitepolicies.com/cookie-consent-banner-generator"],
+        [ "Gravity Forms (plugin)", "https://www.gravityforms.com/" ],
+        [ "Cookie Content Banner Generator", "https://www.websitepolicies.com/cookie-consent-banner-generator" ],
         "API consumption"
       ]
     },
@@ -97,11 +99,11 @@
       ]
     },
     "vsem": {
-      "title": "Visit Seattle Events Manager",
+      "title": "Visit Seattle Events Manager (Client)",
       "thumbnail": "",
       "year": "2019",
       "source": "https://github.com/jaybillings/events-manager-client-public",
-      "copy": "A React webapp providing a user-friendly visual interface for managing listings of events. This is specifically pertaining to the client code -- I also coded the server.",
+      "copy": "*Images coming soon.*\n\nA React webapp created for Visit Seattle. An update to an out-of-date .NET application, it provides a user-friendly interface which allows content authors to import, edit, and export data relating to local events. Data is imported from a 3rd party via either JSON or XML files. This data consists of event listings, various metadata listings, and the connections between them. As a requirement, all unapproved data is saved as 'pending', with pending data being inaccessible to public API endpoints. After import, all pending listings are displayed on a single page where they can be edited and marked for 'publishing' to live tables. For quality control purposes, live data can only be edited by super-users and admins $mdash; default users can only copy live listings and then edit them as pending. \n\nThis application is designed to be standalone, so administrative tasks such as user creation and modification have been included. Also included is an admin section, which is available to super-users and admins, though the available functions aren't the same. Super-users and admins are able to change the mappings between Tags and Neighborhoods, which is necessary given that Visit Seattle and the 3rd party data source don't use the same levels of fidelity. True administrators can also add, remove, and modify user accosts. \n\nOverall, the UX is designed to present complicated data in a widely comprehensible manner and provide simple, easy-to-understand functions for data manipulation. Care has been taken to provide an intuitive interaction flow for each user level, with actions provided depending on context and permissions level. Whenever possible, visual elements such as layout and color have been used in addition to text to provide context.",
       "tech": [
         [ "React", "https://reactjs.org/" ],
         [ "Feathers", "https://feathersjs.com/" ],
@@ -111,17 +113,19 @@
       ]
     },
     "vsemserver": {
-      "title": "Visit Seattle Events Manager -- Server Code",
+      "title": "Visit Seattle Events Manager (Server)",
       "thumbnail": "",
       "year": "2019",
-      "source": "",
-      "copy": "The server code for the Events Manager, written for Visit Seattle. This represents the first server app I created from design to deployment, though I have contributed to server/backend code throughout my career. The code implements several APIs for use with the app, as well as a general data API that was designed to be consumable by 3rd-party sources.",
+      "source": "https://github.com/jaybillings/events-manager",
+      "copy": "The server code for the Visit Seattle Events Manager, written using Feathers, Node.js framework. It replaces an older, out-of-date .NET application. As the name suggests, the Events Manager manages data related to local Seattle events. It provides endpoints to the [Events Manager Client](/gallery/vsem) as well as the [Events Importer plugin](/gallery/vspivsei), which ingests data as custom WordPress taxonomy for display on the Visit Seattle website.\n\nBecause it was written in Feathers, each model is mapped to a single table and created with a set of CRUD endpoints. Several custom endpoints are also present: an 'importer' endpoint that ingests data from a structured XML file, an 'exporter' endpoint that exports all data in one of two formats, and an 'api' endpoint that runs specific query actions that allow external sources to maintain current event listings. All publicly accessible endpoints are authenticated via an api key, which can be generated on the client.\n\nOther than events, the server code establishes and manages a number of database tables representing metadata and the associations between metadata and listings. As a requirement for the project, data must be approved before becoming available to the API, with edits preserved between sessions. To satisfy this requirement, each live table has a matching '-pending' table, representing unapproved data inaccessible to public endpoints. Because of this, schema is crafted such that pending data can be associated with live data. Further complicating the application's overall data structure, the 3rd party data source does not map certain data in the same way as Visit Seattle, which is addressed when importing and exporting. \n\nTo simplify the process of tracking event listings, separate tables track added and removed listings by ID; these are made available to external sources via two public endpoints. To avoid side-effects in CRUD operations, the client is responsible for editing these tables when events are added and removed. \n\nWhenever possible, this application has been optimized for reliability, maintainability, and speed. This is particularly important for the 'import' endpoint, which has to process large amounts of data as quickly as possible while sending progress updates to the client. To this aim, the import runs via a series of well-defined steps, with each step representing the ingestion of a specific schema. Steps are organized to minimize requests and minimize data corruption when handling errors. At the end of each step, the server emits a 'status' message to the client. ",
       "tech": [
         [ "Feathers", "https://feathersjs.com/" ],
         [ "Express", "https://expressjs.com/" ],
-        [ "MariaDB", "https://mariadb.org/" ],
         [ "Knex.js", "http://knexjs.org/" ],
+        [ "SQLite", "https://www.sqlite.org/index.html" ],
+        [ "MariaDB", "https://mariadb.org" ],
         [ "Ajv", "https://www.npmjs.com/package/ajv" ],
+        [ "Passport", "https://www.npmjs.com/package/passport" ],
         [ "ECMAScript 6", "http://www.ecma-international.org/ecma-262/6.0/" ]
       ]
     },
@@ -133,7 +137,7 @@
         {
           "name": "Partners",
           "uri": "https://github.com/jaybillings/vs-wp-partners-importer-public"
-        },{
+        }, {
           "name": "Events",
           "uri": "https://github.com/jaybillings/vs-wp-events-importer-public"
         }
