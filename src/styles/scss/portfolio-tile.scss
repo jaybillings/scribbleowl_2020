@@ -44,7 +44,7 @@
     }
 
     @include media(">=medium") {
-      max-height: 15rem;
+      max-height: 18rem;
       overflow: auto;
       //noinspection CssUnknownProperty
       scrollbar-width: thin;

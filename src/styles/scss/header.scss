@@ -6,18 +6,18 @@
   grid-template: [row-1-start] "header social" [row-1-end] [row-2-start] "nav nav" [row-2-end]
   / 1fr auto;
   grid-row-gap: 1rem;
-  padding: 1.5em $whitespace;
+  padding: ($whitespace * 2) $whitespace 1rem;
   background: $main-color;
   color: $text-color-reverse;
   z-index: 1;
 
   @include media(">=small") {
-    padding: 2rem $whitespace-med 1.5rem;
+    padding: ($whitespace-med * 2) $whitespace-med 1.5rem;
     grid-template: [row-1-start] ". social" [row-1-end] [row-2-start] "header nav" [row-2-end] / 1fr auto;
   }
 
   @include media(">=medium") {
-    padding: 2.5em $whitespace-lg 2em;
+    padding: ($whitespace-lg * 2) $whitespace-lg 1.5rem;
   }
 
   h1 {

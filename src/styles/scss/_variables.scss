@@ -42,9 +42,9 @@ $font-stack-code: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monos
 $default-font-size: 18px;
 $desktop-font-size: 16px;
 
-$whitespace: 1.25rem;
-$whitespace-med: 1.5rem;
-$whitespace-lg: 2rem;
+$whitespace: 1.5rem;
+$whitespace-med: 2rem;
+$whitespace-lg: 3rem;
 
 /* Rough breakpoint equivalents:
  default: phone (portrait)
@@ -52,4 +52,4 @@ $whitespace-lg: 2rem;
  >=medium: tablet (landscape)
  >=large: laptop, desktop
  */
-$breakpoints: (small: 560px, medium: 760px, large: 1000px) !default;
+$breakpoints: (small: 620px, medium: 816px, large: 1024px) !default;
