@@ -1,15 +1,39 @@
 {
+  "name": "Jay Billings' Online Portfolio",
   "short_name": "Jay Billings",
-  "name": "Jay Billings",
+  "version": "1.1.0",
+  "manifest_version": 2,
+  "author": "Jay Billings",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#faf4e1",
+  "description": "The online portfolio of Jay Billings, a Web Developer in Seattle",
   "icons": [
     {
-      "src": "favicon.ico",
+      "src": "img/icons/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }, {
+      "src": "img/icons/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }, {
+      "src": "img/icons/apple-touch-icons.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }, {
+      "src": "img/icons/favicon-32x32.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    }, {
+      "src": "img/icons/favicon-16x16.png",
       "sizes": "16x16",
+      "type": "image/png"
+    }, {
+      "src": "favicon.ico",
+      "sizes": "64x64 32x32 24x24 16x16",
       "type": "image/x-icon"
     }
   ],
-  "start_url": ".",
-  "display": "standalone",
-  "theme_color": "#0d7e83",
-  "background_color": "#faf4e1"
+  "theme_color": "#0d7e83"
 }
