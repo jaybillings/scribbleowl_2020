@@ -1,12 +1,11 @@
 import React, { Component } from "react";
-import ScrollTop from "../common/ScrollTop";
 import ReactMarkdown from "react-markdown";
-import { TiArrowForwardOutline } from "react-icons/ti";
+import ScrollTop from "../common/ScrollTop";
+import ExternalLinks from "../common/ExternalLinks";
 
 import "../../styles/scss/gallery.scss";
 import { renderTechList } from "../../js/utilities";
 import { Redirect } from "react-router";
-import ExternalLinks from "../common/ExternalLinks";
 
 export default class Gallery extends Component {
   constructor(props) {
@@ -27,7 +26,7 @@ export default class Gallery extends Component {
     if (typeof this.props.images[this.props.imgIndex] === 'undefined') return <Redirect to={'/404'} />;
 
     const imageData = this.props.images[this.props.imgIndex];
-    const imgSrc = process.env.REACT_APP_LOCAL_IMAGES ? `/img/${this.props.projID}/${imageData.name}` : imageData.name;
+    const imgSrc = `/img/${this.props.projID}/${imageData.name}`;
 
     if (!imageData) return <Redirect to={'/oops'} />;
 

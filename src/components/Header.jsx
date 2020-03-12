@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Link } from "react-router-dom";
 import { handleAnchorClick } from "../js/utilities";
 import { TiSocialGithub, TiSocialLinkedin } from "react-icons/ti";
