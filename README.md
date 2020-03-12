@@ -1,4 +1,5 @@
-# scribbleowl_2020
+# CedarVine.tech 
+(aka scribbleowl_2020)
 
 Version 2 of my personal portfolio site. This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
