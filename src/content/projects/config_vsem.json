@@ -1,1 +1,70 @@
-[]
+[
+  {
+    "name": "vsem_login.png",
+    "title": "Login page"
+  },
+  {
+    "name": "vsem_account-success.png",
+    "title": "Create Account page"
+  },
+  {
+    "name": "vsem_import-complete.png",
+    "title": "Import Page &mdash; File Import"
+  },
+  {
+    "name": "vsem_pending-events-second-import.png",
+    "title": "Import Page &mdash; Pending Events &mdash; Second Import"
+  },
+  {
+    "name": "vsem_neighborhood-module-edit.png",
+    "title": "Import Page &mdash; Pending Neighborhoods &mdash; Edit Mode"
+  },
+  {
+    "name": "vsem_pending-neighborhoods-search.png",
+    "title": "Import Page &mdash; Pending Neighborhoods &mdash; Search"
+  },
+  {
+    "name": "vsem_pending-events-multi-select.png",
+    "title": "Import Page &mdash; Pending Events &mdash; Multi-Select"
+  },
+  {
+    "name": "vsem_pending-event-delete.png",
+    "title": "Import Page &mdash; Pending Events &mdash; Post Delete"
+  },
+  {
+    "name": "vsem_pending-event.png",
+    "title": "Pending Listing Page &mdash; Event"
+  },
+  {
+    "name": "vsem_pending-neighborhood-save.png",
+    "title": "Pending Listing Page &mdash; Neighborhood &mdash; Save"
+  },
+  {
+    "name": "vsem_events.png",
+    "title": "Events Page"
+  },
+  {
+    "name": "vsem_events-dropped.png",
+    "title": "Events Page &mdash; Dropped Events Only"
+  },
+  {
+    "name": "vsem_venues-edit-mode.png",
+    "title": "Venues Page &mdash; Edit Mode"
+  },
+  {
+    "name": "vsem_neighborhood-add.png",
+    "title": "Neighborhoods Page &mdash; Add New"
+  },
+  {
+    "name": "vsem_account-settings.png",
+    "title": "Account Settings Page"
+  },
+  {
+    "name": "vsem_admin-tools-users.png",
+    "title": "Admin Tools Page &mdash; User Management"
+  },
+  {
+    "name": "vsem_admin-tools-tag-swap.png",
+    "title": "Admin Tools Page &mdash; Tag Term Replacement"
+  }
+]
