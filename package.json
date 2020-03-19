@@ -1,7 +1,7 @@
 {
   "name": "scribbleowl_2020",
   "homepage": "https://cedarvine.tech",
-  "version": "1.0.0",
+  "version": "1.0.3",
   "directories": {
     "lib": "src",
     "test": "test/"

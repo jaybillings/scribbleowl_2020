@@ -1,7 +1,7 @@
 {
   "name": "Jay Billings' Online Portfolio",
   "short_name": "Jay Billings",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "manifest_version": 2,
   "author": "Jay Billings",
   "start_url": ".",
