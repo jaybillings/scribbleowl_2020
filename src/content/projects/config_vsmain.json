@@ -1,39 +1,39 @@
 [
   {
     "name": "vs_mobile_old.png",
-    "title": "Mobile front page &mdash; phone view, old",
+    "title": "## Mobile front page &mdash; phone view, old",
     "copy": "An old version of the mobile front page, small/phone viewport size. Note the awkward spacing of visual blocks as well as the improper nesting of elements (div is an invalid child of a), which contributed to visual issues."
   },
   {
     "name": "vs_mobile_new.png",
-    "title": "Mobile front page &mdash; phone view, new",
+    "title": "## Mobile front page &mdash; phone view, new",
     "copy": "The mobile front page, phone/small view after my edits. I aligned the content blocks and fixed the HTML nesting.\n\nEach content block in the Visit Seattle website is created using hand-coded Advanced Custom Fields blocks, which I added to and updated as needed. Between client requests, I overhauled these blocks, removing any errors, cleaning up the code, and removing removing any content blocks design confirmed they were not going to use."
   },
   {
     "name": "vs_tablet_old.png",
-    "title": "Mobile front page &mdash; tablet view, old",
+    "title": "## Mobile front page &mdash; tablet view, old",
     "copy": "An old version of the mobile front page, tablet/medium viewport size. Note the extra whitespace beneath the main image as well as the invalid HTML (div is an invalid child of a)."
   },
   {
     "name": "vs_tablet_new.png",
-    "title": "Mobile front page &mdash; tablet view, new",
+    "title": "## Mobile front page &mdash; tablet view, new",
     "copy": "The mobile front page, tablet/small view after my edits. I aligned all visual blocks, altered the background images to be larger and more centered, and fixed the HTML nesting."
   },
   {
     "name": "banner_current.png",
-    "title": "GDPR Compliance &mdash; Subscription block, No Link",
+    "title": "## GDPR Compliance &mdash; Subscription block, No Link",
     "alt": "A screenshot of the Visit Seattle website circa 2017, scrolled down to a newsletter subscription block.",
     "copy": "An old version of the newsletter signup form. To prepare for GDPR compliance, I altered the website in a number of ways. In this case, I was tasked with altering the newsletter sign-up banner by adding a link to the Visit Seattle privacy policy and a checkbox affirming the user has read and agrees to that policy.\n\nThe sign-up form in its raw form comes from the Gravity Forms plugin for WordPress."
   },
   {
     "name": "banner_nostyle.png",
-    "title": "GDPR Compliance &mdash; Subscription block, with link, old style",
+    "title": "## GDPR Compliance &mdash; Subscription block, with link, old style",
     "alt": "A screenshot of the Visit Seattle subscription block with an unstyled checkbpox and link.",
     "copy": "The subscription block, with the new link and checkbox, with the previous styling, which does not include the new elements. The original styling also makes the inputs quite small."
   },
   {
     "name": "banner_styled.png",
-    "title": "GDPR Compliance &mdash; Subscription block, with link and new style & cookie notification banner",
+    "title": "## GDPR Compliance &mdash; Subscription block, with link and new style & cookie notification banner",
     "alt": "A screenshot of the Visit Seattle subscription banner with new styling, as well as a GDPR-compliant privacy policy notice and agreement.",
     "copy": "The subscription block, with the new link and checkbox, styled. In addition to placing the link and checkbox, I took the opportunity to widen the subscription input fields to help with accessibility and visual balance.\n\nThis image also shows the sticky banner that informs the user of the site's cookie policy and requests consent, another GDPR compliance requirement. The banner is an implementation of the Cookie Consent Banner. At this point in development, the banner was using temporary copy."
   }
