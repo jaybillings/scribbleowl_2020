@@ -1,9 +1,7 @@
 {
   "name": "scribbleowl_2020",
-  "license": "MIT License",
   "homepage": "https://cedarvine.tech",
-  "repository": "https://github.com/jaybillings/scribbleowl_2020",
-  "version": "1.0.2",
+  "version": "1.0.0",
   "directories": {
     "lib": "src",
     "test": "test/"
@@ -15,21 +13,21 @@
     "eject": "react-scripts eject"
   },
   "dependencies": {
-    "@feathersjs/client": "^4.5.2",
+    "@feathersjs/client": "^4.3.5",
     "fibers": "^4.0.2",
     "hover.css": "^2.3.2",
     "include-media": "^1.4.9",
     "markdown-it": "^10.0.0",
     "node-sass": "^4.13.1",
     "normalize.css": "^8.0.1",
-    "react": "^16.13.0",
-    "react-dom": "^16.13.0",
+    "react": "^16.10.1",
+    "react-dom": "^16.10.1",
     "react-icons": "^3.9.0",
     "react-markdown": "^4.3.1",
     "react-router": "^5.1.2",
     "react-router-dom": "^5.1.2",
-    "react-scripts": "^3.4.0",
-    "sass": "^1.26.3",
+    "react-scripts": "^3.3.0",
+    "sass": "^1.25.0",
     "socket.io-client": "^2.3.0"
   },
   "eslintConfig": {
@@ -53,12 +51,12 @@
     ]
   },
   "devDependencies": {
-    "@testing-library/dom": "^6.16.0",
-    "@testing-library/react": "^9.5.0",
-    "babel-eslint": "^10.1.0",
-    "eslint-plugin-react": "^7.19.0",
+    "@testing-library/dom": "^6.11.0",
+    "@testing-library/react": "^9.4.0",
+    "babel-eslint": "^10.0.3",
+    "eslint-plugin-react": "^7.18.3",
     "jest-dom": "^4.0.0",
-    "jest-extended": "^0.11.5",
-    "react-test-renderer": "^16.13.0"
+    "jest-extended": "^0.11.4",
+    "react-test-renderer": "^16.12.0"
   }
 }
