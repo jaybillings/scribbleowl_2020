@@ -1,70 +1,87 @@
 [
   {
     "name": "vsem_login.png",
-    "title": "## Login page"
+    "title": "Login page",
+    "copy": "The first page a user sees. An account creation link is included on the same page.\n\nThere are four account levels: user, super user, admin, and api-only. All users have API keys for directly fetching data, but as the name implies, api-only users have no credentials to log into the dashboard and can only be created by an admin."
   },
   {
     "name": "vsem_account-success.png",
-    "title": "## Create Account page"
+    "title": "Create Account page",
+    "copy": "Successful account creation. An external mail service sends a verification email. Unverified users can log in, but account functions are limited."
   },
   {
     "name": "vsem_import-complete.png",
-    "title": "## Import Page &mdash; File Import"
+    "title": "Import Page &mdash; File Import",
+    "copy": "The Import page is the first page a user sees after logging in. Here, users can import new data via XML file. New listings are ingested into 'pending' tables, to keep unverified information from being accessible to the API. To lower CPU load, while the import is happening, normal page listening is suspended."
   },
   {
     "name": "vsem_pending-events-second-import.png",
-    "title": "## Import Page &mdash; Pending Events &mdash; Subsequent Import"
+    "title": "Import Page &mdash; Pending Events &mdash; Subsequent Import",
+    "copy": "To assist in identifying changed records, pending listings display a status that indicates whether they are new or updates to live listings. If the listing has been updated, any changed fields are highlighted, which helps users scanning for changes to review. Each data type is shown in a module view, which supports paging (with variable page sizes), column sorting, search, and multi-select/deselect."
   },
   {
     "name": "vsem_neighborhood-module-edit.png",
-    "title": "## Import Page &mdash; Pending Neighborhoods &mdash; Edit Mode"
+    "title": "Import Page (Low-Privilege View) &mdash; Pending Neighborhoods &mdash; Edit Mode",
+    "copy": "Listing rows can be edited in-table, preventing the user from having to transition to a new page when doing quick edits. This screen-cap is an example of a low-privilege view, available to normal users. This view allows for deletion of pending listings, but does not allow users to publish them to the live tables. This screen-cap also shows how individual modules can be hidden to de-clutter the page."
   },
   {
     "name": "vsem_pending-hoods-search.png",
-    "title": "## Import Page &mdash; Pending Neighborhoods &mdash; Search"
+    "title": "Import Page (Low Privilege View) &mdash; Pending Neighborhoods &mdash; Search",
+    "copy": "Users can search within each module. Selected items matched by search are retained, while all other selected items are deselected. Search terms, as well as all other filtering and sorting, is saved before page transition and restored on page construction."
   },
   {
     "name": "vsem_pending-venues-multi-select.png",
-    "title": "## Import Page &mdash; Pending Venues &mdash; Multi-Select"
+    "title": "Import Page (Low Privilege View) &mdash; Pending Venues &mdash; Multi-Select",
+    "copy": "Multiple listings can be selected at one time. Buttons on each module allow selecting all listings or selecting the currently visible page. Listings can also be selected by clicking on them."
   },
   {
     "name": "vsem_pending-event-delete.png",
-    "title": "## Import Page &mdash; Pending Events &mdash; Post Delete"
+    "title": "Import Page &mdash; Pending Events &mdash; Post Delete",
+    "copy": "Users of all levels can delete pending listings. For listings with multi-to-multi connections, like events and tags, the relevant lookup row(s) are deleted when either listing is deleted."
   },
   {
     "name": "vsem_pending-event.png",
-    "title": "## Pending Listing Page &mdash; Event"
+    "title": "Pending Listing Page &mdash; Event",
+    "copy": "To distinguish between pending and live listings, pending listing names have a specific 'warning' style. Also note the '[PENDING]' label attached to venue and organizer names, which appears for new listings that have not yet been published.\n\nBecause data is populated using Feathers and Socket.io, displayed data changes as the underlying data changes. Components use as much standard HTML as possible, which includes the calendar fields. Whenever possible, input fields have been specifically typed to enable built-in data validation. Data is also validated against a server-side schema on save."
   },
   {
     "name": "vsem_pending-neighborhood-save.png",
-    "title": "## Pending Listing Page &mdash; Neighborhood &mdash; Save"
+    "title": "Pending Listing Page &mdash; Neighborhood &mdash; Save",
+    "copy": "This shows the messaging for a successful save. Listing pages also display messages if any linked data is changed."
   },
   {
     "name": "vsem_events.png",
-    "title": "## Events Page"
+    "title": "Events Page",
+    "copy": "This view allows users to browse through all published events. Events can also be added using the form at the bottom &mdash; this is an improvement from the previous version of this app, which only allowed adding new listings via file import.\n\nPrivileged users can directly add and publish events and other listings, while non-privileged users who add or edit live listings will instead create pending listings. On save, they are redirected to the pending listing's page.\n\nPublished events can be either live or dropped, which is controlled in the UI by a toggle. When a live event is created (either directly or via publishing a pending event), its ID and the time is noted. The same thing happens whn an event is dropped or deleted. This allows data consumers to easily track which listings they should add or remove."
   },
   {
     "name": "vsem_events-dropped.png",
-    "title": "## Events Page &mdash; Dropped Events Only"
+    "title": "Events Page &mdash; Dropped Events Only",
+    "copy": "Users can filter the event table to show only live, dropped, or stale events. 'Stale' events are events that are live, but have ended (the end date is earlier than the current date). This view is helpful for users trying to determine which events are available on the API and why."
   },
   {
     "name": "vsem_venues-edit-mode.png",
-    "title": "## Venues Page &mdash; Edit Mode"
+    "title": "Venues Page &mdash; Edit Mode",
+    "copy": "This screencap shows listing quick-edits for venues. All listing tables have the same capabilities as pending listing modules, including quick-edit."
   },
   {
     "name": "vsem_neighborhood-add.png",
-    "title": "Neighborhoods Page &mdash; Add New"
-  },
-  {
-    "name": "vsem_account-settings.png",
-    "title": "Account Settings Page"
+    "title": "Neighborhoods Page &mdash; Add New",
+    "copy": "An example of direct listing creation, in this case from the neighborhood schema. Because data is fetched using socket.io, listing changes are immediately available to all views which subscribe to the data."
   },
   {
     "name": "vsem_admin-tools-users.png",
-    "title": "Admin Tools Page &mdash; User Management"
+    "title": "Admin Tools Page &mdash; User Management",
+    "copy": "Admin-level users have access to a special Admin Settings page. At the top is the user module, which allows admins to add, remove, and edit users. Not visible in this screen-cap, the add user module includes a button to automatically generate secure a secure password."
   },
   {
     "name": "vsem_admin-tools-tag-swap.png",
-    "title": "Admin Tools Page &mdash; Tag Term Replacement"
+    "title": "Admin Tools Page &mdash; Tag Term Replacement",
+    "copy": "Admins can also initiate term replacement for tags and neighborhoods. This is required due to the fact that the 3rd party data provides more listings for those data types than Visit Seattle. Since this is a destructive operation, it is only open to admins. Once a replacement mapping has been created, the appropriate schema is immediately processed.\n\nReplacement mapping also runs on file import; tags or neighborhoods that have a replacement row are instead ingested as the replacement term. Rows can be deleted, but the replacements will not be revered.\n\nBecause this function is for admins only, messages are more detailed to aid troubleshooting."
+  },
+  {
+    "name": "vsem_account-settings.png",
+    "title": "Account Settings Page",
+    "copy": "All users have access to their own account settings, where they can change their password and log out."
   }
 ]

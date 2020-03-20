@@ -38,7 +38,7 @@ export default class Gallery extends Component {
         <div className={'copy'}><ReactMarkdown source={this.props.project.copy} /></div>
         <hr />
         <div className={'gallery-inner'}>
-          {imageData.title ? <ReactMarkdown source={imageData.title} /> : ''}
+          {imageData.title ? <ReactMarkdown source={'## ' + imageData.title} /> : ''}
           <figure><a href={imgSrc}><img alt={imageData.alt || ''} src={imgSrc} /></a></figure>
           <figcaption className={'copy'}>
             <ReactMarkdown source={imageData.copy} />
