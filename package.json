@@ -17,7 +17,7 @@
     "fibers": "^4.0.2",
     "hover.css": "^2.3.2",
     "include-media": "^1.4.9",
-    "markdown-it": "^10.0.0",
+    "markdown-it": "^12.3.2",
     "node-sass": "^4.13.1",
     "normalize.css": "^8.0.1",
     "react": "^16.10.1",
